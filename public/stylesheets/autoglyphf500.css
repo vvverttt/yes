@@ -1,0 +1,443 @@
+@font-face {
+    font-family: 'Autoglyphs 100';
+    src: url('../fonts/autoglyphs-100.ttf') format('truetype');
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'Autoglyphs 200';
+    src: url('../fonts/autoglyphs-200.ttf') format('truetype');
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'Autoglyphs 300';
+    src: url('../fonts/autoglyphs-300.ttf') format('truetype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Autoglyphs 400';
+    src: url('../fonts/autoglyphs-400.ttf') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Autoglyphs 500';
+    src: url('../fonts/autoglyphs-500.ttf') format('truetype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Autoglyphs 600';
+    src: url('../fonts/autoglyphs-600.ttf') format('truetype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Autoglyphs 700';
+    src: url('../fonts/autoglyphs-700.ttf') format('truetype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Autoglyphs 800';
+    src: url('../fonts/autoglyphs-800.ttf') format('truetype');
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: 'Autoglyphs 900';
+    src: url('../fonts/autoglyphs-900.ttf') format('truetype');
+    font-weight: 900;
+}
+
+li.jsNavShow a {
+    text-decoration: none;
+}
+
+a.logo {
+    text-decoration: none;
+}
+
+img.glyph {
+    background: white;
+    box-shadow: 4px 4px #00000033;
+}
+
+pre.glyph-text {
+    font: 11px 'Autoglyphs 400', monospace !important;
+    font-size: 11px;
+    box-shadow: 4px 4px #00000033;
+    text-rendering: geometricPrecision;
+    padding: 12px;
+    font-weight: 700;
+}
+
+.autoglyph_image_block {
+    padding-bottom: 24px;
+}
+
+.glyph-container {
+    padding: 4%;
+}
+
+img.glyphlist {
+    background: white;
+    margin-top: 8.333%;
+    box-shadow: 4px 4px #00000033;
+}
+
+div.glyphlist_small {
+    padding-right: 0px;
+}
+
+img.glyphlist_small {
+    background: white;
+    margin-top: 7.5px;
+    margin-bottom: 7.5px;
+    box-shadow: 1px 1px #00000033;
+}
+
+[v-cloak] {
+    display: none;
+}
+
+.autoglyph_create_form {
+    background-color: #ddd;
+    padding-top: 45px;
+}
+
+.autoglyph-creating {
+    background: black;
+    color: white;
+}
+
+.loader {
+    display: inline-block;
+    width: 15px;
+}
+
+.loader:after {
+    content: "◰";
+    font-family: monospace;
+    animation-name: loader;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes loader {
+    0% { content: '◰'; }
+    20% { content: "◳"; }
+    40% { content: "◲"; }
+    60% { content: "◱"; }
+}
+
+@keyframes loader-cornersquares {
+    0% { content: '▖'; }
+    20% { content: "▘"; }
+    40% { content: "▝"; }
+    60% { content: "▗"; }
+}
+
+@keyframes loader-blocks {
+    0% { content: '░'; }
+    20% { content: "▒"; }
+    40% { content: "▓"; }
+    60% { content: "█"; }
+}
+
+img.symbol-scheme {
+    height: 18px;
+    margin-bottom: 3px;
+}
+
+pre.glyphs {
+    line-height: 1.2;
+}
+
+code.glyphs {
+    font-size: 12px;
+}
+
+.pixelated {
+    image-rendering: -moz-crisp-edges;
+    image-rendering: pixelated;
+}
+
+.btn {
+    border-radius: 0;
+    background: #ff04b4;
+    font-size: 15px;
+    line-height: 15px;
+    padding: 12px 15px;
+    width: 60%;
+    text-decoration: none;
+    text-shadow: none;
+    box-shadow: none;
+    border: 0;
+    margin-top: 10px;
+    text-align: left;
+    transition: all .5s;
+}
+
+.btn_nounderline {
+    text-decoration: none;
+}
+
+.btn-nominwidth {
+    width: auto;
+}
+
+.btn-search {
+    border-radius: 0;
+    background: #ff04b4;
+    font-size: 15px;
+    line-height: normal;
+    padding: 15px 15px 16px;
+    /* width: 60%; */
+    /* text-shadow: none; */
+    box-shadow: none;
+    border: 0;
+    /* margin-top: 10px; */
+    /* text-align: left; */
+    transition: all .5s;
+}
+
+small {
+    color: #272727 !important;
+}
+
+p.subhead {
+    line-height: 1em;
+}
+
+.tight-line {
+    line-height: 1.3em;
+}
+
+.btn:hover {
+    background: #000;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+div.modal button.btn:before,
+#ethereum a#buttonWithdraw:before,
+.btn:before {
+    font-family: "FontAwesome";
+    padding-right: 6px;
+}
+
+.btn#buttonBuy:before {
+    content: "\f07a";
+}
+
+.btn#buttonTicket:before {
+    content: "\f145";
+}
+
+.btn#buttonTransfer:before {
+    content: "\f1d8";
+}
+
+div.modal button.btn:before,
+.btn#buttonRemoveFromSale:before {
+    content: "\f05e";
+}
+
+.btn#buttonBid:before,
+.btn#buttonOffer:before {
+    content: "\f02b";
+}
+
+div.modal button.btn:last-child:before,
+.btn#buttonAcceptBid:before {
+    content: "\f00c";
+}
+
+.btn#buttonWithdrawBid:before {
+    content: "\f00d";
+}
+
+.btn#buttonTopOwners:before {
+    content: "\f0cb";
+}
+
+.btn#buttonAllAttributes:before {
+    content: "\f1b3";
+}
+
+.btn#buttonLogout:before {
+    content: "\f08b";
+}
+
+.btn#buttonChangePassword:before {
+    content: "\f084";
+}
+
+.btn#buttonWatchAccount:before {
+    content: "\f06e";
+}
+
+.btn#buttonUnwatchAccount:before {
+    content: "\f070";
+}
+
+@media screen and (max-width: 992px) {
+    .btn {
+        width: 100%;
+    }
+}
+
+p#ethereumAccount a {
+    font-size: 20px;
+}
+
+.ethereumpanel {}
+
+.ethereumpanel-loggedin {
+    /*display: none;*/
+    position: fixed !important;
+    top: 200px !important;
+    right: 0 !important;
+    border-right: 0;
+}
+
+.ethereumpanel-loggedin .panel.panel-default {
+    box-shadow: 15px 5px 30px 5px rgba(0, 0, 0, 0.05);
+    padding: 30px 40px !important;
+    background: #fcfcfc;
+}
+
+.ethereumpanel-loggedout {
+    /*display: none;*/
+    position: absolute !important;
+    top: 200px !important;
+    right: 0 !important;
+    border-right: 0;
+}
+
+.ethereumpanel-loggedout .panel.panel-default {
+    max-width: 350px;
+    box-shadow: 15px 5px 30px 5px rgba(0, 0, 0, 0.05);
+    padding: 30px 40px !important;
+    background: #fcfcfc;
+}
+
+#ethereum a#buttonWithdraw {
+    transition: all .5s;
+    border-radius: 0;
+    margin-left: 0;
+    width: 100%;
+    text-transform: capitalize;
+    font-size: 15px;
+    padding: 0 15px
+}
+
+#ethereum a#buttonWithdraw:before {
+    content: "\f063"
+}
+
+.modal button.btn {
+    width: 49%;
+    margin: 0;
+    margin-right: 2%;
+    float: left;
+}
+
+.modal button.btn:last-child {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.modal button.close {
+    font-size: 40px;
+}
+
+.modal .modal-dialog .modal-content {
+    border-radius: 0;
+    display: block;
+    vertical-align: middle;
+    width: 100%;
+    margin: auto;
+    max-width: 600px;
+}
+
+.modal {
+    /*display: table;*/
+    height: 100%;
+    width: 100%;
+}
+
+.modal .modal-dialog {
+    /*display: table-cell;*/
+    height: 370px;
+    width: 600px;
+    vertical-align: middle;
+}
+
+.modal h4.modal-title {
+    line-height: 40px;
+}
+
+.modal .modal-header {
+    background: #f3f3f3;
+    padding: 15px 30px;
+}
+
+.modal .modal-body,
+.modal-footer {
+    padding: 0 30px 30px;
+    border: 0;
+}
+
+.modal .modal-body {
+    margin-top: 30px;
+}
+
+@media screen and (max-width: 992px) {
+    .btn {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .modal button.btn {
+        width: 100%;
+    }
+
+    .modal button.btn:last-child {
+        margin-top: 10px
+    }
+
+    .punk-stat {
+        line-height: 1.3em;
+        margin-top: 20px;
+    }
+
+    .punk-stat-line {
+        margin-top: 0px;
+    }
+
+    img.glyphlist {
+        background: white;
+        margin-top: 12px;
+        box-shadow: 1px 1px #00000033;
+    }
+
+    .autoglyph_image_block {
+        padding-bottom: 12px;
+    }
+
+    code.glyphs {
+        font-size: 8px;
+    }
+}
+
+.actually-center {
+    display: table;
+    margin: 0 auto;
+}
