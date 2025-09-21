@@ -16,6 +16,37 @@
     <link rel="stylesheet" type="text/css" href="./public/stylesheets/mainf500.css?v=13" charset="utf-8" >
     <link rel="stylesheet" type="text/css" href="./public/stylesheets/stylesf500.css?v=13" charset="utf-8" >
 
+    <style>
+    /* Mobile gradient fix - make all gradients go from left to right on small devices */
+    @media (max-width: 768px) {
+        .meebits-background {
+            background: linear-gradient(to right, black, transparent), url('./public/images/banner_5.png') !important;
+            background-position: bottom !important;
+            background-size: cover !important;
+        }
+
+        .cryptopunk-background {
+            background: linear-gradient(to right, black, transparent), url('./public/images/missingphunks_banner_3.png') !important;
+            background-position: center !important;
+            background-size: cover !important;
+        }
+
+        /* DystoPhunkz section */
+        .inverse.meebits-background[style*="dystophunks_banner_2.png"] {
+            background: linear-gradient(to right, black, transparent), url('./public/images/dystophunks_banner_2.png') !important;
+            background-position: bottom !important;
+            background-size: cover !important;
+        }
+
+        /* Eths Rocks section */
+        .inverse.cryptopunk-background[style*="ethsrocks_banner_3.png"] {
+            background: linear-gradient(to right, black, transparent), url('./public/images/ethsrocks_banner_3.png') !important;
+            background-position: center !important;
+            background-size: cover !important;
+        }
+    }
+    </style>
+
     <!-- Open Graph data -->
     <meta property="og:title" content="DystoLabz" />
             <meta property="og:image" content="index.html" />
