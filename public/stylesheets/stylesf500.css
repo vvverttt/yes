@@ -1071,7 +1071,7 @@ li {
   }
 }
 
-/* Fix for header twitching on mobile during page transitions */
+/* Fix for header twitching on mobile during page transitions - updated */
 @media (max-width: 767px) {
   body {
     -webkit-transform: translateZ(0);
