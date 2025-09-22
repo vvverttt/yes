@@ -492,6 +492,9 @@ li {
 .main_header {
   margin-top: 70px;
   margin-bottom: 100px;
+  position: relative;
+  z-index: 100;
+  transition: none;
 }
 .main_header [class^="col-"] {
   display: -webkit-box;
@@ -513,11 +516,16 @@ li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: auto;
 }
 .main_header .main_nav_list > li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 .main_header .main_nav_list > li:after {
   margin-left: 50px;
@@ -960,6 +968,11 @@ li {
   .main_header {
     margin-top: 50px;
     margin-bottom: 20px;
+    position: relative;
+    z-index: 100;
+    transition: none;
+    transform: translateZ(0);
+    backface-visibility: hidden;
   }
   .main_header .inner_wrap {
     padding-bottom: 0;
@@ -1055,5 +1068,27 @@ li {
   }
   .col-image-grid-small {
     width: 12.5%;
+  }
+}
+
+/* Fix for header twitching on mobile during page transitions */
+@media (max-width: 767px) {
+  body {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .main_header * {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .container {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
