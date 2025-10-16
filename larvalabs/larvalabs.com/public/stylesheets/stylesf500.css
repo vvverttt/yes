@@ -73,7 +73,7 @@ a {
 a:hover,
 a:focus,
 a.active {
-  color: #ff04b4;
+  color: #B3BF44;
 }
 code {
   background-color: #f5f5f5;
@@ -109,13 +109,16 @@ p {
   margin-bottom: 10px;
 }
 p a {
-  color: #ff04b4;
+  color: #B3BF44;
 }
 li a {
-  color: #ff04b4;
+  color: #B3BF44;
 }
 li.jsNavShow a {
   color: #272727;
+}
+li.jsNavShow a.active {
+  color: #B3BF44;
 }
 li.jsNavShow a i {
   font-weight: normal;
@@ -155,7 +158,7 @@ p.small {
 #icon-logo,
 #icon-medium,
 #icon-twitter {
-  fill: #ff04b4;
+  fill: #B3BF44;
 }
 blockquote {
   border: none;
@@ -240,7 +243,7 @@ blockquote:before {
   min-width: 0px;
 }
 .btn_hover:hover {
-  background-color: #ff04b4;
+  background-color: #B3BF44;
 }
 .btn.btn_secondary {
   background-color: #fff;
@@ -252,7 +255,7 @@ blockquote:before {
   border: 2px solid #f5f5f5;
 }
 .category_btn {
-  background-color: #ff04b4;
+  background-color: #B3BF44;
   -webkit-border-radius: 2em;
   border-radius: 2em;
   color: #fff;
@@ -386,7 +389,7 @@ blockquote:before {
 }
 .select .dropdown-menu li:hover,
 .select .dropdown-menu li.active {
-  color: #ff04b4;
+  color: #B3BF44;
   font-weight: 700;
 }
 .select svg {
@@ -701,7 +704,7 @@ li {
 .inverse a:hover,
 .inverse a:focus,
 .inverse a.active {
-  color: #ff04b4;
+  color: #B3BF44;
 }
 .inverse h1,
 .inverse h2,
@@ -729,8 +732,8 @@ li {
   color: #181818;
 }
 .inverse .btn:hover {
-  background-color: #ff04b4;
-  border: 2px solid #ff04b4;
+  background-color: #B3BF44;
+  border: 2px solid #B3BF44;
   color: #fff;
 }
 .inverse .btn.btn_secondary {
