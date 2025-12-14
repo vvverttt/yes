@@ -118,7 +118,7 @@
     </div>
 
     <!-- Overall Stats Section -->
-    <div class="container item_header" style="margin-top: 55px; margin-bottom: 40px;">
+    <div class="container item_header stats-section" style="margin-top: 55px; margin-bottom: 40px;">
         <div class="row">
             <div class="col-md-11 col-xs-12 header_block" style="padding-bottom: 0;">
                 <h2 style="margin-bottom: 0; font-size: 25px;">Overall Stats</h2>
@@ -150,10 +150,10 @@
         </div>
         <div class="row" style="margin-top: -5px; margin-left: -15px;">
             <div class="col-md-6 col-sm-6 col-xs-12" style="margin-bottom: 10px;">
-                <a href="#" class="btn" style="background-color: #B3BF44; color: white; width: 100%; padding: 12px 20px; border-radius: 4px; display: block; text-align: center; font-family: 'Montserrat', arial, helvetica, sans-serif;">Top Phunk Owners</a>
+                <a href="#" class="btn stats-btn" style="background-color: #B3BF44; color: white; width: 100%; padding: 12px 20px; border-radius: 4px; display: block; text-align: center; font-family: 'Montserrat', arial, helvetica, sans-serif;">Top Phunk Owners</a>
             </div>
             <div class="col-md-6 col-sm-6 col-xs-12" style="margin-bottom: 10px;">
-                <a href="cryptophunks-attributes.html" class="btn" style="background-color: #B3BF44; color: white; width: 100%; padding: 12px 20px; border-radius: 4px; display: block; text-align: center; font-family: 'Montserrat', arial, helvetica, sans-serif;">All Phunk Types and Attributes</a>
+                <a href="cryptophunks-attributes.html" class="btn stats-btn" style="background-color: #B3BF44; color: white; width: 100%; padding: 12px 20px; border-radius: 4px; display: block; text-align: center; font-family: 'Montserrat', arial, helvetica, sans-serif;">All Phunk Types and Attributes</a>
             </div>
         </div>
     </div>
@@ -231,6 +231,67 @@
 
     body.fullscreen-active {
         overflow: hidden !important;
+    }
+
+    /* Mobile responsive styles */
+    @media (max-width: 768px) {
+        .header_block h1 {
+            font-size: 24px !important;
+        }
+
+        .header_block p {
+            font-size: 14px !important;
+            line-height: 1.5 !important;
+        }
+
+        #iframe-container {
+            height: 400px !important;
+        }
+
+        .item_header {
+            padding-left: 15px !important;
+            padding-right: 15px !important;
+        }
+
+        .item_header h2 {
+            font-size: 20px !important;
+        }
+
+        .item_header .row > div p {
+            font-size: 13px !important;
+        }
+
+        .item_header .btn {
+            font-size: 14px !important;
+            padding: 10px 15px !important;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .header_block h1 {
+            font-size: 20px !important;
+        }
+
+        .header_block p {
+            font-size: 13px !important;
+        }
+
+        #iframe-container {
+            height: 350px !important;
+        }
+
+        .item_header h2 {
+            font-size: 18px !important;
+        }
+
+        .item_header .row > div p {
+            font-size: 12px !important;
+        }
+
+        .item_header .btn {
+            font-size: 13px !important;
+            padding: 10px 12px !important;
+        }
     }
 </style>
 
