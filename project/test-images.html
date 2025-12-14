@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Test</title>
+    <style>
+        body { background: #c3ff00; padding: 20px; }
+        img { border: 2px solid black; margin: 5px; }
+        #log { background: white; padding: 10px; margin-top: 20px; font-family: monospace; }
+    </style>
+</head>
+<body>
+    <h1>Image Loading Test</h1>
+    
+    <h2>Direct IMG tags:</h2>
+    <img src="/images/images_24x24/1.png" alt="1" width="48" height="48">
+    <img src="/images/images_24x24/8.png" alt="8" width="48" height="48">
+    <img src="/images/images_24x24/17.png" alt="17" width="48" height="48">
+    
+    <h2>Canvas test:</h2>
+    <canvas id="test-canvas" width="200" height="100" style="border: 2px solid black; background: white;"></canvas>
+    
+    <div id="log"></div>
+    
+    <script>
+        var log = document.getElementById('log');
+        function addLog(msg) {
+            log.innerHTML += msg + '<br>';
+            console.log(msg);
+        }
+        
+        addLog('Script started');
+        
+        // Test loading JSON
+        fetch('/public/json/image-list.json')
+            .then(function(r) { return r.json(); })
+            .then(function(data) {
+                addLog('JSON loaded: ' + data.images.length + ' images');
+                addLog('First image num: ' + data.images[0].num);
+            })
+            .catch(function(e) {
+                addLog('JSON ERROR: ' + e);
+            });
+        
+        // Test canvas drawing
+        var canvas = document.getElementById('test-canvas');
+        var ctx = canvas.getContext('2d');
+        ctx.fillStyle = '#c3ff00';
+        ctx.fillRect(0, 0, 200, 100);
+        addLog('Canvas filled with yellow');
+        
+        // Test loading image to canvas
+        var img = new Image();
+        img.onload = function() {
+            addLog('Image loaded successfully!');
+            ctx.drawImage(img, 10, 10, 48, 48);
+            addLog('Image drawn to canvas');
+        };
+        img.onerror = function() {
+            addLog('ERROR: Image failed to load!');
+        };
+        img.src = '/images/images_24x24/1.png';
+        addLog('Loading image: ' + img.src);
+    </script>
+</body>
+</html>
+

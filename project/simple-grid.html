@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Grid Test</title>
+    <style>
+        body { background: #c3ff00; margin: 0; padding: 20px; }
+        #grid { display: flex; flex-wrap: wrap; gap: 2px; }
+        #grid img { width: 24px; height: 24px; image-rendering: pixelated; }
+        #status { background: white; padding: 10px; margin-bottom: 20px; font-family: monospace; }
+    </style>
+</head>
+<body>
+    <div id="status">Loading...</div>
+    <div id="grid"></div>
+    
+    <script>
+        var status = document.getElementById('status');
+        var grid = document.getElementById('grid');
+        
+        // Simple approach: just load first 100 images
+        fetch('/public/json/image-list.json')
+            .then(function(r) { return r.json(); })
+            .then(function(data) {
+                status.textContent = 'Loaded JSON with ' + data.images.length + ' images. Showing first 100:';
+                
+                // Just show first 100 images
+                var first100 = data.images.slice(0, 100);
+                
+                first100.forEach(function(imageData) {
+                    var img = document.createElement('img');
+                    img.src = '/images/images_24x24/' + imageData.num + '.png';
+                    img.alt = imageData.num;
+                    img.onerror = function() {
+                        this.style.background = 'red';
+                    };
+                    grid.appendChild(img);
+                });
+            })
+            .catch(function(e) {
+                status.textContent = 'ERROR: ' + e;
+            });
+    </script>
+</body>
+</html>
+
