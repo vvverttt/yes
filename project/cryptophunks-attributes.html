@@ -44,16 +44,17 @@
     </div>
 </header>
 
-<div class="container item_header">
+<div class="container" style="margin-top: 30px;">
     <div class="row">
-        <div class="col-md-11 col-xs-12 header_block">
-            <!-- Breadcrumb navigation -->
-            <p style="font-size: 14px; margin-bottom: 5px; font-family: 'Montserrat', arial, helvetica, sans-serif;">
-                <a href="cryptophunks.html" style="color: #B3BF44; text-decoration: none;">CryptoPhunksV69</a>
-                <span style="color: #999;"> / Types and Attributes</span>
-            </p>
-            <!-- Main heading -->
-            <h1 style="font-size: 36px; font-weight: 700; margin-top: 10px; font-family: 'Montserrat', arial, helvetica, sans-serif;">Types and Attributes</h1>
+        <div class="col-md-11 col-xs-12">
+            <!-- Breadcrumb navigation with box -->
+            <div class="breadcrumb-box">
+                <a href="cryptophunks.html" class="breadcrumb-link">CryptoPhunksV69</a>
+                <span class="breadcrumb-separator"> / </span>
+                <span class="breadcrumb-current">Types and Attributes</span>
+            </div>
+            <!-- Main heading - 25% bigger (45px) and more spacing -->
+            <h1 class="main-title">Types and Attributes</h1>
         </div>
     </div>
 </div>
@@ -68,7 +69,7 @@
                     <tr>
                         <th>Attribute</th>
                         <th>#</th>
-                        <th>More Examples</th>
+                        <th>Examples</th>
                     </tr>
                 </thead>
                 <tbody id="types-tbody">
@@ -79,85 +80,112 @@
     </div>
 </div>
 
-<!-- Attributes Section -->
-<div class="container" style="margin-top: 40px;">
-    <div class="row">
-        <div class="col-md-12">
-            <h3 class="section-title">Attributes</h3>
-            <table class="attr-table">
-                <thead>
-                    <tr>
-                        <th>Attribute</th>
-                        <th>#</th>
-                        <th>More Examples</th>
-                    </tr>
-                </thead>
-                <tbody id="attributes-tbody">
-                    <!-- Dynamically populated -->
-                </tbody>
-            </table>
-        </div>
-    </div>
+<!-- Attributes Sections (separated by trait type) -->
+<div class="container" style="margin-top: 40px;" id="attributes-container">
+    <!-- Dynamically populated with sections for each trait type -->
 </div>
 
 <style>
+    /* Breadcrumb box styling */
+    .breadcrumb-box {
+        display: inline-block;
+        background-color: #f5f5f5;
+        border: 1px solid #e0e0e0;
+        padding: 8px 15px;
+        font-family: 'Montserrat', arial, helvetica, sans-serif;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .breadcrumb-link {
+        color: #B3BF44;
+        text-decoration: none;
+        font-weight: 700;
+    }
+    .breadcrumb-link:hover {
+        text-decoration: underline;
+    }
+    .breadcrumb-separator {
+        color: #666;
+    }
+    .breadcrumb-current {
+        color: #333;
+    }
+    /* Main title - 25% bigger (45px) with more spacing */
+    .main-title {
+        font-family: 'Montserrat', arial, helvetica, sans-serif;
+        font-size: 45px;
+        font-weight: 700;
+        color: #333;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
     .section-title {
         font-family: 'Montserrat', arial, helvetica, sans-serif;
-        font-size: 18px;
-        font-weight: 600;
+        font-size: 20px;
+        font-weight: 700;
         color: #333;
-        border-bottom: 1px solid #ddd;
+        margin-bottom: 10px;
+        margin-top: 20px;
         padding-bottom: 10px;
-        margin-bottom: 0;
     }
     .attr-table {
         width: 100%;
         border-collapse: collapse;
         font-family: 'Montserrat', arial, helvetica, sans-serif;
-        font-size: 14px;
+        font-size: 16px;
     }
     .attr-table th {
-        padding: 12px 10px;
+        padding: 12px 8px;
         text-align: left;
-        font-weight: 600;
-        color: #777;
+        font-weight: 700;
+        color: #333;
         border-bottom: 1px solid #ddd;
+        font-size: 16px;
     }
     .attr-table td {
-        padding: 8px 10px;
+        padding: 8px 8px;
         text-align: left;
         border-bottom: 1px solid #eee;
         vertical-align: middle;
-    }
-    .attr-table tr:hover {
-        background-color: #f9f9f9;
-    }
-    .attr-name {
-        font-weight: 500;
+        font-size: 16px;
         color: #333;
     }
-    .attr-count {
-        color: #666;
+    .attr-table tr:hover {
+        background-color: #fafafa;
     }
+    .attr-name {
+        font-weight: 700;
+    }
+    .attr-name a {
+        color: #B3BF44;
+        text-decoration: none;
+    }
+    .attr-name a:hover {
+        text-decoration: underline;
+    }
+    .attr-count {
+        color: #333;
+        font-weight: 400;
+    }
+    /* Bigger phunk boxes - 48x48 like CryptoPunks, no gaps */
     .phunk-box {
         display: inline-block;
-        width: 24px;
-        height: 24px;
+        width: 48px;
+        height: 48px;
         background-color: #c3ff00;
-        margin-right: 2px;
+        margin: 0;
+        padding: 0;
         vertical-align: middle;
     }
     .phunk-box img {
-        width: 24px;
-        height: 24px;
+        width: 48px;
+        height: 48px;
         image-rendering: pixelated;
         display: block;
     }
     .examples-cell {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2px;
-        align-items: center;
+        white-space: nowrap;
+        font-size: 0;
     }
 </style>
 
@@ -168,11 +196,10 @@
         .then(data => {
             const items = data.collection_items;
 
-            // Count types and attributes
+            // Count types and attributes grouped by trait_type
             const typeCounts = {};
             const typeExamples = {};
-            const attributeCounts = {};
-            const attributeExamples = {};
+            const traitsByCategory = {}; // { traitType: { value: { count, examples } } }
 
             items.forEach(item => {
                 const index = item.index;
@@ -182,24 +209,32 @@
                         const type = attr.value;
                         typeCounts[type] = (typeCounts[type] || 0) + 1;
                         if (!typeExamples[type]) typeExamples[type] = [];
-                        if (typeExamples[type].length < 8) typeExamples[type].push(index);
+                        if (typeExamples[type].length < 10) typeExamples[type].push(index);
                     } else if (attr.trait_type !== 'Species' && attr.trait_type !== 'Skin Tone') {
-                        const attrName = attr.value;
-                        attributeCounts[attrName] = (attributeCounts[attrName] || 0) + 1;
-                        if (!attributeExamples[attrName]) attributeExamples[attrName] = [];
-                        if (attributeExamples[attrName].length < 8) attributeExamples[attrName].push(index);
+                        const traitType = attr.trait_type;
+                        const value = attr.value;
+
+                        if (!traitsByCategory[traitType]) {
+                            traitsByCategory[traitType] = {};
+                        }
+                        if (!traitsByCategory[traitType][value]) {
+                            traitsByCategory[traitType][value] = { count: 0, examples: [] };
+                        }
+                        traitsByCategory[traitType][value].count++;
+                        if (traitsByCategory[traitType][value].examples.length < 10) {
+                            traitsByCategory[traitType][value].examples.push(index);
+                        }
                     }
                 });
             });
 
-            // Sort by count (types descending, attributes ascending by rarity)
+            // Sort types by count (rarest first)
             const sortedTypes = Object.entries(typeCounts).sort((a, b) => a[1] - b[1]);
-            const sortedAttributes = Object.entries(attributeCounts).sort((a, b) => a[1] - b[1]);
 
-            // Helper function to create phunk box HTML
+            // Helper function to create phunk box HTML with 48x48 images
             function createPhunkBoxes(examples) {
                 return examples.map(idx =>
-                    `<span class="phunk-box"><img src="../images/images_24x24/${idx}.png" alt="Phunk ${idx}" title="Phunk ${idx}" onerror="this.parentElement.style.display='none'"></span>`
+                    `<span class="phunk-box"><img src="../images/phunks/${idx}.png" alt="Phunk ${idx}" title="Phunk ${idx}" onerror="this.src='../images/images_24x24/${idx}.png'"></span>`
                 ).join('');
             }
 
@@ -207,36 +242,79 @@
             const typesTbody = document.getElementById('types-tbody');
             sortedTypes.forEach(([type, count]) => {
                 const examples = typeExamples[type] || [];
-                const examplesHtml = createPhunkBoxes(examples);
+                const examplesHtml = createPhunkBoxes(examples.slice(0, 8));
+                const searchUrl = `cryptophunks-search.html?query=${encodeURIComponent(type)}`;
 
                 const row = document.createElement('tr');
                 row.innerHTML = `
-                    <td class="attr-name">${type}</td>
+                    <td class="attr-name"><a href="${searchUrl}">${type}</a></td>
                     <td class="attr-count">${count}</td>
                     <td class="examples-cell">${examplesHtml}</td>
                 `;
                 typesTbody.appendChild(row);
             });
 
-            // Populate attributes table
-            const attrTbody = document.getElementById('attributes-tbody');
-            sortedAttributes.forEach(([attr, count]) => {
-                const examples = attributeExamples[attr] || [];
-                const examplesHtml = createPhunkBoxes(examples);
+            // Define trait type order: all trait types except Type, Character, Special at end
+            // Character before Special, Special at very bottom
+            const traitTypeOrder = ['Hair', 'Eyes', 'Ears', 'Mouth', 'Beard', 'Neck', 'Emotion', 'Weapon', 'Character', 'Special'];
 
-                const row = document.createElement('tr');
-                row.innerHTML = `
-                    <td class="attr-name">${attr}</td>
-                    <td class="attr-count">${count}</td>
-                    <td class="examples-cell">${examplesHtml}</td>
+            // Get all trait types from data and sort by defined order
+            const allTraitTypes = Object.keys(traitsByCategory).filter(t => t !== 'Type');
+            allTraitTypes.sort((a, b) => {
+                const aIdx = traitTypeOrder.indexOf(a);
+                const bIdx = traitTypeOrder.indexOf(b);
+                if (aIdx === -1 && bIdx === -1) return a.localeCompare(b);
+                if (aIdx === -1) return -1;
+                if (bIdx === -1) return 1;
+                return aIdx - bIdx;
+            });
+
+            // Create sections for each trait type
+            const container = document.getElementById('attributes-container');
+            allTraitTypes.forEach(traitType => {
+                const traits = traitsByCategory[traitType];
+                if (!traits) return;
+
+                // Sort traits by count (rarest first)
+                const sortedTraits = Object.entries(traits).sort((a, b) => a[1].count - b[1].count);
+
+                // Create section HTML
+                const section = document.createElement('div');
+                section.className = 'row';
+                section.innerHTML = `
+                    <div class="col-md-12">
+                        <h3 class="section-title">${traitType}</h3>
+                        <table class="attr-table">
+                            <thead>
+                                <tr>
+                                    <th>Attribute</th>
+                                    <th>#</th>
+                                    <th>Examples</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
                 `;
-                attrTbody.appendChild(row);
+                container.appendChild(section);
+
+                const tbody = section.querySelector('tbody');
+                sortedTraits.forEach(([value, data]) => {
+                    const examplesHtml = createPhunkBoxes(data.examples.slice(0, 8));
+                    const searchUrl = `cryptophunks-search.html?query=${encodeURIComponent(value)}`;
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td class="attr-name"><a href="${searchUrl}">${value}</a></td>
+                        <td class="attr-count">${data.count}</td>
+                        <td class="examples-cell">${examplesHtml}</td>
+                    `;
+                    tbody.appendChild(row);
+                });
             });
         })
         .catch(error => {
             console.error('Error loading JSON:', error);
-            document.getElementById('types-tbody').innerHTML = '<tr><td colspan="3">Error loading data</td></tr>';
-            document.getElementById('attributes-tbody').innerHTML = '<tr><td colspan="3">Error loading data</td></tr>';
+            document.getElementById('types-tbody').innerHTML = '<tr><td colspan="6">Error loading data</td></tr>';
         });
 </script>
 
