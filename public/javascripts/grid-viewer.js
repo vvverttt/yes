@@ -287,8 +287,13 @@ function handleCanvasClick(e) {
 
         if (characterIndex >= 0 && characterIndex < characterImages.length) {
             const characterNum = characterImages[characterIndex].num;
-            // Navigate to detail page
-            window.location.href = `cryptophunk-detail.html?num=${characterNum}`;
+            // Force navigation to break out of iframe
+            try {
+                window.top.location.replace(`./cryptophunks-details.html?id=${characterNum}`);
+            } catch (e) {
+                // Fallback if top window is restricted
+                window.location.href = `./cryptophunks-details.html?id=${characterNum}`;
+            }
         }
     }
 }

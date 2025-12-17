@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv=X-UA-Compatible content="IE=11">
+    <link rel="shortcut icon" type="image/png" href="public/images/favicon.ico">
+    <title>All DystoPhunkz - DystoPhunkz</title>
+    <meta name="description" content="View all DystoPhunkz in the collection" />
+    <link rel="stylesheet" href="public/components/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/components/bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="public/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="public/stylesheets/mainf500.css?v=13" charset="utf-8" >
+    <link rel="stylesheet" type="text/css" href="public/stylesheets/stylesf500.css?v=13" charset="utf-8" >
+
+    <meta property="og:title" content="All DystoPhunkz - DystoPhunkz" />
+    <meta property="og:description" content="View all DystoPhunkz in the collection" />
+
+    <script src="public/components/jquery-2.2.4.min.js"></script>
+    <script src="public/components/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<header class="container main_header">
+    <div class="row">
+        <div class="col-lg-3 col-xs-2">
+            <a href="index.html" class="logo ">
+            <svg viewBox="0 0 16 26" y="0" x="0"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-logo"></use></svg>
+            <span class="hidden-xs hidden-sm">DystoLabz</span>
+            </a>
+        </div>
+        <div class="col-lg-9 col-xs-10">
+            <nav class="main_navigation">
+                <ul class="list main_nav_list">
+                    <li class="jsNavShow"><a class="active" href="projectlist.html">Projects</a></li>
+                    <li class="jsNavShow"><a class="" href="bloglist.html">Writing</a></li>
+                    <li class="jsNavShow"><a class="" href="about.html">About</a></li>
+                    <li class="jsNavShow"><a href="https://x.com/DystoLabz" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<div class="container" style="margin-top: 30px;">
+    <div class="row">
+        <div class="col-md-11 col-xs-12">
+            <!-- Breadcrumb navigation with box -->
+            <div class="breadcrumb-box">
+                <a href="DystoPhunkz.html" class="breadcrumb-link">DystoPhunkz</a>
+                <span class="breadcrumb-separator"> / </span>
+                <span class="breadcrumb-current">All Types and Attributes</span>
+            </div>
+            <!-- Title -->
+            <h1 class="main-title">All DystoPhunkz</h1>
+            
+            <!-- Navigation buttons with dropdowns -->
+            <div style="margin-bottom: 20px;">
+                <div style="position: relative; display: inline-block; margin-right: 20px;">
+                    <span id="phunk-types-btn" style="color: #000; padding: 4px 8px; font-family: 'Montserrat', sans-serif; font-size: 14px; cursor: pointer; background: none; border: none;">Phunk Types ▼</span>
+                    <div id="phunk-types-dropdown" style="display: none; position: absolute; top: 100%; left: 0; background: white; border: 1px solid #ccc; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 15px; min-width: 250px; max-height: 400px; overflow-y: auto; z-index: 1000; font-family: 'Montserrat', sans-serif; font-size: 12px;">
+                        <div style="margin-bottom: 10px;">
+                            <input type="text" id="phunk-types-search" placeholder="Filter phunk types..." style="width: 100%; padding: 5px; border: 1px solid #ddd; font-size: 12px;">
+                        </div>
+                        <div id="phunk-types-list"></div>
+                        <div style="margin-top: 10px; text-align: center;">
+                            <button onclick="clearPhunkTypeFilters()" style="padding: 5px 10px; background: #f0f0f0; border: 1px solid #ccc; cursor: pointer; font-size: 11px;">Clear All</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="position: relative; display: inline-block; margin-right: 20px;">
+                    <span id="attributes-btn" style="color: #000; padding: 4px 8px; font-family: 'Montserrat', sans-serif; font-size: 14px; cursor: pointer; background: none; border: none;">Attributes ▼</span>
+                    <div id="attributes-dropdown" style="display: none; position: absolute; top: 100%; left: 0; background: white; border: 1px solid #ccc; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 15px; min-width: 250px; max-height: 400px; overflow-y: auto; z-index: 1000; font-family: 'Montserrat', sans-serif; font-size: 12px;">
+                        <div style="margin-bottom: 10px;">
+                            <input type="text" id="attributes-search" placeholder="Filter attributes..." style="width: 100%; padding: 5px; border: 1px solid #ddd; font-size: 12px;">
+                        </div>
+                        <div id="attributes-list"></div>
+                        <div style="margin-top: 10px; text-align: center;">
+                            <button onclick="clearAttributeFilters()" style="padding: 5px 10px; background: #f0f0f0; border: 1px solid #ccc; cursor: pointer; font-size: 11px;">Clear All</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="position: relative; display: inline-block;">
+                    <span id="attribute-counts-btn" style="color: #000; padding: 4px 8px; font-family: 'Montserrat', sans-serif; font-size: 14px; cursor: pointer; background: none; border: none;">Attribute Counts ▼</span>
+                    <div id="attribute-counts-dropdown" style="display: none; position: absolute; top: 100%; left: 0; background: white; border: 1px solid #ccc; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 15px; min-width: 300px; max-height: 400px; overflow-y: auto; z-index: 1000; font-family: 'Montserrat', sans-serif; font-size: 12px;">
+                        <div style="margin-bottom: 10px;">
+                            <input type="text" id="attribute-counts-search" placeholder="Filter by attribute count..." style="width: 100%; padding: 5px; border: 1px solid #ddd; font-size: 12px;">
+                        </div>
+                        <div id="attribute-counts-list"></div>
+                        <div style="margin-top: 10px; text-align: center;">
+                            <button onclick="clearAttributeCountFilters()" style="padding: 5px 10px; background: #f0f0f0; border: 1px solid #ccc; cursor: pointer; font-size: 11px;">Clear All</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Grid Container -->
+<div class="container-fluid" style="padding: 0 20px;">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="punks-grid" style="display: grid; grid-template-columns: repeat(12, 90px); margin: 0 auto; padding: 0; gap: 0; justify-content: center;">
+                <!-- Punks will be loaded here -->
+            </div>
+            <div id="loading" style="text-align: center; padding: 40px; font-family: 'Montserrat', arial, helvetica, sans-serif;">
+                Loading DystoPhunkz...
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="main_footer" style="margin-top: 50px;">
+    <div class="container">
+        <div class="col-md-6 col-sm-6 col-xs-12 pull-right">
+            <ul class="list footer_nav_list">
+                <li class="jsNavShow"><a class="active" href="projectlist.html">Projects</a></li>
+                <li class="jsNavShow"><a class="" href="bloglist.html">Writing</a></li>
+                <li class="jsNavShow"><a class="" href="about.html">About</a></li>
+                <li class="jsNavShow"><a href="https://x.com/DystoLabz" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<style>
+    /* Breadcrumb box styling - extended, no border, matches attributes page */
+    .breadcrumb-box {
+        display: block;
+        width: 100%;
+        background-color: #f5f5f5;
+        border: none;
+        padding: 8px 15px;
+        font-family: 'Montserrat', arial, helvetica, sans-serif;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .breadcrumb-link {
+        color: #B3BF44;
+        text-decoration: none;
+        font-weight: 700;
+    }
+    .breadcrumb-link:hover {
+        text-decoration: underline;
+    }
+    .breadcrumb-separator {
+        color: #666;
+    }
+    .breadcrumb-current {
+        color: #333;
+    }
+    /* Main title - matches attributes page styling */
+    .main-title {
+        font-family: 'Montserrat', arial, helvetica, sans-serif;
+        font-size: 45px;
+        font-weight: 700;
+        color: #333;
+        margin-top: 25px;
+        margin-bottom: 30px;
+    }
+
+    .punk-item {
+        width: 90px;
+        height: 104px;
+        margin: 0;
+        padding: 0;
+        background-color: white;
+        cursor: pointer;
+        position: relative;
+        text-align: center;
+        border: none;
+        box-sizing: border-box;
+        display: block;
+    }
+    
+    .punk-item img {
+        width: 90px;
+        height: 90px;
+        image-rendering: pixelated;
+        display: block;
+        margin: 0;
+        padding: 0;
+        background-color: #c3ff00;
+    }
+    
+    .punk-item:hover {
+        opacity: 0.8;
+        transform: scale(1.05);
+        z-index: 10;
+    }
+    
+    .punk-number {
+        font-family: 'Montserrat', arial, helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        color: #000;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        background-color: white;
+        line-height: 12px;
+        padding: 1px 0;
+    }
+    
+    /* Remove any spacing */
+    #punks-grid {
+        gap: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        grid-gap: 0 !important;
+        border-spacing: 0 !important;
+    }
+    
+    #punks-grid * {
+        margin: 0 !important;
+        border: 0 !important;
+    }
+    
+    /* Make rows flow properly */
+    #punks-grid {
+        line-height: 0;
+    }
+    
+    @media (max-width: 768px) {
+        .punk-item {
+            width: 70px;
+            height: 82px;
+        }
+        
+        .punk-item img {
+            width: 70px;
+            height: 70px;
+        }
+        
+        .punk-number {
+            font-size: 11px;
+            line-height: 12px;
+        }
+        
+        h1 {
+            font-size: 28px !important;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .punk-item {
+            width: 55px;
+            height: 65px;
+        }
+        
+        .punk-item img {
+            width: 55px;
+            height: 55px;
+        }
+        
+        .punk-number {
+            font-size: 9px;
+            line-height: 10px;
+        }
+        
+        h1 {
+            font-size: 24px !important;
+        }
+    }
+</style>
+
+<script>
+    console.log('Loading all DystoPhunkz from JSON...');
+    
+    // Load all punks from JSON
+    fetch('images/dysto-phunks.json?v=' + Date.now())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('JSON loaded successfully');
+            loadAllPunks(data);
+        })
+        .catch(error => {
+            console.error('JSON error:', error);
+            document.getElementById('loading').innerHTML = `
+                <div style="color: red; font-family: 'Montserrat', sans-serif;">
+                    Error loading DystoPhunkz. Check console for details.
+                </div>`;
+        });
+    
+    function loadAllPunks(data) {
+        const items = data.collection_items || [];
+        const grid = document.getElementById('punks-grid');
+        const loading = document.getElementById('loading');
+        
+        console.log(`Loading ${items.length} DystoPhunkz...`);
+        
+        // Clear existing items first to prevent duplicates
+        grid.innerHTML = '';
+        
+        // Sort items by index
+        const sortedItems = items.sort((a, b) => parseInt(a.index) - parseInt(b.index));
+        
+        // Create all punk items
+        sortedItems.forEach(item => {
+            const punkDiv = document.createElement('div');
+            punkDiv.className = 'punk-item';
+            
+            const img = document.createElement('img');
+            img.src = `images/DystoPhunkz/${item.index}_DystoPhunk_${item.index}.png`;
+            img.alt = `DystoPhunk ${item.index}`;
+            img.style.imageRendering = 'pixelated';
+            
+            img.onerror = () => {
+                console.warn(`Image ${item.index} not found`);
+                img.src = 'images/placeholder.png'; // Fallback if needed
+            };
+            
+            const numberDiv = document.createElement('div');
+            numberDiv.className = 'punk-number';
+            numberDiv.textContent = `#${item.index}`;
+            
+            punkDiv.appendChild(img);
+            punkDiv.appendChild(numberDiv);
+            
+            punkDiv.onclick = () => {
+                window.location.href = `DystoPhunkz-details.html?id=${item.index}`;
+            };
+            
+            grid.appendChild(punkDiv);
+        });
+        
+        // Hide loading
+        loading.style.display = 'none';
+        console.log('All DystoPhunkz loaded successfully!');
+        
+        // Setup dropdown functionality
+        setupDropdowns(items);
+    }
+    
+    // Global variables for filtering
+    let allPunksData = [];
+    let selectedPhunkTypes = new Set();
+    let selectedAttributes = new Set();
+    let selectedAttributeCounts = new Set();
+    let currentSearchTerm = '';
+
+    function setupDropdowns(items) {
+        allPunksData = items;
+        
+        console.log('Setting up dropdowns with', items.length, 'items');
+        
+        // Extract data for dropdowns
+        const phunkTypes = new Set();
+        const attributesByType = {};
+        const attributeCounts = {};
+        
+        items.forEach(item => {
+            console.log('Processing item:', item.index, 'with attributes:', item.attributes);
+            
+            if (item.attributes && Array.isArray(item.attributes)) {
+                // Count attributes excluding Sex (since that's the type for DystoPhunkz)
+                const countableAttributes = item.attributes.filter(attr => 
+                    attr.trait_type !== 'Sex'
+                );
+                const totalAttributes = countableAttributes.length;
+                const countKey = `${totalAttributes} attribute${totalAttributes === 1 ? '' : 's'}`;
+                attributeCounts[countKey] = (attributeCounts[countKey] || 0) + 1;
+                
+                item.attributes.forEach(attr => {
+                    if (attr.trait_type && attr.value) {
+                        // Add to phunk types if it's a Sex attribute (equivalent to Type in CryptoPhunks)
+                        if (attr.trait_type === 'Sex') {
+                            phunkTypes.add(attr.value);
+                        }
+                        
+                        // Group attributes by type
+                        if (!attributesByType[attr.trait_type]) {
+                            attributesByType[attr.trait_type] = new Set();
+                        }
+                        attributesByType[attr.trait_type].add(attr.value);
+                    }
+                });
+            }
+        });
+        
+        console.log('Extracted phunk types:', Array.from(phunkTypes));
+        console.log('Extracted attributes by type:', attributesByType);
+        console.log('Extracted attribute counts:', attributeCounts);
+        
+        // Setup Phunk Types dropdown
+        setupPhunkTypesDropdown(Array.from(phunkTypes).sort());
+        
+        // Setup Attributes dropdown  
+        setupAttributesDropdown(attributesByType);
+        
+        // Setup Attribute Counts dropdown
+        setupAttributeCountsDropdown(attributeCounts);
+        
+        // Setup click handlers
+        document.getElementById('phunk-types-btn').onclick = () => {
+            toggleDropdown('phunk-types-dropdown');
+        };
+        
+        document.getElementById('attributes-btn').onclick = () => {
+            toggleDropdown('attributes-dropdown');
+        };
+        
+        document.getElementById('attribute-counts-btn').onclick = () => {
+            toggleDropdown('attribute-counts-dropdown');
+        };
+        
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('[id$="-btn"]') && !e.target.closest('[id$="-dropdown"]')) {
+                ['phunk-types-dropdown', 'attributes-dropdown', 'attribute-counts-dropdown']
+                    .forEach(id => document.getElementById(id).style.display = 'none');
+            }
+        });
+    }
+    
+    function setupPhunkTypesDropdown(phunkTypes) {
+        const searchInput = document.getElementById('phunk-types-search');
+        const listContainer = document.getElementById('phunk-types-list');
+        
+        console.log('Setting up phunk types dropdown with:', phunkTypes);
+        
+        if (phunkTypes.length === 0) {
+            listContainer.innerHTML = '<div style="color: #999; font-style: italic; padding: 10px;">No phunk types found</div>';
+            return;
+        }
+        
+        function renderPhunkTypes(filteredTypes = phunkTypes) {
+            listContainer.innerHTML = filteredTypes.map(type => `
+                <div style="margin-bottom: 8px;">
+                    <label style="display: flex; align-items: center; cursor: pointer; padding: 4px 0;">
+                        <input type="checkbox" value="${type}" onchange="togglePhunkTypeFilter('${type}')" 
+                               ${selectedPhunkTypes.has(type) ? 'checked' : ''}
+                               style="margin-right: 8px;">
+                        <span style="color: #666; font-family: 'Montserrat', arial, helvetica, sans-serif;">${type}</span>
+                    </label>
+                </div>
+            `).join('');
+        }
+        
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            const filtered = phunkTypes.filter(type => 
+                type.toLowerCase().includes(searchTerm)
+            );
+            renderPhunkTypes(filtered);
+        });
+        
+        renderPhunkTypes();
+    }
+    
+    function setupAttributesDropdown(attributesByType) {
+        const searchInput = document.getElementById('attributes-search');
+        const listContainer = document.getElementById('attributes-list');
+        
+        console.log('Setting up attributes dropdown with:', attributesByType);
+        
+        if (Object.keys(attributesByType).length === 0) {
+            listContainer.innerHTML = '<div style="color: #999; font-style: italic; padding: 10px;">No attributes found</div>';
+            return;
+        }
+        
+        function renderAttributes(searchTerm = '') {
+            const html = Object.keys(attributesByType).sort().map(traitType => {
+                const values = Array.from(attributesByType[traitType]).sort();
+                const filteredValues = searchTerm ? 
+                    values.filter(value => 
+                        value.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                        traitType.toLowerCase().includes(searchTerm.toLowerCase())
+                    ) : values;
+                    
+                if (filteredValues.length === 0) return '';
+                
+                return `
+                    <div style="margin-bottom: 12px;">
+                        <div style="font-weight: bold; padding: 4px 0; color: #333; border-bottom: 1px solid #eee; font-family: 'Montserrat', arial, helvetica, sans-serif;">${traitType}</div>
+                        ${filteredValues.map(value => {
+                            const attrKey = `${traitType}:${value}`;
+                            return `
+                                <div style="margin-left: 15px; margin-bottom: 4px;">
+                                    <label style="display: flex; align-items: center; cursor: pointer; padding: 2px 0;">
+                                        <input type="checkbox" value="${attrKey}" onchange="toggleAttributeFilter('${attrKey}')"
+                                               ${selectedAttributes.has(attrKey) ? 'checked' : ''}
+                                               style="margin-right: 8px;">
+                                        <span style="color: #666; font-size: 11px; font-family: 'Montserrat', arial, helvetica, sans-serif;">${value}</span>
+                                    </label>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                `;
+            }).join('');
+            
+            listContainer.innerHTML = html || '<div style="color: #999; font-style: italic; padding: 10px;">No matching attributes found</div>';
+        }
+        
+        searchInput.addEventListener('input', (e) => {
+            renderAttributes(e.target.value);
+        });
+        
+        renderAttributes();
+    }
+    
+    function setupAttributeCountsDropdown(attributeCounts) {
+        const searchInput = document.getElementById('attribute-counts-search');
+        const listContainer = document.getElementById('attribute-counts-list');
+        
+        console.log('Setting up attribute counts dropdown with:', attributeCounts);
+        
+        if (Object.keys(attributeCounts).length === 0) {
+            listContainer.innerHTML = '<div style="color: #999; font-style: italic; padding: 10px;">No attribute counts found</div>';
+            return;
+        }
+        
+        function renderAttributeCounts(searchTerm = '') {
+            // Sort by attribute count (descending)
+            const sorted = Object.entries(attributeCounts)
+                .map(([countStr, numPunks]) => {
+                    // Extract number from "X attributes" string
+                    const count = parseInt(countStr.split(' ')[0]);
+                    return [count, countStr, numPunks];
+                })
+                .sort((a, b) => b[0] - a[0]); // Sort by count descending
+                
+            const filtered = searchTerm ? 
+                sorted.filter(([count, countStr, numPunks]) => 
+                    countStr.toLowerCase().includes(searchTerm.toLowerCase())
+                ) : sorted;
+            
+            if (filtered.length === 0) {
+                listContainer.innerHTML = '<div style="color: #999; font-style: italic; padding: 10px;">No matching attribute counts found</div>';
+                return;
+            }
+            
+            listContainer.innerHTML = filtered.map(([count, countStr, numPunks]) => `
+                <div style="margin-bottom: 8px;">
+                    <label style="display: flex; align-items: center; justify-content: space-between; cursor: pointer; padding: 4px 0;">
+                        <div style="display: flex; align-items: center;">
+                            <input type="checkbox" value="${count}" onchange="toggleAttributeCountFilter(${count})" 
+                                   ${selectedAttributeCounts.has(count) ? 'checked' : ''}
+                                   style="margin-right: 8px;">
+                            <span style="color: #666; font-size: 12px; font-family: 'Montserrat', arial, helvetica, sans-serif;">${countStr}</span>
+                        </div>
+                        <span style="color: #333; font-weight: bold; font-family: 'Montserrat', arial, helvetica, sans-serif;">(${numPunks})</span>
+                    </label>
+                </div>
+            `).join('');
+        }
+        
+        searchInput.addEventListener('input', (e) => {
+            renderAttributeCounts(e.target.value);
+        });
+        
+        renderAttributeCounts();
+    }
+    
+    function togglePhunkTypeFilter(type) {
+        if (selectedPhunkTypes.has(type)) {
+            selectedPhunkTypes.delete(type);
+        } else {
+            selectedPhunkTypes.add(type);
+        }
+        applyAllFilters();
+    }
+    
+    function toggleAttributeFilter(attrKey) {
+        if (selectedAttributes.has(attrKey)) {
+            selectedAttributes.delete(attrKey);
+        } else {
+            selectedAttributes.add(attrKey);
+        }
+        applyAllFilters();
+    }
+    
+    function toggleAttributeCountFilter(count) {
+        if (selectedAttributeCounts.has(count)) {
+            selectedAttributeCounts.delete(count);
+        } else {
+            selectedAttributeCounts.add(count);
+        }
+        applyAllFilters();
+    }
+    
+    function clearPhunkTypeFilters() {
+        selectedPhunkTypes.clear();
+        // Uncheck all checkboxes
+        const checkboxes = document.querySelectorAll('#phunk-types-list input[type="checkbox"]');
+        checkboxes.forEach(cb => cb.checked = false);
+        applyAllFilters();
+    }
+    
+    function clearAttributeFilters() {
+        selectedAttributes.clear();
+        // Uncheck all checkboxes
+        const checkboxes = document.querySelectorAll('#attributes-list input[type="checkbox"]');
+        checkboxes.forEach(cb => cb.checked = false);
+        applyAllFilters();
+    }
+    
+    function clearAttributeCountFilters() {
+        selectedAttributeCounts.clear();
+        // Uncheck all checkboxes
+        const checkboxes = document.querySelectorAll('#attribute-counts-list input[type="checkbox"]');
+        checkboxes.forEach(cb => cb.checked = false);
+        applyAllFilters();
+    }
+    
+    function toggleDropdown(dropdownId) {
+        const dropdown = document.getElementById(dropdownId);
+        const isVisible = dropdown.style.display !== 'none';
+        
+        // Hide all dropdowns first
+        ['phunk-types-dropdown', 'attributes-dropdown', 'attribute-counts-dropdown']
+            .forEach(id => document.getElementById(id).style.display = 'none');
+        
+        if (!isVisible) {
+            dropdown.style.display = 'block';
+        }
+    }
+    
+    function applyAllFilters() {
+        const grid = document.getElementById('punks-grid');
+        let visibleCount = 0;
+        
+        Array.from(grid.children).forEach(punkDiv => {
+            const punkNumber = punkDiv.querySelector('.punk-number').textContent;
+            const punkIndex = punkNumber.replace('#', '');
+            
+            // Find the punk data
+            const punkData = allPunksData.find(item => item.index.toString() === punkIndex);
+            
+            let shouldShow = true;
+            
+            // Apply phunk type filter
+            if (shouldShow && selectedPhunkTypes.size > 0) {
+                if (punkData && punkData.attributes) {
+                    const typeAttr = punkData.attributes.find(attr => attr.trait_type === 'Sex');
+                    if (!typeAttr || !selectedPhunkTypes.has(typeAttr.value)) {
+                        shouldShow = false;
+                    }
+                } else {
+                    shouldShow = false;
+                }
+            }
+            
+            // Apply attribute filter
+            if (shouldShow && selectedAttributes.size > 0) {
+                if (punkData && punkData.attributes) {
+                    const hasSelectedAttribute = punkData.attributes.some(attr => {
+                        const attrKey = `${attr.trait_type}:${attr.value}`;
+                        return selectedAttributes.has(attrKey);
+                    });
+                    if (!hasSelectedAttribute) {
+                        shouldShow = false;
+                    }
+                } else {
+                    shouldShow = false;
+                }
+            }
+            
+            // Apply attribute count filter
+            if (shouldShow && selectedAttributeCounts.size > 0) {
+                if (punkData && punkData.attributes) {
+                    // Count attributes excluding Sex
+                    const countableAttributes = punkData.attributes.filter(attr => 
+                        attr.trait_type !== 'Sex'
+                    );
+                    const punkAttributeCount = countableAttributes.length;
+                    if (!selectedAttributeCounts.has(punkAttributeCount)) {
+                        shouldShow = false;
+                    }
+                } else {
+                    shouldShow = false;
+                }
+            }
+            
+            punkDiv.style.display = shouldShow ? 'block' : 'none';
+            if (shouldShow) visibleCount++;
+        });
+    }
+</script>
+
+<svg hidden>
+    <defs>
+        <g id="icon-logo">
+            <path d="M0,3.5 C0,1.56700338 1.57093664,0 3.5,0 C5.43299662,0 7,1.57093664 7,3.5 C7,5.43299662 5.42906336,7 3.5,7 C1.56700338,7 0,5.42906336 0,3.5 Z M0,13.5 C0,11.5670034 1.57093664,10 3.5,10 C5.43299662,10 7,11.5709366 7,13.5 C7,15.4329966 5.42906336,17 3.5,17 C1.56700338,17 0,15.4290634 0,13.5 Z M0,22.5 C0,20.5670034 1.57093664,19 3.5,19 C5.43299662,19 7,20.5709366 7,22.5 C7,24.4329966 5.42906336,26 3.5,26 C1.56700338,26 0,24.4290634 0,22.5 Z M12,4 C12,2.8954305 12.8877296,2 14,2 C15.1045695,2 16,2.88772964 16,4 C16,5.1045695 15.1122704,6 14,6 C12.8954305,6 12,5.11227036 12,4 Z M12,14 C12,12.8954305 12.8877296,12 14,12 C15.1045695,12 16,12.8877296 16,14 C16,15.1045695 15.1122704,16 14,16 C12.8954305,16 12,15.1122704 12,14 Z M12,23 C12,21.8954305 12.8877296,21 14,21 C15.1045695,21 16,21.8877296 16,23 C16,24.1045695 15.1122704,25 14,25 C12.8954305,25 12,24.1122704 12,23 Z" id="logo"></path>
+        </g>
+    </defs>
+</svg>
+
+<script src="public/javascripts/script.js"></script>
+
+</body>
+</html>

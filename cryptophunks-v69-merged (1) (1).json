@@ -36385,7 +36385,7 @@
       ]
     },
     {
-      "id": "0x9fe22ead8959f82dd79ab7c9a49d30d8f3164e337d3da180ba2e52d761ee4cac",
+      "id": "0x89d9c11571258783c35f0e41997d4e25e008ee2c77903a8f8b03ab44427ece00",
       "index": 2166,
       "sha": "",
       "name": "QuantumPhunk 2166",
@@ -36402,10 +36402,6 @@
         {
           "trait_type": "Type",
           "value": "Female"
-        },
-        {
-          "trait_type": "Eyes",
-          "value": "Spectral Sight"
         }
       ]
     },

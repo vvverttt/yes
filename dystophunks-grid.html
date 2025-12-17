@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DystoPhunkz - Interactive Grid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: #c3ff00;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        #viewer {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #grid-canvas {
+            display: block;
+            cursor: grab;
+        }
+
+        #grid-canvas:active {
+            cursor: grabbing;
+        }
+
+        .controls {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .controls button {
+            padding: 0;
+            background-color: transparent;
+            border: none;
+            border-radius: 0;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.1s, opacity 0.2s;
+            overflow: hidden;
+            opacity: 0.7;
+        }
+
+        .controls button img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            image-rendering: pixelated;
+            image-rendering: crisp-edges;
+        }
+
+        .controls button:active {
+            transform: scale(0.95);
+            opacity: 1;
+        }
+
+        .controls button:hover {
+            transform: scale(1.05);
+            opacity: 1;
+        }
+
+        .punk-overlay {
+            position: fixed;
+            background: #c3ff00;
+            border: 2px solid #333;
+            padding: 8px 12px;
+            font-weight: bold;
+            font-size: 12px;
+            cursor: pointer;
+            text-decoration: none;
+            color: #333;
+            z-index: 101;
+            white-space: nowrap;
+        }
+
+        .fullscreen-info {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            z-index: 1001;
+            display: none;
+        }
+
+        .fullscreen-info.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="viewer">
+        <canvas id="grid-canvas"></canvas>
+    </div>
+
+    <div class="controls">
+        <button id="btn-zoom-in" title="Zoom In">
+            <img src="../images/zoom_in.png" alt="Zoom In">
+        </button>
+        <button id="btn-zoom-out" title="Zoom Out">
+            <img src="../images/zoom_out.png" alt="Zoom Out">
+        </button>
+        <button id="btn-fullscreen" title="Full Screen">
+            <img src="../images/resize_b_cross_diagonal.png" alt="Full Screen">
+        </button>
+        <button id="btn-reset" title="Home">
+            <img src="../images/door.png" alt="Home">
+        </button>
+    </div>
+
+    <div class="fullscreen-info" id="fullscreen-info">
+        Press ESC to exit fullscreen
+    </div>
+
+    <script>
+        var canvas, ctx;
+        var characterImages = [];
+        var characterSize = 24;
+        var gridSpacing = 2;
+        var cols = 10; // 10 columns for DystoPhunkz
+        var rows = Math.ceil(69 / cols); // 69 DystoPhunkz total
+        var panX = 0, panY = 0, zoom = 2.35; // Original zoom like OG
+        var minZoom = 2.35; // Minimum zoom to keep grid filling screen
+        var isDragging = false;
+        var dragStartX = 0, dragStartY = 0, dragStartPanX = 0, dragStartPanY = 0;
+        var hoveredPhunkIndex = null;
+
+        function initCanvas() {
+            canvas = document.getElementById('grid-canvas');
+            ctx = canvas.getContext('2d');
+            
+            // Disable image smoothing for crisp pixel art
+            ctx.imageSmoothingEnabled = false;
+            ctx.webkitImageSmoothingEnabled = false;
+            ctx.mozImageSmoothingEnabled = false;
+            ctx.msImageSmoothingEnabled = false;
+            
+            function resizeCanvas() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+                
+                // Reapply image smoothing settings after canvas resize
+                ctx.imageSmoothingEnabled = false;
+                ctx.webkitImageSmoothingEnabled = false;
+                ctx.mozImageSmoothingEnabled = false;
+                ctx.msImageSmoothingEnabled = false;
+                
+                // Calculate zoom to fill screen width with grid (exactly like OG)
+                var gridWidth = cols * (characterSize + gridSpacing) - gridSpacing;
+                var gridHeight = rows * (characterSize + gridSpacing) - gridSpacing;
+                var zoomForWidth = canvas.width / gridWidth;
+                var zoomForHeight = canvas.height / gridHeight;
+                
+                // Use the larger zoom to ensure no empty space (exactly like OG)
+                minZoom = Math.max(zoomForWidth, zoomForHeight, 2.35);
+                zoom = minZoom;
+                
+                drawGrid();
+            }
+            
+            resizeCanvas();
+            window.addEventListener('resize', resizeCanvas);
+            
+            // Mouse events for panning and zooming
+            canvas.addEventListener('wheel', handleWheel);
+            canvas.addEventListener('mousedown', handleMouseDown);
+            canvas.addEventListener('mousemove', handleMouseMove);
+            canvas.addEventListener('mouseup', handleMouseUp);
+        }
+
+        function limitPan() {
+            if (!canvas) return;
+            
+            var gridWidth = cols * (characterSize + gridSpacing) - gridSpacing;
+            var gridHeight = rows * (characterSize + gridSpacing) - gridSpacing;
+            
+            var effectiveGridWidth = gridWidth * zoom;
+            var effectiveGridHeight = gridHeight * zoom;
+            
+            // Allow generous scrolling to see all content
+            var maxPanX = effectiveGridWidth * 0.8;
+            var maxPanY = effectiveGridHeight * 0.8;
+            
+            var minPanX = -effectiveGridWidth * 0.8;
+            var minPanY = -effectiveGridHeight * 0.8;
+            
+            panX = Math.max(minPanX, Math.min(maxPanX, panX));
+            panY = Math.max(minPanY, Math.min(maxPanY, panY));
+        }
+
+        function loadDystoPhunkz() {
+            console.log('Loading DystoPhunkz images (10251-10319)...');
+            
+            fetch('images/dysto-phunks.json')
+                .then(response => response.json())
+                .then(data => {
+                    var loadedCount = 0;
+                    var totalImages = data.collection_items.length;
+                    
+                    // Sort by index
+                    const sortedItems = data.collection_items.sort((a, b) => parseInt(a.index) - parseInt(b.index));
+                    
+                    sortedItems.forEach(function(item, arrayIndex) {
+                        var img = new Image();
+                        img.src = `images/dystophunks/${item.index}_DystoPhunk_${item.index}.png`;
+                        
+                        img.onload = function() {
+                            characterImages[arrayIndex] = img;
+                            loadedCount++;
+                            
+                            if (loadedCount % 10 === 0) {
+                                console.log('Loaded ' + loadedCount + '/' + totalImages);
+                                drawGrid();
+                            }
+                            
+                            if (loadedCount === totalImages) {
+                                console.log('All images loaded');
+                                drawGrid();
+                            }
+                        };
+                        
+                        img.onerror = function() {
+                            console.warn('Failed to load image:', item.index);
+                            loadedCount++;
+                        };
+                    });
+                })
+                .catch(error => {
+                    console.error('Error loading DystoPhunkz JSON:', error);
+                });
+        }
+
+        function drawGrid() {
+            if (!ctx) return;
+
+            // Fill background with plain #c3ff00
+            ctx.fillStyle = '#c3ff00';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.save();
+            
+            // Disable image smoothing for crisp pixels
+            ctx.imageSmoothingEnabled = false;
+            ctx.webkitImageSmoothingEnabled = false;
+            ctx.mozImageSmoothingEnabled = false;
+            ctx.msImageSmoothingEnabled = false;
+
+            for (var i = 0; i < characterImages.length; i++) {
+                if (characterImages[i]) {
+                    var col = i % cols;
+                    var row = Math.floor(i / cols);
+                    
+                    var effectiveSize = characterSize * zoom;
+                    var effectiveSpacing = gridSpacing * zoom;
+                    
+                    var x = panX + col * (effectiveSize + effectiveSpacing);
+                    var y = panY + row * (effectiveSize + effectiveSpacing);
+                    
+                    // Only draw if visible
+                    if (x > -effectiveSize && x < canvas.width && y > -effectiveSize && y < canvas.height) {
+                        ctx.drawImage(characterImages[i], x, y, effectiveSize, effectiveSize);
+                    }
+                }
+            }
+
+            ctx.restore();
+        }
+
+        function handleWheel(e) {
+            e.preventDefault();
+            
+            var rect = canvas.getBoundingClientRect();
+            var mouseX = e.clientX - rect.left;
+            var mouseY = e.clientY - rect.top;
+            
+            // Calculate world position before zoom
+            var worldX = (mouseX - canvas.width / 2) / zoom + panX;
+            var worldY = (mouseY - canvas.height / 2) / zoom + panY;
+            
+            var delta = e.deltaY;
+            var zoomFactor = delta > 0 ? 0.9 : 1.1;
+            zoom *= zoomFactor;
+            zoom = Math.max(minZoom, Math.min(zoom, 20)); // Prevent zooming out beyond grid fill
+            
+            // Calculate world position after zoom and adjust pan
+            var newWorldX = (mouseX - canvas.width / 2) / zoom + panX;
+            var newWorldY = (mouseY - canvas.height / 2) / zoom + panY;
+            
+            panX -= (newWorldX - worldX);
+            panY -= (newWorldY - worldY);
+            
+            limitPan(); // Keep within bounds after zoom
+            
+            drawGrid();
+        }
+
+        function handleMouseDown(e) {
+            // Only allow clicks when zoomed in enough
+            if (zoom < 12.0) {
+                // Start dragging at low zoom levels
+                isDragging = true;
+                dragStartX = e.clientX;
+                dragStartY = e.clientY;
+                dragStartPanX = panX;
+                dragStartPanY = panY;
+                canvas.style.cursor = 'grabbing';
+                return;
+            }
+            
+            // Check for phunk click before starting drag
+            const rect = canvas.getBoundingClientRect();
+            const clickX = e.clientX - rect.left;
+            const clickY = e.clientY - rect.top;
+            
+            const clickedPhunk = getPhunkAtPosition(clickX, clickY);
+            if (clickedPhunk !== null) {
+                // Navigate to the phunk details page
+                const phunkIndex = 10251 + clickedPhunk; // Convert grid index to DystoPhunk ID
+                window.parent.location.href = `DystoPhunkz-details.html?id=${phunkIndex}`;
+                return; // Don't start dragging if we clicked a phunk
+            }
+            
+            isDragging = true;
+            dragStartX = e.clientX;
+            dragStartY = e.clientY;
+            dragStartPanX = panX;
+            dragStartPanY = panY;
+            canvas.style.cursor = 'grabbing';
+        }
+
+        function getPhunkAtPosition(x, y) {
+            var effectiveSize = characterSize * zoom;
+            var effectiveSpacing = gridSpacing * zoom;
+            
+            for (var i = 0; i < characterImages.length; i++) {
+                if (!characterImages[i]) continue;
+                
+                var col = i % cols;
+                var row = Math.floor(i / cols);
+                
+                var phunkX = panX + col * (effectiveSize + effectiveSpacing);
+                var phunkY = panY + row * (effectiveSize + effectiveSpacing);
+                
+                // Check if click is within this phunk's bounds
+                if (x >= phunkX && x <= phunkX + effectiveSize && 
+                    y >= phunkY && y <= phunkY + effectiveSize) {
+                    return i; // Return the phunk index
+                }
+            }
+            return null; // No phunk clicked
+        }
+
+        function handleMouseMove(e) {
+            const rect = canvas.getBoundingClientRect();
+            const mouseX = e.clientX - rect.left;
+            const mouseY = e.clientY - rect.top;
+            
+            // Only show pointer cursor and detect hover when zoomed in enough
+            if (zoom >= 12.0) {
+                const hoveredPhunk = getPhunkAtPosition(mouseX, mouseY);
+                if (hoveredPhunk !== hoveredPhunkIndex) {
+                    hoveredPhunkIndex = hoveredPhunk;
+                }
+                
+                if (hoveredPhunk !== null && !isDragging) {
+                    canvas.style.cursor = 'pointer';
+                } else if (!isDragging) {
+                    canvas.style.cursor = 'grab';
+                }
+            } else {
+                canvas.style.cursor = 'grab';
+                if (!isDragging) {
+                    hoveredPhunkIndex = null;
+                }
+            }
+            
+            if (isDragging) {
+                panX = dragStartPanX + (e.clientX - dragStartX) * 5 / zoom;
+                panY = dragStartPanY + (e.clientY - dragStartY) * 5 / zoom;
+                limitPan(); // Keep within bounds
+                drawGrid();
+            }
+        }
+
+        function handleMouseUp(e) {
+            if (isDragging) {
+                isDragging = false;
+                canvas.style.cursor = 'grab';
+            }
+        }
+
+        // Control buttons
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('btn-zoom-in').addEventListener('click', function() {
+                zoom *= 1.2;
+                zoom = Math.min(zoom, 20);
+                drawGrid();
+            });
+
+            document.getElementById('btn-zoom-out').addEventListener('click', function() {
+                zoom /= 1.2;
+                zoom = Math.max(zoom, minZoom); // Prevent zooming out beyond grid fill
+                drawGrid();
+            });
+
+            document.getElementById('btn-fullscreen').addEventListener('click', function() {
+                window.parent.postMessage('toggleFullscreen', '*');
+            });
+
+            document.getElementById('btn-reset').addEventListener('click', function() {
+                panX = 0;
+                panY = 0;
+                
+                // Calculate initial zoom to fit grid nicely
+                var gridWidth = cols * (characterSize + gridSpacing) - gridSpacing;
+                var gridHeight = rows * (characterSize + gridSpacing) - gridSpacing;
+                var zoomForWidth = canvas.width / gridWidth;
+                var zoomForHeight = canvas.height / gridHeight;
+                minZoom = Math.max(zoomForWidth, zoomForHeight, 2.35);
+                zoom = minZoom;
+                
+                limitPan(); // Ensure within bounds
+                drawGrid();
+            });
+
+            initCanvas();
+            loadDystoPhunkz();
+        });
+
+        // Listen for fullscreen messages
+        window.addEventListener('message', function(event) {
+            if (event.data === 'toggleFullscreen') {
+                var info = document.getElementById('fullscreen-info');
+                if (info.style.display === 'block') {
+                    info.style.display = 'none';
+                } else {
+                    info.style.display = 'block';
+                }
+            }
+        });
+
+        // ESC key to exit fullscreen
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                window.parent.postMessage('toggleFullscreen', '*');
+            }
+        });
+    </script>
+</body>
+</html>

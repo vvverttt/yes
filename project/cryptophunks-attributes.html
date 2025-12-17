@@ -80,17 +80,44 @@
     </div>
 </div>
 
+<!-- Horizontal line between Types and Attributes -->
+<div class="container">
+    <div class="section-divider"></div>
+</div>
+
 <!-- Attributes Sections (separated by trait type) -->
-<div class="container" style="margin-top: 40px;" id="attributes-container">
+<div class="container" id="attributes-container">
     <!-- Dynamically populated with sections for each trait type -->
 </div>
 
+<!-- Attribute Counts Section -->
+<div class="container" style="margin-top: 40px;">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="section-title">Attribute Counts</h3>
+            <table class="attr-table">
+                <thead>
+                    <tr>
+                        <th>Attribute</th>
+                        <th>#</th>
+                        <th>Examples</th>
+                    </tr>
+                </thead>
+                <tbody id="counts-tbody">
+                    <!-- Dynamically populated -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
 <style>
-    /* Breadcrumb box styling */
+    /* Breadcrumb box styling - extended, no border */
     .breadcrumb-box {
-        display: inline-block;
+        display: block;
+        width: 100%;
         background-color: #f5f5f5;
-        border: 1px solid #e0e0e0;
+        border: none;
         padding: 8px 15px;
         font-family: 'Montserrat', arial, helvetica, sans-serif;
         font-size: 16px;
@@ -110,14 +137,19 @@
     .breadcrumb-current {
         color: #333;
     }
-    /* Main title - 25% bigger (45px) with more spacing */
+    /* Main title - 25% bigger (45px) with more spacing, moved 5px down */
     .main-title {
         font-family: 'Montserrat', arial, helvetica, sans-serif;
         font-size: 45px;
         font-weight: 700;
         color: #333;
-        margin-top: 20px;
+        margin-top: 25px;
         margin-bottom: 30px;
+    }
+    /* Horizontal divider line */
+    .section-divider {
+        border-top: 1px solid #e0e0e0;
+        margin: 30px 0;
     }
     .section-title {
         font-family: 'Montserrat', arial, helvetica, sans-serif;
@@ -176,12 +208,16 @@
         margin: 0;
         padding: 0;
         vertical-align: middle;
+        text-decoration: none;
     }
     .phunk-box img {
         width: 48px;
         height: 48px;
         image-rendering: pixelated;
         display: block;
+    }
+    .phunk-box:hover {
+        opacity: 0.8;
     }
     .examples-cell {
         white-space: nowrap;
@@ -191,7 +227,7 @@
 
 <script>
     // Load the JSON and populate tables
-    fetch('../cryptophunks-v69-merged (1) (1).json')
+    fetch('../cryptophunks-v69-merged (1) (1).json?v=' + Date.now())
         .then(response => response.json())
         .then(data => {
             const items = data.collection_items;
@@ -210,7 +246,7 @@
                         typeCounts[type] = (typeCounts[type] || 0) + 1;
                         if (!typeExamples[type]) typeExamples[type] = [];
                         if (typeExamples[type].length < 10) typeExamples[type].push(index);
-                    } else if (attr.trait_type !== 'Species' && attr.trait_type !== 'Skin Tone') {
+                    } else if (attr.trait_type !== 'Species') {
                         const traitType = attr.trait_type;
                         const value = attr.value;
 
@@ -228,13 +264,28 @@
                 });
             });
 
-            // Sort types by count (rarest first)
-            const sortedTypes = Object.entries(typeCounts).sort((a, b) => a[1] - b[1]);
+            // Sort types with custom priority: Martian, Yautja, Xenomorph first, then by rarity (count)
+            const typesPriority = ['Martian', 'Yautja', 'Xenomorph'];
+            const sortedTypes = Object.entries(typeCounts).sort((a, b) => {
+                const aIndex = typesPriority.indexOf(a[0]);
+                const bIndex = typesPriority.indexOf(b[0]);
+                
+                // If both are in priority list, sort by priority order
+                if (aIndex !== -1 && bIndex !== -1) {
+                    return aIndex - bIndex;
+                }
+                // If only a is in priority, put it first
+                if (aIndex !== -1) return -1;
+                // If only b is in priority, put it first
+                if (bIndex !== -1) return 1;
+                // If neither is in priority, sort by rarity (count)
+                return a[1] - b[1];
+            });
 
-            // Helper function to create phunk box HTML with 48x48 images
+            // Helper function to create phunk box HTML with 48x48 images (clickable links to details page)
             function createPhunkBoxes(examples) {
                 return examples.map(idx =>
-                    `<span class="phunk-box"><img src="../images/phunks/${idx}.png" alt="Phunk ${idx}" title="Phunk ${idx}" onerror="this.src='../images/images_24x24/${idx}.png'"></span>`
+                    `<a href="cryptophunks-details.html?id=${idx}" class="phunk-box"><img src="../images/images_24x24/${idx}.png" alt="Phunk ${idx}" title="Phunk #${idx}"></a>`
                 ).join('');
             }
 
@@ -243,7 +294,7 @@
             sortedTypes.forEach(([type, count]) => {
                 const examples = typeExamples[type] || [];
                 const examplesHtml = createPhunkBoxes(examples.slice(0, 8));
-                const searchUrl = `cryptophunks-search.html?query=${encodeURIComponent(type)}`;
+                const searchUrl = `cryptophunks-search.html?trait_type=${encodeURIComponent('Type')}&value=${encodeURIComponent(type)}`;
 
                 const row = document.createElement('tr');
                 row.innerHTML = `
@@ -254,20 +305,22 @@
                 typesTbody.appendChild(row);
             });
 
-            // Define trait type order: all trait types except Type, Character, Special at end
-            // Character before Special, Special at very bottom
-            const traitTypeOrder = ['Hair', 'Eyes', 'Ears', 'Mouth', 'Beard', 'Neck', 'Emotion', 'Weapon', 'Character', 'Special'];
+            // Define trait type order: Aura first, then Skin Tone, Variant, others, then Armor/Cheeks/Face/Hands/Lips/Nose/Teeth, then Weapon, Pet, Special, Species, Character. Attribute Count is separate section at bottom.
+            const traitTypeOrder = ['Aura', 'Skin Tone', 'Variant', 'Hair', 'Eyes', 'Eye Mask', 'Ears', 'Mouth', 'Beard', 'Neck', 'Emotion', 'Armor', 'Cheeks', 'Face', 'Hands', 'Lips', 'Nose', 'Teeth', 'Weapon', 'Pet', 'Special', 'Species', 'Character'];
 
-            // Get all trait types from data and sort by defined order
+            // Get all trait types from data and sort by defined order (include Species now)
             const allTraitTypes = Object.keys(traitsByCategory).filter(t => t !== 'Type');
+            console.log('All trait types found:', allTraitTypes);
+            console.log('Trait order array:', traitTypeOrder);
             allTraitTypes.sort((a, b) => {
                 const aIdx = traitTypeOrder.indexOf(a);
                 const bIdx = traitTypeOrder.indexOf(b);
                 if (aIdx === -1 && bIdx === -1) return a.localeCompare(b);
-                if (aIdx === -1) return -1;
-                if (bIdx === -1) return 1;
+                if (aIdx === -1) return 1; // Put unknown traits at end
+                if (bIdx === -1) return -1; // Put unknown traits at end
                 return aIdx - bIdx;
             });
+            console.log('Sorted trait types:', allTraitTypes);
 
             // Create sections for each trait type
             const container = document.getElementById('attributes-container');
@@ -301,7 +354,7 @@
                 const tbody = section.querySelector('tbody');
                 sortedTraits.forEach(([value, data]) => {
                     const examplesHtml = createPhunkBoxes(data.examples.slice(0, 8));
-                    const searchUrl = `cryptophunks-search.html?query=${encodeURIComponent(value)}`;
+                    const searchUrl = `cryptophunks-search.html?trait_type=${encodeURIComponent(traitType)}&value=${encodeURIComponent(value)}`;
                     const row = document.createElement('tr');
                     row.innerHTML = `
                         <td class="attr-name"><a href="${searchUrl}">${value}</a></td>
@@ -310,6 +363,39 @@
                     `;
                     tbody.appendChild(row);
                 });
+            });
+
+            // Calculate attribute counts (how many phunks have 0, 1, 2, 3... attributes)
+            const attrCountGroups = {};
+            items.forEach(item => {
+                const attrs = item.attributes || [];
+                // Count non-Type and non-Species attributes
+                const nonTypeAttrs = attrs.filter(a => a.trait_type !== 'Type' && a.trait_type !== 'Species');
+                const count = nonTypeAttrs.length;
+                if (!attrCountGroups[count]) {
+                    attrCountGroups[count] = { count: 0, examples: [] };
+                }
+                attrCountGroups[count].count++;
+                if (attrCountGroups[count].examples.length < 8) {
+                    attrCountGroups[count].examples.push(item.index);
+                }
+            });
+
+            // Populate attribute counts table
+            const countsTbody = document.getElementById('counts-tbody');
+            const sortedCounts = Object.keys(attrCountGroups).map(Number).sort((a, b) => a - b);
+            sortedCounts.forEach(numAttrs => {
+                const data = attrCountGroups[numAttrs];
+                const examplesHtml = createPhunkBoxes(data.examples);
+                const label = numAttrs === 1 ? '1 Attribute' : `${numAttrs} Attributes`;
+                const searchUrl = `cryptophunks-search.html?attrcount=${numAttrs}`;
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td class="attr-name"><a href="${searchUrl}">${label}</a></td>
+                    <td class="attr-count">${data.count}</td>
+                    <td class="examples-cell">${examplesHtml}</td>
+                `;
+                countsTbody.appendChild(row);
             });
         })
         .catch(error => {

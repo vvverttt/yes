@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:bind="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv=X-UA-Compatible content="IE=11">
+    <link rel="shortcut icon" type="image/png" href="public/images/favicon.ico">
+    <title>DystoPhunkz: Search</title>
+    <meta name="description" content="Search DystoPhunkz" />
+    <link rel="stylesheet" href="public/components/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/components/bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="public/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="public/stylesheets/mainf500.css?v=13" charset="utf-8" >
+    <link rel="stylesheet" type="text/css" href="public/stylesheets/stylesf500.css?v=13" charset="utf-8" >
+
+    <meta property="og:title" content="DystoPhunkz: Search" />
+    <meta property="og:description" content="Search DystoPhunkz" />
+
+    <script src="public/components/jquery-2.2.4.min.js"></script>
+    <script src="public/components/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<header class="container main_header">
+    <div class="row">
+        <div class="col-lg-3 col-xs-2">
+            <a href="index.html" class="logo ">
+            <svg viewBox="0 0 16 26" y="0" x="0"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-logo"></use></svg>
+            <span class="hidden-xs hidden-sm">DystoLabz</span>
+            </a>
+        </div>
+        <div class="col-lg-9 col-xs-10">
+            <nav class="main_navigation">
+                <ul class="list main_nav_list">
+                    <li class="jsNavShow"><a class="active" href="projectlist.html">Projects</a></li>
+                    <li class="jsNavShow"><a class="" href="bloglist.html">Writing</a></li>
+                    <li class="jsNavShow"><a class="" href="about.html">About</a></li>
+                    <li class="jsNavShow"><a href="https://x.com/DystoLabz" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<div class="container" style="margin-top: 30px;">
+    <div class="row">
+        <div class="col-md-12">
+            <!-- Breadcrumb navigation with box -->
+            <div class="breadcrumb-box">
+                <a href="DystoPhunkz.html" class="breadcrumb-link">DystoPhunkz</a>
+                <span class="breadcrumb-separator"> / </span>
+                <a href="DystoPhunkz-attributes.html" class="breadcrumb-link">Attributes</a>
+                <span class="breadcrumb-separator"> / </span>
+                <span class="breadcrumb-current" id="query-display">"Loading..."</span>
+            </div>
+            <!-- Results count -->
+            <h1 class="main-title"><span id="results-count">0</span> Phunks Found</h1>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="phunks-grid" class="phunks-grid"></div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .breadcrumb-box {
+        display: block;
+        width: 100%;
+        background-color: #f5f5f5;
+        border: none;
+        padding: 8px 15px;
+        font-family: 'Montserrat', arial, helvetica, sans-serif;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .breadcrumb-link {
+        color: #B3BF44;
+        text-decoration: none;
+        font-weight: 700;
+    }
+    .breadcrumb-link:hover {
+        text-decoration: underline;
+    }
+    .breadcrumb-separator {
+        color: #666;
+    }
+    .breadcrumb-current {
+        color: #333;
+    }
+    .main-title {
+        font-family: 'Montserrat', arial, helvetica, sans-serif;
+        font-size: 45px;
+        font-weight: 700;
+        color: #333;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    .phunks-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0;
+        font-size: 0;
+    }
+    .phunk-box {
+        width: 90px;
+        height: 104px;
+        margin: 0;
+        padding: 0;
+        background-color: white;
+        cursor: pointer;
+        position: relative;
+        text-align: center;
+        border: none;
+        box-sizing: border-box;
+        display: block;
+        text-decoration: none;
+    }
+    .phunk-box img {
+        width: 90px;
+        height: 90px;
+        image-rendering: pixelated;
+        display: block;
+        margin: 0;
+        padding: 0;
+        background-color: #c3ff00;
+    }
+    .phunk-box:hover {
+        opacity: 0.8;
+        transform: scale(1.05);
+        z-index: 10;
+    }
+    .phunk-number {
+        font-family: 'Montserrat', arial, helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        color: #000;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        background-color: white;
+        line-height: 12px;
+        padding: 1px 0;
+    }
+    .phunk-box:hover {
+        opacity: 0.8;
+        cursor: pointer;
+    }
+</style>
+
+<script>
+    // Get query parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const query = urlParams.get('query') || '';
+    const attrCount = urlParams.get('attrcount');
+    const traitType = urlParams.get('trait_type');
+    const traitValue = urlParams.get('value');
+
+    // Set display text based on search type
+    if (attrCount !== null) {
+        const label = attrCount === '1' ? '1 Attribute' : `${attrCount} Attributes`;
+        document.getElementById('query-display').textContent = `"${label}"`;
+        document.title = `DystoPhunkz: ${label}`;
+    } else if (traitType && traitValue) {
+        document.getElementById('query-display').textContent = `"${traitType}: ${traitValue}"`;
+        document.title = `DystoPhunkz: ${traitType}: ${traitValue}`;
+    } else {
+        document.getElementById('query-display').textContent = `"${query}"`;
+        document.title = `DystoPhunkz: ${query}`;
+    }
+
+    // Load JSON and find matching phunks
+    fetch('images/dysto-phunks.json?v=' + Date.now())
+        .then(response => response.json())
+        .then(data => {
+            const items = data.collection_items || [];
+            const matchingPhunks = [];
+            const queryLower = query.toLowerCase();
+
+            items.forEach(item => {
+                const attrs = item.attributes || [];
+
+                if (attrCount !== null) {
+                    // Search by attribute count (excluding Sex)
+                    const nonSexAttrs = attrs.filter(a => a.trait_type !== 'Sex');
+                    if (nonSexAttrs.length === parseInt(attrCount)) {
+                        matchingPhunks.push(item.index);
+                    }
+                } else if (traitType && traitValue) {
+                    // Search by specific trait type and value
+                    const hasMatch = attrs.some(attr => {
+                        return attr.trait_type === traitType && 
+                               attr.value && 
+                               attr.value.toLowerCase() === traitValue.toLowerCase();
+                    });
+                    
+                    if (hasMatch) {
+                        matchingPhunks.push(item.index);
+                    }
+                } else {
+                    // Search by attribute value - exact match across all trait types (backward compatibility)
+                    const queryLower = query.toLowerCase();
+                    const hasMatch = attrs.some(attr => {
+                        return attr.value && 
+                               attr.value.toLowerCase() === queryLower;
+                    });
+                    
+                    if (hasMatch) {
+                        matchingPhunks.push(item.index);
+                    }
+                }
+            });
+
+            document.getElementById('results-count').textContent = matchingPhunks.length;
+
+            const grid = document.getElementById('phunks-grid');
+            matchingPhunks.forEach(idx => {
+                const box = document.createElement('a');
+                box.className = 'phunk-box';
+                box.href = `DystoPhunkz-details.html?id=${idx}`;
+                
+                const img = document.createElement('img');
+                img.src = `images/DystoPhunkz/${idx}_DystoPhunk_${idx}.png`;
+                img.alt = `DystoPhunk ${idx}`;
+                
+                const numberDiv = document.createElement('div');
+                numberDiv.className = 'phunk-number';
+                numberDiv.textContent = `#${idx}`;
+                
+                box.appendChild(img);
+                box.appendChild(numberDiv);
+                grid.appendChild(box);
+            });
+        })
+        .catch(error => {
+            console.error('Error loading JSON:', error);
+        });
+</script>
+
+<footer class="main_footer">
+    <div class="container">
+        <div class="col-md-6 col-sm-6 col-xs-12 pull-right">
+            <ul class="list footer_nav_list">
+                <li class="jsNavShow"><a class="active" href="projectlist.html">Projects</a></li>
+                <li class="jsNavShow"><a class="" href="bloglist.html">Writing</a></li>
+                <li class="jsNavShow"><a class="" href="about.html">About</a></li>
+                <li class="jsNavShow"><a href="https://x.com/DystoLabz" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<svg hidden>
+    <defs>
+        <g id="icon-logo">
+            <path d="M0,3.5 C0,1.56700338 1.57093664,0 3.5,0 C5.43299662,0 7,1.57093664 7 3.5 C7,5.43299662 5.42906336,7 3.5,7 C1.56700338,7 0,5.42906336 0,3.5 Z M0,13.5 C0,11.5670034 1.57093664,10 3.5,10 C5.43299662,10 7,11.5709366 7,13.5 C7,15.4329966 5.42906336,17 3.5,17 C1.56700338,17 0,15.4290634 0,13.5 Z M0,22.5 C0,20.5670034 1.57093664,19 3.5,19 C5.43299662,19 7,20.5709366 7,22.5 C7,24.4329966 5.42906336,26 3.5,26 C1.56700338,26 0,24.4290634 0,22.5 Z M12,4 C12,2.8954305 12.8877296,2 14,2 C15.1045695,2 16,2.88772964 16,4 C16,5.1045695 15.1122704,6 14,6 C12.8954305,6 12,5.11227036 12,4 Z M12,14 C12,12.8954305 12.8877296,12 14,12 C15.1045695,12 16,12.8877296 16,14 C16,15.1045695 15.1122704,16 14,16 C12.8954305,16 12,15.1122704 12,14 Z M12,23 C12,21.8954305 12.8877296,21 14,21 C15.1045695,21 16,21.8877296 16,23 C16,24.1045695 15.1122704,25 14,25 C12.8954305,25 12,24.1122704 12,23 Z" id="logo"></path>
+        </g>
+    </defs>
+</svg>
+
+<script src="public/javascripts/script.js"></script>
+
+</body>
+</html>

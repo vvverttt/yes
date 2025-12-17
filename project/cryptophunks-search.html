@@ -71,9 +71,10 @@
 
 <style>
     .breadcrumb-box {
-        display: inline-block;
+        display: block;
+        width: 100%;
         background-color: #f5f5f5;
-        border: 1px solid #e0e0e0;
+        border: none;
         padding: 8px 15px;
         font-family: 'Montserrat', arial, helvetica, sans-serif;
         font-size: 16px;
@@ -108,18 +109,46 @@
         font-size: 0;
     }
     .phunk-box {
-        display: inline-block;
-        width: 48px;
-        height: 48px;
-        background-color: #c3ff00;
+        width: 90px;
+        height: 104px;
         margin: 0;
         padding: 0;
+        background-color: white;
+        cursor: pointer;
+        position: relative;
+        text-align: center;
+        border: none;
+        box-sizing: border-box;
+        display: block;
+        text-decoration: none;
     }
     .phunk-box img {
-        width: 48px;
-        height: 48px;
+        width: 90px;
+        height: 90px;
         image-rendering: pixelated;
         display: block;
+        margin: 0;
+        padding: 0;
+        background-color: #c3ff00;
+    }
+    .phunk-box:hover {
+        opacity: 0.8;
+        transform: scale(1.05);
+        z-index: 10;
+    }
+    .phunk-number {
+        font-family: 'Montserrat', arial, helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        color: #000;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        background-color: white;
+        line-height: 12px;
+        padding: 1px 0;
     }
     .phunk-box:hover {
         opacity: 0.8;
@@ -128,37 +157,86 @@
 </style>
 
 <script>
-    // Get query parameter
+    // Get query parameters
     const urlParams = new URLSearchParams(window.location.search);
     const query = urlParams.get('query') || '';
-    
-    document.getElementById('query-display').textContent = `"${query}"`;
-    document.title = `CryptoPhunksV69: ${query}`;
-    
+    const attrCount = urlParams.get('attrcount');
+    const traitType = urlParams.get('trait_type');
+    const traitValue = urlParams.get('value');
+
+    // Set display text based on search type
+    if (attrCount !== null) {
+        const label = attrCount === '1' ? '1 Attribute' : `${attrCount} Attributes`;
+        document.getElementById('query-display').textContent = `"${label}"`;
+        document.title = `CryptoPhunksV69: ${label}`;
+    } else if (traitType && traitValue) {
+        document.getElementById('query-display').textContent = `"${traitType}: ${traitValue}"`;
+        document.title = `CryptoPhunksV69: ${traitType}: ${traitValue}`;
+    } else {
+        document.getElementById('query-display').textContent = `"${query}"`;
+        document.title = `CryptoPhunksV69: ${query}`;
+    }
+
     // Load JSON and find matching phunks
-    fetch('../cryptophunks-v69-merged (1) (1).json')
+    fetch('../cryptophunks-v69-merged (1) (1).json?v=' + Date.now())
         .then(response => response.json())
         .then(data => {
             const items = data.collection_items || [];
             const matchingPhunks = [];
-            
+            const queryLower = query.toLowerCase();
+
             items.forEach(item => {
                 const attrs = item.attributes || [];
-                const hasMatch = attrs.some(attr => 
-                    attr.value && attr.value.toLowerCase() === query.toLowerCase()
-                );
-                if (hasMatch) {
-                    matchingPhunks.push(item.index);
+
+                if (attrCount !== null) {
+                    // Search by attribute count (excluding Type and Species)
+                    const nonTypeAttrs = attrs.filter(a => a.trait_type !== 'Type' && a.trait_type !== 'Species');
+                    if (nonTypeAttrs.length === parseInt(attrCount)) {
+                        matchingPhunks.push(item.index);
+                    }
+                } else if (traitType && traitValue) {
+                    // Search by specific trait type and value
+                    const hasMatch = attrs.some(attr => {
+                        return attr.trait_type === traitType && 
+                               attr.value && 
+                               attr.value.toLowerCase() === traitValue.toLowerCase();
+                    });
+                    
+                    if (hasMatch) {
+                        matchingPhunks.push(item.index);
+                    }
+                } else {
+                    // Search by attribute value - exact match across all trait types (backward compatibility)
+                    const queryLower = query.toLowerCase();
+                    const hasMatch = attrs.some(attr => {
+                        return attr.value && 
+                               attr.value.toLowerCase() === queryLower;
+                    });
+                    
+                    if (hasMatch) {
+                        matchingPhunks.push(item.index);
+                    }
                 }
             });
-            
+
             document.getElementById('results-count').textContent = matchingPhunks.length;
-            
+
             const grid = document.getElementById('phunks-grid');
             matchingPhunks.forEach(idx => {
-                const box = document.createElement('span');
+                const box = document.createElement('a');
                 box.className = 'phunk-box';
-                box.innerHTML = `<img src="../images/phunks/${idx}.png" alt="Phunk ${idx}" title="Phunk #${idx}" onerror="this.src='../images/images_24x24/${idx}.png'">`;
+                box.href = `cryptophunks-details.html?id=${idx}`;
+                
+                const img = document.createElement('img');
+                img.src = `../images/images_24x24/${idx}.png`;
+                img.alt = `Phunk ${idx}`;
+                
+                const numberDiv = document.createElement('div');
+                numberDiv.className = 'phunk-number';
+                numberDiv.textContent = `#${idx}`;
+                
+                box.appendChild(img);
+                box.appendChild(numberDiv);
                 grid.appendChild(box);
             });
         })
