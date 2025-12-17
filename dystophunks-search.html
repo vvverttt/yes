@@ -49,9 +49,9 @@
         <div class="col-md-12">
             <!-- Breadcrumb navigation with box -->
             <div class="breadcrumb-box">
-                <a href="DystoPhunkz.html" class="breadcrumb-link">DystoPhunkz</a>
+                <a href="dystophunks-all-fixed.html" class="breadcrumb-link">DystoPhunkz</a>
                 <span class="breadcrumb-separator"> / </span>
-                <a href="DystoPhunkz-attributes.html" class="breadcrumb-link">Attributes</a>
+                <a href="dystophunks-attributes.html" class="breadcrumb-link">Attributes</a>
                 <span class="breadcrumb-separator"> / </span>
                 <span class="breadcrumb-current" id="query-display">"Loading..."</span>
             </div>
@@ -225,10 +225,9 @@
             matchingPhunks.forEach(idx => {
                 const box = document.createElement('a');
                 box.className = 'phunk-box';
-                box.href = `DystoPhunkz-details.html?id=${idx}`;
-                
+                box.href = `dystophunks-details.html?id=${idx}`;
                 const img = document.createElement('img');
-                img.src = `images/DystoPhunkz/${idx}_DystoPhunk_${idx}.png`;
+                img.src = `images/dystophunks/${idx}_DystoPhunk_${idx}.png`;
                 img.alt = `DystoPhunk ${idx}`;
                 
                 const numberDiv = document.createElement('div');

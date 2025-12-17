@@ -49,7 +49,7 @@
         <div class="col-md-11 col-xs-12">
             <!-- Breadcrumb navigation with box -->
             <div class="breadcrumb-box">
-                <a href="DystoPhunkz.html" class="breadcrumb-link">DystoPhunkz</a>
+                <a href="dystophunks-all-fixed.html" class="breadcrumb-link">DystoPhunkz</a>
                 <span class="breadcrumb-separator"> / </span>
                 <span class="breadcrumb-current">Types and Attributes</span>
             </div>
@@ -279,7 +279,7 @@
             sortedTypes.forEach(([type, count]) => {
                 const examples = typeExamples[type] || [];
                 const examplesHtml = createPhunkBoxes(examples.slice(0, 8));
-                const searchUrl = `DystoPhunkz-search.html?trait_type=Sex&value=${encodeURIComponent(type)}`;
+                const searchUrl = `dystophunks-search.html?trait_type=Sex&value=${encodeURIComponent(type)}`;
 
                 const row = document.createElement('tr');
                 row.innerHTML = `
@@ -338,7 +338,7 @@
                 const tbody = section.querySelector('tbody');
                 sortedTraits.forEach(([value, data]) => {
                     const examplesHtml = createPhunkBoxes(data.examples.slice(0, 8));
-                    const searchUrl = `DystoPhunkz-search.html?trait_type=${encodeURIComponent(traitType)}&value=${encodeURIComponent(value)}`;
+                    const searchUrl = `dystophunks-search.html?trait_type=${encodeURIComponent(traitType)}&value=${encodeURIComponent(value)}`;
                     const row = document.createElement('tr');
                     row.innerHTML = `
                         <td class="attr-name"><a href="${searchUrl}">${value}</a></td>
@@ -372,7 +372,7 @@
                 const data = attrCountGroups[numAttrs];
                 const examplesHtml = createPhunkBoxes(data.examples);
                 const label = numAttrs === 1 ? '1 Attribute' : `${numAttrs} Attributes`;
-                const searchUrl = `DystoPhunkz-search.html?attrcount=${numAttrs}`;
+                const searchUrl = `dystophunks-search.html?attrcount=${numAttrs}`;
                 const row = document.createElement('tr');
                 row.innerHTML = `
                     <td class="attr-name"><a href="${searchUrl}">${label}</a></td>
