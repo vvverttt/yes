@@ -207,7 +207,7 @@
 
     // Set phunk image first
     const phunkImg = document.getElementById('phunk-image');
-    phunkImg.src = `images/DystoPhunkz/${phunkId}_DystoPhunk_${phunkId}.png`;
+    phunkImg.src = `images/dystophunks/${phunkId}_DystoPhunk_${phunkId}.png`;
     phunkImg.alt = `DystoPhunk ${phunkId}`;
     phunkImg.onerror = function() { this.src = `images/placeholder.png`; };
 
@@ -252,13 +252,13 @@
                 // Set description like CryptoPunks: "one of 9 Alien Punks." with type as green link
                 if (sex) {
                     const descEl = document.getElementById('phunk-description');
-                    descEl.innerHTML = `<strong style="color: black;">one of ${sexCount} <a href="DystoPhunkz-search.html?trait_type=Sex&value=${encodeURIComponent(sex.value)}" class="type-link">${sex.value}</a> Phunks.</strong>`;
+                    descEl.innerHTML = `<strong style="color: black;">one of ${sexCount} <a href="dystophunks-search.html?trait_type=Sex&value=${encodeURIComponent(sex.value)}" class="type-link">${sex.value}</a> Phunks.</strong>`;
                 }
 
                 // Set attribute count text like CryptoPunks: "This Punk has 1 attribute, one of 333 with that many."
                 const attrWord = attrCount === 1 ? 'attribute' : 'attributes';
                 document.getElementById('attribute-count-text').innerHTML =
-                    `This Phunk has <a href="DystoPhunkz-search.html?attrcount=${attrCount}" class="count-highlight">${attrCount} ${attrWord}</a>, one of ${attrCountMatch} with that many.`;
+                    `This Phunk has <a href="dystophunks-search.html?attrcount=${attrCount}" class="count-highlight">${attrCount} ${attrWord}</a>, one of ${attrCountMatch} with that many.`;
 
                 // Count occurrences of each attribute (including Sex for display counts)
                 const attrCounts = {};
@@ -275,7 +275,7 @@
                     const item = document.createElement('div');
                     item.className = 'attribute-item';
                     item.innerHTML = `
-                        <a href="DystoPhunkz-search.html?trait_type=${encodeURIComponent(attr.trait_type)}&value=${encodeURIComponent(attr.value)}" class="attribute-name">${attr.value}</a>
+                        <a href="dystophunks-search.html?trait_type=${encodeURIComponent(attr.trait_type)}&value=${encodeURIComponent(attr.value)}" class="attribute-name">${attr.value}</a>
                         <span class="attribute-count-info"><strong>${count}</strong> Phunks have this.</span>
                     `;
                     attrList.appendChild(item);
