@@ -1,9 +1,9 @@
 {
-  "name": "QuantumPhunks",
+  "name": "Quantum Phunks",
   "logo_image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAFBlWElmTU0AKgAAAAgAAgESAAMAAAABAAEAAIdpAAQAAAABAAAAJgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAGKADAAQAAAABAAAAGAAAAADw6FuzAAABKElEQVRIDe2VvQ0CMQyFmYGfhgGYAHoY4qagpmQCqJBYgZqSDRASoocNmCLcQ3F4sZzchZ+OSFainPM+2/HddTr/UVKBw7LrSvyLfRsAgGsrY2QAbn2cRrbYTQTWHnJe9a0SRcIMKoYYgKS4gIogPwfctgNdou9moAHz8cU12ay3aX/Z9/0wygDiqDGMQbwnAMx+ne4qC+Dqgf5ngN7TkCTIArBwai0ABOLNzkID4CztmJtRMncdPcWrqkpDCPB0yonyM7kTBJQF+C4KTixirTlDQN4G4KBlDG0F8G9y6ww+BnAJWIzXErmUJ3sH9C0KWTRBBABhMV/OelJD/Q8iSO0a3YNk4U6v9sxGD5YCYCtERYdDC0NcZ4AzOGgOAwC/EDlDII4smgAPSzNOcQI/U8wAAAAASUVORK5CYII=",
   "banner_image": null,
   "total_supply": 4445,
-  "slug": "quantumphunks",
+  "slug": "quantum-phunks",
   "description": "Ethscription-crafted digital artifacts",
   "website_url": null,
   "twitter_url": "https://x.com/null",
@@ -594,11 +594,15 @@
       "attributes": [
         {
           "trait_type": "Species",
-          "value": "Utrom"
+          "value": "Utromian"
         },
         {
           "trait_type": "Type",
           "value": "Male"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
         },
         {
           "trait_type": "Character",
@@ -700,7 +704,7 @@
       "description": "",
       "attributes": [
         {
-          "trait_type": "Type",
+          "trait_type": "Species",
           "value": "Zerethian"
         },
         {
@@ -718,6 +722,10 @@
         {
           "trait_type": "Special",
           "value": "Character"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
         }
       ]
     },
@@ -1226,7 +1234,7 @@
           "value": "Turtle"
         },
         {
-          "trait_type": "Type",
+          "trait_type": "Species",
           "value": "Xenomorph"
         },
         {
@@ -1240,6 +1248,10 @@
         {
           "trait_type": "Character",
           "value": "XX121"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
         }
       ]
     },
@@ -2156,6 +2168,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Guardian"
         }
       ]
     },
@@ -2295,6 +2311,14 @@
         {
           "trait_type": "Special",
           "value": "Character"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Titanian Eternal"
         }
       ]
     },
@@ -2351,6 +2375,10 @@
           "value": "Male"
         },
         {
+          "trait_type": "Species",
+          "value": "Mystery"
+        },
+        {
           "trait_type": "Character",
           "value": "Yoda"
         },
@@ -2361,6 +2389,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
         }
       ]
     },
@@ -2806,8 +2838,8 @@
           "value": "Character"
         },
         {
-          "trait_type": "Special",
-          "value": "One of One"
+          "trait_type": "Species",
+          "value": "Amazonian"
         }
       ]
     },
@@ -2963,12 +2995,16 @@
           "value": "Male"
         },
         {
+          "trait_type": "Species",
+          "value": "Zabrak"
+        },
+        {
           "trait_type": "Skin Tone",
           "value": "2003 Leonardo"
         },
         {
           "trait_type": "Character",
-          "value": "Star Wars Dart Maul"
+          "value": "Star Wars Darth Maul"
         },
         {
           "trait_type": "Special",
@@ -2977,6 +3013,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
         }
       ]
     },
@@ -3293,6 +3333,14 @@
         {
           "trait_type": "Special",
           "value": "Character"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Titanian Eternal"
         }
       ]
     },
@@ -4115,6 +4163,14 @@
         {
           "trait_type": "Special",
           "value": "Character"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Titanian Eternal"
         }
       ]
     },
@@ -4253,6 +4309,10 @@
           "value": "Male"
         },
         {
+          "trait_type": "Species",
+          "value": "Megamindian"
+        },
+        {
           "trait_type": "Special",
           "value": "Character"
         },
@@ -4263,6 +4323,10 @@
         {
           "trait_type": "Character",
           "value": "Megamind"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
         }
       ]
     },
@@ -4279,11 +4343,7 @@
         },
         {
           "trait_type": "Type",
-          "value": "Male"
-        },
-        {
-          "trait_type": "Skin Tone",
-          "value": "2021 Donatello"
+          "value": "Robot"
         },
         {
           "trait_type": "Character",
@@ -4406,11 +4466,7 @@
         },
         {
           "trait_type": "Type",
-          "value": "Male"
-        },
-        {
-          "trait_type": "Skin Tone",
-          "value": "2021 Raphael"
+          "value": "Robot"
         },
         {
           "trait_type": "Character",
@@ -5473,7 +5529,7 @@
       "description": "",
       "attributes": [
         {
-          "trait_type": "Type",
+          "trait_type": "Species",
           "value": "Zerethian"
         },
         {
@@ -5483,6 +5539,10 @@
         {
           "trait_type": "Species",
           "value": "Turtle"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
         }
       ]
     },
@@ -5512,6 +5572,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Gorgon"
         }
       ]
     },
@@ -5697,6 +5761,14 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Zehoberei"
         }
       ]
     },
@@ -6015,8 +6087,8 @@
           "value": "Messy Hair Neon"
         },
         {
-          "trait_type": "Variant",
-          "value": "Android"
+          "trait_type": "Type",
+          "value": "Cyborg"
         },
         {
           "trait_type": "Nose",
@@ -7373,6 +7445,14 @@
         {
           "trait_type": "Special",
           "value": "Character"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Titanian Eternal"
         }
       ]
     },
@@ -7499,7 +7579,7 @@
       "description": "",
       "attributes": [
         {
-          "trait_type": "Type",
+          "trait_type": "Species",
           "value": "Zerethian"
         },
         {
@@ -7513,6 +7593,10 @@
         {
           "trait_type": "Species",
           "value": "Turtle"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
         }
       ]
     },
@@ -7542,6 +7626,14 @@
         {
           "trait_type": "Character",
           "value": "Spongebob King Neptune"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Mythic"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Merman"
         }
       ]
     },
@@ -8186,6 +8278,14 @@
         {
           "trait_type": "Special",
           "value": "Character"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Titanian Eternal"
         }
       ]
     },
@@ -9112,6 +9212,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Nabooian"
         }
       ]
     },
@@ -9470,6 +9574,14 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Unknown"
         }
       ]
     },
@@ -9567,7 +9679,7 @@
       "description": "",
       "attributes": [
         {
-          "trait_type": "Type",
+          "trait_type": "Species",
           "value": "Zerethian"
         },
         {
@@ -9593,6 +9705,10 @@
         {
           "trait_type": "Species",
           "value": "Turtle"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
         }
       ]
     },
@@ -10118,7 +10234,7 @@
       "description": "",
       "attributes": [
         {
-          "trait_type": "Type",
+          "trait_type": "Species",
           "value": "Zerethian"
         },
         {
@@ -10136,6 +10252,10 @@
         {
           "trait_type": "Species",
           "value": "Turtle"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
         }
       ]
     },
@@ -11265,6 +11385,14 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Unknown"
         }
       ]
     },
@@ -11305,7 +11433,7 @@
       "description": "",
       "attributes": [
         {
-          "trait_type": "Type",
+          "trait_type": "Species",
           "value": "Zerethian"
         },
         {
@@ -11327,6 +11455,10 @@
         {
           "trait_type": "Species",
           "value": "Turtle"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
         }
       ]
     },
@@ -11736,7 +11868,7 @@
       "description": "",
       "attributes": [
         {
-          "trait_type": "Type",
+          "trait_type": "Species",
           "value": "Zerethian"
         },
         {
@@ -11758,6 +11890,10 @@
         {
           "trait_type": "Species",
           "value": "Turtle"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
         }
       ]
     },
@@ -12176,7 +12312,7 @@
       "description": "",
       "attributes": [
         {
-          "trait_type": "Type",
+          "trait_type": "Species",
           "value": "Zerethian"
         },
         {
@@ -12194,6 +12330,10 @@
         {
           "trait_type": "Species",
           "value": "Turtle"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
         }
       ]
     },
@@ -12691,6 +12831,14 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Unknown"
         }
       ]
     },
@@ -12702,7 +12850,7 @@
       "description": "",
       "attributes": [
         {
-          "trait_type": "Type",
+          "trait_type": "Species",
           "value": "Zerethian"
         },
         {
@@ -12736,6 +12884,10 @@
         {
           "trait_type": "Species",
           "value": "Turtle"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
         }
       ]
     },
@@ -12962,6 +13114,14 @@
         {
           "trait_type": "Character",
           "value": "E. Aster Bunnymund"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Guardian"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Bunny"
         }
       ]
     },
@@ -13462,7 +13622,7 @@
       "description": "",
       "attributes": [
         {
-          "trait_type": "Type",
+          "trait_type": "Species",
           "value": "Zerethian"
         },
         {
@@ -13480,6 +13640,10 @@
         {
           "trait_type": "Species",
           "value": "Turtle"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
         }
       ]
     },
@@ -14497,7 +14661,7 @@
           "value": "Turtle"
         },
         {
-          "trait_type": "Type",
+          "trait_type": "Species",
           "value": "Yautja"
         },
         {
@@ -14511,6 +14675,10 @@
         {
           "trait_type": "Character",
           "value": "Jungle Hunter"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
         }
       ]
     },
@@ -15409,6 +15577,10 @@
           "value": "Male"
         },
         {
+          "trait_type": "Type",
+          "value": "Cyborg"
+        },
+        {
           "trait_type": "Skin Tone",
           "value": "Og Promo Giorgione"
         },
@@ -15452,6 +15624,14 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Unknown"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Guardian"
         }
       ]
     },
@@ -15911,6 +16091,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Schtroumpffus Amicabilis"
         }
       ]
     },
@@ -16610,6 +16794,14 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Mythic"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Asgardian"
         }
       ]
     },
@@ -18570,6 +18762,14 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Mythic"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Olympian"
         }
       ]
     },
@@ -19667,10 +19867,6 @@
         {
           "trait_type": "Special",
           "value": "Character"
-        },
-        {
-          "trait_type": "Special",
-          "value": "One of One"
         }
       ]
     },
@@ -20004,6 +20200,14 @@
         {
           "trait_type": "Special",
           "value": "Character"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Titanian Eternal"
         }
       ]
     },
@@ -21145,6 +21349,18 @@
         {
           "trait_type": "Special",
           "value": "OG Aug 2021"
+        },
+        {
+          "trait_type": "Character",
+          "value": "Donatello"
+        },
+        {
+          "trait_type": "Special",
+          "value": "Character"
+        },
+        {
+          "trait_type": "Special",
+          "value": "One of One"
         }
       ]
     },
@@ -22029,6 +22245,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Gum People"
         }
       ]
     },
@@ -22238,6 +22458,14 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Mythic"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Demigod"
         }
       ]
     },
@@ -22954,11 +23182,7 @@
         },
         {
           "trait_type": "Type",
-          "value": "Male"
-        },
-        {
-          "trait_type": "Skin Tone",
-          "value": "Og Promo Giorgione"
+          "value": "Robot"
         },
         {
           "trait_type": "Character",
@@ -23485,6 +23709,10 @@
         {
           "trait_type": "Special",
           "value": "Character"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Sproto Gremlin"
         }
       ]
     },
@@ -23555,6 +23783,14 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Mythic"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Demigod"
         }
       ]
     },
@@ -24426,6 +24662,18 @@
         {
           "trait_type": "Special",
           "value": "OG Aug 2021"
+        },
+        {
+          "trait_type": "Character",
+          "value": "Michaelangelo"
+        },
+        {
+          "trait_type": "Special",
+          "value": "Character"
+        },
+        {
+          "trait_type": "Special",
+          "value": "One of One"
         }
       ]
     },
@@ -25214,6 +25462,14 @@
         {
           "trait_type": "Special",
           "value": "Character"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Titanian Eternal"
         }
       ]
     },
@@ -25268,6 +25524,10 @@
         {
           "trait_type": "Type",
           "value": "Male"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cyborg"
         },
         {
           "trait_type": "Special",
@@ -27372,14 +27632,6 @@
           "value": "Turtle"
         },
         {
-          "trait_type": "Type",
-          "value": "Male"
-        },
-        {
-          "trait_type": "Skin Tone",
-          "value": "2021 Albrecht"
-        },
-        {
           "trait_type": "Character",
           "value": "Aot Bmo"
         },
@@ -27390,6 +27642,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Robot"
         }
       ]
     },
@@ -27649,6 +27905,14 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Centaurian"
         }
       ]
     },
@@ -27921,6 +28185,14 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Mythic"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Asgardian"
         }
       ]
     },
@@ -27969,7 +28241,7 @@
           "value": "Turtle"
         },
         {
-          "trait_type": "Type",
+          "trait_type": "Species",
           "value": "Zerethian"
         },
         {
@@ -27991,6 +28263,10 @@
         {
           "trait_type": "Special",
           "value": "Character"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
         }
       ]
     },
@@ -29121,6 +29397,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Gar"
         }
       ]
     },
@@ -29536,6 +29816,14 @@
         {
           "trait_type": "Special",
           "value": "Character"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Titanian Eternal"
         }
       ]
     },
@@ -31459,6 +31747,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Dog"
         }
       ]
     },
@@ -32023,6 +32315,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cyborg"
         }
       ]
     },
@@ -34862,6 +35158,14 @@
         {
           "trait_type": "Special",
           "value": "Character"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Titanian Eternal"
         }
       ]
     },
@@ -35002,6 +35306,14 @@
         {
           "trait_type": "Special",
           "value": "Character"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Titanian Eternal"
         }
       ]
     },
@@ -35068,6 +35380,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
         }
       ]
     },
@@ -36744,6 +37060,10 @@
         {
           "trait_type": "Type",
           "value": "Male"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Zombie"
         },
         {
           "trait_type": "Variant",
@@ -42033,6 +42353,18 @@
         {
           "trait_type": "Special",
           "value": "OG Aug 2021"
+        },
+        {
+          "trait_type": "Character",
+          "value": "Leonardo"
+        },
+        {
+          "trait_type": "Special",
+          "value": "Character"
+        },
+        {
+          "trait_type": "Special",
+          "value": "One of One"
         }
       ]
     },
@@ -50300,6 +50632,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Minionus Despicabilis"
         }
       ]
     },
@@ -50333,6 +50669,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Guardian"
         }
       ]
     },
@@ -51780,6 +52120,10 @@
         {
           "trait_type": "Special",
           "value": "Character"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
         }
       ]
     },
@@ -52109,6 +52453,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
         }
       ]
     },
@@ -54707,6 +55055,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Mermaid"
         }
       ]
     },
@@ -56548,6 +56900,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Zombie"
         }
       ]
     },
@@ -59310,6 +59666,10 @@
         {
           "trait_type": "Character",
           "value": "Karmen Rider Shocker"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cyborg"
         }
       ]
     },
@@ -59704,6 +60064,10 @@
         {
           "trait_type": "Character",
           "value": "Jack Frost"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Guardian"
         }
       ]
     },
@@ -59832,6 +60196,10 @@
         {
           "trait_type": "Character",
           "value": "Karmen Rider Spider"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cyborg"
         }
       ]
     },
@@ -60098,7 +60466,7 @@
           "value": "Turtle"
         },
         {
-          "trait_type": "Type",
+          "trait_type": "Species",
           "value": "Rigellian"
         },
         {
@@ -60112,6 +60480,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
         }
       ]
     },
@@ -60293,6 +60665,14 @@
         {
           "trait_type": "Character",
           "value": "Jack Skellington"
+        },
+        {
+          "trait_type": "Special",
+          "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Guardian"
         }
       ]
     },
@@ -61902,7 +62282,7 @@
         },
         {
           "trait_type": "Type",
-          "value": "Female"
+          "value": "Robot"
         },
         {
           "trait_type": "Special",
@@ -63394,7 +63774,7 @@
         },
         {
           "trait_type": "Skin Tone",
-          "value": "1987 Giorgione"
+          "value": "Og Promo Giorgione"
         },
         {
           "trait_type": "Character",
@@ -63411,6 +63791,14 @@
         {
           "trait_type": "Special",
           "value": "Animated"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Saiyan"
         }
       ]
     },
@@ -64568,6 +64956,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cyborg"
         }
       ]
     },
@@ -64613,6 +65005,14 @@
         {
           "trait_type": "Special",
           "value": "Character"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Titanian Eternal"
         }
       ]
     },
@@ -66027,6 +66427,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cyborg"
         }
       ]
     },
@@ -67774,6 +68178,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cyborg"
         }
       ]
     },
@@ -68435,6 +68843,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
         }
       ]
     },
@@ -68464,6 +68876,10 @@
         {
           "trait_type": "Character",
           "value": "Karmen Rider Shocker Red"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cyborg"
         }
       ]
     },
@@ -68530,6 +68946,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cyborg"
         }
       ]
     },
@@ -71252,6 +71672,10 @@
         {
           "trait_type": "Character",
           "value": "Chill Guy"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Dog"
         }
       ]
     },
@@ -73552,6 +73976,14 @@
         {
           "trait_type": "Special",
           "value": "Character"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Titanian Eternal"
         }
       ]
     },
@@ -74395,7 +74827,7 @@
       ]
     },
     {
-      "id": "0x4d932ffe0a4c11801c0985b8ad8145f50aca22c98e756db211eb54bd67dd11b6",
+      "id": "0xb59c988138022650d7f5a63037fc1816f67443c824b6c5cccb97c33c4af1808f",
       "index": 4524,
       "sha": "",
       "name": "QuantumPhunk 4524",
@@ -74411,15 +74843,19 @@
         },
         {
           "trait_type": "Skin Tone",
-          "value": "2021 Raphael"
+          "value": "Og Promo Leonardo"
         },
         {
-          "trait_type": "Eyes",
-          "value": "Classic Shades"
+          "trait_type": "Special",
+          "value": "One of One"
         },
         {
-          "trait_type": "Hair",
-          "value": "Mohawk Dark"
+          "trait_type": "Character",
+          "value": "Elon Musk"
+        },
+        {
+          "trait_type": "Special",
+          "value": "Character"
         }
       ]
     },
@@ -75140,6 +75576,14 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Titanian Eternal"
         }
       ]
     },
@@ -77041,6 +77485,10 @@
           "value": "Male"
         },
         {
+          "trait_type": "Species",
+          "value": "Namekian"
+        },
+        {
           "trait_type": "Skin Tone",
           "value": "Mirage Raphael"
         },
@@ -77055,6 +77503,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
         }
       ]
     },
@@ -78056,7 +78508,7 @@
           "value": "Turtle"
         },
         {
-          "trait_type": "Type",
+          "trait_type": "Species",
           "value": "Martian"
         },
         {
@@ -78074,6 +78526,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
         }
       ]
     },
@@ -78119,6 +78575,14 @@
         {
           "trait_type": "Special",
           "value": "Character"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Titanian Eternal"
         }
       ]
     },
@@ -79573,6 +80037,10 @@
         {
           "trait_type": "Character",
           "value": "Leprechaun"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Guardian"
         }
       ]
     },
@@ -81040,6 +81508,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cyborg"
         }
       ]
     },
@@ -81609,6 +82081,10 @@
           "value": "Male"
         },
         {
+          "trait_type": "Species",
+          "value": "Arcosian"
+        },
+        {
           "trait_type": "Skin Tone",
           "value": "Og Promo Raphael"
         },
@@ -81623,6 +82099,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
         }
       ]
     },
@@ -81864,14 +82344,6 @@
           "value": "Turtle"
         },
         {
-          "trait_type": "Type",
-          "value": "Male"
-        },
-        {
-          "trait_type": "Skin Tone",
-          "value": "Mirage Hans"
-        },
-        {
           "trait_type": "Character",
           "value": "Futurama Bender"
         },
@@ -81882,6 +82354,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Robot"
         }
       ]
     },
@@ -84589,6 +85065,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
         }
       ]
     },
@@ -87776,6 +88256,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
         }
       ]
     },
@@ -89489,6 +89973,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cyborg"
         }
       ]
     },
@@ -90869,6 +91357,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cyborg"
         }
       ]
     },
@@ -93704,6 +94196,14 @@
         {
           "trait_type": "Special",
           "value": "Character"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Titanian Eternal"
         }
       ]
     },
@@ -94226,6 +94726,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
         }
       ]
     },
@@ -94724,6 +95228,10 @@
         {
           "trait_type": "Special",
           "value": "Character"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Guardian"
         }
       ]
     },
@@ -95271,6 +95779,10 @@
         {
           "trait_type": "Special",
           "value": "Character"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Guardian"
         }
       ]
     },
@@ -95475,14 +95987,6 @@
           "value": "Turtle"
         },
         {
-          "trait_type": "Type",
-          "value": "Male"
-        },
-        {
-          "trait_type": "Skin Tone",
-          "value": "Mirage Filippo"
-        },
-        {
           "trait_type": "Character",
           "value": "Gundam Rx78"
         },
@@ -95493,6 +95997,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Robot"
         }
       ]
     },
@@ -96287,6 +96795,14 @@
         {
           "trait_type": "Special",
           "value": "Character"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Titanian Eternal"
         }
       ]
     },
@@ -99427,6 +99943,18 @@
         {
           "trait_type": "Special",
           "value": "OG Aug 2021"
+        },
+        {
+          "trait_type": "Character",
+          "value": "Raphael"
+        },
+        {
+          "trait_type": "Special",
+          "value": "Character"
+        },
+        {
+          "trait_type": "Special",
+          "value": "One of One"
         }
       ]
     },
@@ -101097,6 +101625,10 @@
         {
           "trait_type": "Character",
           "value": "Pundsutawney Phil"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Guardian"
         }
       ]
     },
@@ -101823,6 +102355,10 @@
           "value": "Male"
         },
         {
+          "trait_type": "Species",
+          "value": "Asogian"
+        },
+        {
           "trait_type": "Skin Tone",
           "value": "Og Promo Guido"
         },
@@ -101837,6 +102373,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
         }
       ]
     },
@@ -103059,6 +103599,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Guardian"
         }
       ]
     },
@@ -105809,6 +106353,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Guardian"
         }
       ]
     },
@@ -111747,6 +112295,10 @@
         {
           "trait_type": "Weapon",
           "value": "Quantum Edge Gold"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
         }
       ]
     },
@@ -114123,6 +114675,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cyborg"
         }
       ]
     },
@@ -115186,6 +115742,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Guardian"
         }
       ]
     },
@@ -115572,6 +116132,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
         }
       ]
     },
@@ -115967,6 +116531,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Guardian"
         }
       ]
     },
@@ -116119,6 +116687,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
         }
       ]
     },
@@ -117745,6 +118317,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Guardian"
         }
       ]
     },
@@ -118386,6 +118962,10 @@
         {
           "trait_type": "Special",
           "value": "Character"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
         }
       ]
     },
@@ -121005,6 +121585,10 @@
         {
           "trait_type": "Special",
           "value": "Animated"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
         }
       ]
     },
@@ -122247,6 +122831,14 @@
         {
           "trait_type": "Special",
           "value": "Character"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Titanian Eternal"
         }
       ]
     },
@@ -124583,6 +125175,14 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Zenn-Lavian"
         }
       ]
     },
@@ -129184,6 +129784,14 @@
         {
           "trait_type": "Special",
           "value": "Character"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Titanian Eternal"
         }
       ]
     },
@@ -132795,6 +133403,14 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Martian"
         }
       ]
     },
@@ -136321,6 +136937,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Guardian"
         }
       ]
     },
@@ -137620,7 +138240,7 @@
         },
         {
           "trait_type": "Type",
-          "value": "Male"
+          "value": "Robot"
         },
         {
           "trait_type": "Special",
@@ -138779,7 +139399,7 @@
           "value": "Turtle"
         },
         {
-          "trait_type": "Type",
+          "trait_type": "Species",
           "value": "Rigellian"
         },
         {
@@ -138813,6 +139433,10 @@
         {
           "trait_type": "Hands",
           "value": "Dual Flip"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
         }
       ]
     },
@@ -139928,6 +140552,14 @@
         {
           "trait_type": "Special",
           "value": "Character"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Titanian Eternal"
         }
       ]
     },
@@ -143566,6 +144198,14 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Mythic"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Mermaid"
         }
       ]
     },
@@ -155771,6 +156411,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Schtroumpffus Amicabilis"
         }
       ]
     },
@@ -155804,6 +156448,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Schtroumpffus Amicabilis"
         }
       ]
     },
@@ -160592,7 +161240,7 @@
         },
         {
           "trait_type": "Special",
-          "value": "MissingPhunk"
+          "value": "Missing Phunk"
         }
       ]
     },
@@ -160617,7 +161265,7 @@
         },
         {
           "trait_type": "Special",
-          "value": "MissingPhunk"
+          "value": "Missing Phunk"
         }
       ]
     },
@@ -160658,7 +161306,7 @@
         },
         {
           "trait_type": "Special",
-          "value": "MissingPhunk"
+          "value": "Missing Phunk"
         }
       ]
     },
@@ -160707,7 +161355,7 @@
         },
         {
           "trait_type": "Special",
-          "value": "MissingPhunk"
+          "value": "Missing Phunk"
         }
       ]
     },
@@ -160744,7 +161392,7 @@
         },
         {
           "trait_type": "Special",
-          "value": "MissingPhunk"
+          "value": "Missing Phunk"
         }
       ]
     },
@@ -160789,7 +161437,7 @@
         },
         {
           "trait_type": "Special",
-          "value": "MissingPhunk"
+          "value": "Missing Phunk"
         }
       ]
     },
@@ -160838,7 +161486,7 @@
         },
         {
           "trait_type": "Special",
-          "value": "MissingPhunk"
+          "value": "Missing Phunk"
         }
       ]
     },
@@ -160879,7 +161527,7 @@
         },
         {
           "trait_type": "Special",
-          "value": "MissingPhunk"
+          "value": "Missing Phunk"
         }
       ]
     },
@@ -160924,7 +161572,7 @@
         },
         {
           "trait_type": "Special",
-          "value": "MissingPhunk"
+          "value": "Missing Phunk"
         }
       ]
     },
@@ -160961,7 +161609,7 @@
         },
         {
           "trait_type": "Special",
-          "value": "MissingPhunk"
+          "value": "Missing Phunk"
         }
       ]
     },
@@ -161006,7 +161654,7 @@
         },
         {
           "trait_type": "Special",
-          "value": "MissingPhunk"
+          "value": "Missing Phunk"
         }
       ]
     },
@@ -161055,7 +161703,7 @@
         },
         {
           "trait_type": "Special",
-          "value": "MissingPhunk"
+          "value": "Missing Phunk"
         }
       ]
     },
@@ -161100,7 +161748,7 @@
         },
         {
           "trait_type": "Special",
-          "value": "MissingPhunk"
+          "value": "Missing Phunk"
         }
       ]
     },
@@ -161129,7 +161777,7 @@
         },
         {
           "trait_type": "Special",
-          "value": "MissingPhunk"
+          "value": "Missing Phunk"
         },
         {
           "trait_type": "Special",
@@ -161174,7 +161822,7 @@
         },
         {
           "trait_type": "Special",
-          "value": "MissingPhunk"
+          "value": "Missing Phunk"
         }
       ]
     },
@@ -161223,7 +161871,7 @@
         },
         {
           "trait_type": "Special",
-          "value": "MissingPhunk"
+          "value": "Missing Phunk"
         }
       ]
     },
@@ -161252,7 +161900,7 @@
         },
         {
           "trait_type": "Special",
-          "value": "MissingPhunk"
+          "value": "Missing Phunk"
         },
         {
           "trait_type": "Special",
@@ -161371,7 +162019,7 @@
       "description": "",
       "attributes": [
         {
-          "trait_type": "Type",
+          "trait_type": "Species",
           "value": "Zerethian"
         },
         {
@@ -161393,6 +162041,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
         }
       ]
     },
@@ -161742,7 +162394,11 @@
         },
         {
           "trait_type": "Species",
-          "value": "Utrom"
+          "value": "Utromian"
+        },
+        {
+          "trait_type": "Type",
+          "value": "Cosmic"
         }
       ]
     },
@@ -165114,7 +165770,7 @@
         },
         {
           "trait_type": "Special",
-          "value": "InfinityStone"
+          "value": "Infinity Stone"
         },
         {
           "trait_type": "Special",
@@ -165135,7 +165791,7 @@
         },
         {
           "trait_type": "Special",
-          "value": "InfinityStone"
+          "value": "Infinity Stone"
         },
         {
           "trait_type": "Special",
@@ -165156,7 +165812,7 @@
         },
         {
           "trait_type": "Special",
-          "value": "InfinityStone"
+          "value": "Infinity Stone"
         },
         {
           "trait_type": "Special",
@@ -165177,7 +165833,7 @@
         },
         {
           "trait_type": "Special",
-          "value": "InfinityStone"
+          "value": "Infinity Stone"
         },
         {
           "trait_type": "Special",
@@ -165198,7 +165854,7 @@
         },
         {
           "trait_type": "Special",
-          "value": "InfinityStone"
+          "value": "Infinity Stone"
         },
         {
           "trait_type": "Special",
@@ -165219,7 +165875,7 @@
         },
         {
           "trait_type": "Special",
-          "value": "InfinityStone"
+          "value": "Infinity Stone"
         },
         {
           "trait_type": "Special",

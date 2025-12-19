@@ -80,13 +80,10 @@
     </div>
 </div>
 
-<!-- Horizontal line between Types and Attributes -->
-<div class="container">
-    <div class="section-divider"></div>
-</div>
 
 <!-- Attributes Sections (separated by trait type) -->
 <div class="container" id="attributes-container">
+    
     <!-- Dynamically populated with sections for each trait type -->
 </div>
 
@@ -246,7 +243,7 @@
                         typeCounts[type] = (typeCounts[type] || 0) + 1;
                         if (!typeExamples[type]) typeExamples[type] = [];
                         if (typeExamples[type].length < 10) typeExamples[type].push(index);
-                    } else if (attr.trait_type !== 'Species') {
+                    } else {
                         const traitType = attr.trait_type;
                         const value = attr.value;
 
@@ -305,13 +302,14 @@
                 typesTbody.appendChild(row);
             });
 
-            // Define trait type order: Aura first, then Skin Tone, Variant, others, then Armor/Cheeks/Face/Hands/Lips/Nose/Teeth, then Weapon, Pet, Special, Species, Character. Attribute Count is separate section at bottom.
-            const traitTypeOrder = ['Aura', 'Skin Tone', 'Variant', 'Hair', 'Eyes', 'Eye Mask', 'Ears', 'Mouth', 'Beard', 'Neck', 'Emotion', 'Armor', 'Cheeks', 'Face', 'Hands', 'Lips', 'Nose', 'Teeth', 'Weapon', 'Pet', 'Special', 'Species', 'Character'];
+            // Define trait type order: Aura first, then Skin Tone, Variant, others, then Armor/Cheeks/Face/Hands/Lips/Nose/Teeth, then Weapon, Pet, Species, Special, Character, Infinity Stone. Attribute Count is separate section at bottom.
+            const traitTypeOrder = ['Aura', 'Skin Tone', 'Variant', 'Hair', 'Eyes', 'Eye Mask', 'Ears', 'Mouth', 'Beard', 'Neck', 'Emotion', 'Armor', 'Cheeks', 'Face', 'Hands', 'Lips', 'Nose', 'Teeth', 'Weapon', 'Pet', 'Species', 'Special', 'Character', 'Infinity Stone', 'Attributes'];
 
-            // Get all trait types from data and sort by defined order (include Species now)
-            const allTraitTypes = Object.keys(traitsByCategory).filter(t => t !== 'Type');
-            console.log('All trait types found:', allTraitTypes);
-            console.log('Trait order array:', traitTypeOrder);
+            // Get all trait types from data and ensure Species and Infinity Stone are always present in the order
+            let allTraitTypes = Object.keys(traitsByCategory).filter(t => t !== 'Type');
+            // Add 'Species' and 'Infinity Stone' if missing
+            if (!allTraitTypes.includes('Species')) allTraitTypes.push('Species');
+            if (!allTraitTypes.includes('Infinity Stone')) allTraitTypes.push('Infinity Stone');
             allTraitTypes.sort((a, b) => {
                 const aIdx = traitTypeOrder.indexOf(a);
                 const bIdx = traitTypeOrder.indexOf(b);
@@ -320,18 +318,16 @@
                 if (bIdx === -1) return -1; // Put unknown traits at end
                 return aIdx - bIdx;
             });
-            console.log('Sorted trait types:', allTraitTypes);
+            // Debug output removed
 
             // Create sections for each trait type
             const container = document.getElementById('attributes-container');
             allTraitTypes.forEach(traitType => {
-                const traits = traitsByCategory[traitType];
-                if (!traits) return;
-
+                const traits = traitsByCategory[traitType] || {};
                 // Sort traits by count (rarest first)
                 const sortedTraits = Object.entries(traits).sort((a, b) => a[1].count - b[1].count);
 
-                // Create section HTML
+                // Always create section HTML
                 const section = document.createElement('div');
                 section.className = 'row';
                 section.innerHTML = `
@@ -352,17 +348,23 @@
                 container.appendChild(section);
 
                 const tbody = section.querySelector('tbody');
-                sortedTraits.forEach(([value, data]) => {
-                    const examplesHtml = createPhunkBoxes(data.examples.slice(0, 8));
-                    const searchUrl = `cryptophunks-search.html?trait_type=${encodeURIComponent(traitType)}&value=${encodeURIComponent(value)}`;
+                if (sortedTraits.length === 0) {
                     const row = document.createElement('tr');
-                    row.innerHTML = `
-                        <td class="attr-name"><a href="${searchUrl}">${value}</a></td>
-                        <td class="attr-count">${data.count}</td>
-                        <td class="examples-cell">${examplesHtml}</td>
-                    `;
+                    row.innerHTML = `<td colspan="3" style="color:#aaa;font-style:italic">No attributes of this type.</td>`;
                     tbody.appendChild(row);
-                });
+                } else {
+                    sortedTraits.forEach(([value, data]) => {
+                        const examplesHtml = createPhunkBoxes(data.examples.slice(0, 8));
+                        const searchUrl = `cryptophunks-search.html?trait_type=${encodeURIComponent(traitType)}&value=${encodeURIComponent(value)}`;
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td class="attr-name"><a href="${searchUrl}">${value}</a></td>
+                            <td class="attr-count">${data.count}</td>
+                            <td class="examples-cell">${examplesHtml}</td>
+                        `;
+                        tbody.appendChild(row);
+                    });
+                }
             });
 
             // Calculate attribute counts (how many phunks have 0, 1, 2, 3... attributes)

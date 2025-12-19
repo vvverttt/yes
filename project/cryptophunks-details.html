@@ -113,6 +113,7 @@
         height: 336px;
         padding: 0;
         margin-bottom: 30px;
+        position: relative;
     }
     .phunk-detail-image {
         width: 300px;
@@ -137,36 +138,6 @@
         margin-top: -15px;
         margin-bottom: 30px;
     }
-    .type-link {
-        color: #B3BF44;
-        text-decoration: none;
-        font-weight: 700;
-    }
-    .type-link:hover {
-        text-decoration: underline;
-    }
-    /* Attributes section */
-    .attributes-section {
-        margin-top: 20px;
-    }
-    .section-title {
-        font-family: 'Montserrat', arial, helvetica, sans-serif;
-        font-size: 26px;
-        font-weight: 700;
-        color: #333;
-        margin-bottom: 15px;
-        border-bottom: none;
-        padding-bottom: 0;
-    }
-    .attribute-count-text {
-        font-family: 'Montserrat', arial, helvetica, sans-serif;
-        font-size: 18px;
-        color: #000;
-        margin-bottom: 20px;
-    }
-    .attribute-count-text .count-highlight {
-        color: #B3BF44;
-        font-weight: 700;
         text-decoration: none;
     }
     .attribute-count-text .count-highlight:hover {
@@ -201,6 +172,22 @@
 </style>
 
 <script>
+        // Toggle background color button logic
+        document.addEventListener('DOMContentLoaded', function() {
+            var btn = document.getElementById('toggle-bg-color');
+            var container = document.querySelector('.phunk-image-container');
+            var color1 = '#c3ff00';
+            var color2 = '#B3BF44';
+            if (btn && container) {
+                btn.addEventListener('click', function() {
+                    if (container.style.backgroundColor === color2) {
+                        container.style.backgroundColor = color1;
+                    } else {
+                        container.style.backgroundColor = color2;
+                    }
+                });
+            }
+        });
     // Get phunk ID from URL
     const urlParams = new URLSearchParams(window.location.search);
     const phunkId = urlParams.get('id') || '0';
@@ -271,6 +258,18 @@
                 // Populate attributes list - each on its own line like CryptoPunks
                 const attrList = document.getElementById('attributes-list');
                 attrs.forEach(attr => {
+                    // Custom order: Species before Infinity Stone
+                });
+                // Custom sort: Species before Infinity Stone, then others
+                const sortedAttrs = [...attrs];
+                sortedAttrs.sort((a, b) => {
+                    if (a.trait_type === 'Species') return -1;
+                    if (b.trait_type === 'Species') return 1;
+                    if (a.trait_type === 'Infinity Stone') return 1;
+                    if (b.trait_type === 'Infinity Stone') return -1;
+                    return 0;
+                });
+                sortedAttrs.forEach(attr => {
                     const count = attrCounts[attr.value] || 0;
                     const item = document.createElement('div');
                     item.className = 'attribute-item';
