@@ -327,7 +327,12 @@
                 // Sort traits by count (rarest first)
                 const sortedTraits = Object.entries(traits).sort((a, b) => a[1].count - b[1].count);
 
-                // Always create section HTML
+                // For Species, if empty, skip rendering the section entirely
+                if (traitType === 'Species' && sortedTraits.length === 0) {
+                    return;
+                }
+
+                // Always create section HTML for other cases
                 const section = document.createElement('div');
                 section.className = 'row';
                 section.innerHTML = `
