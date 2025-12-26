@@ -389,7 +389,7 @@
       ]
     },
     {
-      "id": "0xd9aaa33464571b7bfb31044c6d7ac74cde680bb4df82d3cec1ab8ad9dd800704",
+      "id": "0xc30c50b0f1e75ae7bcd5d223df8b3703ede7915be6874ab5a4e2ac2e0c3bf017",
       "index": 35,
       "sha": "",
       "name": "QuantumPhunk 35",
@@ -11414,7 +11414,7 @@
       ]
     },
     {
-      "id": "0x5ea3d93a84def5c3f799bd6ea44b6c4e82e5b2074b441ba8cacd81cd198457e3",
+      "id": "0xd0051f793b1848ffb261dd8a40bec1560196b98b1c477f86ee12fabee9847147",
       "index": 709,
       "sha": "",
       "name": "QuantumPhunk 709",
@@ -11433,16 +11433,12 @@
           "value": "1987 Tiziano"
         },
         {
-          "trait_type": "Beard",
-          "value": "Shadow Beard"
-        },
-        {
-          "trait_type": "Ears",
-          "value": "Earring"
+          "trait_type": "Variant",
+          "value": "C3FF00"
         },
         {
           "trait_type": "Hair",
-          "value": "Shaved Head"
+          "value": "Crazy Hair"
         },
         {
           "trait_type": "Character",
@@ -11450,11 +11446,15 @@
         },
         {
           "trait_type": "Eyes",
-          "value": "Lunarc"
+          "value": "Eths VR"
         },
         {
           "trait_type": "Special",
           "value": "Character"
+        },
+        {
+          "trait_type": "Hair",
+          "value": "Beanie"
         }
       ]
     },
@@ -17384,7 +17384,7 @@
       ]
     },
     {
-      "id": "0xcfb90bf70ad7285321229fbbebc0b690e211d0a2ab4c2289dcbbf6ee13f2b276",
+      "id": "0x819f6bc30df7e6e20bc72f5ccc3798b94cf831ef0ed49d085c631a6e3cf7a7d0",
       "index": 1060,
       "sha": "",
       "name": "QuantumPhunk 1060",
@@ -24673,7 +24673,7 @@
       ]
     },
     {
-      "id": "0x4377d2c975d6e58bd0e90c3b4326978e02439d14fc0d8c487e8687b260fa40da",
+      "id": "0xcf37bfaf6f6c83008df45aea4e7694511461ce4ded6ba702b9ba88e03127f7eb",
       "index": 1483,
       "sha": "",
       "name": "QuantumPhunk 1483",
@@ -24689,24 +24689,48 @@
         },
         {
           "trait_type": "Skin Tone",
-          "value": "2021 Raphael"
+          "value": "Og Promo Albretcht"
         },
         {
           "trait_type": "Emotion",
-          "value": "Frown"
+          "value": "Smile"
         },
         {
           "trait_type": "Hair",
-          "value": "Top Hat"
+          "value": "Cowboy Hat Gold"
+        },
+        {
+          "trait_type": "Hair",
+          "value": "Stringy Hair"
+        },
+        {
+          "trait_type": "Hair",
+          "value": "Purple Hair"
+        },
+        {
+          "trait_type": "Hair",
+          "value": "Hoodie"
         },
         {
           "trait_type": "Eyes",
-          "value": "3D Glasses"
+          "value": "Eye Mask"
+        },
+        {
+          "trait_type": "Special",
+          "value": "Character"
+        },
+        {
+          "trait_type": "Character",
+          "value": "Flash"
+        },
+        {
+          "trait_type": "Neck",
+          "value": "Gold Chain"
         }
       ]
     },
     {
-      "id": "0x67901464bb81a0db53d4c4aeeadbb6028e1f06c5cb5d12768fb9df8da69babc3",
+      "id": "0xb63e0e44a6aa951dc9616b687f96924f80b032b2a486afb96fec92ccef9f6d98",
       "index": 1484,
       "sha": "",
       "name": "QuantumPhunk 1484",
@@ -24718,19 +24742,19 @@
         },
         {
           "trait_type": "Type",
-          "value": "Male"
+          "value": "Zombie"
         },
         {
-          "trait_type": "Skin Tone",
-          "value": "2012 Leonardo"
+          "trait_type": "Aura",
+          "value": "Power Surge Radiation"
         },
         {
           "trait_type": "Hair",
-          "value": "Hoodie"
+          "value": "Verda"
         },
         {
           "trait_type": "Beard",
-          "value": "Handlebars"
+          "value": "Mustache"
         },
         {
           "trait_type": "Ears",
@@ -24738,7 +24762,27 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Wizard"
+          "value": "Purple Hair"
+        },
+        {
+          "trait_type": "Hair",
+          "value": "Do-rag"
+        },
+        {
+          "trait_type": "Hair",
+          "value": "Stringy Hair"
+        },
+        {
+          "trait_type": "Neck",
+          "value": "Gold Chain"
+        },
+        {
+          "trait_type": "Face",
+          "value": "Spots"
+        },
+        {
+          "trait_type": "Emotion",
+          "value": "Left Smile"
         }
       ]
     },
@@ -36732,10 +36776,6 @@
         {
           "trait_type": "Hair",
           "value": "Hoodie"
-        },
-        {
-          "trait_type": "Special",
-          "value": "One of One"
         }
       ]
     },
@@ -40106,7 +40146,7 @@
       ]
     },
     {
-      "id": "0x507bce33b20edb34b840e0c8135e551b188d47fcbe151d9bdfc2e3b0af941ec7",
+      "id": "0xe4572f69067529902d967d2b940509f5b26984e7dab8eebc09f214f7f2b06854",
       "index": 2408,
       "sha": "",
       "name": "QuantumPhunk 2408",
@@ -40118,23 +40158,23 @@
         },
         {
           "trait_type": "Type",
-          "value": "Male"
-        },
-        {
-          "trait_type": "Skin Tone",
-          "value": "1987 Michaelangelo"
-        },
-        {
-          "trait_type": "Mouth",
-          "value": "Cigarette"
+          "value": "Zombie"
         },
         {
           "trait_type": "Hair",
-          "value": "Cap"
+          "value": "Shaved Head"
         },
         {
-          "trait_type": "Eyes",
-          "value": "Eye Patch"
+          "trait_type": "Neck",
+          "value": "Gold Chain"
+        },
+        {
+          "trait_type": "Hair",
+          "value": "Hoodie"
+        },
+        {
+          "trait_type": "Ears",
+          "value": "Earring"
         }
       ]
     },
@@ -40521,7 +40561,7 @@
       ]
     },
     {
-      "id": "0x9566651030bd2186042f417f81a8b7f0412d334e0c8216e27f6681ffbf00b5ef",
+      "id": "0x02b5cf2af556892da71ef647d90d2dd55627e3744f31fb8266ad016048e99ce6",
       "index": 2433,
       "sha": "",
       "name": "QuantumPhunk 2433",
@@ -40533,11 +40573,11 @@
         },
         {
           "trait_type": "Type",
-          "value": "Male"
+          "value": "Zombie"
         },
         {
-          "trait_type": "Skin Tone",
-          "value": "2003 Guido"
+          "trait_type": "Hair",
+          "value": "Beanie"
         },
         {
           "trait_type": "Hair",
@@ -40545,15 +40585,59 @@
         },
         {
           "trait_type": "Beard",
-          "value": "Handlebars"
+          "value": "Mustache"
         },
         {
           "trait_type": "Eyes",
-          "value": "Classic Shades"
+          "value": "3D Wings Gold Diamond"
         },
         {
           "trait_type": "Hair",
-          "value": "Pirate"
+          "value": "Headband"
+        },
+        {
+          "trait_type": "Hair",
+          "value": "Purple Hair"
+        },
+        {
+          "trait_type": "Hair",
+          "value": "Hoodie"
+        },
+        {
+          "trait_type": "Beard",
+          "value": "Shadow Beard"
+        },
+        {
+          "trait_type": "Beard",
+          "value": "Goat"
+        },
+        {
+          "trait_type": "Cheeks",
+          "value": "Rosy Cheeks"
+        },
+        {
+          "trait_type": "Face",
+          "value": "Spots"
+        },
+        {
+          "trait_type": "Ears",
+          "value": "Earring"
+        },
+        {
+          "trait_type": "Neck",
+          "value": "Gold Chain"
+        },
+        {
+          "trait_type": "Neck",
+          "value": "Diamond Chain"
+        },
+        {
+          "trait_type": "Aura",
+          "value": "Power Surge Radiation"
+        },
+        {
+          "trait_type": "Emotion",
+          "value": "Smile"
         }
       ]
     },
@@ -43871,7 +43955,7 @@
       ]
     },
     {
-      "id": "0x896c3916b46364c519a4aa83aae1080baafcc6e4bd5a246efcadba5dd99d91f6",
+      "id": "0xa8d75811b698001394beb16880e72e58f351098ad2e6004741055402c73f2415",
       "index": 2655,
       "sha": "",
       "name": "QuantumPhunk 2655",
@@ -43887,35 +43971,15 @@
         },
         {
           "trait_type": "Skin Tone",
-          "value": "2003 Leonardo"
-        },
-        {
-          "trait_type": "Eye Mask",
-          "value": "2003"
-        },
-        {
-          "trait_type": "Nose",
-          "value": "Clown Nose"
-        },
-        {
-          "trait_type": "Beard",
-          "value": "Chinstrap"
-        },
-        {
-          "trait_type": "Hair",
-          "value": "Shaved Head"
-        },
-        {
-          "trait_type": "Variant",
-          "value": "Ghost"
+          "value": "Og Promo Filippo"
         },
         {
           "trait_type": "Eyes",
           "value": "Eye Mask"
         },
         {
-          "trait_type": "Hair",
-          "value": "Captain Hat"
+          "trait_type": "Emotion",
+          "value": "Smile"
         }
       ]
     },
@@ -50482,7 +50546,7 @@
       ]
     },
     {
-      "id": "0x353e6c75be93ce70e0931eb3fe075e1a96dbbfaa4afa1d4fb9a5479093a4bca9",
+      "id": "0x3a16c0ed998f7235de129fc97e786e762a2a344f37ae8e8823eef8f94b7b0be6",
       "index": 3064,
       "sha": "",
       "name": "QuantumPhunk 3064",
@@ -50494,35 +50558,35 @@
         },
         {
           "trait_type": "Type",
-          "value": "Male"
-        },
-        {
-          "trait_type": "Skin Tone",
-          "value": "Rise Of The Tmnt Michaelangelo"
-        },
-        {
-          "trait_type": "Ears",
-          "value": "Earring"
-        },
-        {
-          "trait_type": "Eyes",
-          "value": "Horned Rim Glasses"
+          "value": "Alien"
         },
         {
           "trait_type": "Hair",
-          "value": "Cowboy Hat"
+          "value": "Purple Hair"
+        },
+        {
+          "trait_type": "Neck",
+          "value": "Gold Chain"
+        },
+        {
+          "trait_type": "Special",
+          "value": "Character"
         },
         {
           "trait_type": "Character",
           "value": "Flash"
         },
         {
-          "trait_type": "Teeth",
-          "value": "Rainbow Grills"
+          "trait_type": "Hair",
+          "value": "Hoodie"
         },
         {
-          "trait_type": "Special",
-          "value": "Character"
+          "trait_type": "Weapon",
+          "value": "Gold Saber"
+        },
+        {
+          "trait_type": "Hair",
+          "value": "Brk Crown 24K Gold"
         }
       ]
     },
@@ -53976,7 +54040,7 @@
       ]
     },
     {
-      "id": "0x8fb79e30760e118e741938ebc35326d9c893851e5dd5696d251c0e75896d6748",
+      "id": "0xf54ece20c04bc2519a4ec38162def7233fed0854fbe9b8cfa6f5df1737301693",
       "index": 3279,
       "sha": "",
       "name": "QuantumPhunk 3279",
@@ -53988,19 +54052,39 @@
         },
         {
           "trait_type": "Type",
-          "value": "Male"
-        },
-        {
-          "trait_type": "Skin Tone",
-          "value": "Mirage Michaelangelo"
+          "value": "Zombie"
         },
         {
           "trait_type": "Hair",
-          "value": "Mohawk"
+          "value": "Cowboy Hat Gold"
         },
         {
           "trait_type": "Eyes",
-          "value": "Small Shades"
+          "value": "Eye Mask"
+        },
+        {
+          "trait_type": "Hair",
+          "value": "Hoodie"
+        },
+        {
+          "trait_type": "Weapon",
+          "value": "Diamond Saber"
+        },
+        {
+          "trait_type": "Special",
+          "value": "Character"
+        },
+        {
+          "trait_type": "Character",
+          "value": "Flash"
+        },
+        {
+          "trait_type": "Neck",
+          "value": "Gold Chain"
+        },
+        {
+          "trait_type": "Emotion",
+          "value": "Smile"
         }
       ]
     },
@@ -58461,7 +58545,7 @@
       ]
     },
     {
-      "id": "0x3f8208a9db6a69e4d118217967dee3d0ea9482db21781e6114af004fe0100fd8",
+      "id": "0x85c64c22bdae223d4917a00e358d9fd6f7218a1e765158486e702bf380afe747",
       "index": 3563,
       "sha": "",
       "name": "QuantumPhunk 3563",
@@ -58481,23 +58565,23 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Stringy Hair"
+          "value": "Purple Hair"
         },
         {
-          "trait_type": "Mouth",
-          "value": "Cigarette"
+          "trait_type": "Emotion",
+          "value": "Left Smile"
         },
         {
-          "trait_type": "Eyes",
-          "value": "VR"
+          "trait_type": "Hair",
+          "value": "Brkcrown"
         },
         {
           "trait_type": "Character",
           "value": "Flash"
         },
         {
-          "trait_type": "Hair",
-          "value": "Builder"
+          "trait_type": "Beard",
+          "value": "Shadow Beard"
         },
         {
           "trait_type": "Special",
@@ -99850,7 +99934,7 @@
       ]
     },
     {
-      "id": "0x85c64c22bdae223d4917a00e358d9fd6f7218a1e765158486e702bf380afe747",
+      "id": "0x1f6f7a14a4658519bef9736ebfbc432ab6b71b1729c9f88320c8ccaf6dbce5fe",
       "index": 6068,
       "sha": "",
       "name": "QuantumPhunk 6068",
@@ -99870,19 +99954,19 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Stringy Hair"
-        },
-        {
-          "trait_type": "Mouth",
-          "value": "Cigarette"
-        },
-        {
-          "trait_type": "Beard",
-          "value": "Mustache"
+          "value": "Wild Hair"
         },
         {
           "trait_type": "Eyes",
-          "value": "Horned Rim Glasses"
+          "value": "VR"
+        },
+        {
+          "trait_type": "Hair",
+          "value": "Hoodie"
+        },
+        {
+          "trait_type": "Eyes",
+          "value": "Beam"
         },
         {
           "trait_type": "Character",
@@ -99891,6 +99975,10 @@
         {
           "trait_type": "Special",
           "value": "Character"
+        },
+        {
+          "trait_type": "Variant",
+          "value": "C3FF00"
         }
       ]
     },
@@ -103203,7 +103291,7 @@
       ]
     },
     {
-      "id": "0xcf80051ab1ccda46ea5c505a9eead38453b2d830d36be91668a0aee18d684d9f",
+      "id": "0x7c83670141e8cfc0f5aeaf26af17c6fa63d25bd46f72ce6ea2d024690a403eca",
       "index": 6276,
       "sha": "",
       "name": "QuantumPhunk 6276",
@@ -103219,27 +103307,55 @@
         },
         {
           "trait_type": "Skin Tone",
-          "value": "Mirage Guido"
+          "value": "OG Promo Filippo"
         },
         {
           "trait_type": "Hair",
-          "value": "Shaved Head"
+          "value": "Purple Hair"
         },
         {
-          "trait_type": "Face",
-          "value": "Mole"
+          "trait_type": "Hair",
+          "value": "Do-rag"
         },
         {
           "trait_type": "Character",
           "value": "Flash"
         },
         {
-          "trait_type": "Teeth",
-          "value": "Open Mouth Six Teeth"
+          "trait_type": "Hair",
+          "value": "Cowboy Hat Diamond"
         },
         {
           "trait_type": "Special",
           "value": "Character"
+        },
+        {
+          "trait_type": "Neck",
+          "value": "Gold Chain"
+        },
+        {
+          "trait_type": "Neck",
+          "value": "Diamond Chain"
+        },
+        {
+          "trait_type": "Hair",
+          "value": "Hoodie"
+        },
+        {
+          "trait_type": "Eyes",
+          "value": "Eye Mask"
+        },
+        {
+          "trait_type": "Emotion",
+          "value": "Smile"
+        },
+        {
+          "trait_type": "Variant",
+          "value": "Mummy"
+        },
+        {
+          "trait_type": "Weapon",
+          "value": "Gold Saber"
         }
       ]
     },
@@ -111550,7 +111666,7 @@
       ]
     },
     {
-      "id": "0x838ad4c1ce73475d1bc0f616a5ddbe7cbff6f4b5d824be0aab891c0d6a5a441c",
+      "id": "0x72fe99235a3a2e540c159dba54c3ba985de4fb9ade55b000c411d86e1e8ccc56",
       "index": 6819,
       "sha": "",
       "name": "QuantumPhunk 6819",
@@ -111562,23 +111678,35 @@
         },
         {
           "trait_type": "Type",
-          "value": "Male"
-        },
-        {
-          "trait_type": "Skin Tone",
-          "value": "2012 Raphael"
+          "value": "Zombie"
         },
         {
           "trait_type": "Hair",
-          "value": "Cap"
+          "value": "Hoodie"
         },
         {
-          "trait_type": "Teeth",
-          "value": "Buck Teeth"
+          "trait_type": "Hair",
+          "value": "Crazy Hair"
         },
         {
-          "trait_type": "Beard",
-          "value": "Front Beard Dark"
+          "trait_type": "Hair",
+          "value": "Cowboy Hat Gucci White"
+        },
+        {
+          "trait_type": "Eyes",
+          "value": "VR"
+        },
+        {
+          "trait_type": "Neck",
+          "value": "Gold Chain"
+        },
+        {
+          "trait_type": "Hair",
+          "value": "Shaved Head"
+        },
+        {
+          "trait_type": "Ears",
+          "value": "Earring"
         }
       ]
     },
@@ -118855,7 +118983,7 @@
       ]
     },
     {
-      "id": "0x9c76ef7a5aadf82735e072f37a5bb8df407dedadba68095ce1be144bd5e9ee28",
+      "id": "0x87ab6fe8352106b5a5ae94596650717bf3382843b9a9c81604b8a3348ffe71b0",
       "index": 7267,
       "sha": "",
       "name": "QuantumPhunk 7267",
@@ -118867,23 +118995,27 @@
         },
         {
           "trait_type": "Type",
-          "value": "Male"
-        },
-        {
-          "trait_type": "Skin Tone",
-          "value": "2012 Leonardo"
+          "value": "Zombie"
         },
         {
           "trait_type": "Hair",
-          "value": "Cap"
+          "value": "Crazy Hair"
         },
         {
-          "trait_type": "Eyes",
-          "value": "Big Shades"
+          "trait_type": "Hair",
+          "value": "Bandana"
         },
         {
-          "trait_type": "Mouth",
-          "value": "Vape"
+          "trait_type": "Ears",
+          "value": "Earring"
+        },
+        {
+          "trait_type": "Emotion",
+          "value": "Smile"
+        },
+        {
+          "trait_type": "Neck",
+          "value": "Gold Chain"
         }
       ]
     },
@@ -140005,7 +140137,7 @@
       ]
     },
     {
-      "id": "0x3ce767d8b186574877ffac603981a67cc188bc279389d6ed10646c58501fd9df",
+      "id": "0x1ebd3c152876c28ea5e41da78cf7e706b723f941770c1100225e6d4a5f2f59aa",
       "index": 8677,
       "sha": "",
       "name": "QuantumPhunk 8677",
@@ -140017,27 +140149,19 @@
         },
         {
           "trait_type": "Type",
-          "value": "Male"
+          "value": "Zombie"
         },
         {
-          "trait_type": "Skin Tone",
-          "value": "2021 Raphael"
+          "trait_type": "Ears",
+          "value": "Earring"
         },
         {
           "trait_type": "Hair",
           "value": "Cap"
         },
         {
-          "trait_type": "Cheeks",
-          "value": "Rosy Cheeks"
-        },
-        {
-          "trait_type": "Eyes",
-          "value": "Small Shades"
-        },
-        {
-          "trait_type": "Mouth",
-          "value": "Bubblegum"
+          "trait_type": "Neck",
+          "value": "Gold Chain"
         }
       ]
     },
@@ -142871,7 +142995,7 @@
       ]
     },
     {
-      "id": "0xd15f82f7ca9d32dccacfb8a87b552042dc22e967e530e61f381e94c2827bf63b",
+      "id": "0xef502bb35964919da7dfc31e47c42b7ddac95f65ed70c0751c334710604c8b2d",
       "index": 8877,
       "sha": "",
       "name": "QuantumPhunk 8877",
@@ -142883,27 +143007,47 @@
         },
         {
           "trait_type": "Type",
-          "value": "Male"
-        },
-        {
-          "trait_type": "Skin Tone",
-          "value": "2021 Michaelangelo"
-        },
-        {
-          "trait_type": "Hair",
-          "value": "Hoodie"
+          "value": "Zombie"
         },
         {
           "trait_type": "Beard",
-          "value": "Handlebars"
-        },
-        {
-          "trait_type": "Eyes",
-          "value": "Regular Shades"
+          "value": "Shadow Beard"
         },
         {
           "trait_type": "Hair",
           "value": "Wizard"
+        },
+        {
+          "trait_type": "Emotion",
+          "value": "Smile"
+        },
+        {
+          "trait_type": "Eyes",
+          "value": "VR"
+        },
+        {
+          "trait_type": "Hair",
+          "value": "Mullet Blonde"
+        },
+        {
+          "trait_type": "Eyes",
+          "value": "Beam"
+        },
+        {
+          "trait_type": "Ears",
+          "value": "Earring"
+        },
+        {
+          "trait_type": "Neck",
+          "value": "Gold Chain"
+        },
+        {
+          "trait_type": "Neck",
+          "value": "Diamond Chain"
+        },
+        {
+          "trait_type": "Hair",
+          "value": "Hoodie"
         }
       ]
     },
@@ -155813,10 +155957,6 @@
         {
           "trait_type": "Type",
           "value": "Male"
-        },
-        {
-          "trait_type": "Skin Tone",
-          "value": "Og Promo Filippo"
         },
         {
           "trait_type": "Character",
