@@ -14499,7 +14499,7 @@
       ]
     },
     {
-      "id": "0x12e572bce51717568828bc7e9d3e0276e4293165cf38e688159f11d21514e2da",
+      "id": "0x432e0174eac172ae8297a7da6e6bfbcb03f3a587a4ffb8db8005a5ab430029a1",
       "index": 901,
       "sha": "",
       "name": "QuantumPhunk 901",
@@ -14511,11 +14511,11 @@
         },
         {
           "trait_type": "Type",
-          "value": "Alien"
+          "value": "Female"
         },
         {
-          "trait_type": "Hair",
-          "value": "Petalburn"
+          "trait_type": "Skin Tone",
+          "value": "Og Promo Venus"
         },
         {
           "trait_type": "Hair",
@@ -14523,23 +14523,15 @@
         },
         {
           "trait_type": "Lips",
-          "value": "Purple Lipstick"
+          "value": "Hot Lipstick"
         },
         {
-          "trait_type": "Hair",
-          "value": "Pigtails"
+          "trait_type": "Mouth",
+          "value": "Cigarette"
         },
         {
-          "trait_type": "Emotion",
-          "value": "Smile"
-        },
-        {
-          "trait_type": "Neck",
-          "value": "Gold Chain"
-        },
-        {
-          "trait_type": "Ears",
-          "value": "Earring"
+          "trait_type": "Eyes",
+          "value": "Eye Mask"
         }
       ]
     },
@@ -27798,7 +27790,7 @@
       ]
     },
     {
-      "id": "0x344787cdd5c732fb4f8eb2b6036044f6e2e7859db19897d0ab8fe90409d5f675",
+      "id": "0x1153b660be8a8ddf5b8e000138010dd21fa87ed5c8eb9afaab8155a88c400f22",
       "index": 1658,
       "sha": "",
       "name": "QuantumPhunk 1658",
@@ -27815,30 +27807,6 @@
         {
           "trait_type": "Hair",
           "value": "Stringy Hair"
-        },
-        {
-          "trait_type": "Hair",
-          "value": "Hoodie"
-        },
-        {
-          "trait_type": "Eyes",
-          "value": "3D Glasses"
-        },
-        {
-          "trait_type": "Weapon",
-          "value": "Gold Saber"
-        },
-        {
-          "trait_type": "Beard",
-          "value": "Shadow Beard"
-        },
-        {
-          "trait_type": "Beard",
-          "value": "Mustache"
-        },
-        {
-          "trait_type": "Emotion",
-          "value": "Left Smile"
         }
       ]
     },
@@ -39323,7 +39291,7 @@
       ]
     },
     {
-      "id": "0x299b17a3a9ca35767eb93cd7c8343a928961abe2389c5566fca9b1b2c5a4e037",
+      "id": "0xcfd6c4870ead0ad540158d1339ef423578571581b709dbea203e46e279732336",
       "index": 2338,
       "sha": "",
       "name": "QuantumPhunk 2338",
@@ -39340,30 +39308,6 @@
         {
           "trait_type": "Hair",
           "value": "Mohawk Thin"
-        },
-        {
-          "trait_type": "Hair",
-          "value": "Headband"
-        },
-        {
-          "trait_type": "Eyes",
-          "value": "Eye Patch"
-        },
-        {
-          "trait_type": "Beard",
-          "value": "Normal Beard"
-        },
-        {
-          "trait_type": "Beard",
-          "value": "Front Beard Dark"
-        },
-        {
-          "trait_type": "Emotion",
-          "value": "Smile"
-        },
-        {
-          "trait_type": "Teeth",
-          "value": "Buck Teeth"
         }
       ]
     },
@@ -41450,7 +41394,7 @@
       ]
     },
     {
-      "id": "0xfd5af557a4feb3dbb55aacf022f217600bd6ddde8b0383216e4e249d75a2d2bd",
+      "id": "0x4b1703f4e8da71560baf2864c6d9d3543ba55b09c1f1b890efd327aae79eb356",
       "index": 2474,
       "sha": "",
       "name": "QuantumPhunk 2474",
@@ -41467,14 +41411,6 @@
         {
           "trait_type": "Variant",
           "value": "Orc"
-        },
-        {
-          "trait_type": "Hair",
-          "value": "Stringy Hair"
-        },
-        {
-          "trait_type": "Hair",
-          "value": "Ancient Watcher"
         }
       ]
     },
@@ -43403,7 +43339,7 @@
       ]
     },
     {
-      "id": "0x639d5e8718e2b8ea8ac7dee5d7c7e87a0fae1f977ce78af516f131b511c42a13",
+      "id": "0x8f24804e79364d8872f14966888edf261ec998b117bd9c06ae737a725c568cba",
       "index": 2609,
       "sha": "",
       "name": "QuantumPhunk 2609",
@@ -43424,10 +43360,6 @@
         {
           "trait_type": "Special",
           "value": "One of One"
-        },
-        {
-          "trait_type": "Hair",
-          "value": "Purple Hair"
         }
       ]
     },
@@ -43851,7 +43783,7 @@
       ]
     },
     {
-      "id": "0x6685261771b382c7aff174c9257e17d5c9a0dc3864c968111b77ff6a28907e20",
+      "id": "0xe399dfccde6968f421fc2f168d91caf387fadd459067c5347c0fff74d3951eed",
       "index": 2638,
       "sha": "",
       "name": "QuantumPhunk 2638",
@@ -43863,31 +43795,23 @@
         },
         {
           "trait_type": "Type",
-          "value": "Ape"
+          "value": "Female"
         },
         {
           "trait_type": "Skin Tone",
-          "value": "Eths Flare"
+          "value": "2012 Venus"
         },
         {
           "trait_type": "Hair",
-          "value": "Witch"
+          "value": "Bandana"
         },
         {
-          "trait_type": "Lips",
-          "value": "Purple Lipstick"
+          "trait_type": "Mouth",
+          "value": "Cigarette"
         },
         {
-          "trait_type": "Hair",
-          "value": "Hoodie"
-        },
-        {
-          "trait_type": "Hair",
-          "value": "Orange Side"
-        },
-        {
-          "trait_type": "Emotion",
-          "value": "Smile"
+          "trait_type": "Eyes",
+          "value": "Eye Mask"
         }
       ]
     },
@@ -45170,7 +45094,7 @@
       ]
     },
     {
-      "id": "0x063d6deac21dbf6840142095c258c731bfd1a398eda210a29a7e4a4a10c6a2c9",
+      "id": "0x676d8bfbb54dc2b8ec4f54fb52b1de1c1323548af99517fd8c98213e85767381",
       "index": 2722,
       "sha": "",
       "name": "QuantumPhunk 2722",
@@ -45191,14 +45115,6 @@
         {
           "trait_type": "Special",
           "value": "One of One"
-        },
-        {
-          "trait_type": "Hair",
-          "value": "Messy Hair"
-        },
-        {
-          "trait_type": "Hair",
-          "value": "Fedora"
         }
       ]
     },
@@ -46488,7 +46404,7 @@
       ]
     },
     {
-      "id": "0x1ab63e8539887d29ffb65a840b2a7e53a1ea4d9613fd18661f2638ee2fca0367",
+      "id": "0x0b9da16163843212cfb26bd2d4cdf4e96c916da5187feb94187644b15322e786",
       "index": 2790,
       "sha": "",
       "name": "QuantumPhunk 2790",
@@ -46500,31 +46416,23 @@
         },
         {
           "trait_type": "Type",
-          "value": "Zombie"
+          "value": "Male"
+        },
+        {
+          "trait_type": "Skin Tone",
+          "value": "Mirage Michaelangelo"
         },
         {
           "trait_type": "Hair",
-          "value": "Beanie"
-        },
-        {
-          "trait_type": "Hair",
-          "value": "Do-rag"
+          "value": "Wild Hair"
         },
         {
           "trait_type": "Beard",
-          "value": "Luxurious Beard"
+          "value": "Normal Beard"
         },
         {
           "trait_type": "Mouth",
-          "value": "Pipe"
-        },
-        {
-          "trait_type": "Hair",
-          "value": "Hoodie"
-        },
-        {
-          "trait_type": "Hair",
-          "value": "Knitted Cap"
+          "value": "Bubblegum"
         }
       ]
     },
@@ -57960,7 +57868,7 @@
       ]
     },
     {
-      "id": "0x670680daaf81e57aac509fb9624b47bb06c5e9a9c760dc1c24681766c261bf10",
+      "id": "0x16af06fbd9847a0af1fd8fd312f958c1c266f615b271e3b8a68b188bb12edf1c",
       "index": 3499,
       "sha": "",
       "name": "QuantumPhunk 3499",
@@ -57972,39 +57880,27 @@
         },
         {
           "trait_type": "Type",
-          "value": "Zombie"
+          "value": "Male"
         },
         {
-          "trait_type": "Character",
-          "value": "Mfer"
-        },
-        {
-          "trait_type": "Special",
-          "value": "Character"
+          "trait_type": "Skin Tone",
+          "value": "1987 Donatello"
         },
         {
           "trait_type": "Hair",
-          "value": "Clown Hair Green"
-        },
-        {
-          "trait_type": "Hair",
-          "value": "M Spinner Gold"
-        },
-        {
-          "trait_type": "Eyes",
-          "value": "VR"
+          "value": "Wild Hair"
         },
         {
           "trait_type": "Ears",
           "value": "Earring"
         },
         {
-          "trait_type": "Special",
-          "value": "One of One"
+          "trait_type": "Eyes",
+          "value": "Regular Shades"
         },
         {
-          "trait_type": "Emotion",
-          "value": "Smile"
+          "trait_type": "Mouth",
+          "value": "Pizza"
         }
       ]
     },
@@ -66874,7 +66770,7 @@
       ]
     },
     {
-      "id": "0x8e89eaff4108c9c14aa9258e498b79c1c7e4c24603849c3a26455d1e9e4dc5c7",
+      "id": "0xe0995c230cdeb148774546fdc2fd48c45ae1e53a2a1e74d37cafffcb3f0efe75",
       "index": 4069,
       "sha": "",
       "name": "QuantumPhunk 4069",
@@ -66886,11 +66782,11 @@
         },
         {
           "trait_type": "Type",
-          "value": "Ape"
+          "value": "Female"
         },
         {
           "trait_type": "Skin Tone",
-          "value": "Amethyst"
+          "value": "Batman Talena"
         },
         {
           "trait_type": "Lips",
@@ -66898,19 +66794,15 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Wild White Hair"
+          "value": "Mohawk Dark"
         },
         {
-          "trait_type": "Eyes",
-          "value": "Welding Goggles"
+          "trait_type": "Character",
+          "value": "Nebula"
         },
         {
-          "trait_type": "Emotion",
-          "value": "Smile"
-        },
-        {
-          "trait_type": "Hair",
-          "value": "Pom Pom Beanie Pink"
+          "trait_type": "Special",
+          "value": "Character"
         }
       ]
     },
@@ -76163,7 +76055,7 @@
       ]
     },
     {
-      "id": "0x1af1e66624935718263a276bce930df0afb5176713cacefab7cd1f360723a0e4",
+      "id": "0x013a98196d8873434ebd5fe2445ac892bf3ea363391a0f14342a8102f658bebe",
       "index": 4630,
       "sha": "",
       "name": "QuantumPhunk 4630",
@@ -76175,19 +76067,35 @@
         },
         {
           "trait_type": "Type",
-          "value": "Zombie"
+          "value": "Female"
+        },
+        {
+          "trait_type": "Skin Tone",
+          "value": "Mirage Amoly"
         },
         {
           "trait_type": "Lips",
-          "value": "Purple Lipstick"
+          "value": "Black Lipstick"
         },
         {
           "trait_type": "Hair",
-          "value": "Orange Side"
+          "value": "Mohawk"
         },
         {
-          "trait_type": "Hair",
-          "value": "Cap"
+          "trait_type": "Eyes",
+          "value": "VR"
+        },
+        {
+          "trait_type": "Eyes",
+          "value": "Beam"
+        },
+        {
+          "trait_type": "Character",
+          "value": "Nebula"
+        },
+        {
+          "trait_type": "Special",
+          "value": "Character"
         }
       ]
     },
@@ -96155,7 +96063,7 @@
       ]
     },
     {
-      "id": "0x8e8413574a5b3cd67b365dd3ee39d495a6f0541f3e7a880b90f3e62b0b2287a3",
+      "id": "0x8711ad5e8c028fa2e6be6342aa2f4a603010db31767cea0136c2de5325f25023",
       "index": 5833,
       "sha": "",
       "name": "QuantumPhunk 5833",
@@ -96167,15 +96075,15 @@
         },
         {
           "trait_type": "Type",
-          "value": "Zombie"
+          "value": "Female"
         },
         {
-          "trait_type": "Hair",
-          "value": "Wild White Hair"
+          "trait_type": "Skin Tone",
+          "value": "Rise of the TMNT Venus"
         },
         {
-          "trait_type": "Hair",
-          "value": "Tiara"
+          "trait_type": "Eyes",
+          "value": "Green Eye Shadow"
         },
         {
           "trait_type": "Lips",
@@ -96183,19 +96091,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Witch"
-        },
-        {
-          "trait_type": "Neck",
-          "value": "Gold Chain"
-        },
-        {
-          "trait_type": "Hair",
-          "value": "Hoodie"
-        },
-        {
-          "trait_type": "Emotion",
-          "value": "Smile"
+          "value": "Mohawk Dark"
         }
       ]
     },
@@ -128886,7 +128782,7 @@
       ]
     },
     {
-      "id": "0x2ea9a953a799672e0f59126dd9a342a7cd865517e82ea6ae5c87e974fec8fbc7",
+      "id": "0x0c14917a2b47682be6f2fb3db046939f4049a46af4b91ce1992ab5fc82fc8d9f",
       "index": 7971,
       "sha": "",
       "name": "QuantumPhunk 7971",
@@ -128898,31 +128794,35 @@
         },
         {
           "trait_type": "Type",
-          "value": "Zombie"
+          "value": "Female"
         },
         {
-          "trait_type": "Hair",
-          "value": "Flame Purple"
+          "trait_type": "Skin Tone",
+          "value": "2021 Lymera"
+        },
+        {
+          "trait_type": "Face",
+          "value": "Mole"
         },
         {
           "trait_type": "Eyes",
-          "value": "Fire Breathing Purple"
-        },
-        {
-          "trait_type": "Hair",
-          "value": "Birthday Hat"
+          "value": "Big Shades"
         },
         {
           "trait_type": "Lips",
-          "value": "Purple Lipstick"
+          "value": "Black Lipstick"
+        },
+        {
+          "trait_type": "Hair",
+          "value": "Wild Hair"
         },
         {
           "trait_type": "Ears",
           "value": "Earring"
         },
         {
-          "trait_type": "Neck",
-          "value": "Gold Chain"
+          "trait_type": "Mouth",
+          "value": "Cigarette"
         }
       ]
     },
@@ -130535,26 +130435,6 @@
         {
           "trait_type": "Special",
           "value": "One of One"
-        },
-        {
-          "trait_type": "Hair",
-          "value": "Beanie"
-        },
-        {
-          "trait_type": "Hair",
-          "value": "Purple Hair"
-        },
-        {
-          "trait_type": "Ears",
-          "value": "Earring"
-        },
-        {
-          "trait_type": "Eyes",
-          "value": "VR"
-        },
-        {
-          "trait_type": "Emotion",
-          "value": "Smile"
         }
       ]
     },
@@ -133684,26 +133564,6 @@
         {
           "trait_type": "Special",
           "value": "One of One"
-        },
-        {
-          "trait_type": "Hair",
-          "value": "Beanie"
-        },
-        {
-          "trait_type": "Hair",
-          "value": "Orange Side"
-        },
-        {
-          "trait_type": "Hair",
-          "value": "Headphones"
-        },
-        {
-          "trait_type": "Lips",
-          "value": "Purple Lipstick"
-        },
-        {
-          "trait_type": "Emotion",
-          "value": "Smile"
         }
       ]
     },
