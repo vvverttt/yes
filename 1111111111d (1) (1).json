@@ -611,10 +611,6 @@
         {
           "trait_type": "Special",
           "value": "One of One"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Utrom"
         }
       ]
     },
@@ -718,10 +714,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Zerethian"
         }
       ]
     },
@@ -1244,10 +1236,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Xenomorph"
         }
       ]
     },
@@ -2303,10 +2291,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Titanian Eternal"
         }
       ]
     },
@@ -2373,10 +2357,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Unknown"
         }
       ]
     },
@@ -2989,10 +2969,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Dathomirian Zabrak"
         }
       ]
     },
@@ -3309,10 +3285,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Titanian Eternal"
         }
       ]
     },
@@ -4131,10 +4103,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Titanian Eternal"
         }
       ]
     },
@@ -4283,10 +4251,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Unknown"
         }
       ]
     },
@@ -5499,10 +5463,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Zerethian"
         }
       ]
     },
@@ -5717,10 +5677,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Zen-Whoberian"
         }
       ]
     },
@@ -7389,10 +7345,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Titanian Eternal"
         }
       ]
     },
@@ -7533,10 +7485,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Zerethian"
         }
       ]
     },
@@ -8210,10 +8158,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Titanian Eternal"
         }
       ]
     },
@@ -9494,10 +9438,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Unknown"
         }
       ]
     },
@@ -9621,10 +9561,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Zerethian"
         }
       ]
     },
@@ -10168,10 +10104,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Zerethian"
         }
       ]
     },
@@ -11301,10 +11233,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Unknown"
         }
       ]
     },
@@ -11367,10 +11295,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Zerethian"
         }
       ]
     },
@@ -11802,10 +11726,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Zerethian"
         }
       ]
     },
@@ -12242,10 +12162,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Zerethian"
         }
       ]
     },
@@ -12743,10 +12659,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Unknown"
         }
       ]
     },
@@ -12792,10 +12704,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Zerethian"
         }
       ]
     },
@@ -13560,10 +13468,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Zerethian"
         }
       ]
     },
@@ -14591,10 +14495,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Yautja"
         }
       ]
     },
@@ -20140,10 +20040,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Titanian Eternal"
         }
       ]
     },
@@ -25426,10 +25322,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Titanian Eternal"
         }
       ]
     },
@@ -27861,10 +27753,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Centaurian"
         }
       ]
     },
@@ -28235,10 +28123,6 @@
         {
           "trait_type": "Character",
           "value": "Flash Gold Zerethian"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Zerethian"
         }
       ]
     },
@@ -29788,10 +29672,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Titanian Eternal"
         }
       ]
     },
@@ -35122,10 +35002,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Titanian Eternal"
         }
       ]
     },
@@ -35266,10 +35142,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Titanian Eternal"
         }
       ]
     },
@@ -52160,10 +52032,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Flora Colossus"
         }
       ]
     },
@@ -52493,10 +52361,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Echidna"
         }
       ]
     },
@@ -60540,10 +60404,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Rigellian"
         }
       ]
     },
@@ -63847,10 +63707,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Saiyan"
         }
       ]
     },
@@ -65053,10 +64909,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Titanian Eternal"
         }
       ]
     },
@@ -68891,10 +68743,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Vulcanian"
         }
       ]
     },
@@ -74016,10 +73864,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Titanian Eternal"
         }
       ]
     },
@@ -75612,10 +75456,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Titanian Eternal"
         }
       ]
     },
@@ -77515,10 +77355,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Namekian"
         }
       ]
     },
@@ -77663,10 +77499,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Saiyan"
         }
       ]
     },
@@ -78546,10 +78378,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Martian"
         }
       ]
     },
@@ -78595,10 +78423,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Titanian Eternal"
         }
       ]
     },
@@ -82099,10 +81923,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Frieza"
         }
       ]
     },
@@ -85065,10 +84885,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Frieza"
         }
       ]
     },
@@ -88256,10 +88072,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Unknown"
         }
       ]
     },
@@ -94196,10 +94008,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Titanian Eternal"
         }
       ]
     },
@@ -94468,10 +94276,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Klynar"
         }
       ]
     },
@@ -94726,10 +94530,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Unknown"
         }
       ]
     },
@@ -94923,10 +94723,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Klynar"
         }
       ]
     },
@@ -96803,10 +96599,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Titanian Eternal"
         }
       ]
     },
@@ -102373,10 +102165,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Asogian"
         }
       ]
     },
@@ -112331,10 +112119,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Vulcanian"
         }
       ]
     },
@@ -116164,10 +115948,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Unknown"
         }
       ]
     },
@@ -116715,10 +116495,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Decapodian"
         }
       ]
     },
@@ -118990,10 +118766,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Flora Colossus"
         }
       ]
     },
@@ -121605,10 +121377,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Saiyan"
         }
       ]
     },
@@ -122855,10 +122623,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Titanian Eternal"
         }
       ]
     },
@@ -125203,10 +124967,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Zenn-Lavian"
         }
       ]
     },
@@ -129816,10 +129576,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Titanian Eternal"
         }
       ]
     },
@@ -133427,10 +133183,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Martian"
         }
       ]
     },
@@ -139469,10 +139221,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Rigellian"
         }
       ]
     },
@@ -140588,10 +140336,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Titanian Eternal"
         }
       ]
     },
@@ -162101,10 +161845,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Zerethian"
         }
       ]
     },
@@ -162195,7 +161935,7 @@
         },
         {
           "trait_type": "Animal",
-          "value": "Wookiee"
+          "value": "Wookie"
         },
         {
           "trait_type": "Special",
@@ -162208,10 +161948,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Wookiee"
         }
       ]
     },
@@ -162455,10 +162191,6 @@
         {
           "trait_type": "Type",
           "value": "Cosmic"
-        },
-        {
-          "trait_type": "Species",
-          "value": "Utrom"
         }
       ]
     },
