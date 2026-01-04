@@ -326,24 +326,29 @@
         sortedItems.forEach(item => {
             const punkDiv = document.createElement('div');
             punkDiv.className = 'punk-item';
-            
+
             const img = document.createElement('img');
-            img.src = `../../images/images_24x24/${item.index}.png`;
+            const specialGifIds = [5865, 6850, 8913];
+            if ([5865, 6850, 8913, 6922].includes(Number(item.index))) {
+                img.src = `../../images/images_24x24/${item.index}.gif`;
+            } else {
+                img.src = `../../images/images_24x24/${item.index}.png`;
+            }
             img.alt = `QuantumPhunk ${item.index}`;
             img.style.imageRendering = 'pixelated';
-            
+
             img.onerror = () => {
                 console.warn(`Image ${item.index} not found`);
                 img.src = '../images/placeholder.png'; // Fallback if needed
             };
-            
+
             const numberDiv = document.createElement('div');
             numberDiv.className = 'punk-number';
             numberDiv.textContent = `#${item.index}`;
-            
+
             punkDiv.appendChild(img);
             punkDiv.appendChild(numberDiv);
-            
+
             punkDiv.onclick = () => {
                 window.location.href = `cryptophunks-details.html?id=${item.index}`;
             };

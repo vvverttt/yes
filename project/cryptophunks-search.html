@@ -226,15 +226,20 @@
                 const box = document.createElement('a');
                 box.className = 'phunk-box';
                 box.href = `cryptophunks-details.html?id=${idx}`;
-                
+
                 const img = document.createElement('img');
-                img.src = `../images/images_24x24/${idx}.png`;
+                const specialGifIds = [5865, 6850, 8913];
+                if ([5865, 6850, 8913, 6922].includes(idx)) {
+                    img.src = `../images/images_24x24/${idx}.gif`;
+                } else {
+                    img.src = `../images/images_24x24/${idx}.png`;
+                }
                 img.alt = `Phunk ${idx}`;
-                
+
                 const numberDiv = document.createElement('div');
                 numberDiv.className = 'phunk-number';
                 numberDiv.textContent = `#${idx}`;
-                
+
                 box.appendChild(img);
                 box.appendChild(numberDiv);
                 grid.appendChild(box);

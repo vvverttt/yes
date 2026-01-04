@@ -281,9 +281,16 @@
 
             // Helper function to create phunk box HTML with 48x48 images (clickable links to details page)
             function createPhunkBoxes(examples) {
-                return examples.map(idx =>
-                    `<a href="cryptophunks-details.html?id=${idx}" class="phunk-box"><img src="../images/images_24x24/${idx}.png" alt="Phunk ${idx}" title="Phunk #${idx}"></a>`
-                ).join('');
+                return examples.map(idx => {
+                    const specialGifIds = [5865, 6850, 8913, 6922];
+                    let imgSrc;
+                    if (specialGifIds.includes(idx)) {
+                        imgSrc = `../images/images_24x24/${idx}.gif`;
+                    } else {
+                        imgSrc = `../images/images_24x24/${idx}.png`;
+                    }
+                    return `<a href="cryptophunks-details.html?id=${idx}" class="phunk-box"><img src="${imgSrc}" alt="Phunk ${idx}" title="Phunk #${idx}"></a>`;
+                }).join('');
             }
 
             // Populate types table

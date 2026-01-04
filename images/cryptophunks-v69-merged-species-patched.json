@@ -6127,7 +6127,7 @@
       ]
     },
     {
-      "id": "0x310373ca26b582db634d5f11bbc10f58aad09b1648251e9046df070dd01ea215",
+      "id": "0x8c41465db933e9de1e2ad44e0cb1d3aeed7aae7a8d915a72c4d15a2413cea281",
       "index": 412,
       "sha": "",
       "name": "QuantumPhunk 412",
@@ -6163,7 +6163,7 @@
         },
         {
           "trait_type": "Ears",
-          "value": "Diamond Earring"
+          "value": "Sapphire Earring"
         }
       ]
     },
@@ -17547,7 +17547,7 @@
         },
         {
           "trait_type": "Ears",
-          "value": "Earring"
+          "value": "Earrings"
         },
         {
           "trait_type": "Hair",
@@ -25755,7 +25755,7 @@
       ]
     },
     {
-      "id": "0xa8a83ebc897247cbe8ce63766d6c8a17e4f0e6bac1b4de5957e638f6dd5ee1be",
+      "id": "0x15fc516404b6a798a86d25013f42e08de317739327dc0fe294dad1d88238f1cb",
       "index": 1524,
       "sha": "",
       "name": "QuantumPhunk 1524",
@@ -25770,16 +25770,20 @@
           "value": "Male"
         },
         {
-          "trait_type": "Special",
-          "value": "Character"
+          "trait_type": "Skin Tone",
+          "value": "2021 Donatello"
         },
         {
-          "trait_type": "Character",
-          "value": "Daft Punk"
+          "trait_type": "Hair",
+          "value": "Frumpy Hair"
         },
         {
-          "trait_type": "Special",
-          "value": "One of One"
+          "trait_type": "Hair",
+          "value": "Viking"
+        },
+        {
+          "trait_type": "Ears",
+          "value": "Ruby Earring"
         }
       ]
     },
@@ -33742,7 +33746,7 @@
       ]
     },
     {
-      "id": "0x7396689c885e4e6adbb152ed29309b89c2165b813785faa9b173d4b9a6d376b4",
+      "id": "0x19cdfc6e67b02267c1ce14ed2bacef651cd042ca78f142a6c1cea4b7eaeebcf0",
       "index": 1992,
       "sha": "",
       "name": "QuantumPhunk 1992",
@@ -33757,16 +33761,20 @@
           "value": "Male"
         },
         {
-          "trait_type": "Special",
-          "value": "Character"
+          "trait_type": "Skin Tone",
+          "value": "2012 Donatello"
         },
         {
-          "trait_type": "Character",
-          "value": "Alotta Phunk"
+          "trait_type": "Hair",
+          "value": "Frumpy Hair"
         },
         {
-          "trait_type": "Special",
-          "value": "One of One"
+          "trait_type": "Eyes",
+          "value": "Regular Shades"
+        },
+        {
+          "trait_type": "Hair",
+          "value": "Viking"
         }
       ]
     },
@@ -62828,7 +62836,7 @@
       ]
     },
     {
-      "id": "0xae14bb8a9dcd00ce1b7b660f2795032cd80be7c6e2253a95364fc8575713dca1",
+      "id": "0x7f4aea5450c6177e52f9333bb4ae12f0c8a8a1cc8fc3af0677d16b4598891864",
       "index": 3815,
       "sha": "",
       "name": "QuantumPhunk 3815",
@@ -62847,8 +62855,8 @@
           "value": "Mirage Ethscript"
         },
         {
-          "trait_type": "Hair",
-          "value": "Cap"
+          "trait_type": "Mouth",
+          "value": "Cigarette"
         },
         {
           "trait_type": "Hair",
@@ -62859,8 +62867,8 @@
           "value": "Eye Mask"
         },
         {
-          "trait_type": "Beard",
-          "value": "Luxurious Beard"
+          "trait_type": "Hair",
+          "value": "Captain Hat"
         }
       ]
     },
@@ -113997,7 +114005,7 @@
       ]
     },
     {
-      "id": "0x9a46c14148c235caee361abdd9d0de5520bb058c6c967e1aabbd8c8f2daed808",
+      "id": "0xd271e7ce4269c19b190fe9dfb96d0a0420f291e95fd5939b8d602d9e2760d164",
       "index": 6922,
       "sha": "",
       "name": "QuantumPhunk 6922",
@@ -114009,31 +114017,31 @@
         },
         {
           "trait_type": "Type",
-          "value": "Cosmic"
+          "value": "Male"
         },
         {
-          "trait_type": "Character",
-          "value": "Afterburn"
+          "trait_type": "Skin Tone",
+          "value": "2021 Hans"
         },
         {
-          "trait_type": "Special",
-          "value": "XCopy"
+          "trait_type": "Hair",
+          "value": "Wild Hair"
         },
         {
-          "trait_type": "Special",
-          "value": "Animated"
+          "trait_type": "Beard",
+          "value": "Mustache"
         },
         {
-          "trait_type": "Special",
-          "value": "Character"
+          "trait_type": "Ears",
+          "value": "Earring"
         },
         {
-          "trait_type": "Special",
-          "value": "One of One"
+          "trait_type": "Eyes",
+          "value": "Small Shades"
         },
         {
-          "trait_type": "Species",
-          "value": "Unknown"
+          "trait_type": "Weapon",
+          "value": "Quantum Edge"
         }
       ]
     },
@@ -143555,7 +143563,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Wizard V2"
+          "value": "Wizard"
         },
         {
           "trait_type": "Emotion",
@@ -147834,7 +147842,7 @@
       ]
     },
     {
-      "id": "0x72b37952b7ee15d4d4029c12f5f7d8a7daf4c8c0231093847e2bfed7595d862f",
+      "id": "0x76c00e3d1ef472860d65cdced01cc41ff7d16221126ceb78f9161f2edb647180",
       "index": 9185,
       "sha": "",
       "name": "QuantumPhunk 9185",

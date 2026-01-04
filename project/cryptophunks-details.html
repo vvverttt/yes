@@ -194,9 +194,14 @@
 
     // Set phunk image first
     const phunkImg = document.getElementById('phunk-image');
-    phunkImg.src = `../../images/phunks/${phunkId}.png`;
+    const specialGifIds = [5865, 6850, 8913];
+    if ([5865, 6850, 8913, 6922].includes(Number(phunkId))) {
+        phunkImg.src = `../../images/images_24x24/${phunkId}.gif`;
+    } else {
+        phunkImg.src = `../../images/phunks/${phunkId}.png`;
+        phunkImg.onerror = function() { this.src = `../../images/images_24x24/${phunkId}.png`; };
+    }
     phunkImg.alt = `Phunk ${phunkId}`;
-    phunkImg.onerror = function() { this.src = `../../images/images_24x24/${phunkId}.png`; };
 
     // Load JSON and get phunk data
     fetch('../cryptophunks-v69-merged (1) (1).json?v=' + Date.now())

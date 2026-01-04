@@ -39,7 +39,12 @@ function loadImages(callback) {
 
             data.images.forEach(function(imageData) {
                 var img = new Image();
-                img.src = '/images/images_24x24/' + imageData.num + '.png';
+                var specialGifIds = [5865, 6850, 8913, 6922];
+                if (specialGifIds.includes(imageData.num)) {
+                    img.src = '/images/images_24x24/' + imageData.num + '.gif';
+                } else {
+                    img.src = '/images/images_24x24/' + imageData.num + '.png';
+                }
 
                 img.onload = function() {
                     loadedCount++;

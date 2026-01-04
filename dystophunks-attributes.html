@@ -73,6 +73,9 @@
                     </tr>
                 </thead>
                 <tbody id="types-tbody">
+                        <tr>
+                            <td class="attr-name"><img src="images/images_24x24/5865.gif" alt="#5865"></td>
+                        </tr>
                     <!-- Dynamically populated -->
                 </tbody>
             </table>
@@ -104,6 +107,12 @@
                     </tr>
                 </thead>
                 <tbody id="counts-tbody">
+                        <tr>
+                            <td class="attr-name"><img src="images/images_24x24/6850.gif" alt="#6850"></td>
+                        </tr>
+                        <tr>
+                            <td class="attr-name"><img src="images/images_24x24/8913.gif" alt="#8913"></td>
+                        </tr>
                     <!-- Dynamically populated -->
                 </tbody>
             </table>
@@ -189,6 +198,22 @@
         font-weight: 700;
     }
     .attr-name a {
+    }
+
+    /* Force display for special GIFs */
+    img[src$="5865.gif"],
+    img[src$="6850.gif"],
+    img[src$="8913.gif"] {
+        display: inline-block !important;
+        width: 48px !important;
+        height: 48px !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        z-index: 10 !important;
+        background: none !important;
+        border: 2px solid #B3BF44;
+        box-sizing: border-box;
+    }
         color: #B3BF44;
         text-decoration: none;
     }
@@ -269,9 +294,16 @@
 
             // Helper function to create phunk box HTML with 48x48 images (clickable links to details page)
             function createPhunkBoxes(examples) {
-                return examples.map(idx =>
-                    `<a href="dystophunks-details.html?id=${idx}" class="phunk-box"><img src="images/dystophunks/${idx}_DystoPhunk_${idx}.png" alt="DystoPhunk ${idx}" title="DystoPhunk #${idx}"></a>`
-                ).join('');
+                const specialGifIds = [5865, 6850, 8913];
+                return examples.map(idx => {
+                    let imgSrc;
+                    if (specialGifIds.includes(idx)) {
+                        imgSrc = `images/images_24x24/${idx}.gif`;
+                    } else {
+                        imgSrc = `images/dystophunks/${idx}_DystoPhunk_${idx}.png`;
+                    }
+                    return `<a href="dystophunks-details.html?id=${idx}" class="phunk-box"><img src="${imgSrc}" alt="DystoPhunk ${idx}" title="DystoPhunk #${idx}"></a>`;
+                }).join('');
             }
 
             // Populate types table
