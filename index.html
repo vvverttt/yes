@@ -9,6 +9,15 @@
         }
     </script>
     <style>
+        /* Lock header layout for both light and dark modes - prevent shift on reload */
+        html, body { margin: 0; padding: 0; }
+        .main_header, .main_footer, header { position: relative !important; }
+        
+        /* Light mode defaults */
+        html:not([data-theme="dark"]) .main_header, html:not([data-theme="dark"]) .main_footer, html:not([data-theme="dark"]) header { 
+            background-color: #ffffff !important; position: relative !important; 
+        }
+        
         /* Dark mode styles using data attribute - applies before page renders */
         html[data-theme="dark"], html[data-theme="dark"] body { background-color: #1a1a1a !important; color: #ffffff !important; }
         html[data-theme="dark"] h1, html[data-theme="dark"] h2, html[data-theme="dark"] h3, html[data-theme="dark"] h4, html[data-theme="dark"] h5, html[data-theme="dark"] h6 { color: #ffffff !important; }
