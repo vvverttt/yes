@@ -11,7 +11,7 @@
         // Prevent dark mode flash on reload with comprehensive style injection
         if (localStorage.getItem('darkMode') === 'true') {
             const style = document.createElement('style');
-            style.innerHTML = 'html, body { background-color: #1a1a1a !important; color: #ffffff !important; } h1, h2, h3, h4, h5, h6, p, span, a, div, li, nav, header, footer { color: #ffffff !important; } .main_header, .main_footer, header { background-color: #1a1a1a !important; } .main_nav_list a, .footer_nav_list a { color: #B3BF44 !important; }';
+            style.innerHTML = 'html, body { background-color: #1a1a1a !important; color: #ffffff !important; } h1, h2, h3, h4, h5, h6, p, span, a, div, li, nav, header, footer { color: #ffffff !important; } .main_header, .main_footer, header { background-color: #1a1a1a !important; position: relative !important; } .main_nav_list a, .footer_nav_list a { color: #B3BF44 !important; } button, .btn, input[type="button"], input[type="submit"] { color: #ffffff !important; background-color: #2a2a2a !important; border-color: #555555 !important; } button:hover, .btn:hover { background-color: #3a3a3a !important; }';
             document.head.insertBefore(style, document.head.firstChild);
             document.documentElement.classList.add('dark-mode');
             document.documentElement.style.backgroundColor = '#1a1a1a';
