@@ -61,6 +61,7 @@
 <li class="jsNavShow"><a class="active" href="bloglist.html">Writing</a></li>
 <li class="jsNavShow"><a class="" href="about.html">About</a></li>
 <li class="jsNavShow"><a href="https://x.com/DystoLabz"><i class="fa fa-twitter"></i></a></li>
+<li class="jsNavShow"><a id="dark-mode-toggle" href="javascript:void(0)" onclick="toggleDarkMode()" style="cursor: pointer;"><i class="fa fa-moon-o"></i></a></li>
                 </ul>
             </nav>
         </div>
@@ -190,6 +191,82 @@
     window.lazySizesConfig = window.lazySizesConfig || {};
     window.lazySizesConfig.expand = 10; //default 360-500
     lazySizesConfig. expFactor = 1.5; //default: 1.7
+</script>
+
+<style>
+    /* Dark Mode Styles - Only background changes */
+    body.dark-mode {
+        background-color: #1a1a1a !important;
+    }
+
+    body.dark-mode .main_content {
+        background-color: #1a1a1a !important;
+    }
+
+    body.dark-mode .container {
+        background-color: #1a1a1a !important;
+        color: #ffffff !important;
+    }
+
+    body.dark-mode .main_footer {
+        background-color: #1a1a1a !important;
+        color: #ffffff !important;
+    }
+
+    body.dark-mode .main_header {
+        background-color: #1a1a1a !important;
+        color: #ffffff !important;
+    }
+
+    body.dark-mode a {
+        color: #B3BF44 !important;
+    }
+
+    body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 {
+        color: #ffffff !important;
+    }
+
+    body.dark-mode p, body.dark-mode .small, body.dark-mode .blog_txt {
+        color: #ffffff !important;
+    }
+</style>
+
+<script>
+    // Dark Mode Toggle
+    function toggleDarkMode() {
+        const body = document.body;
+        const toggle = document.getElementById('dark-mode-toggle');
+        body.classList.toggle('dark-mode');
+        
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('darkMode', 'true');
+            if (toggle && toggle.querySelector('i')) {
+                toggle.querySelector('i').classList.remove('fa-moon-o');
+                toggle.querySelector('i').classList.add('fa-sun-o');
+            }
+        } else {
+            localStorage.setItem('darkMode', 'false');
+            if (toggle && toggle.querySelector('i')) {
+                toggle.querySelector('i').classList.remove('fa-sun-o');
+                toggle.querySelector('i').classList.add('fa-moon-o');
+            }
+        }
+    }
+
+    // Load dark mode preference on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        const darkMode = localStorage.getItem('darkMode') === 'true';
+        const body = document.body;
+        const toggle = document.getElementById('dark-mode-toggle');
+        
+        if (darkMode) {
+            body.classList.add('dark-mode');
+            if (toggle && toggle.querySelector('i')) {
+                toggle.querySelector('i').classList.remove('fa-moon-o');
+                toggle.querySelector('i').classList.add('fa-sun-o');
+            }
+        }
+    });
 </script>
 
 </body>

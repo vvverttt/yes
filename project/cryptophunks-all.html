@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv=X-UA-Compatible content="IE=11">
     <link rel="shortcut icon" type="image/png" href="../public/images/favicon.ico">
-    <title>All QuantumPhunks - CryptoPhunksV69</title>
+    <title>All QuantumPhunks - CryptoPhunksV67</title>
     <meta name="description" content="View all QuantumPhunks in the collection" />
     <link rel="stylesheet" href="../public/components/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../public/components/bootstrap/css/bootstrap-theme.min.css">
@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="../public/stylesheets/mainf500.css?v=13" charset="utf-8" >
     <link rel="stylesheet" type="text/css" href="../public/stylesheets/stylesf500.css?v=13" charset="utf-8" >
 
-    <meta property="og:title" content="All QuantumPhunks - CryptoPhunksV69" />
+    <meta property="og:title" content="All QuantumPhunks - CryptoPhunksV67" />
     <meta property="og:description" content="View all QuantumPhunks in the collection" />
 
     <script src="../public/components/jquery-2.2.4.min.js"></script>
@@ -38,6 +38,7 @@
                     <li class="jsNavShow"><a class="" href="../bloglist.html">Writing</a></li>
                     <li class="jsNavShow"><a class="" href="../about.html">About</a></li>
                     <li class="jsNavShow"><a href="https://x.com/DystoLabz" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                    <li class="jsNavShow"><a id="dark-mode-toggle" href="javascript:void(0)" onclick="toggleDarkMode()" style="cursor: pointer;"><i class="fa fa-moon-o"></i></a></li>
                 </ul>
             </nav>
         </div>
@@ -49,7 +50,7 @@
         <div class="col-md-11 col-xs-12">
             <!-- Breadcrumb navigation with box -->
             <div class="breadcrumb-box">
-                <a href="cryptophunks.html" class="breadcrumb-link">CryptoPhunksV69</a>
+                <a href="cryptophunks.html" class="breadcrumb-link">CryptoPhunksV67</a>
                 <span class="breadcrumb-separator"> / </span>
                 <span class="breadcrumb-current">All QuantumPhunks</span>
             </div>
@@ -59,7 +60,7 @@
             <!-- Navigation buttons with dropdowns -->
             <div style="margin-bottom: 20px;">
                 <div style="position: relative; display: inline-block; margin-right: 20px;">
-                    <span id="phunk-types-btn" style="color: #000; padding: 4px 8px; font-family: 'Montserrat', sans-serif; font-size: 14px; cursor: pointer; background: none; border: none;">Phunk Types ▼</span>
+                    <span id="phunk-types-btn" style="color: #333; padding: 4px 8px; font-family: 'Montserrat', sans-serif; font-size: 14px; cursor: pointer; background: none; border: none;">Phunk Types ▼</span>
                     <div id="phunk-types-dropdown" style="display: none; position: absolute; top: 100%; left: 0; background: white; border: 1px solid #ccc; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 15px; min-width: 250px; max-height: 400px; overflow-y: auto; z-index: 1000; font-family: 'Montserrat', sans-serif; font-size: 12px;">
                         <div style="margin-bottom: 10px;">
                             <input type="text" id="phunk-types-search" placeholder="Filter phunk types..." style="width: 100%; padding: 5px; border: 1px solid #ddd; font-size: 12px;">
@@ -72,7 +73,7 @@
                 </div>
                 
                 <div style="position: relative; display: inline-block; margin-right: 20px;">
-                    <span id="attributes-btn" style="color: #000; padding: 4px 8px; font-family: 'Montserrat', sans-serif; font-size: 14px; cursor: pointer; background: none; border: none;">Attributes ▼</span>
+                    <span id="attributes-btn" style="color: #333; padding: 4px 8px; font-family: 'Montserrat', sans-serif; font-size: 14px; cursor: pointer; background: none; border: none;">Attributes ▼</span>
                     <div id="attributes-dropdown" style="display: none; position: absolute; top: 100%; left: 0; background: white; border: 1px solid #ccc; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 15px; min-width: 250px; max-height: 400px; overflow-y: auto; z-index: 1000; font-family: 'Montserrat', sans-serif; font-size: 12px;">
                         <div style="margin-bottom: 10px;">
                             <input type="text" id="attributes-search" placeholder="Filter attributes..." style="width: 100%; padding: 5px; border: 1px solid #ddd; font-size: 12px;">
@@ -85,7 +86,7 @@
                 </div>
                 
                 <div style="position: relative; display: inline-block;">
-                    <span id="attribute-counts-btn" style="color: #000; padding: 4px 8px; font-family: 'Montserrat', sans-serif; font-size: 14px; cursor: pointer; background: none; border: none;">Attribute Counts ▼</span>
+                    <span id="attribute-counts-btn" style="color: #333; padding: 4px 8px; font-family: 'Montserrat', sans-serif; font-size: 14px; cursor: pointer; background: none; border: none;">Attribute Counts ▼</span>
                     <div id="attribute-counts-dropdown" style="display: none; position: absolute; top: 100%; left: 0; background: white; border: 1px solid #ccc; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 15px; min-width: 300px; max-height: 400px; overflow-y: auto; z-index: 1000; font-family: 'Montserrat', sans-serif; font-size: 12px;">
                         <div style="margin-bottom: 10px;">
                             <input type="text" id="attribute-counts-search" placeholder="Filter by attribute count..." style="width: 100%; padding: 5px; border: 1px solid #ddd; font-size: 12px;">
@@ -180,12 +181,25 @@
     
     .punk-item img {
         width: 90px;
-        height: 90px;
+        height: auto;
+        aspect-ratio: 1 / 1;
         image-rendering: pixelated;
         display: block;
         margin: 0;
         padding: 0;
         background-color: #c3ff00;
+    }
+
+    /* Ensure EthsRock images in grid use correct aspect ratio and size */
+    .punk-item img.ethsrock-img {
+        width: 90px !important;
+        height: 104px !important;
+        aspect-ratio: 350 / 495 !important;
+        object-fit: contain !important;
+        background-color: #c3ff00;
+        display: block;
+        margin: 0;
+        padding: 0;
     }
     
     .punk-item:hover {
@@ -211,11 +225,20 @@
     
     /* Remove any spacing */
     #punks-grid {
+        display: grid;
+        grid-template-columns: repeat(12, 90px);
         gap: 0 !important;
         margin: 0 !important;
         padding: 0 !important;
         grid-gap: 0 !important;
         border-spacing: 0 !important;
+        justify-content: flex-start;
+        overflow-x: auto;
+        width: 100%;
+        min-width: 1080px;
+        /* Prevent squishing by keeping grid fixed and enabling scroll */
+        box-sizing: border-box;
+        /* Remove any responsive overrides that shrink items */
     }
     
     #punks-grid * {
@@ -227,47 +250,124 @@
     #punks-grid {
         line-height: 0;
     }
-    
-    @media (max-width: 768px) {
-        .punk-item {
-            width: 70px;
-            height: 82px;
-        }
-        
-        .punk-item img {
-            width: 70px;
-            height: 70px;
-        }
-        
-        .punk-number {
-            font-size: 11px;
-            line-height: 12px;
-        }
-        
-        h1 {
-            font-size: 28px !important;
-        }
+</style>
+
+<style>
+    body.dark-mode {
+        background-color: #1a1a1a !important;
+        color: #ffffff !important;
     }
-    
-    @media (max-width: 480px) {
-        .punk-item {
-            width: 55px;
-            height: 65px;
-        }
-        
-        .punk-item img {
-            width: 55px;
-            height: 55px;
-        }
-        
-        .punk-number {
-            font-size: 9px;
-            line-height: 10px;
-        }
-        
-        h1 {
-            font-size: 24px !important;
-        }
+
+    body.dark-mode .main_footer {
+        background-color: #1a1a1a !important;
+        color: #ffffff !important;
+    }
+
+    body.dark-mode .main_header {
+        background-color: #1a1a1a !important;
+        color: #ffffff !important;
+    }
+
+    body.dark-mode a {
+        color: #B3BF44 !important;
+    }
+
+    body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 {
+        color: #ffffff !important;
+    }
+
+    body.dark-mode .main-title {
+        color: #ffffff !important;
+    }
+
+    body.dark-mode .breadcrumb-box {
+        background-color: #2a2a2a !important;
+        color: #ffffff !important;
+    }
+
+    body.dark-mode .breadcrumb-current {
+        color: #ffffff !important;
+    }
+
+    body.dark-mode .breadcrumb-separator {
+        color: #999 !important;
+    }
+
+    body.dark-mode .breadcrumb-current {
+        color: #ffffff !important;
+    }
+
+    body.dark-mode #phunk-types-btn, body.dark-mode #attributes-btn, body.dark-mode #attribute-counts-btn {
+        color: #ffffff !important;
+    }
+
+    body.dark-mode .phunk-name {
+        color: #ffffff !important;
+    }
+
+    body.dark-mode p, body.dark-mode .small {
+        color: #ffffff !important;
+    }
+
+    body.dark-mode .punk-item {
+        background-color: #2a2a2a !important;
+    }
+
+    body.dark-mode .punk-number {
+        background-color: #2a2a2a !important;
+        color: #ffffff !important;
+    }
+
+    body.dark-mode .phunk-box {
+        background-color: #2a2a2a !important;
+    }
+
+    body.dark-mode #phunk-types-dropdown,
+    body.dark-mode #attributes-dropdown,
+    body.dark-mode #attribute-counts-dropdown {
+        background-color: #2a2a2a !important;
+        border: 1px solid #444 !important;
+        color: #ffffff !important;
+    }
+
+    body.dark-mode #phunk-types-dropdown input,
+    body.dark-mode #attributes-dropdown input,
+    body.dark-mode #attribute-counts-dropdown input {
+        background-color: #1a1a1a !important;
+        color: #ffffff !important;
+        border: 1px solid #444 !important;
+    }
+
+    body.dark-mode #phunk-types-dropdown label,
+    body.dark-mode #attributes-dropdown label,
+    body.dark-mode #attribute-counts-dropdown label {
+        color: #ffffff !important;
+    }
+
+    body.dark-mode #phunk-types-dropdown button,
+    body.dark-mode #attributes-dropdown button,
+    body.dark-mode #attribute-counts-dropdown button {
+        background-color: #1a1a1a !important;
+        color: #ffffff !important;
+        border: 1px solid #444 !important;
+    }
+
+    body.dark-mode [style*="background: white"] {
+        background-color: #2a2a2a !important;
+        color: #ffffff !important;
+    }
+
+    body.dark-mode [style*="background: #f0f0f0"] {
+        background-color: #1a1a1a !important;
+        color: #ffffff !important;
+    }
+
+    body.dark-mode [style*="color: #333"] {
+        color: #ffffff !important;
+    }
+
+    body.dark-mode [style*="color: #666"] {
+        color: #cccccc !important;
     }
 </style>
 
@@ -275,7 +375,7 @@
     console.log('Loading all QuantumPhunks from JSON...');
     
     // Load all punks from JSON
-    fetch('../cryptophunks-v69-merged%20(1)%20(1).json?v=' + Date.now())
+    fetch('../cryptophunks-v67-merged%20(1)%20(1).json?v=' + Date.now())
         .then(response => {
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
@@ -289,7 +389,7 @@
         .catch(error => {
             console.error('JSON error, trying alternative path:', error);
             // Try without URL encoding
-            fetch('../cryptophunks-v69-merged (1) (1).json?v=' + Date.now())
+            fetch('../cryptophunks-v67-merged (1) (1).json?v=' + Date.now())
                 .then(response => {
                     if (!response.ok) {
                         throw new Error(`Alternative fetch failed! status: ${response.status}`);
@@ -329,13 +429,25 @@
 
             const img = document.createElement('img');
             const specialGifIds = [5865, 6850, 8913];
-            if ([5865, 6850, 8913, 6922].includes(Number(item.index))) {
-                img.src = `../../images/images_24x24/${item.index}.gif`;
-            } else {
-                img.src = `../../images/images_24x24/${item.index}.png`;
-            }
-            img.alt = `QuantumPhunk ${item.index}`;
-            img.style.imageRendering = 'pixelated';
+
+                // Check if this is an EthsRock
+                let isEthsRock = false;
+                if (item.attributes) {
+                    isEthsRock = item.attributes.some(attr => attr.trait_type === 'Type' && attr.value === 'EthsRock');
+                }
+
+                if ([5865, 6850, 8913, 6922, 6996].includes(Number(item.index))) {
+                    img.src = `../images/images_24x24/${item.index}.gif`;
+                } else {
+                    img.src = `../images/images_24x24/${item.index}.png`;
+                }
+                img.alt = `QuantumPhunk ${item.index}`;
+                img.style.imageRendering = 'pixelated';
+
+                // Apply EthsRock class for correct aspect ratio
+                if (isEthsRock) {
+                    img.classList.add('ethsrock-img');
+                }
 
             img.onerror = () => {
                 console.warn(`Image ${item.index} not found`);
@@ -381,20 +493,21 @@
         
         items.forEach(item => {
             if (item.attributes) {
-                // Count attributes excluding Type and Species
+                // Count attributes excluding Type, Animal, Species
+                const excludedTraits = ['Type', 'Animal', 'Species'];
                 const countableAttributes = item.attributes.filter(attr => 
-                    attr.trait_type !== 'Type' && attr.trait_type !== 'Species'
+                    !excludedTraits.includes(attr.trait_type)
                 );
                 const totalAttributes = countableAttributes.length;
                 const countKey = `${totalAttributes} attribute${totalAttributes === 1 ? '' : 's'}`;
                 attributeCounts[countKey] = (attributeCounts[countKey] || 0) + 1;
-                
+
                 item.attributes.forEach(attr => {
                     // Add to phunk types if it's a Type attribute
                     if (attr.trait_type === 'Type') {
                         phunkTypes.add(attr.value);
                     }
-                    
+
                     // Group attributes by type
                     if (!attributesByType[attr.trait_type]) {
                         attributesByType[attr.trait_type] = new Set();
@@ -707,6 +820,31 @@
         // Update count with comma formatting
         totalCount.textContent = visibleCount.toLocaleString();
     }
+
+    // Dark Mode Toggle
+    function toggleDarkMode() {
+        const body = document.body;
+        const isDarkMode = body.classList.contains('dark-mode');
+        const toggle = document.getElementById('dark-mode-toggle');
+        if (isDarkMode) {
+            body.classList.remove('dark-mode');
+            localStorage.setItem('darkMode', 'false');
+            toggle.innerHTML = '<i class="fa fa-moon-o"></i>';
+        } else {
+            body.classList.add('dark-mode');
+            localStorage.setItem('darkMode', 'true');
+            toggle.innerHTML = '<i class="fa fa-sun-o"></i>';
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggle = document.getElementById('dark-mode-toggle');
+        const darkModeEnabled = localStorage.getItem('darkMode') === 'true';
+        if (darkModeEnabled) {
+            document.body.classList.add('dark-mode');
+            toggle.innerHTML = '<i class="fa fa-sun-o"></i>';
+        }
+    });
 </script>
 
 <svg hidden>

@@ -43,6 +43,18 @@
         ga('create', 'UA-191940-2', 'auto');
         ga('send', 'pageview');
     </script>
+    <style>
+        body.dark-mode {
+            background-color: #1a1a1a !important;
+            color: #ffffff !important;
+        }
+        body.dark-mode .main_footer { background-color: #1a1a1a !important; color: #ffffff !important; }
+        body.dark-mode .main_header { background-color: #1a1a1a !important; color: #ffffff !important; }
+        body.dark-mode a { color: #B3BF44 !important; }
+        body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 { color: #ffffff !important; }
+        body.dark-mode p, body.dark-mode .small, body.dark-mode .text_block { color: #ffffff !important; }
+        body.dark-mode .breadcrumb-box, body.dark-mode .breadcrumb-current { background-color: #2a2a2a !important; color: #ffffff !important; }
+    </style>
     </head>
 <body>
 
@@ -61,6 +73,7 @@
 <li class="jsNavShow"><a class="" href="../bloglist.html">Writing</a></li>
 <li class="jsNavShow"><a class="" href="../about.html">About</a></li>
 <li class="jsNavShow"><a href="https://x.com/DystoLabz"><i class="fa fa-twitter"></i></a></li>
+<li class="jsNavShow"><a id="dark-mode-toggle" href="javascript:void(0)" onclick="toggleDarkMode()" style="cursor: pointer;"><i class="fa fa-moon-o"></i></a></li>
                 </ul>
             </nav>
         </div>
@@ -116,7 +129,7 @@
                 
                 <p style="max-width: none; width: 100%; margin-bottom: 20px;">Numbered 10,000–10,250, the collection includes 0-trait Alien and Ape Zombie, Philip the Intern, PhunkBot V2 (aka FlippinBot), and the Ethereum Phunks PFP with both male and female versions—serving as a disciplined continuation of the punk design space.</p>
                 
-                <p style="max-width: none; width: 100%; margin-bottom: 0;">This is not a reinterpretation of the punk aesthetic, but a completion and extension of it—an ode to Missing Phunks, V2 Phunks, and EtherPhunks, proving the 24×24 format still has room to evolve while honoring its roots.</p>
+                <p style="max-width: none; width: 100%; margin-bottom: 0;">This is not a reinterpretation of the punk aesthetic, but a completion and extension of it—an ode to Missing Punks, V2 Phunks, and CryptoPhunks, proving the 24×24 format still has room to evolve while honoring its roots.</p>
             </div>
             <div class="col-md-2 hidden-sm hidden-xs spacer_block">
             </div>
@@ -331,6 +344,38 @@
                 setTimeout(function() {
                     window.scrollTo(0, savedScrollPosition);
                 }, 50);
+            }
+        }
+    });
+</script>
+
+<script>
+    function toggleDarkMode() {
+        const body = document.body;
+        const toggle = document.getElementById('dark-mode-toggle');
+        body.classList.toggle('dark-mode');
+        
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('darkMode', 'true');
+            toggle.querySelector('i').classList.remove('fa-moon-o');
+            toggle.querySelector('i').classList.add('fa-sun-o');
+        } else {
+            localStorage.setItem('darkMode', 'false');
+            toggle.querySelector('i').classList.remove('fa-sun-o');
+            toggle.querySelector('i').classList.add('fa-moon-o');
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const darkMode = localStorage.getItem('darkMode') === 'true';
+        const body = document.body;
+        const toggle = document.getElementById('dark-mode-toggle');
+        
+        if (darkMode) {
+            body.classList.add('dark-mode');
+            if (toggle && toggle.querySelector('i')) {
+                toggle.querySelector('i').classList.remove('fa-moon-o');
+                toggle.querySelector('i').classList.add('fa-sun-o');
             }
         }
     });

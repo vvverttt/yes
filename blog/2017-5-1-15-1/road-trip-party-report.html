@@ -43,6 +43,56 @@
         ga('create', 'UA-191940-2', 'auto');
         ga('send', 'pageview');
     </script>
+    <script>
+        // Dark Mode Toggle
+        function toggleDarkMode() {
+            const body = document.body;
+            const isDarkMode = body.classList.contains('dark-mode');
+            const toggle = document.getElementById('dark-mode-toggle');
+            if (isDarkMode) {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'false');
+                toggle.innerHTML = '<i class="fa fa-moon-o"></i>';
+            } else {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'true');
+                toggle.innerHTML = '<i class="fa fa-sun-o"></i>';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggle = document.getElementById('dark-mode-toggle');
+            const darkModeEnabled = localStorage.getItem('darkMode') === 'true';
+            if (darkModeEnabled) {
+                document.body.classList.add('dark-mode');
+                toggle.innerHTML = '<i class="fa fa-sun-o"></i>';
+            }
+        });
+    </script>
+    <style>
+        body.dark-mode {
+            background-color: #1a1a1a !important;
+            color: #ffffff !important;
+        }
+
+        body.dark-mode .main_footer {
+            background-color: #1a1a1a !important;
+            color: #ffffff !important;
+        }
+
+        body.dark-mode .main_header {
+            background-color: #1a1a1a !important;
+            color: #ffffff !important;
+        }
+
+        body.dark-mode a {
+            color: #B3BF44 !important;
+        }
+
+        body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 {
+            color: #ffffff !important;
+        }
+    </style>
     </head>
 <body>
 
@@ -61,6 +111,7 @@
 <li class="jsNavShow"><a class="active" href="../../bloglist.html">Writing</a></li>
 <li class="jsNavShow"><a class="" href="../../about.html">About</a></li>
 <li class="jsNavShow"><a href="http://twitter.com/larvalabs"><i class="fa fa-twitter"></i></a></li>
+<li class="jsNavShow"><a id="dark-mode-toggle" href="javascript:void(0)" onclick="toggleDarkMode()" style="cursor: pointer;"><i class="fa fa-moon-o"></i></a></li>
                 </ul>
             </nav>
         </div>

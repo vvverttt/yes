@@ -5,6 +5,15 @@
 			"label": "Open index.html in browser",
 			"type": "shell",
 			"command": "start index.html"
+		},
+		{
+			"label": "Run local server on port 8000",
+			"type": "shell",
+			"command": "python -m http.server 8000",
+			"args": [],
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": "build"
 		}
 	]
 }

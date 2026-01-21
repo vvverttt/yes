@@ -75163,7 +75163,7 @@
       ]
     },
     {
-      "id": "0x601d4029e2fb8fcc9f5b24037c20f76407e5a5bb35a0915b2c3d64c955832c29",
+      "id": "0xf1060dccf5c596a521c641d5e8e3af55a7cfdb23298588d38e7ad008a137a000",
       "index": 4566,
       "sha": "",
       "name": "QuantumPhunk 4566",
@@ -75188,6 +75188,10 @@
         {
           "trait_type": "Hair",
           "value": "Pink With Hat"
+        },
+        {
+          "trait_type": "Hair",
+          "value": "Diamond With Hat"
         }
       ]
     },
@@ -138560,7 +138564,7 @@
       ]
     },
     {
-      "id": "0xc7a60b0713f72fd60a534b9db227d564e1342889ea7a780d34176aebbe498348",
+      "id": "0x1805ab5c8d658f50f03545b1d3332e1703e25ae753abd25b46f59632f9ba2e19",
       "index": 8579,
       "sha": "",
       "name": "QuantumPhunk 8579",

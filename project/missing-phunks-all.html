@@ -38,6 +38,7 @@
                     <li class="jsNavShow"><a class="" href="../bloglist.html">Writing</a></li>
                     <li class="jsNavShow"><a class="" href="../about.html">About</a></li>
                     <li class="jsNavShow"><a href="https://x.com/DystoLabz" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                    <li class="jsNavShow"><a id="dark-mode-toggle" href="javascript:void(0)" onclick="toggleDarkMode()" style="cursor: pointer;"><i class="fa fa-moon-o"></i></a></li>
                 </ul>
             </nav>
         </div>
@@ -105,7 +106,7 @@
 <div class="container-fluid" style="padding: 0 20px;">
     <div class="row">
         <div class="col-md-12">
-            <div id="punks-grid" style="display: grid; grid-template-columns: repeat(12, 90px); margin: 0 auto; padding: 0; gap: 0; justify-content: center;">
+            <div id="punks-grid">
                 <!-- Punks will be loaded here -->
             </div>
             <div id="loading" style="text-align: center; padding: 40px; font-family: 'Montserrat', arial, helvetica, sans-serif;">
@@ -211,11 +212,17 @@
     
     /* Remove any spacing */
     #punks-grid {
+        display: grid;
+        grid-template-columns: repeat(12, 90px);
         gap: 0 !important;
         margin: 0 !important;
         padding: 0 !important;
         grid-gap: 0 !important;
         border-spacing: 0 !important;
+        justify-content: center;
+        overflow-x: auto;
+        width: 100%;
+        min-width: 1080px;
     }
     
     #punks-grid * {
@@ -227,51 +234,69 @@
     #punks-grid {
         line-height: 0;
     }
-    
-    @media (max-width: 768px) {
-        .punk-item {
-            width: 70px;
-            height: 82px;
-        }
-        
-        .punk-item img {
-            width: 70px;
-            height: 70px;
-        }
-        
-        .punk-number {
-            font-size: 11px;
-            line-height: 12px;
-        }
-        
-        h1 {
-            font-size: 28px !important;
-        }
+
+    body.dark-mode .punk-item {
+        background-color: #2a2a2a !important;
     }
-    
-    @media (max-width: 480px) {
-        .punk-item {
-            width: 55px;
-            height: 65px;
-        }
-        
-        .punk-item img {
-            width: 55px;
-            height: 55px;
-        }
-        
-        .punk-number {
-            font-size: 9px;
-            line-height: 10px;
-        }
-        
-        h1 {
-            font-size: 24px !important;
-        }
+
+    body.dark-mode .punk-number {
+        background-color: #2a2a2a !important;
+        color: #ffffff !important;
     }
+
+    body.dark-mode .phunk-box {
+        background-color: #2a2a2a !important;
+    }
+
+    body.dark-mode .breadcrumb-box {
+        background-color: #2a2a2a !important;
+    }
+
+    body.dark-mode .breadcrumb-current {
+        color: #ffffff !important;
+    }
+
+    body.dark-mode {
+        background-color: #1a1a1a !important;
+        color: #ffffff !important;
+    }
+    body.dark-mode .main_footer { background-color: #1a1a1a !important; color: #ffffff !important; }
+    body.dark-mode .main_header { background-color: #1a1a1a !important; color: #ffffff !important; }
+    body.dark-mode a { color: #B3BF44 !important; }
+    body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 { color: #ffffff !important; }
+    body.dark-mode p, body.dark-mode .small, body.dark-mode .text_block { color: #ffffff !important; }
+    body.dark-mode .main-title { color: #ffffff !important; }
+    body.dark-mode #phunk-types-btn, body.dark-mode #attributes-btn, body.dark-mode #attribute-counts-btn { color: #ffffff !important; }
+    body.dark-mode [style*="border-bottom: 1px solid #eee"] { border-bottom: 1px solid #333 !important; }
+    body.dark-mode [style*="color: #333; border-bottom"] { color: #ffffff !important; border-bottom-color: #333 !important; }
 </style>
 
 <script>
+    // Dark Mode Toggle
+    function toggleDarkMode() {
+        const body = document.body;
+        const isDarkMode = body.classList.contains('dark-mode');
+        const toggle = document.getElementById('dark-mode-toggle');
+        if (isDarkMode) {
+            body.classList.remove('dark-mode');
+            localStorage.setItem('darkMode', 'false');
+            toggle.innerHTML = '<i class="fa fa-moon-o"></i>';
+        } else {
+            body.classList.add('dark-mode');
+            localStorage.setItem('darkMode', 'true');
+            toggle.innerHTML = '<i class="fa fa-sun-o"></i>';
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggle = document.getElementById('dark-mode-toggle');
+        const darkModeEnabled = localStorage.getItem('darkMode') === 'true';
+        if (darkModeEnabled) {
+            document.body.classList.add('dark-mode');
+            toggle.innerHTML = '<i class="fa fa-sun-o"></i>';
+        }
+    });
+
     console.log('Loading all Missing Phunks from JSON...');
     
     // Load all punks from JSON

@@ -38,6 +38,7 @@
                     <li class="jsNavShow"><a class="" href="bloglist.html">Writing</a></li>
                     <li class="jsNavShow"><a class="" href="about.html">About</a></li>
                     <li class="jsNavShow"><a href="https://x.com/DystoLabz" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                    <li class="jsNavShow"><a id="dark-mode-toggle" href="javascript:void(0)" onclick="toggleDarkMode()" style="cursor: pointer;"><i class="fa fa-moon-o"></i></a></li>
                 </ul>
             </nav>
         </div>
@@ -73,9 +74,6 @@
                     </tr>
                 </thead>
                 <tbody id="types-tbody">
-                        <tr>
-                            <td class="attr-name"><img src="images/images_24x24/5865.gif" alt="#5865"></td>
-                        </tr>
                     <!-- Dynamically populated -->
                 </tbody>
             </table>
@@ -85,7 +83,6 @@
 
 <!-- Horizontal line between Types and Attributes -->
 <div class="container">
-    <div class="section-divider"></div>
 </div>
 
 <!-- Attributes Sections (separated by trait type) -->
@@ -107,12 +104,6 @@
                     </tr>
                 </thead>
                 <tbody id="counts-tbody">
-                        <tr>
-                            <td class="attr-name"><img src="images/images_24x24/6850.gif" alt="#6850"></td>
-                        </tr>
-                        <tr>
-                            <td class="attr-name"><img src="images/images_24x24/8913.gif" alt="#8913"></td>
-                        </tr>
                     <!-- Dynamically populated -->
                 </tbody>
             </table>
@@ -198,6 +189,8 @@
         font-weight: 700;
     }
     .attr-name a {
+        color: #B3BF44;
+        text-decoration: none;
     }
 
     /* Force display for special GIFs */
@@ -213,9 +206,6 @@
         background: none !important;
         border: 2px solid #B3BF44;
         box-sizing: border-box;
-    }
-        color: #B3BF44;
-        text-decoration: none;
     }
     .attr-name a:hover {
         text-decoration: underline;
@@ -247,6 +237,65 @@
     .examples-cell {
         white-space: nowrap;
         font-size: 0;
+    }
+
+    body.dark-mode {
+        background-color: #1a1a1a !important;
+        color: #ffffff !important;
+    }
+
+    body.dark-mode .main_footer {
+        background-color: #1a1a1a !important;
+        color: #ffffff !important;
+    }
+
+    body.dark-mode .main_header {
+        background-color: #1a1a1a !important;
+        color: #ffffff !important;
+    }
+
+    body.dark-mode a {
+        color: #B3BF44 !important;
+    }
+
+    body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 {
+        color: #ffffff !important;
+    }
+
+    body.dark-mode p, body.dark-mode .small {
+        color: #ffffff !important;
+    }
+
+    body.dark-mode .attr-table th {
+        background-color: #2a2a2a !important;
+        color: #ffffff !important;
+        border-bottom: 1px solid #444 !important;
+    }
+
+    body.dark-mode .attr-table td {
+        color: #ffffff !important;
+        border-bottom: 1px solid #333 !important;
+    }
+
+    body.dark-mode .attr-table tr:hover {
+        background-color: #2a2a2a !important;
+    }
+
+    body.dark-mode .breadcrumb-box {
+        background-color: #2a2a2a !important;
+        color: #ffffff !important;
+    }
+
+    body.dark-mode .breadcrumb-current {
+        color: #ffffff !important;
+    }
+
+    body.dark-mode .main-title {
+        color: #ffffff !important;
+    }
+
+    body.dark-mode .section-title {
+        color: #ffffff !important;
     }
 </style>
 
@@ -442,6 +491,38 @@
 </svg>
 
 <script src="public/javascripts/script.js"></script>
+
+<script>
+    function toggleDarkMode() {
+        const body = document.body;
+        const toggle = document.getElementById('dark-mode-toggle');
+        body.classList.toggle('dark-mode');
+        
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('darkMode', 'true');
+            toggle.querySelector('i').classList.remove('fa-moon-o');
+            toggle.querySelector('i').classList.add('fa-sun-o');
+        } else {
+            localStorage.setItem('darkMode', 'false');
+            toggle.querySelector('i').classList.remove('fa-sun-o');
+            toggle.querySelector('i').classList.add('fa-moon-o');
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const darkMode = localStorage.getItem('darkMode') === 'true';
+        const body = document.body;
+        const toggle = document.getElementById('dark-mode-toggle');
+        
+        if (darkMode) {
+            body.classList.add('dark-mode');
+            if (toggle && toggle.querySelector('i')) {
+                toggle.querySelector('i').classList.remove('fa-moon-o');
+                toggle.querySelector('i').classList.add('fa-sun-o');
+            }
+        }
+    });
+</script>
 
 </body>
 </html>

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv=X-UA-Compatible content="IE=11">
     <link rel="shortcut icon" type="image/png" href="../public/images/favicon.ico">
-    <title>CryptoPhunksV69: All Attributes</title>
+    <title>CryptoPhunksV67: All Attributes</title>
     <meta name="description" content="All Phunk Types and Attributes" />
     <link rel="stylesheet" href="../public/components/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../public/components/bootstrap/css/bootstrap-theme.min.css">
@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="../public/stylesheets/mainf500.css?v=13" charset="utf-8" >
     <link rel="stylesheet" type="text/css" href="../public/stylesheets/stylesf500.css?v=13" charset="utf-8" >
 
-    <meta property="og:title" content="CryptoPhunksV69: All Attributes" />
+    <meta property="og:title" content="CryptoPhunksV67: All Attributes" />
     <meta property="og:description" content="All Phunk Types and Attributes" />
 
     <script src="../public/components/jquery-2.2.4.min.js"></script>
@@ -38,6 +38,7 @@
                     <li class="jsNavShow"><a class="" href="../bloglist.html">Writing</a></li>
                     <li class="jsNavShow"><a class="" href="../about.html">About</a></li>
                     <li class="jsNavShow"><a href="https://x.com/DystoLabz" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                    <li class="jsNavShow"><a id="dark-mode-toggle" href="javascript:void(0)" onclick="toggleDarkMode()" style="cursor: pointer;"><i class="fa fa-moon-o"></i></a></li>
                 </ul>
             </nav>
         </div>
@@ -49,7 +50,7 @@
         <div class="col-md-11 col-xs-12">
             <!-- Breadcrumb navigation with box -->
             <div class="breadcrumb-box">
-                <a href="cryptophunks.html" class="breadcrumb-link">CryptoPhunksV69</a>
+                <a href="cryptophunks.html" class="breadcrumb-link">CryptoPhunksV67</a>
                 <span class="breadcrumb-separator"> / </span>
                 <span class="breadcrumb-current">Types and Attributes</span>
             </div>
@@ -220,11 +221,69 @@
         white-space: nowrap;
         font-size: 0;
     }
+
+    body.dark-mode {
+        background-color: #1a1a1a !important;
+        color: #ffffff !important;
+    }
+
+    body.dark-mode .main_footer {
+        background-color: #1a1a1a !important;
+        color: #ffffff !important;
+    }
+
+    body.dark-mode .main_header {
+        background-color: #1a1a1a !important;
+        color: #ffffff !important;
+    }
+
+    body.dark-mode a {
+        color: #B3BF44 !important;
+    }
+
+    body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 {
+        color: #ffffff !important;
+    }
+
+    body.dark-mode p, body.dark-mode .small {
+        color: #ffffff !important;
+    }
+
+    body.dark-mode .attr-table td {
+        color: #ffffff !important;
+    }
+
+    body.dark-mode .attr-table th {
+        background-color: #2a2a2a !important;
+        color: #ffffff !important;
+        border-bottom: 1px solid #444 !important;
+    }
+
+    body.dark-mode .attr-table tr:hover {
+        background-color: #2a2a2a !important;
+    }
+
+    body.dark-mode .breadcrumb-box {
+        background-color: #2a2a2a !important;
+        color: #ffffff !important;
+    }
+
+    body.dark-mode .breadcrumb-current {
+        color: #ffffff !important;
+    }
+
+    body.dark-mode .main-title {
+        color: #ffffff !important;
+    }
+
+    body.dark-mode .section-title {
+        color: #ffffff !important;
+    }
 </style>
 
 <script>
     // Load the JSON and populate tables
-    fetch('../cryptophunks-v69-merged (1) (1).json?v=' + Date.now())
+    fetch('../cryptophunks-v67-merged (1) (1).json?v=' + Date.now())
         .then(response => response.json())
         .then(data => {
             const items = data.collection_items;
@@ -282,7 +341,7 @@
             // Helper function to create phunk box HTML with 48x48 images (clickable links to details page)
             function createPhunkBoxes(examples) {
                 return examples.map(idx => {
-                    const specialGifIds = [5865, 6850, 8913, 6922];
+                    const specialGifIds = [5865, 6850, 6922, 6996, 8913];
                     let imgSrc;
                     if (specialGifIds.includes(idx)) {
                         imgSrc = `../images/images_24x24/${idx}.gif`;
@@ -309,14 +368,13 @@
                 typesTbody.appendChild(row);
             });
 
-            // Define trait type order: Aura first, then Skin Tone, Variant, others, then Armor/Cheeks/Face/Hands/Lips/Nose/Teeth, then Weapon, Pet, Species, Special, Character, Infinity Stone. Attribute Count is separate section at bottom.
-            const traitTypeOrder = ['Aura', 'Skin Tone', 'Variant', 'Hair', 'Eyes', 'Eye Mask', 'Ears', 'Mouth', 'Beard', 'Neck', 'Emotion', 'Armor', 'Cheeks', 'Face', 'Hands', 'Lips', 'Nose', 'Teeth', 'Weapon', 'Pet', 'Species', 'Special', 'Character', 'Infinity Stone', 'Attributes'];
+            // Define trait type order: Aura first, then Skin Tone, Variant, others, then Armor/Cheeks/Face/Hands/Lips/Nose/Teeth, then Weapon, Pet, Species, Special, Character. Attribute Count is separate section at bottom.
+            const traitTypeOrder = ['Aura', 'Skin Tone', 'Variant', 'Hair', 'Eyes', 'Eye Mask', 'Ears', 'Mouth', 'Beard', 'Neck', 'Emotion', 'Armor', 'Cheeks', 'Face', 'Hands', 'Lips', 'Nose', 'Teeth', 'Weapon', 'Pet', 'Species', 'Special', 'Character', 'Attributes'];
 
-            // Get all trait types from data and ensure Species and Infinity Stone are always present in the order
+            // Get all trait types from data and ensure Species is always present in the order
             let allTraitTypes = Object.keys(traitsByCategory).filter(t => t !== 'Type');
-            // Add 'Species' and 'Infinity Stone' if missing
+            // Add 'Species' if missing
             if (!allTraitTypes.includes('Species')) allTraitTypes.push('Species');
-            if (!allTraitTypes.includes('Infinity Stone')) allTraitTypes.push('Infinity Stone');
             allTraitTypes.sort((a, b) => {
                 const aIdx = traitTypeOrder.indexOf(a);
                 const bIdx = traitTypeOrder.indexOf(b);
@@ -383,9 +441,10 @@
             const attrCountGroups = {};
             items.forEach(item => {
                 const attrs = item.attributes || [];
-                // Count non-Type and non-Species attributes
-                const nonTypeAttrs = attrs.filter(a => a.trait_type !== 'Type' && a.trait_type !== 'Species');
-                const count = nonTypeAttrs.length;
+                // Exclude Type, Animal, Species from attribute count (but still display them)
+                const excludedTraits = ['Type', 'Animal', 'Species'];
+                const filteredAttrs = attrs.filter(a => !excludedTraits.includes(a.trait_type));
+                const count = filteredAttrs.length;
                 if (!attrCountGroups[count]) {
                     attrCountGroups[count] = { count: 0, examples: [] };
                 }
@@ -415,6 +474,31 @@
         .catch(error => {
             console.error('Error loading JSON:', error);
             document.getElementById('types-tbody').innerHTML = '<tr><td colspan="6">Error loading data</td></tr>';
+        });
+
+        // Dark Mode Toggle
+        function toggleDarkMode() {
+            const body = document.body;
+            const isDarkMode = body.classList.contains('dark-mode');
+            const toggle = document.getElementById('dark-mode-toggle');
+            if (isDarkMode) {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'false');
+                toggle.innerHTML = '<i class="fa fa-moon-o"></i>';
+            } else {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'true');
+                toggle.innerHTML = '<i class="fa fa-sun-o"></i>';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggle = document.getElementById('dark-mode-toggle');
+            const darkModeEnabled = localStorage.getItem('darkMode') === 'true';
+            if (darkModeEnabled) {
+                document.body.classList.add('dark-mode');
+                toggle.innerHTML = '<i class="fa fa-sun-o"></i>';
+            }
         });
 </script>
 

@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv=X-UA-Compatible content="IE=11">
     <link rel="shortcut icon" type="image/png" href="../public/images/favicon.ico">
-    <title>CryptoPhunksV69: Details</title>
-    <meta name="description" content="CryptoPhunksV69 Phunk Details" />
+    <title>CryptoPhunksV67: Details</title>
+    <meta name="description" content="CryptoPhunksV67 Phunk Details" />
     <link rel="stylesheet" href="../public/components/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../public/components/bootstrap/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
@@ -15,8 +15,8 @@
     <link rel="stylesheet" type="text/css" href="../public/stylesheets/mainf500.css?v=13" charset="utf-8" >
     <link rel="stylesheet" type="text/css" href="../public/stylesheets/stylesf500.css?v=13" charset="utf-8" >
 
-    <meta property="og:title" content="CryptoPhunksV69: Details" />
-    <meta property="og:description" content="CryptoPhunksV69 Phunk Details" />
+    <meta property="og:title" content="CryptoPhunksV67: Details" />
+    <meta property="og:description" content="CryptoPhunksV67 Phunk Details" />
 
     <script src="../public/components/jquery-2.2.4.min.js"></script>
     <script src="../public/components/bootstrap/js/bootstrap.min.js"></script>
@@ -38,6 +38,7 @@
                     <li class="jsNavShow"><a class="" href="../bloglist.html">Writing</a></li>
                     <li class="jsNavShow"><a class="" href="../about.html">About</a></li>
                     <li class="jsNavShow"><a href="https://x.com/DystoLabz" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                    <li class="jsNavShow"><a id="dark-mode-toggle" href="javascript:void(0)" onclick="toggleDarkMode()" style="cursor: pointer;"><i class="fa fa-moon-o"></i></a></li>
                 </ul>
             </nav>
         </div>
@@ -49,7 +50,7 @@
         <div class="col-md-12">
             <!-- Breadcrumb navigation with box - extended, no border -->
             <div class="breadcrumb-box">
-                <a href="cryptophunks.html" class="breadcrumb-link">CryptoPhunksV69</a>
+                <a href="cryptophunks.html" class="breadcrumb-link">CryptoPhunksV67</a>
                 <span class="breadcrumb-separator"> / </span>
                 <span class="breadcrumb-current" id="phunk-id-breadcrumb">Phunk #0</span>
             </div>
@@ -115,11 +116,26 @@
         margin-bottom: 30px;
         position: relative;
     }
+
+    /* Vertically center EthsRock images in green box */
+    .phunk-image-container.center-rock {
+        align-items: center !important;
+    }
     .phunk-detail-image {
-        width: 300px;
-        height: 300px;
+            width: 240px;
+            height: 240px;
         image-rendering: pixelated;
         display: block;
+        margin: 0 auto;
+    }
+
+    /* Only apply special size for EthsRock images */
+    .phunk-detail-image.ethsrock-img {
+        max-width: 350px !important;
+        height: 495px !important;
+        aspect-ratio: 350 / 495 !important;
+        object-fit: contain !important;
+        margin: 0 auto;
     }
     /* Title like CryptoPunks - no # sign */
     .phunk-detail-title {
@@ -134,7 +150,7 @@
     .phunk-detail-description {
         font-family: 'Montserrat', arial, helvetica, sans-serif;
         font-size: 19px;
-        color: #000;
+        color: #333;
         margin-top: -15px;
         margin-bottom: 30px;
     }
@@ -165,11 +181,73 @@
         text-decoration: underline;
     }
     .attribute-count-info {
-        color: #000;
+        color: #333;
         font-weight: 400;
         font-size: 17px;
     }
-</style>
+    body.dark-mode {
+        background-color: #1a1a1a !important;
+        color: #ffffff !important;
+    }
+
+    body.dark-mode .main_footer {
+        background-color: #1a1a1a !important;
+        color: #ffffff !important;
+    }
+
+    body.dark-mode .main_header {
+        background-color: #1a1a1a !important;
+        color: #ffffff !important;
+    }
+
+    body.dark-mode a {
+        color: #B3BF44 !important;
+    }
+
+    body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 {
+        color: #ffffff !important;
+    }
+
+    body.dark-mode .phunk-detail-title, body.dark-mode .phunk-detail-description {
+        color: #ffffff !important;
+    }
+
+    body.dark-mode .description-text, body.dark-mode .attribute-count-text, body.dark-mode .attribute-count-info {
+        color: #ffffff !important;
+    }
+
+    body.dark-mode p, body.dark-mode .small {
+        color: #ffffff !important;
+    }
+
+    body.dark-mode .breadcrumb-box {
+        background-color: #2a2a2a !important;
+        color: #ffffff !important;
+    }
+
+    body.dark-mode .breadcrumb-current {
+        color: #ffffff !important;
+    }
+
+    body.dark-mode .breadcrumb-separator {
+        color: #666 !important;
+    }
+
+    body.dark-mode .attribute-name {
+        color: #B3BF44 !important;
+    }
+
+    body.dark-mode .attribute-count-info {
+        color: #ffffff !important;
+    }
+
+    body.dark-mode .section-title {
+        color: #ffffff !important;
+    }
+
+    body.dark-mode .attribute-item {
+        color: #ffffff !important;
+    }</style>
 
 <script>
         // Toggle background color button logic
@@ -194,17 +272,40 @@
 
     // Set phunk image first
     const phunkImg = document.getElementById('phunk-image');
-    const specialGifIds = [5865, 6850, 8913];
-    if ([5865, 6850, 8913, 6922].includes(Number(phunkId))) {
+    if ([5865, 6850, 8913, 6922, 6996].includes(Number(phunkId))) {
         phunkImg.src = `../../images/images_24x24/${phunkId}.gif`;
     } else {
-        phunkImg.src = `../../images/phunks/${phunkId}.png`;
-        phunkImg.onerror = function() { this.src = `../../images/images_24x24/${phunkId}.png`; };
+        phunkImg.src = `../../images/images_24x24/${phunkId}.png`;
     }
     phunkImg.alt = `Phunk ${phunkId}`;
+    phunkImg.onerror = function() { 
+        this.style.display = 'none';
+        const container = document.querySelector('.phunk-image-container');
+        if (container) {
+            container.innerHTML = '<div style="color: #999; text-align: center; padding: 100px 20px;">Image not available for Phunk ' + phunkId + '</div>';
+        }
+    };
+
+    // Vertically center EthsRock images in green box
+    const phunkImageContainer = document.querySelector('.phunk-image-container');
+    if (Number(phunkId) >= 10320 && Number(phunkId) <= 10419) {
+        if (!phunkImg.classList.contains('ethsrock-img')) {
+            phunkImg.classList.add('ethsrock-img');
+        }
+        if (phunkImageContainer && !phunkImageContainer.classList.contains('center-rock')) {
+            phunkImageContainer.classList.add('center-rock');
+        }
+    } else {
+        phunkImg.classList.remove('ethsrock-img');
+        phunkImg.style.width = '240px';
+        phunkImg.style.height = '240px';
+        if (phunkImageContainer && phunkImageContainer.classList.contains('center-rock')) {
+            phunkImageContainer.classList.remove('center-rock');
+        }
+    }
 
     // Load JSON and get phunk data
-    fetch('../cryptophunks-v69-merged (1) (1).json?v=' + Date.now())
+    fetch('../cryptophunks-v67-merged (1) (1).json?v=' + Date.now())
         .then(response => response.json())
         .then(data => {
             const items = data.collection_items || [];
@@ -216,13 +317,15 @@
             // Update page elements with JSON name
             document.getElementById('phunk-id-breadcrumb').textContent = phunkId;
             document.getElementById('phunk-title').textContent = phunkName;
-            document.title = `${phunkName} - CryptoPhunksV69`;
+            document.title = `${phunkName} - CryptoPhunksV67`;
 
             if (phunk) {
                 const attrs = phunk.attributes || [];
                 const type = attrs.find(a => a.trait_type === 'Type');
-                const nonTypeAttrs = attrs.filter(a => a.trait_type !== 'Type' && a.trait_type !== 'Species');
-                const attrCount = nonTypeAttrs.length;
+                // Exclude Type, Animal, Species from attribute count
+                const excludedTraits = ['Type', 'Animal', 'Species'];
+                const countableAttrs = attrs.filter(a => !excludedTraits.includes(a.trait_type));
+                const attrCount = countableAttrs.length;
 
                 // Count how many phunks have same type
                 let typeCount = 0;
@@ -237,14 +340,14 @@
                 // Count how many phunks have same attribute count
                 let attrCountMatch = 0;
                 items.forEach(item => {
-                    const itemAttrs = (item.attributes || []).filter(a => a.trait_type !== 'Type' && a.trait_type !== 'Species');
+                    const itemAttrs = (item.attributes || []).filter(a => !excludedTraits.includes(a.trait_type));
                     if (itemAttrs.length === attrCount) attrCountMatch++;
                 });
 
                 // Set description like CryptoPunks: "one of 9 Alien Punks." with type as green link
                 if (type) {
                     const descEl = document.getElementById('phunk-description');
-                    descEl.innerHTML = `<strong style="color: black;">one of ${typeCount} <a href="cryptophunks-search.html?query=${encodeURIComponent(type.value)}" class="type-link">${type.value}</a> Phunks.</strong>`;
+                    descEl.innerHTML = `<strong style="color: inherit;">one of ${typeCount} <a href="cryptophunks-search.html?query=${encodeURIComponent(type.value)}" class="type-link">${type.value}</a> Phunks.</strong>`;
                 }
 
                 // Set attribute count text like CryptoPunks: "This Punk has 1 attribute, one of 333 with that many."
@@ -253,10 +356,12 @@
                     `This Phunk has <a href="cryptophunks-search.html?attrcount=${attrCount}" class="count-highlight">${attrCount} ${attrWord}</a>, one of ${attrCountMatch} with that many.`;
 
                 // Count occurrences of each attribute (including Type and Species for display counts)
+                // Count occurrences of each trait type/value pair
                 const attrCounts = {};
                 items.forEach(item => {
                     (item.attributes || []).forEach(attr => {
-                        attrCounts[attr.value] = (attrCounts[attr.value] || 0) + 1;
+                        const key = attr.trait_type + ':' + attr.value;
+                        attrCounts[key] = (attrCounts[key] || 0) + 1;
                     });
                 });
 
@@ -275,11 +380,12 @@
                     return 0;
                 });
                 sortedAttrs.forEach(attr => {
-                    const count = attrCounts[attr.value] || 0;
+                    const key = attr.trait_type + ':' + attr.value;
+                    const count = attrCounts[key] || 0;
                     const item = document.createElement('div');
                     item.className = 'attribute-item';
                     item.innerHTML = `
-                        <a href="cryptophunks-search.html?query=${encodeURIComponent(attr.value)}" class="attribute-name">${attr.value}</a>
+                        <a href="cryptophunks-search.html?trait_type=${encodeURIComponent(attr.trait_type)}&value=${encodeURIComponent(attr.value)}" class="attribute-name">${attr.value}</a>
                         <span class="attribute-count-info"><strong>${count}</strong> Phunks have this.</span>
                     `;
                     attrList.appendChild(item);
@@ -289,6 +395,47 @@
         .catch(error => {
             console.error('Error loading JSON:', error);
         });
+        // Only apply .ethsrock-img for IDs 10320-10419, never for others
+        if (Number(phunkId) >= 10320 && Number(phunkId) <= 10419) {
+            if (!phunkImg.classList.contains('ethsrock-img')) {
+                phunkImg.classList.add('ethsrock-img');
+            }
+        } else {
+            phunkImg.classList.remove('ethsrock-img');
+            phunkImg.style.width = '300px';
+            phunkImg.style.height = '300px';
+        }
+
+    // Dark Mode Toggle
+    function toggleDarkMode() {
+        const body = document.body;
+        const toggle = document.getElementById('dark-mode-toggle');
+        body.classList.toggle('dark-mode');
+        
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('darkMode', 'true');
+            toggle.querySelector('i').classList.remove('fa-moon-o');
+            toggle.querySelector('i').classList.add('fa-sun-o');
+        } else {
+            localStorage.setItem('darkMode', 'false');
+            toggle.querySelector('i').classList.remove('fa-sun-o');
+            toggle.querySelector('i').classList.add('fa-moon-o');
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const darkMode = localStorage.getItem('darkMode') === 'true';
+        const body = document.body;
+        const toggle = document.getElementById('dark-mode-toggle');
+        
+        if (darkMode) {
+            body.classList.add('dark-mode');
+            if (toggle && toggle.querySelector('i')) {
+                toggle.querySelector('i').classList.remove('fa-moon-o');
+                toggle.querySelector('i').classList.add('fa-sun-o');
+            }
+        }
+    });
 </script>
 
 <footer class="main_footer">
@@ -307,13 +454,28 @@
 <svg hidden>
     <defs>
         <g id="icon-logo">
-            <path d="M0,3.5 C0,1.56700338 1.57093664,0 3.5,0 C5.43299662,0 7,1.57093664 7,3.5 C7,5.43299662 5.42906336,7 3.5,7 C1.56700338,7 0,5.42906336 0,3.5 Z M0,13.5 C0,11.5670034 1.57093664,10 3.5,10 C5.43299662,10 7,11.5709366 7,13.5 C7,15.4329966 5.42906336,17 3.5,17 C1.56700338,17 0,15.4290634 0,13.5 Z M0,22.5 C0,20.5670034 1.57093664,19 3.5,19 C5.43299662,19 7,20.5709366 7,22.5 C7,24.4329966 5.42906336,26 3.5,26 C1.56700338,26 0,24.4290634 0,22.5 Z M12,4 C12,2.8954305 12.8877296,2 14,2 C15.1045695,2 16,2.88772964 16,4 C16,5.1045695 15.1122704,6 14,6 C12.8954305,6 12,5.11227036 12,4 Z M12,14 C12,12.8954305 12.8877296,12 14,12 C15.1045695,12 16,12.8877296 16,14 C16,15.1045695 15.1122704,16 14,16 C12.8954305,16 12,15.1122704 12,14 Z M12,23 C12,21.8954305 12.8877296,21 14,21 C15.1045695,21 16,21.8877296 16,23 C16,24.1045695 15.1122704,25 14,25 C12.8954305,25 12,24.1122704 12,23 Z" id="logo"></path>
+            <path d="M0,3.5 C0,1.56700338 1.57093664,0 3.5,0 C5.43299662,0 7,1.57093664 7 3.5 C7,5.43299662 5.42906336,7 3.5,7 C1.56700338,7 0,5.42906336 0,3.5 Z M0,13.5 C0,11.5670034 1.57093664,10 3.5,10 C5.43299662,10 7,11.5709366 7,13.5 C7,15.4329966 5.42906336,17 3.5,17 C1.56700338,17 0,15.4290634 0,13.5 Z M0,22.5 C0,20.5670034 1.57093664,19 3.5,19 C5.43299662,19 7,20.5709366 7,22.5 C7,24.4329966 5.42906336,26 3.5,26 C1.56700338,26 0,24.4290634 0,22.5 Z M12,4 C12,2.8954305 12.8877296,2 14,2 C15.1045695,2 16,2.88772964 16,4 C16,5.1045695 15.1122704,6 14,6 C12.8954305,6 12,5.11227036 12,4 Z M12,14 C12,12.8954305 12.8877296,12 14,12 C15.1045695,12 16,12.8877296 16,14 C16,15.1045695 15.1122704,16 14,16 C12.8954305,16 12,15.1122704 12,14 Z M12,23 C12,21.8954305 12.8877296,21 14,21 C15.1045695,21 16,21.8877296 16,23 C16,24.1045695 15.1122704,25 14,25 C12.8954305,25 12,24.1122704 12,23 Z" id="logo"></path>
         </g>
     </defs>
 </svg>
 
 <script src="../public/javascripts/script.js"></script>
 
-</body>
-</html>
+<style>
+    body.dark-mode {
+        background-color: #1a1a1a !important;
+        color: #ffffff !important;
+    }
+    body.dark-mode .main_footer { background-color: #1a1a1a !important; color: #ffffff !important; }
+    body.dark-mode .main_header { background-color: #1a1a1a !important; color: #ffffff !important; }
+    body.dark-mode a { color: #B3BF44 !important; }
+    body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 { color: #ffffff !important; }
+    body.dark-mode p, body.dark-mode .small { color: #ffffff !important; }
+    body.dark-mode .phunk-detail-title { color: #ffffff !important; }
+    body.dark-mode .phunk-detail-description, body.dark-mode .attribute-count-text, body.dark-mode .attribute-count-info, body.dark-mode .section-title { color: #ffffff !important; }
+    body.dark-mode .breadcrumb-box { background-color: #2a2a2a !important; color: #ffffff !important; }
+    body.dark-mode .breadcrumb-current { color: #ffffff !important; }
+    body.dark-mode .breadcrumb-separator { color: #999 !important; }
+    body.dark-mode [style*="color: black"] { color: #ffffff !important; }
+</style>
 

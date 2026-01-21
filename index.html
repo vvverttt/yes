@@ -90,6 +90,7 @@
 <li class="jsNavShow"><a class="" href="bloglist.html">Writing</a></li>
 <li class="jsNavShow"><a class="" href="about.html">About</a></li>
 <li class="jsNavShow"><a href="https://x.com/DystoLabz"><i class="fa fa-twitter"></i></a></li>
+<li class="jsNavShow"><a id="dark-mode-toggle" href="javascript:void(0)" onclick="toggleDarkMode()" style="cursor: pointer;"><i class="fa fa-moon-o"></i></a></li>
                 </ul>
             </nav>
         </div>
@@ -159,9 +160,9 @@
     <div class="container" style="position: relative; z-index: 2;">
             <div class="row project-row-equal-height">
                 <div class="col-md-4 col-sm-6 col-xs-6 col-md-push-8 text_block project-equal-height">
-                    <h2>CryptoPhunksV69</h2>
+                    <h2>CryptoPhunksV67</h2>
                     <p class="small">The ultimate evolution. Traits and styles from alt-punk history, built on CryptoPunks with the most iconic collections. CryptoPhunks #0000–10526.</p><br>
-                    <a href="https://etherphunks.eth.limo/cryptophunks-v69" target="_blank" rel="noopener noreferrer" class="btn btn_hover btn-meebits" id="cryptophunksv69-readmore">READ MORE</a>
+                    <a href="https://etherphunks.eth.limo/cryptophunks-v67" target="_blank" rel="noopener noreferrer" class="btn btn_hover btn-meebits" id="cryptophunksv67-readmore">READ MORE</a>
 
                 </div>
                 <div class="col-md-8 col-md-pull-4 image_block">
@@ -193,7 +194,7 @@
         </div>
     </div>
 
-    <!-- CryptoPhunksV69 (duplicate) -->
+    <!-- CryptoPhunksV67 (duplicate) -->
     <div class="inverse meebits-background" style="background: linear-gradient(to right, transparent, transparent 30%, #000c 65%, #000d), url('public/images/dystophunks_banner_2.png'); background-position: bottom; background-size: cover;">
         <style type="text/css">
             .btn-meebits {
@@ -227,27 +228,6 @@
         </div>
     </div>
 
-    <!-- DystoPhunkz -->
-    <div class="inverse cryptopunk-background" style="background: linear-gradient(to right, black, transparent), url('./public/images/ethsrocks_banner_3.png'); background-position: center; background-size: cover; image-rendering: pixelated;">
-        <style type="text/css">
-            .index .inverse .btn.btn-DystoPhunkz:hover {
-                background-color: #fff;
-                border: 2px solid #638596;
-                color: #638596;
-            }
-        </style>
-        <div class="container">
-            <div class="row project-row-equal-height">
-                <div class="col-md-4 col-sm-6 col-xs-6 text_block project-equal-height">
-                    <h2>Eths Rocks</h2>
-                    <p class="small">106 Rocks on Ethscriptions. CryptoPhunks #10,420-10,526.</p><br>
-                    <a href="https://etherphunks.eth.limo/cryptophunks-v69/market/all?Ether%20Rock=Phlipped" target="_blank" rel="noopener noreferrer" class="btn btn_hover btn-DystoPhunkz">READ MORE</a>
-                </div>
-                <div class="col-md-8 spacer_block" style="height: 300px;">
-                </div>
-            </div>
-        </div>
-    </div>
 
 
 </div>
@@ -299,6 +279,74 @@
     window.lazySizesConfig = window.lazySizesConfig || {};
     window.lazySizesConfig.expand = 10; //default 360-500
     lazySizesConfig. expFactor = 1.5; //default: 1.7
+</script>
+
+<style>
+    /* Dark Mode Styles - Only background changes */
+    body.dark-mode {
+        background-color: #1a1a1a !important;
+        color: #ffffff !important;
+    }
+
+    body.dark-mode .main_footer {
+        background-color: #1a1a1a !important;
+        color: #ffffff !important;
+    }
+
+    body.dark-mode .main_header {
+        background-color: #1a1a1a !important;
+        color: #ffffff !important;
+    }
+
+    body.dark-mode a {
+        color: #B3BF44 !important;
+    }
+
+    body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 {
+        color: #ffffff !important;
+    }
+
+    body.dark-mode p, body.dark-mode .small, body.dark-mode .text_block {
+        color: #ffffff !important;
+    }
+</style>
+
+<script>
+    // Dark Mode Toggle
+    function toggleDarkMode() {
+        const body = document.body;
+        const toggle = document.getElementById('dark-mode-toggle');
+        body.classList.toggle('dark-mode');
+        
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('darkMode', 'true');
+            if (toggle && toggle.querySelector('i')) {
+                toggle.querySelector('i').classList.remove('fa-moon-o');
+                toggle.querySelector('i').classList.add('fa-sun-o');
+            }
+        } else {
+            localStorage.setItem('darkMode', 'false');
+            if (toggle && toggle.querySelector('i')) {
+                toggle.querySelector('i').classList.remove('fa-sun-o');
+                toggle.querySelector('i').classList.add('fa-moon-o');
+            }
+        }
+    }
+
+    // Load dark mode preference on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        const darkMode = localStorage.getItem('darkMode') === 'true';
+        const body = document.body;
+        const toggle = document.getElementById('dark-mode-toggle');
+        
+        if (darkMode) {
+            body.classList.add('dark-mode');
+            if (toggle && toggle.querySelector('i')) {
+                toggle.querySelector('i').classList.remove('fa-moon-o');
+                toggle.querySelector('i').classList.add('fa-sun-o');
+            }
+        }
+    });
 </script>
 
 </body>

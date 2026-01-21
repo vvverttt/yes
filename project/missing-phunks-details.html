@@ -38,6 +38,7 @@
                     <li class="jsNavShow"><a class="" href="../bloglist.html">Writing</a></li>
                     <li class="jsNavShow"><a class="" href="../about.html">About</a></li>
                     <li class="jsNavShow"><a href="https://x.com/DystoLabz" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                    <li class="jsNavShow"><a id="dark-mode-toggle" href="javascript:void(0)" onclick="toggleDarkMode()" style="cursor: pointer;"><i class="fa fa-moon-o"></i></a></li>
                 </ul>
             </nav>
         </div>
@@ -252,7 +253,7 @@
                 // Set description like CryptoPunks: "one of 9 Alien Punks." with type as green link
                 if (sex) {
                     const descEl = document.getElementById('phunk-description');
-                    descEl.innerHTML = `<strong style="color: black;">one of ${sexCount} <a href="missing-phunks-search.html?trait_type=Sex&value=${encodeURIComponent(sex.value)}" class="type-link">${sex.value}</a> Phunks.</strong>`;
+                    descEl.innerHTML = `<strong style="color: inherit;">one of ${sexCount} <a href="missing-phunks-search.html?trait_type=Sex&value=${encodeURIComponent(sex.value)}" class="type-link">${sex.value}</a> Phunks.</strong>`;
                 }
 
                 // Set attribute count text like CryptoPunks: "This Punk has 1 attribute, one of 333 with that many."
@@ -309,6 +310,56 @@
 </svg>
 
 <script src="../public/javascripts/script.js"></script>
+
+<style>
+    body.dark-mode {
+        background-color: #1a1a1a !important;
+        color: #ffffff !important;
+    }
+    body.dark-mode .main_footer { background-color: #1a1a1a !important; color: #ffffff !important; }
+    body.dark-mode .main_header { background-color: #1a1a1a !important; color: #ffffff !important; }
+    body.dark-mode a { color: #B3BF44 !important; }
+    body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 { color: #ffffff !important; }
+    body.dark-mode p, body.dark-mode .small { color: #ffffff !important; }
+    body.dark-mode .phunk-detail-title { color: #ffffff !important; }
+    body.dark-mode .phunk-detail-description, body.dark-mode .attribute-count-text, body.dark-mode .attribute-count-info, body.dark-mode .section-title { color: #ffffff !important; }
+    body.dark-mode .breadcrumb-box { background-color: #2a2a2a !important; color: #ffffff !important; }
+    body.dark-mode .breadcrumb-current { color: #ffffff !important; }
+    body.dark-mode .breadcrumb-separator { color: #999 !important; }
+    body.dark-mode [style*="color: black"] { color: #ffffff !important; }
+</style>
+
+<script>
+    function toggleDarkMode() {
+        const body = document.body;
+        const toggle = document.getElementById('dark-mode-toggle');
+        body.classList.toggle('dark-mode');
+        
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('darkMode', 'true');
+            toggle.querySelector('i').classList.remove('fa-moon-o');
+            toggle.querySelector('i').classList.add('fa-sun-o');
+        } else {
+            localStorage.setItem('darkMode', 'false');
+            toggle.querySelector('i').classList.remove('fa-sun-o');
+            toggle.querySelector('i').classList.add('fa-moon-o');
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const darkMode = localStorage.getItem('darkMode') === 'true';
+        const body = document.body;
+        const toggle = document.getElementById('dark-mode-toggle');
+        
+        if (darkMode) {
+            body.classList.add('dark-mode');
+            if (toggle && toggle.querySelector('i')) {
+                toggle.querySelector('i').classList.remove('fa-moon-o');
+                toggle.querySelector('i').classList.add('fa-sun-o');
+            }
+        }
+    });
+</script>
 
 </body>
 </html>

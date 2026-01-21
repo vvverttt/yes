@@ -37,9 +37,14 @@ function loadImages(callback) {
             var loadedCount = 0;
             var totalImages = data.images.length;
 
+
             data.images.forEach(function(imageData) {
+                // Hide EthsRock images (10320-10419) from the grid
+                if (imageData.num >= 10320 && imageData.num <= 10419) {
+                    return;
+                }
                 var img = new Image();
-                var specialGifIds = [5865, 6850, 8913, 6922];
+                var specialGifIds = [5865, 6850, 8913, 6922, 6996];
                 if (specialGifIds.includes(imageData.num)) {
                     img.src = '/images/images_24x24/' + imageData.num + '.gif';
                 } else {

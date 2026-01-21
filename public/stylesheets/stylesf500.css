@@ -1095,3 +1095,273 @@ li {
     transform: translateZ(0);
   }
 }
+
+/* Dark mode button styles */
+body.dark-mode .btn, 
+body.dark-mode button,
+body.dark-mode input[type="button"],
+body.dark-mode input[type="submit"],
+body.dark-mode .category_btn,
+body.dark-mode .stats-btn {
+  color: #ffffff !important;
+  background-color: #B3BF44 !important;
+}
+
+body.dark-mode .btn:hover, 
+body.dark-mode button:hover,
+body.dark-mode input[type="button"]:hover,
+body.dark-mode input[type="submit"]:hover {
+  color: #000000 !important;
+  background-color: #B3BF44 !important;
+}
+
+body.dark-mode .btn_secondary {
+  color: #ffffff !important;
+}
+
+body.dark-mode [style*="color: #000"] {
+  color: #ffffff !important;
+}
+
+/* Dark mode button styles */
+body.dark-mode .btn, 
+body.dark-mode button,
+body.dark-mode input[type="button"],
+body.dark-mode input[type="submit"],
+body.dark-mode .category_btn,
+body.dark-mode .stats-btn {
+  color: #ffffff !important;
+  background-color: #B3BF44 !important;
+}
+
+body.dark-mode .btn:hover, 
+body.dark-mode button:hover,
+body.dark-mode input[type="button"]:hover,
+body.dark-mode input[type="submit"]:hover {
+  color: #000000 !important;
+  background-color: #B3BF44 !important;
+}
+
+body.dark-mode .btn_secondary {
+  color: #ffffff !important;
+}
+
+body.dark-mode [style*="color: #000"] {
+  color: #ffffff !important;
+}
+
+/* Dark mode button styles */
+body.dark-mode .btn, 
+body.dark-mode button,
+body.dark-mode input[type="button"],
+body.dark-mode input[type="submit"],
+body.dark-mode .category_btn,
+body.dark-mode .stats-btn {
+  color: #ffffff !important;
+  background-color: #B3BF44 !important;
+}
+
+body.dark-mode .btn:hover, 
+body.dark-mode button:hover,
+body.dark-mode input[type="button"]:hover,
+body.dark-mode input[type="submit"]:hover {
+  color: #000000 !important;
+  background-color: #B3BF44 !important;
+}
+
+body.dark-mode .btn_secondary {
+  color: #ffffff !important;
+}
+
+body.dark-mode [style*="color: #000"] {
+  color: #ffffff !important;
+}
+
+/* Dark mode button styles */
+body.dark-mode .btn, 
+body.dark-mode button,
+body.dark-mode input[type="button"],
+body.dark-mode input[type="submit"],
+body.dark-mode .category_btn,
+body.dark-mode .stats-btn {
+  color: #ffffff !important;
+  background-color: #B3BF44 !important;
+}
+
+body.dark-mode .btn:hover, 
+body.dark-mode button:hover,
+body.dark-mode input[type="button"]:hover,
+body.dark-mode input[type="submit"]:hover {
+  color: #000000 !important;
+  background-color: #B3BF44 !important;
+}
+
+body.dark-mode .btn_secondary {
+  color: #ffffff !important;
+}
+
+body.dark-mode [style*="color: #000"] {
+  color: #ffffff !important;
+}
+
+/* Dark mode button styles */
+body.dark-mode .btn, 
+body.dark-mode button,
+body.dark-mode input[type="button"],
+body.dark-mode input[type="submit"],
+body.dark-mode .category_btn,
+body.dark-mode .stats-btn {
+  color: #ffffff !important;
+  background-color: #B3BF44 !important;
+}
+
+body.dark-mode .btn:hover, 
+body.dark-mode button:hover,
+body.dark-mode input[type="button"]:hover,
+body.dark-mode input[type="submit"]:hover {
+  color: #000000 !important;
+  background-color: #B3BF44 !important;
+}
+
+body.dark-mode .btn_secondary {
+  color: #ffffff !important;
+}
+
+body.dark-mode [style*="color: #000"] {
+  color: #ffffff !important;
+}
+
+/* Dark mode button styles */
+body.dark-mode .btn, 
+body.dark-mode button,
+body.dark-mode input[type="button"],
+body.dark-mode input[type="submit"],
+body.dark-mode .category_btn,
+body.dark-mode .stats-btn {
+  color: #ffffff !important;
+  background-color: #B3BF44 !important;
+}
+
+body.dark-mode .btn:hover, 
+body.dark-mode button:hover,
+body.dark-mode input[type="button"]:hover,
+body.dark-mode input[type="submit"]:hover {
+  color: #000000 !important;
+  background-color: #B3BF44 !important;
+}
+
+body.dark-mode .btn_secondary {
+  color: #ffffff !important;
+}
+
+body.dark-mode [style*="color: #000"] {
+  color: #ffffff !important;
+}
+
+/* Dark mode button styles */
+body.dark-mode .btn, 
+body.dark-mode button,
+body.dark-mode input[type="button"],
+body.dark-mode input[type="submit"],
+body.dark-mode .category_btn,
+body.dark-mode .stats-btn {
+  color: #ffffff !important;
+  background-color: #B3BF44 !important;
+}
+
+body.dark-mode .btn:hover, 
+body.dark-mode button:hover,
+body.dark-mode input[type="button"]:hover,
+body.dark-mode input[type="submit"]:hover {
+  color: #000000 !important;
+  background-color: #B3BF44 !important;
+}
+
+body.dark-mode .btn_secondary {
+  color: #ffffff !important;
+}
+
+body.dark-mode [style*="color: #000"] {
+  color: #ffffff !important;
+}
+
+/* Dark mode button styles */
+body.dark-mode .btn, 
+body.dark-mode button,
+body.dark-mode input[type="button"],
+body.dark-mode input[type="submit"],
+body.dark-mode .category_btn,
+body.dark-mode .stats-btn {
+  color: #ffffff !important;
+  background-color: #B3BF44 !important;
+}
+
+body.dark-mode .btn:hover, 
+body.dark-mode button:hover,
+body.dark-mode input[type="button"]:hover,
+body.dark-mode input[type="submit"]:hover {
+  color: #000000 !important;
+  background-color: #B3BF44 !important;
+}
+
+body.dark-mode .btn_secondary {
+  color: #ffffff !important;
+}
+
+body.dark-mode [style*="color: #000"] {
+  color: #ffffff !important;
+}
+
+/* Dark mode button styles */
+body.dark-mode .btn, 
+body.dark-mode button,
+body.dark-mode input[type="button"],
+body.dark-mode input[type="submit"],
+body.dark-mode .category_btn,
+body.dark-mode .stats-btn {
+  color: #ffffff !important;
+  background-color: #B3BF44 !important;
+}
+
+body.dark-mode .btn:hover, 
+body.dark-mode button:hover,
+body.dark-mode input[type="button"]:hover,
+body.dark-mode input[type="submit"]:hover {
+  color: #000000 !important;
+  background-color: #B3BF44 !important;
+}
+
+body.dark-mode .btn_secondary {
+  color: #ffffff !important;
+}
+
+body.dark-mode [style*="color: #000"] {
+  color: #ffffff !important;
+}
+
+/* Dark mode button styles */
+body.dark-mode .btn, 
+body.dark-mode button,
+body.dark-mode input[type="button"],
+body.dark-mode input[type="submit"],
+body.dark-mode .category_btn,
+body.dark-mode .stats-btn {
+  color: #ffffff !important;
+  background-color: #B3BF44 !important;
+}
+
+body.dark-mode .btn:hover, 
+body.dark-mode button:hover,
+body.dark-mode input[type="button"]:hover,
+body.dark-mode input[type="submit"]:hover {
+  color: #000000 !important;
+  background-color: #B3BF44 !important;
+}
+
+body.dark-mode .btn_secondary {
+  color: #ffffff !important;
+}
+
+body.dark-mode [style*="color: #000"] {
+  color: #ffffff !important;
+}
