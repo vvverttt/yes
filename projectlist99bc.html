@@ -16,18 +16,24 @@
         // Set dark mode synchronously BEFORE any rendering to prevent flash
         if (localStorage.getItem('darkMode') === 'true') {
             document.documentElement.setAttribute('data-theme', 'dark');
+            document.documentElement.classList.add('dark-mode-pending');
         }
     </script>
     <style>
         /* Emergency dark mode style - applies instantly if dark mode is in localStorage */
         html[data-theme="dark"],
-        html[data-theme="dark"] body {
+        html[data-theme="dark"] body,
+        html.dark-mode-pending,
+        html.dark-mode-pending body {
             background-color: #1a1a1a !important;
             color: #ffffff !important;
         }
         html[data-theme="dark"] .main_header,
         html[data-theme="dark"] .main_footer,
-        html[data-theme="dark"] header {
+        html[data-theme="dark"] header,
+        html.dark-mode-pending .main_header,
+        html.dark-mode-pending .main_footer,
+        html.dark-mode-pending header {
             background-color: #1a1a1a !important;
         }
         html[data-theme="dark"] h1,
@@ -35,7 +41,26 @@
         html[data-theme="dark"] h3,
         html[data-theme="dark"] h4,
         html[data-theme="dark"] h5,
-        html[data-theme="dark"] h6 {
+        html[data-theme="dark"] h6,
+        html.dark-mode-pending h1,
+        html.dark-mode-pending h2,
+        html.dark-mode-pending h3,
+        html.dark-mode-pending h4,
+        html.dark-mode-pending h5,
+        html.dark-mode-pending h6 {
+            color: #ffffff !important;
+        }
+        /* Also match body.dark-mode for when JS applies it */
+        body.dark-mode,
+        body.dark-mode .main_header,
+        body.dark-mode .main_footer,
+        body.dark-mode h1,
+        body.dark-mode h2,
+        body.dark-mode h3,
+        body.dark-mode h4,
+        body.dark-mode h5,
+        body.dark-mode h6 {
+            background-color: #1a1a1a !important;
             color: #ffffff !important;
         }
     </style>
@@ -115,6 +140,13 @@
     </script>
     </head>
 <body>
+<script>
+    // Apply dark mode class to body immediately after it exists (before DOMContentLoaded)
+    if (localStorage.getItem('darkMode') === 'true') {
+        document.body.classList.add('dark-mode');
+        document.documentElement.classList.remove('dark-mode-pending');
+    }
+</script>
 
 <header class="container main_header">
     <div class="row">
