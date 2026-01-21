@@ -13,10 +13,7 @@
         html, body { margin: 0; padding: 0; }
         .main_header, .main_footer, header { position: relative !important; }
         
-        /* Light mode - explicit color lock to prevent flashing */
-        html:not([data-theme="dark"]), html:not([data-theme="dark"]) body { background-color: #ffffff !important; color: #000000 !important; }
-        html:not([data-theme="dark"]) h1, html:not([data-theme="dark"]) h2, html:not([data-theme="dark"]) h3, html:not([data-theme="dark"]) h4, html:not([data-theme="dark"]) h5, html:not([data-theme="dark"]) h6 { color: #000000 !important; }
-        html:not([data-theme="dark"]) p, html:not([data-theme="dark"]) span, html:not([data-theme="dark"]) a, html:not([data-theme="dark"]) div, html:not([data-theme="dark"]) li { color: #000000 !important; }
+        /* Light mode defaults */
         html:not([data-theme="dark"]) .main_header, html:not([data-theme="dark"]) .main_footer, html:not([data-theme="dark"]) header { 
             background-color: #ffffff !important; position: relative !important; 
         }
