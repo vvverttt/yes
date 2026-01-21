@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv=X-UA-Compatible content="IE=11">
     <script>
-        // Prevent dark mode flash on reload
+        // Prevent dark mode flash on reload with aggressive !important styles
         if (localStorage.getItem('darkMode') === 'true') {
+            const style = document.createElement('style');
+            style.innerHTML = 'html, body { background-color: #1a1a1a !important; color: #ffffff !important; } * { color: #ffffff !important; }';
+            document.head.insertBefore(style, document.head.firstChild);
             document.documentElement.classList.add('dark-mode');
             document.documentElement.style.backgroundColor = '#1a1a1a';
             document.documentElement.style.color = '#ffffff';
