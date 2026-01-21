@@ -5,9 +5,10 @@
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
     <script>
-        // Set dark mode synchronously BEFORE any rendering
+        // Set dark mode synchronously BEFORE any rendering to prevent flash
         if (localStorage.getItem('darkMode') === 'true') {
             document.documentElement.setAttribute('data-theme', 'dark');
+            document.write('<style>body { background-color: #1a1a1a !important; color: #ffffff !important; }</style>');
         }
     </script>
     <style>

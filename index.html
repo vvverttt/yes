@@ -3,19 +3,12 @@
 
 <head>
         <script>
-            try {
-                var theme = localStorage.getItem('theme');
-                if (theme === 'dark') {
-                    document.documentElement.setAttribute('data-theme', 'dark');
-                }
-            } catch(e){}
+            // Set dark mode synchronously BEFORE any rendering to prevent flash
+            if (localStorage.getItem('darkMode') === 'true') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                document.write('<style>body { background-color: #1a1a1a !important; color: #ffffff !important; }</style>');
+            }
         </script>
-    <script>
-        // Set dark mode synchronously BEFORE any rendering
-        if (localStorage.getItem('darkMode') === 'true') {
-            document.documentElement.setAttribute('data-theme', 'dark');
-        }
-    </script>
     <style>
         /* Lock header layout for both light and dark modes - prevent shift on reload */
         html, body { margin: 0; padding: 0; }
