@@ -8,9 +8,29 @@
         // Set dark mode synchronously BEFORE any rendering to prevent flash
         if (localStorage.getItem('darkMode') === 'true') {
             document.documentElement.setAttribute('data-theme', 'dark');
-            document.write('<style>body { background-color: #1a1a1a !important; color: #ffffff !important; }</style>');
         }
     </script>
+    <style>
+        /* Emergency dark mode style - applies instantly if dark mode is in localStorage */
+        html[data-theme="dark"],
+        html[data-theme="dark"] body {
+            background-color: #1a1a1a !important;
+            color: #ffffff !important;
+        }
+        html[data-theme="dark"] .main_header,
+        html[data-theme="dark"] .main_footer,
+        html[data-theme="dark"] header {
+            background-color: #1a1a1a !important;
+        }
+        html[data-theme="dark"] h1,
+        html[data-theme="dark"] h2,
+        html[data-theme="dark"] h3,
+        html[data-theme="dark"] h4,
+        html[data-theme="dark"] h5,
+        html[data-theme="dark"] h6 {
+            color: #ffffff !important;
+        }
+    </style>
     <style>
         /* Lock header layout for both light and dark modes - prevent shift on reload */
         html, body { margin: 0; padding: 0; }
