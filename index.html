@@ -2,27 +2,26 @@
 <html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:bind="http://www.w3.org/1999/xhtml">
 
 <head>
+    <script>
+        // Set dark mode synchronously BEFORE any rendering
+        if (localStorage.getItem('darkMode') === 'true') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
     <style>
-        /* Static dark mode styles - loaded before anything renders */
-        html.dark-mode, html.dark-mode body { background-color: #1a1a1a !important; color: #ffffff !important; }
-        html.dark-mode h1, html.dark-mode h2, html.dark-mode h3, html.dark-mode h4, html.dark-mode h5, html.dark-mode h6 { color: #ffffff !important; }
-        html.dark-mode p, html.dark-mode span, html.dark-mode a, html.dark-mode div, html.dark-mode li { color: #ffffff !important; }
-        html.dark-mode .main_header, html.dark-mode .main_footer, html.dark-mode header { background-color: #1a1a1a !important; position: relative !important; }
-        html.dark-mode .main_nav_list a, html.dark-mode .footer_nav_list a { color: #B3BF44 !important; }
-        html.dark-mode button, html.dark-mode .btn, html.dark-mode input[type="button"], html.dark-mode input[type="submit"] { color: #ffffff !important; background-color: #2a2a2a !important; border-color: #555555 !important; }
-        html.dark-mode button:hover, html.dark-mode .btn:hover { background-color: #3a3a3a !important; }
+        /* Dark mode styles using data attribute - applies before page renders */
+        html[data-theme="dark"], html[data-theme="dark"] body { background-color: #1a1a1a !important; color: #ffffff !important; }
+        html[data-theme="dark"] h1, html[data-theme="dark"] h2, html[data-theme="dark"] h3, html[data-theme="dark"] h4, html[data-theme="dark"] h5, html[data-theme="dark"] h6 { color: #ffffff !important; }
+        html[data-theme="dark"] p, html[data-theme="dark"] span, html[data-theme="dark"] a, html[data-theme="dark"] div, html[data-theme="dark"] li { color: #ffffff !important; }
+        html[data-theme="dark"] .main_header, html[data-theme="dark"] .main_footer, html[data-theme="dark"] header { background-color: #1a1a1a !important; position: relative !important; }
+        html[data-theme="dark"] .main_nav_list a, html[data-theme="dark"] .footer_nav_list a { color: #B3BF44 !important; }
+        html[data-theme="dark"] button, html[data-theme="dark"] .btn, html[data-theme="dark"] input[type="button"], html[data-theme="dark"] input[type="submit"] { color: #ffffff !important; background-color: #2a2a2a !important; border-color: #555555 !important; }
+        html[data-theme="dark"] button:hover, html[data-theme="dark"] .btn:hover { background-color: #3a3a3a !important; }
+        html[data-theme="dark"] textarea, html[data-theme="dark"] input[type="text"], html[data-theme="dark"] input[type="email"] { background-color: #2a2a2a !important; color: #ffffff !important; border-color: #555555 !important; }
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv=X-UA-Compatible content="IE=11">
-    <script>
-        // Apply dark mode class immediately if enabled
-        if (localStorage.getItem('darkMode') === 'true') {
-            document.documentElement.classList.add('dark-mode');
-            document.documentElement.style.backgroundColor = '#1a1a1a';
-            document.documentElement.style.color = '#ffffff';
-        }
-    </script>
     <link rel="shortcut icon" type="image/png" href="./public/images/favicon.ico">
     <title>DystoLabz</title>
     <meta name="description" content="" />
@@ -333,17 +332,20 @@
     // Dark Mode Toggle
     function toggleDarkMode() {
         const body = document.body;
+        const html = document.documentElement;
         const toggle = document.getElementById('dark-mode-toggle');
         body.classList.toggle('dark-mode');
         
         if (body.classList.contains('dark-mode')) {
             localStorage.setItem('darkMode', 'true');
+            html.setAttribute('data-theme', 'dark');
             if (toggle && toggle.querySelector('i')) {
                 toggle.querySelector('i').classList.remove('fa-moon-o');
                 toggle.querySelector('i').classList.add('fa-sun-o');
             }
         } else {
             localStorage.setItem('darkMode', 'false');
+            html.removeAttribute('data-theme');
             if (toggle && toggle.querySelector('i')) {
                 toggle.querySelector('i').classList.remove('fa-sun-o');
                 toggle.querySelector('i').classList.add('fa-moon-o');
@@ -355,10 +357,12 @@
     document.addEventListener('DOMContentLoaded', function() {
         const darkMode = localStorage.getItem('darkMode') === 'true';
         const body = document.body;
+        const html = document.documentElement;
         const toggle = document.getElementById('dark-mode-toggle');
         
         if (darkMode) {
             body.classList.add('dark-mode');
+            html.setAttribute('data-theme', 'dark');
             if (toggle && toggle.querySelector('i')) {
                 toggle.querySelector('i').classList.remove('fa-moon-o');
                 toggle.querySelector('i').classList.add('fa-sun-o');
