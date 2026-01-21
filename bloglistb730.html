@@ -1,131 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:bind="http://www.w3.org/1999/xhtml">
 
-<!-- Mirrored from larvalabs.com/bloglist?category=general by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Sep 2025 04:08:26 GMT -->
+<!-- Mirrored from larvalabs.com/bloglist by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Sep 2025 04:08:02 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv=X-UA-Compatible content="IE=11">
-    
-    <script>
-        // Apply dark mode immediately to prevent white flash
-        if (localStorage.getItem('darkMode') === 'true') {
-            document.documentElement.style.backgroundColor = '#1a1a1a';
-            document.documentElement.style.color = '#ffffff';
-        }
-    </script>
-    <style>
-        html.dark-mode, html.dark-mode body {
-            background-color: #1a1a1a !important;
-            color: #ffffff !important;
-        }
-    </style>
-    
     <link rel="shortcut icon" type="image/png" href="public/images/favicon.ico">
     <title>DystoLabz Blog</title>
     <meta name="description" content="" />
-    <link rel="stylesheet" href="public/components/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="public/components/bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="./public/components/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./public/components/bootstrap/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
-    <link rel="stylesheet" href="public/font-awesome-4.7.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="./public/font-awesome-4.7.0/css/font-awesome.min.css">
     <!-- production -->
-    <link rel="stylesheet" type="text/css" href="public/stylesheets/mainf500.css?v=13" charset="utf-8" ></link>
-    <link rel="stylesheet" type="text/css" href="public/stylesheets/stylesf500.css?v=13" charset="utf-8" ></link>
+    <link rel="stylesheet" type="text/css" href="./public/stylesheets/mainf500.css?v=13" charset="utf-8" >
+    <link rel="stylesheet" type="text/css" href="./public/stylesheets/stylesf500.css?v=13" charset="utf-8" >
 
-    <style>
-    /* Dark mode styles */
-    body.dark-mode {
-        background-color: #1a1a1a !important;
-        color: #ffffff !important;
-    }
-
-    body.dark-mode .main_header,
-    body.dark-mode .main_footer {
-        background-color: #1a1a1a !important;
-        color: #ffffff !important;
-    }
-
-    body.dark-mode .main_nav_list a,
-    body.dark-mode .footer_nav_list a {
-        color: #B3BF44 !important;
-    }
-
-    body.dark-mode .main_nav_list a:hover,
-    body.dark-mode .footer_nav_list a:hover {
-        color: #ffffff !important;
-    }
-
-    body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 {
-        color: #ffffff !important;
-    }
-
-    body.dark-mode p, body.dark-mode span, body.dark-mode div {
-        color: #ffffff !important;
-    }
-
-    body.dark-mode .list_categories {
-        color: #ffffff !important;
-    }
-
-    body.dark-mode .list_categories a {
-        color: #B3BF44 !important;
-    }
-
-    body.dark-mode .list_categories a:hover {
-        color: #ffffff !important;
-    }
-
-    body.dark-mode .project_item a {
-        color: #000000 !important;
-    }
-
-    body.dark-mode .project_item h4 {
-        color: #000000 !important;
-    }
-
-    body.dark-mode .project_item p {
-        color: #000000 !important;
-    }
-
-    body.dark-mode button,
-    body.dark-mode .btn {
-        background-color: #2a2a2a !important;
-        color: #ffffff !important;
-        border-color: #555555 !important;
-    }
-
-    body.dark-mode button:hover,
-    body.dark-mode .btn:hover {
-        background-color: #3a3a3a !important;
-        color: #B3BF44 !important;
-    }
-
-    body.dark-mode .alert-info {
-        background-color: #2a2a2a !important;
-        color: #ffffff !important;
-        border-color: #555555 !important;
-    }
-
-    body.dark-mode a {
-        color: #B3BF44 !important;
-    }
-
-    body.dark-mode a:hover {
-        color: #ffffff !important;
-    }
-
-    #dark-mode-toggle {
-        position: relative;
-    }
-
-    #dark-mode-toggle i {
-        font-size: 18px;
-        cursor: pointer;
-        transition: color 0.3s ease;
-    }
-    </style>
+    <!-- Open Graph data -->
     <meta property="og:title" content="DystoLabz Blog" />
             <meta property="og:image" content="index.html" />
     <meta property="og:description" content="" />
@@ -168,7 +61,7 @@
 <li class="jsNavShow"><a class="active" href="bloglist.html">Writing</a></li>
 <li class="jsNavShow"><a class="" href="about.html">About</a></li>
 <li class="jsNavShow"><a href="https://x.com/DystoLabz"><i class="fa fa-twitter"></i></a></li>
-<li><a id="dark-mode-toggle" href="#" onclick="event.preventDefault(); toggleDarkMode();"><i class="fa fa-moon-o"></i></a></li>
+<li class="jsNavShow"><a id="dark-mode-toggle" href="javascript:void(0)" onclick="toggleDarkMode()" style="cursor: pointer;"><i class="fa fa-moon-o"></i></a></li>
                 </ul>
             </nav>
         </div>
@@ -211,7 +104,7 @@
                 <a href="blog/2021-6-22-22-6/cryptopunks-4-year-anniversary.html" class="blog_item">
                     <!-- CMS thumbnail and title -->
                     <div class="blog_img">
-                        <img src="public/images/blog/cryptopunks4years/blog-list-thumbnail-2x.jpg" alt="Punk Lineage Behind CryptoPhunksV69" class="img-responsive">
+                        <img src="public/images/blog/cryptopunks4years/blog-list-thumbnail-2x.jpg" alt="The Shell Archive" class="img-responsive">
                     </div>
                     <div class="blog_txt">
                         <!-- CMS title -->
@@ -226,7 +119,7 @@
                 <a href="blog/2026-1-4-1/new-blog.html" class="blog_item">
                     <!-- CMS thumbnail and title -->
                     <div class="blog_img">
-                        <img src="public/images/blog/cryptopunks4years/blog-list-thumbnail-2x.jpg" alt="The Shell Archive" class="img-responsive">
+                        <img src="public/images/blog/cryptopunks4years/blog-list-thumbnail-2x.jpg" alt="New Blog" class="img-responsive">
                     </div>
                     <div class="blog_txt">
                         <!-- CMS title -->
@@ -236,7 +129,9 @@
                     </div>
                 </a>
             </article>
-                    
+
+
+
         </div>
     </div>
 
@@ -298,33 +193,73 @@
     lazySizesConfig. expFactor = 1.5; //default: 1.7
 </script>
 
+<style>
+    /* Dark Mode Styles - Only background changes */
+    body.dark-mode {
+        background-color: #1a1a1a !important;
+    }
+
+    body.dark-mode .main_content {
+        background-color: #1a1a1a !important;
+    }
+
+    body.dark-mode .container {
+        background-color: #1a1a1a !important;
+        color: #ffffff !important;
+    }
+
+    body.dark-mode .main_footer {
+        background-color: #1a1a1a !important;
+        color: #ffffff !important;
+    }
+
+    body.dark-mode .main_header {
+        background-color: #1a1a1a !important;
+        color: #ffffff !important;
+    }
+
+    body.dark-mode a {
+        color: #B3BF44 !important;
+    }
+
+    body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 {
+        color: #ffffff !important;
+    }
+
+    body.dark-mode p, body.dark-mode .small, body.dark-mode .blog_txt {
+        color: #ffffff !important;
+    }
+</style>
+
 <script>
+    // Dark Mode Toggle
     function toggleDarkMode() {
         const body = document.body;
         const toggle = document.getElementById('dark-mode-toggle');
-        
         body.classList.toggle('dark-mode');
         
         if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('darkMode', 'true');
             if (toggle && toggle.querySelector('i')) {
                 toggle.querySelector('i').classList.remove('fa-moon-o');
                 toggle.querySelector('i').classList.add('fa-sun-o');
             }
-            localStorage.setItem('darkMode', 'true');
         } else {
+            localStorage.setItem('darkMode', 'false');
             if (toggle && toggle.querySelector('i')) {
                 toggle.querySelector('i').classList.remove('fa-sun-o');
                 toggle.querySelector('i').classList.add('fa-moon-o');
             }
-            localStorage.setItem('darkMode', 'false');
         }
     }
 
-    // On page load, check if dark mode was previously enabled
-    window.addEventListener('load', function() {
-        if (localStorage.getItem('darkMode') === 'true') {
-            const body = document.body;
-            const toggle = document.getElementById('dark-mode-toggle');
+    // Load dark mode preference on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        const darkMode = localStorage.getItem('darkMode') === 'true';
+        const body = document.body;
+        const toggle = document.getElementById('dark-mode-toggle');
+        
+        if (darkMode) {
             body.classList.add('dark-mode');
             if (toggle && toggle.querySelector('i')) {
                 toggle.querySelector('i').classList.remove('fa-moon-o');
@@ -336,5 +271,5 @@
 
 </body>
 
-<!-- Mirrored from larvalabs.com/bloglist?category=general by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Sep 2025 04:08:26 GMT -->
+<!-- Mirrored from larvalabs.com/bloglist by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Sep 2025 04:08:10 GMT -->
 </html>
