@@ -4,60 +4,30 @@
 <!-- Mirrored from larvalabs.com/projectlist?category=web by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Sep 2025 04:08:21 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
-        <script>
-            // Set dark mode synchronously BEFORE any rendering to prevent flash
-            if (localStorage.getItem('darkMode') === 'true') {
-                document.documentElement.setAttribute('data-theme', 'dark');
-                document.documentElement.classList.add('dark-mode-pending');
-            }
-        </script>
-        <style>
-            /* Emergency dark mode style - applies instantly if dark mode is in localStorage */
-            html[data-theme="dark"],
-            html[data-theme="dark"] body,
-            html.dark-mode-pending,
-            html.dark-mode-pending body {
-                background-color: #1a1a1a !important;
-                color: #ffffff !important;
-            }
-            html[data-theme="dark"] .main_header,
-            html[data-theme="dark"] .main_footer,
-            html[data-theme="dark"] header,
-            html.dark-mode-pending .main_header,
-            html.dark-mode-pending .main_footer,
-            html.dark-mode-pending header {
-                background-color: #1a1a1a !important;
-            }
-            html[data-theme="dark"] h1,
-            html[data-theme="dark"] h2,
-            html[data-theme="dark"] h3,
-            html[data-theme="dark"] h4,
-            html[data-theme="dark"] h5,
-            html[data-theme="dark"] h6,
-            html.dark-mode-pending h1,
-            html.dark-mode-pending h2,
-            html.dark-mode-pending h3,
-            html.dark-mode-pending h4,
-            html.dark-mode-pending h5,
-            html.dark-mode-pending h6 {
-                color: #ffffff !important;
-            }
-            /* Also match body.dark-mode for when JS applies it */
-            body.dark-mode,
-            body.dark-mode .main_header,
-            body.dark-mode .main_footer {
-                background-color: #1a1a1a !important;
-                color: #ffffff !important;
-            }
-            body.dark-mode h1,
-            body.dark-mode h2,
-            body.dark-mode h3,
-            body.dark-mode h4,
-            body.dark-mode h5,
-            body.dark-mode h6 {
-                color: #ffffff !important;
-            }
-        </style>
+    <style>
+        body.dark-mode {
+            background-color: #1a1a1a !important;
+            color: #ffffff !important;
+        }
+
+        body.dark-mode .main_footer {
+            background-color: #1a1a1a !important;
+            color: #ffffff !important;
+        }
+
+        body.dark-mode .main_header {
+            background-color: #1a1a1a !important;
+            color: #ffffff !important;
+        }
+
+        body.dark-mode a {
+            color: #B3BF44 !important;
+        }
+
+        body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 {
+            color: #ffffff !important;
+        }
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv=X-UA-Compatible content="IE=11">
@@ -236,3 +206,4 @@
 
 <!-- Mirrored from larvalabs.com/projectlist?category=web by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Sep 2025 04:08:21 GMT -->
 </html>
+

@@ -8877,7 +8877,7 @@
       ]
     },
     {
-      "id": "0x317b3f5b319565b49a8c2fe8d34b089577d6e4c5b6fb021bae2873a919526b20",
+      "id": "0x0b96fb09a5defc187b292ca7414617562a80846f2ac97b91243bd533adf7a4eb",
       "index": 587,
       "sha": "",
       "name": "QuantumPhunk 587",
@@ -8892,12 +8892,24 @@
           "value": "Male"
         },
         {
-          "trait_type": "Skin Tone",
-          "value": "Idw Donatello"
+          "trait_type": "Special",
+          "value": "One of One"
         },
         {
-          "trait_type": "Eye Mask",
-          "value": "IDW"
+          "trait_type": "Special",
+          "value": "Character"
+        },
+        {
+          "trait_type": "Character",
+          "value": "Madlad"
+        },
+        {
+          "trait_type": "Emotion",
+          "value": "Madlad"
+        },
+        {
+          "trait_type": "Hair",
+          "value": "Clown Hair Green"
         },
         {
           "trait_type": "Ears",
@@ -8905,11 +8917,11 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Do-rag"
+          "value": "Hoodie"
         },
         {
-          "trait_type": "Eyes",
-          "value": "Eye Mask"
+          "trait_type": "Hair",
+          "value": "Beanie"
         }
       ]
     },
@@ -101344,7 +101356,7 @@
       ]
     },
     {
-      "id": "0x99b1830d4c7292b82173a476255bbf3744b914b3230edd16f0132a86703441af",
+      "id": "0xb12c44c3c92d7002e4e86900109413ac614dc1fe8c0f572ab9a2f58b13f65079",
       "index": 6105,
       "sha": "",
       "name": "QuantumPhunk 6105",
@@ -101359,32 +101371,16 @@
           "value": "Male"
         },
         {
-          "trait_type": "Skin Tone",
-          "value": "Mirage Donatello"
-        },
-        {
-          "trait_type": "Hair",
-          "value": "Shaved Head"
-        },
-        {
-          "trait_type": "Beard",
-          "value": "Big Beard"
-        },
-        {
-          "trait_type": "Emotion",
-          "value": "Smile"
-        },
-        {
           "trait_type": "Character",
-          "value": "Turtleman"
-        },
-        {
-          "trait_type": "Eyes",
-          "value": "Elipsa"
+          "value": "Evil Kermit"
         },
         {
           "trait_type": "Special",
           "value": "Character"
+        },
+        {
+          "trait_type": "Special",
+          "value": "One of One"
         }
       ]
     },

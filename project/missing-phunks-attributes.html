@@ -89,11 +89,6 @@
     </div>
 </div>
 
-<!-- Horizontal line between Types and Attributes -->
-<div class="container">
-    <div class="section-divider"></div>
-</div>
-
 <!-- Attributes Sections (separated by trait type) -->
 <div class="container" id="attributes-container">
     <!-- Dynamically populated with sections for each trait type -->
@@ -157,7 +152,17 @@
     }
     /* Horizontal divider line */
     .section-divider {
-        nisnlaynpnn: 10px;
+        border-top: 1px solid #e0e0e0;
+        margin: 30px 0;
+    }
+    .section-title {
+        font-family: 'Montserrat', arial, helvetica, sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 10px;
+        margin-top: 20px;
+        padding-bottom: 10px;
     }
     .attr-table {
         width: 100%;
@@ -488,15 +493,20 @@
 <script>
     function toggleDarkMode() {
         const body = document.body;
+        const html = document.documentElement;
         const toggle = document.getElementById('dark-mode-toggle');
         body.classList.toggle('dark-mode');
         
         if (body.classList.contains('dark-mode')) {
             localStorage.setItem('darkMode', 'true');
+            html.setAttribute('data-theme', 'dark');
+            html.classList.add('dark-mode-pending');
             toggle.querySelector('i').classList.remove('fa-moon-o');
             toggle.querySelector('i').classList.add('fa-sun-o');
         } else {
             localStorage.setItem('darkMode', 'false');
+            html.removeAttribute('data-theme');
+            html.classList.remove('dark-mode-pending');
             toggle.querySelector('i').classList.remove('fa-sun-o');
             toggle.querySelector('i').classList.add('fa-moon-o');
         }

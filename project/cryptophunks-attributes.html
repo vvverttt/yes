@@ -487,14 +487,19 @@
         // Dark Mode Toggle
         function toggleDarkMode() {
             const body = document.body;
+            const html = document.documentElement;
             const isDarkMode = body.classList.contains('dark-mode');
             const toggle = document.getElementById('dark-mode-toggle');
             if (isDarkMode) {
                 body.classList.remove('dark-mode');
+                html.removeAttribute('data-theme');
+                html.classList.remove('dark-mode-pending');
                 localStorage.setItem('darkMode', 'false');
                 toggle.innerHTML = '<i class="fa fa-moon-o"></i>';
             } else {
                 body.classList.add('dark-mode');
+                html.setAttribute('data-theme', 'dark');
+                html.classList.add('dark-mode-pending');
                 localStorage.setItem('darkMode', 'true');
                 toggle.innerHTML = '<i class="fa fa-sun-o"></i>';
             }
