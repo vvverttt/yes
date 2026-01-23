@@ -1001,7 +1001,7 @@
         },
         {
           "trait_type": "Beard",
-          "value": "Big Beard Purple"
+          "value": "Big Beard"
         },
         {
           "trait_type": "Eyes",
@@ -1178,7 +1178,7 @@
       ]
     },
     {
-      "id": "0x0f6f0dbb25f7b31e02036d96e220e673180336da3597157ffbbf2b7c2f2ebc43",
+      "id": "0x677107198723096565a986946c4ee9307b4a238cccb14e444948efee9297b638",
       "index": 94,
       "sha": "",
       "name": "QuantumPhunk 94",
@@ -1487,7 +1487,7 @@
       ]
     },
     {
-      "id": "0xe00f15c967e3b63d137acf0e4c60caa4da2403d4c56ef6499a5e66020768fa34",
+      "id": "0x6685261771b382c7aff174c9257e17d5c9a0dc3864c968111b77ff6a28907e20",
       "index": 121,
       "sha": "",
       "name": "QuantumPhunk 121",
@@ -1499,19 +1499,31 @@
         },
         {
           "trait_type": "Type",
-          "value": "Female"
+          "value": "Ape"
         },
         {
-          "trait_type": "Special",
-          "value": "One of One"
+          "trait_type": "Skin Tone",
+          "value": "Eths Flare"
         },
         {
-          "trait_type": "Special",
-          "value": "Character"
+          "trait_type": "Hair",
+          "value": "Witch"
         },
         {
-          "trait_type": "Character",
-          "value": "Simpson Patty"
+          "trait_type": "Lips",
+          "value": "Purple Lipstick"
+        },
+        {
+          "trait_type": "Hair",
+          "value": "Hoodie"
+        },
+        {
+          "trait_type": "Hair",
+          "value": "Orange Side"
+        },
+        {
+          "trait_type": "Emotion",
+          "value": "Smile"
         }
       ]
     },
@@ -3798,7 +3810,7 @@
       ]
     },
     {
-      "id": "0xa58824978eb6f2ff6029ac7c9cf539fd8be2048459df6be399cfb76dc3bdd673",
+      "id": "0x8dd10c3e794226cd692b42ad5ff617f269f60ac9f55214aabd6bfe407fa595d5",
       "index": 280,
       "sha": "",
       "name": "QuantumPhunk 280",
@@ -3813,28 +3825,28 @@
           "value": "Male"
         },
         {
-          "trait_type": "Skin Tone",
-          "value": "2003 Raphael"
+          "trait_type": "Variant",
+          "value": "Mummy"
         },
         {
-          "trait_type": "Eye Mask",
-          "value": "2003"
+          "trait_type": "Hands",
+          "value": "Dual Flip"
         },
         {
-          "trait_type": "Eyes",
-          "value": "Eye Mask"
+          "trait_type": "Special",
+          "value": "Character"
         },
         {
-          "trait_type": "Hair",
-          "value": "Builder"
+          "trait_type": "Character",
+          "value": "Madlad"
         },
         {
           "trait_type": "Emotion",
-          "value": "Left Smile"
+          "value": "Madlad"
         },
         {
-          "trait_type": "Ears",
-          "value": "Imperial Topaz Earring"
+          "trait_type": "Variant",
+          "value": "Madlad"
         }
       ]
     },
@@ -4084,11 +4096,11 @@
           "value": "Character"
         },
         {
-          "trait_type": "Special",
-          "value": "One of One"
+          "trait_type": "Emotion",
+          "value": "Madlad"
         },
         {
-          "trait_type": "Emotion",
+          "trait_type": "Variant",
           "value": "Madlad"
         }
       ]
@@ -5946,7 +5958,7 @@
         },
         {
           "trait_type": "Character",
-          "value": "Super Turtle"
+          "value": "Cyclops"
         },
         {
           "trait_type": "Hair",
@@ -6492,7 +6504,7 @@
         },
         {
           "trait_type": "Character",
-          "value": "Super Turtle"
+          "value": "Cyclops"
         },
         {
           "trait_type": "Hair",
@@ -6574,7 +6586,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Fries in the Bag Hat Orange"
+          "value": "M Cap Orange"
         }
       ]
     },
@@ -7277,7 +7289,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -7507,7 +7519,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -8893,10 +8905,6 @@
         },
         {
           "trait_type": "Special",
-          "value": "One of One"
-        },
-        {
-          "trait_type": "Special",
           "value": "Character"
         },
         {
@@ -8922,6 +8930,10 @@
         {
           "trait_type": "Hair",
           "value": "Beanie"
+        },
+        {
+          "trait_type": "Variant",
+          "value": "Madlad"
         }
       ]
     },
@@ -9007,7 +9019,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         },
         {
           "trait_type": "Aura",
@@ -9341,7 +9353,7 @@
       ]
     },
     {
-      "id": "0x1aae71ac905c20c759385d94a45c9b4aceb3f77b74e33d55b594ae753c455c3e",
+      "id": "0xa389d6331fbc17ad7359135d9d5e3b029f4ccce2bdc997176bbc18943a7b66ec",
       "index": 613,
       "sha": "",
       "name": "QuantumPhunk 613",
@@ -9357,27 +9369,27 @@
         },
         {
           "trait_type": "Skin Tone",
-          "value": "2021 Raphael"
-        },
-        {
-          "trait_type": "Hair",
-          "value": "Frumpy Hair"
-        },
-        {
-          "trait_type": "Beard",
-          "value": "Chinstrap"
+          "value": "Og Promo Guido"
         },
         {
           "trait_type": "Eyes",
           "value": "Eye Mask"
         },
         {
-          "trait_type": "Hair",
-          "value": "Ushanka"
+          "trait_type": "Special",
+          "value": "Character"
         },
         {
-          "trait_type": "Eye Mask",
-          "value": "2021"
+          "trait_type": "Character",
+          "value": "Madlad"
+        },
+        {
+          "trait_type": "Emotion",
+          "value": "Madlad"
+        },
+        {
+          "trait_type": "Variant",
+          "value": "Madlad"
         }
       ]
     },
@@ -10775,7 +10787,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Fries in the Bag Hat Orange"
+          "value": "M Cap Orange"
         },
         {
           "trait_type": "Emotion",
@@ -10865,7 +10877,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Fries in the Bag Hat Red"
+          "value": "M Cap Red"
         }
       ]
     },
@@ -12979,7 +12991,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Gucci Hat Blue"
+          "value": "Gucci Cap Blue"
         }
       ]
     },
@@ -13747,7 +13759,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         },
         {
           "trait_type": "Aura",
@@ -14589,7 +14601,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -14844,7 +14856,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Fries in the Bag Hat Black"
+          "value": "M Cap Black"
         },
         {
           "trait_type": "Ears",
@@ -15123,7 +15135,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Gucci Hat White"
+          "value": "Gucci Cap White"
         }
       ]
     },
@@ -15386,7 +15398,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Sub Hat"
+          "value": "Sub Cap"
         }
       ]
     },
@@ -16040,6 +16052,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Hair",
+          "value": "Messy Hair"
         }
       ]
     },
@@ -18553,6 +18569,10 @@
         {
           "trait_type": "Emotion",
           "value": "Madlad"
+        },
+        {
+          "trait_type": "Variant",
+          "value": "Madlad"
         }
       ]
     },
@@ -18853,7 +18873,7 @@
       ]
     },
     {
-      "id": "0x50e95b18ccdfa6c7dbd0152a5cad5046d48fe419b95845e72d1d5cdd63bd2b2b",
+      "id": "0xf590823f44f5f204d1e13dbc3f18fb91fe42cec61921d31c8fdb7bb32a5b4c91",
       "index": 1137,
       "sha": "",
       "name": "QuantumPhunk 1137",
@@ -18865,27 +18885,23 @@
         },
         {
           "trait_type": "Type",
-          "value": "Male"
+          "value": "Zombie"
         },
         {
-          "trait_type": "Skin Tone",
-          "value": "2021 Leonardo"
+          "trait_type": "Special",
+          "value": "Character"
         },
         {
-          "trait_type": "Beard",
-          "value": "Shadow Beard"
+          "trait_type": "Character",
+          "value": "Madlad"
         },
         {
-          "trait_type": "Ears",
-          "value": "Earring"
+          "trait_type": "Emotion",
+          "value": "Madlad"
         },
         {
-          "trait_type": "Hair",
-          "value": "Mohawk Dark"
-        },
-        {
-          "trait_type": "Mouth",
-          "value": "Pizza"
+          "trait_type": "Variant",
+          "value": "Madlad"
         }
       ]
     },
@@ -19641,7 +19657,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Fries in the Bag Hat Red"
+          "value": "M Cap Red"
         },
         {
           "trait_type": "Eyes",
@@ -20101,7 +20117,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -21340,7 +21356,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Dominos"
+          "value": "Dominos Cap"
         }
       ]
     },
@@ -22935,7 +22951,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         },
         {
           "trait_type": "Eye Mask",
@@ -24292,7 +24308,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -25403,7 +25419,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -25999,7 +26015,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Gucci Hat White"
+          "value": "Gucci Cap White"
         }
       ]
     },
@@ -26378,7 +26394,7 @@
       ]
     },
     {
-      "id": "0x771864c175f65590e2e9ea431d24a693ebb8b1b6440b869623097dd54078d155",
+      "id": "0xc369da4d092ed8015ff4486472eac6110952d849e469c696b65c8376803c1a67",
       "index": 1562,
       "sha": "",
       "name": "QuantumPhunk 1562",
@@ -26393,20 +26409,32 @@
           "value": "Male"
         },
         {
-          "trait_type": "Skin Tone",
-          "value": "2012 Michaelangelo"
+          "trait_type": "Weapon",
+          "value": "Vibranium Shield"
         },
         {
-          "trait_type": "Eyes",
-          "value": "Clown Eyes Blue"
+          "trait_type": "Character",
+          "value": "Captain Madlad"
         },
         {
-          "trait_type": "Mouth",
-          "value": "Pizza"
+          "trait_type": "Special",
+          "value": "Character"
         },
         {
-          "trait_type": "Hair",
-          "value": "Builder"
+          "trait_type": "Character",
+          "value": "Madlad"
+        },
+        {
+          "trait_type": "Emotion",
+          "value": "Madlad"
+        },
+        {
+          "trait_type": "Variant",
+          "value": "Madlad"
+        },
+        {
+          "trait_type": "Special",
+          "value": "One of One"
         }
       ]
     },
@@ -26591,7 +26619,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Fries In The Bag Hat Black"
+          "value": "M Cap Black"
         },
         {
           "trait_type": "Teeth",
@@ -30199,7 +30227,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Fries in the Bag Hat Black"
+          "value": "M Cap Black"
         }
       ]
     },
@@ -30750,7 +30778,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -31264,7 +31292,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         },
         {
           "trait_type": "Aura",
@@ -32699,7 +32727,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -35086,7 +35114,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Waburger Hat Black"
+          "value": "Waburger Cap Black"
         },
         {
           "trait_type": "Hair",
@@ -35583,7 +35611,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         },
         {
           "trait_type": "Eyes",
@@ -35796,7 +35824,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Waburger Hat Black"
+          "value": "Waburger Cap Black"
         }
       ]
     },
@@ -36199,7 +36227,7 @@
       ]
     },
     {
-      "id": "0xe90b7dcf709d4143dfaa0ba82d3f5944856d09ae347b239a0a6c9aafd25e3521",
+      "id": "0x1ac0f0008b2903aa224c887f7fe7ce49fb3f07639bd7018c4263d72a2d2f6b60",
       "index": 2136,
       "sha": "",
       "name": "QuantumPhunk 2136",
@@ -36214,24 +36242,32 @@
           "value": "Male"
         },
         {
-          "trait_type": "Skin Tone",
-          "value": "2021 Michaelangelo"
+          "trait_type": "Variant",
+          "value": "Android"
         },
         {
-          "trait_type": "Beard",
-          "value": "Handlebars"
+          "trait_type": "Character",
+          "value": "Vision"
         },
         {
-          "trait_type": "Eyes",
-          "value": "Classic Shades"
+          "trait_type": "Special",
+          "value": "Character"
         },
         {
-          "trait_type": "Hair",
-          "value": "Crazy Hair"
+          "trait_type": "Character",
+          "value": "Madlad"
         },
         {
-          "trait_type": "Hair",
-          "value": "Flame Red"
+          "trait_type": "Emotion",
+          "value": "Madlad"
+        },
+        {
+          "trait_type": "Variant",
+          "value": "Madlad"
+        },
+        {
+          "trait_type": "Special",
+          "value": "One of One"
         }
       ]
     },
@@ -36622,7 +36658,7 @@
       ]
     },
     {
-      "id": "0xad89e0c78443e0afba63ce2da886c12f668815e9599535c6d5758fcb97566c04",
+      "id": "0x59c011fe3924822c6148b79df6c221824f1640adb160100df80585b5eba7a12c",
       "index": 2163,
       "sha": "",
       "name": "QuantumPhunk 2163",
@@ -36637,24 +36673,36 @@
           "value": "Male"
         },
         {
-          "trait_type": "Skin Tone",
-          "value": "Idw Guido"
-        },
-        {
-          "trait_type": "Eyes",
-          "value": "Big Shades"
+          "trait_type": "Hair",
+          "value": "Kfc Bucket Gold"
         },
         {
           "trait_type": "Hair",
-          "value": "Headband"
+          "value": "Purple Hair"
+        },
+        {
+          "trait_type": "Special",
+          "value": "Character"
+        },
+        {
+          "trait_type": "Character",
+          "value": "Madlad"
         },
         {
           "trait_type": "Emotion",
-          "value": "Smile"
+          "value": "Madlad"
         },
         {
-          "trait_type": "Emotion",
-          "value": "Full Smile"
+          "trait_type": "Variant",
+          "value": "Madlad"
+        },
+        {
+          "trait_type": "Special",
+          "value": "Phunkism"
+        },
+        {
+          "trait_type": "Special",
+          "value": "One of One"
         }
       ]
     },
@@ -36881,7 +36929,7 @@
       ]
     },
     {
-      "id": "0x8ab255e662a48046497020783420feb07ff133a8afd02f0257ed27f9145a7d9e",
+      "id": "0x043a2787cf26c38ca29803b53dff82ee5787732d9b38ed5eea1ccdc51fba84ff",
       "index": 2178,
       "sha": "",
       "name": "QuantumPhunk 2178",
@@ -36896,24 +36944,32 @@
           "value": "Male"
         },
         {
-          "trait_type": "Skin Tone",
-          "value": "Batman Leonardo"
-        },
-        {
-          "trait_type": "Hair",
-          "value": "Hoodie"
-        },
-        {
-          "trait_type": "Beard",
-          "value": "Front Beard Dark"
-        },
-        {
           "trait_type": "Weapon",
-          "value": "Purple Saber"
+          "value": "Mjölnir"
         },
         {
-          "trait_type": "Eyes",
-          "value": "Elipsa"
+          "trait_type": "Special",
+          "value": "Character"
+        },
+        {
+          "trait_type": "Character",
+          "value": "Madlad"
+        },
+        {
+          "trait_type": "Emotion",
+          "value": "Madlad"
+        },
+        {
+          "trait_type": "Variant",
+          "value": "Madlad"
+        },
+        {
+          "trait_type": "Character",
+          "value": "Thorlad"
+        },
+        {
+          "trait_type": "Special",
+          "value": "One of One"
         }
       ]
     },
@@ -37751,7 +37807,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         },
         {
           "trait_type": "Eyes",
@@ -37760,7 +37816,7 @@
       ]
     },
     {
-      "id": "0x11bfafd4585e0cd57f377b1f15649bca5ed5107699bcfcc1ce6c6ef3aab38d44",
+      "id": "0xb0a781c7c6a79e7150f68ab21dc8b4e2c216251044af88e441a39618a3c0100a",
       "index": 2235,
       "sha": "",
       "name": "QuantumPhunk 2235",
@@ -37775,32 +37831,32 @@
           "value": "Male"
         },
         {
-          "trait_type": "Skin Tone",
-          "value": "2012 Donatello"
+          "trait_type": "Variant",
+          "value": "C3FF00"
         },
         {
-          "trait_type": "Eye Mask",
-          "value": "2012"
+          "trait_type": "Special",
+          "value": "Character"
         },
         {
-          "trait_type": "Eyes",
-          "value": "Eye Mask"
+          "trait_type": "Character",
+          "value": "Madlad"
         },
         {
-          "trait_type": "Hair",
-          "value": "Peak Spike"
+          "trait_type": "Emotion",
+          "value": "Madlad"
         },
         {
-          "trait_type": "Beard",
-          "value": "Muttonchops"
+          "trait_type": "Variant",
+          "value": "Madlad"
         },
         {
-          "trait_type": "Eyes",
-          "value": "Eyes Forward"
+          "trait_type": "Character",
+          "value": "Reverse Flashlad"
         },
         {
-          "trait_type": "Weapon",
-          "value": "Bo Staff"
+          "trait_type": "Special",
+          "value": "One of One"
         }
       ]
     },
@@ -38523,7 +38579,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -39546,7 +39602,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         },
         {
           "trait_type": "Aura",
@@ -39744,7 +39800,7 @@
       ]
     },
     {
-      "id": "0x2399d9ca9b362556510b8efe7141528c30a8c4852e5577232d9b9db40ecec9f8",
+      "id": "0x6b2d40228e5489cf8853103af26552b80a8ed664f607e248148f425635cd67e8",
       "index": 2356,
       "sha": "",
       "name": "QuantumPhunk 2356",
@@ -39759,28 +39815,36 @@
           "value": "Male"
         },
         {
-          "trait_type": "Skin Tone",
-          "value": "Og Promo Raphael"
+          "trait_type": "Hair",
+          "value": "Grail Crown"
         },
         {
-          "trait_type": "Mouth",
-          "value": "Cigarette"
+          "trait_type": "Hair",
+          "value": "Wild Hair"
         },
         {
           "trait_type": "Hair",
           "value": "Hoodie"
         },
         {
-          "trait_type": "Ears",
-          "value": "Earring"
-        },
-        {
-          "trait_type": "Eyes",
-          "value": "Regular Shades"
-        },
-        {
           "trait_type": "Weapon",
-          "value": "Purple Saber"
+          "value": "Gold Saber"
+        },
+        {
+          "trait_type": "Special",
+          "value": "Character"
+        },
+        {
+          "trait_type": "Character",
+          "value": "Madlad"
+        },
+        {
+          "trait_type": "Emotion",
+          "value": "Madlad"
+        },
+        {
+          "trait_type": "Variant",
+          "value": "Madlad"
         }
       ]
     },
@@ -40725,10 +40789,6 @@
           "value": "Earring"
         },
         {
-          "trait_type": "Eyes",
-          "value": "Burn Soar"
-        },
-        {
           "trait_type": "Variant",
           "value": "Goblin"
         }
@@ -41152,7 +41212,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -44009,43 +44069,34 @@
       ]
     },
     {
-      "id": "0x6685261771b382c7aff174c9257e17d5c9a0dc3864c968111b77ff6a28907e20",
+      "id": "0xe00f15c967e3b63d137acf0e4c60caa4da2403d4c56ef6499a5e66020768fa34",
       "index": 2638,
       "sha": "",
       "name": "QuantumPhunk 2638",
       "description": "",
       "attributes": [
-        {
-          "trait_type": "Animal",
+        {"trait_type": "Animal",
           "value": "Turtle"
         },
         {
           "trait_type": "Type",
-          "value": "Ape"
+          "value": "Female"
         },
         {
-          "trait_type": "Skin Tone",
-          "value": "Eths Flare"
+          "trait_type": "Special",
+          "value": "One of One"
         },
         {
-          "trait_type": "Hair",
-          "value": "Witch"
+          "trait_type": "Special",
+          "value": "Character"
         },
         {
-          "trait_type": "Lips",
-          "value": "Purple Lipstick"
+          "trait_type": "Character",
+          "value": "Simpson Patty"
         },
         {
-          "trait_type": "Hair",
-          "value": "Hoodie"
-        },
-        {
-          "trait_type": "Hair",
-          "value": "Orange Side"
-        },
-        {
-          "trait_type": "Emotion",
-          "value": "Smile"
+          "trait_type": "Mouth",
+          "value": "Cigarette"
         }
       ]
     },
@@ -45475,7 +45526,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Fries in the Bag Hat Orange"
+          "value": "M Cap Orange"
         },
         {
           "trait_type": "Weapon",
@@ -48253,7 +48304,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Fries in the Bag Hat Black"
+          "value": "M Cap Black"
         }
       ]
     },
@@ -50576,7 +50627,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Fries in the Bag Hat Black"
+          "value": "M Cap Black"
         }
       ]
     },
@@ -50988,11 +51039,11 @@
         },
         {
           "trait_type": "Weapon",
-          "value": "24K Gold Saber"
+          "value": "Gold Saber"
         },
         {
           "trait_type": "Hair",
-          "value": "Brk Crown 24K Gold"
+          "value": "Brk Crown"
         }
       ]
     },
@@ -54092,7 +54143,7 @@
       ]
     },
     {
-      "id": "0x965084ec800857495473a49c561f1d951b9b1d6410d06cc2ce825e244b787084",
+      "id": "0xe7f571344fdb6b6aa9db75d74ce4390b144486ca9868d29b77933d8dd34c11cc",
       "index": 3262,
       "sha": "",
       "name": "QuantumPhunk 3262",
@@ -54107,28 +54158,36 @@
           "value": "Male"
         },
         {
-          "trait_type": "Skin Tone",
-          "value": "2021 Michaelangelo"
+          "trait_type": "Hair",
+          "value": "Beret Green"
         },
         {
           "trait_type": "Hair",
-          "value": "Frumpy Hair"
+          "value": "Purple Hair"
         },
         {
-          "trait_type": "Nose",
-          "value": "Clown Nose"
-        },
-        {
-          "trait_type": "Beard",
-          "value": "Muttonchops"
-        },
-        {
-          "trait_type": "Eyes",
-          "value": "Regular Shades"
+          "trait_type": "Weapon",
+          "value": "Dual Ray Gun"
         },
         {
           "trait_type": "Hair",
-          "value": "Viking"
+          "value": "Hoodie"
+        },
+        {
+          "trait_type": "Special",
+          "value": "Character"
+        },
+        {
+          "trait_type": "Character",
+          "value": "Madlad"
+        },
+        {
+          "trait_type": "Emotion",
+          "value": "Madlad"
+        },
+        {
+          "trait_type": "Variant",
+          "value": "Madlad"
         }
       ]
     },
@@ -55081,7 +55140,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Hut Hat"
+          "value": "Hut Cap"
         }
       ]
     },
@@ -55961,7 +56020,7 @@
         },
         {
           "trait_type": "Skin Tone",
-          "value": "Rise of the TMNT Leonardo"
+          "value": "Og Promo Leonardo"
         },
         {
           "trait_type": "Character",
@@ -55974,6 +56033,10 @@
         {
           "trait_type": "Special",
           "value": "One of One"
+        },
+        {
+          "trait_type": "Hands",
+          "value": "Left Flip"
         }
       ]
     },
@@ -56601,7 +56664,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         },
         {
           "trait_type": "Variant",
@@ -58218,7 +58281,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "M Spinner Gold"
+          "value": "M Spinner Cap Gold"
         },
         {
           "trait_type": "Eyes",
@@ -58846,7 +58909,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Fries in the Bag Hat Black"
+          "value": "M Cap Black"
         },
         {
           "trait_type": "Weapon",
@@ -59080,7 +59143,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -59716,7 +59779,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Gucci Hat Red"
+          "value": "Gucci Cap Red"
         },
         {
           "trait_type": "Hair",
@@ -60456,7 +60519,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Fries in the Bag Hat Black"
+          "value": "M Cap Black"
         },
         {
           "trait_type": "Mouth",
@@ -61118,7 +61181,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -61238,7 +61301,7 @@
       ]
     },
     {
-      "id": "0xa65dcf3a9f27c1b145086126d2d283afbe78177afef06ef76d51add9e010de07",
+      "id": "0x786c07dd57181536499185074f6c690a6449ce6b6c41787eec8b96b0490680a9",
       "index": 3689,
       "sha": "",
       "name": "QuantumPhunk 3689",
@@ -61253,24 +61316,36 @@
           "value": "Male"
         },
         {
-          "trait_type": "Skin Tone",
-          "value": "2012 Michaelangelo"
+          "trait_type": "Eyes",
+          "value": "VR"
+        },
+        {
+          "trait_type": "Special",
+          "value": "Phunkism"
+        },
+        {
+          "trait_type": "Special",
+          "value": "One of One"
+        },
+        {
+          "trait_type": "Special",
+          "value": "Character"
+        },
+        {
+          "trait_type": "Character",
+          "value": "Madlad"
         },
         {
           "trait_type": "Emotion",
-          "value": "Frown"
+          "value": "Madlad"
+        },
+        {
+          "trait_type": "Variant",
+          "value": "Madlad"
         },
         {
           "trait_type": "Hair",
           "value": "Hoodie"
-        },
-        {
-          "trait_type": "Weapon",
-          "value": "Green Saber"
-        },
-        {
-          "trait_type": "Eyes",
-          "value": "Fire Eyes Purple"
         }
       ]
     },
@@ -61578,7 +61653,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -61686,7 +61761,7 @@
       ]
     },
     {
-      "id": "0x8c237a6db0b904cf762e5017cc30e3460272582bf7cb274dd10867f18c06bee8",
+      "id": "0x94a3261314a916cfde0bbdd5f3fd8003df12a03aff0fbbb42062e6a3e6ff34be",
       "index": 3720,
       "sha": "",
       "name": "QuantumPhunk 3720",
@@ -61701,28 +61776,36 @@
           "value": "Male"
         },
         {
-          "trait_type": "Skin Tone",
-          "value": "Mirage Donatello"
+          "trait_type": "Hair",
+          "value": "Hoodie"
         },
         {
           "trait_type": "Hair",
           "value": "Hoodie"
         },
         {
-          "trait_type": "Beard",
-          "value": "Chinstrap"
+          "trait_type": "Hair",
+          "value": "Messy Hair"
         },
         {
-          "trait_type": "Eyes",
-          "value": "Nerd Glasses"
+          "trait_type": "Special",
+          "value": "Character"
         },
         {
-          "trait_type": "Mouth",
-          "value": "Pizza"
+          "trait_type": "Character",
+          "value": "Madlad"
         },
         {
-          "trait_type": "Weapon",
-          "value": "Blue Saber"
+          "trait_type": "Emotion",
+          "value": "Madlad"
+        },
+        {
+          "trait_type": "Variant",
+          "value": "Madlad"
+        },
+        {
+          "trait_type": "Character",
+          "value": "The Hulk"
         }
       ]
     },
@@ -61887,7 +61970,7 @@
       ]
     },
     {
-      "id": "0x53ed24c77fea115419325be521965b3057d23156a65fa83c879ee307be804ab0",
+      "id": "0xf59254af31120a1951ba8b0c1122bb0fffa4beeb265af69982d9a263afdff20f",
       "index": 3739,
       "sha": "",
       "name": "QuantumPhunk 3739",
@@ -61902,24 +61985,40 @@
           "value": "Male"
         },
         {
-          "trait_type": "Skin Tone",
-          "value": "Mirage Guido"
-        },
-        {
-          "trait_type": "Mouth",
-          "value": "Cigarette"
-        },
-        {
           "trait_type": "Eyes",
-          "value": "Big Shades"
-        },
-        {
-          "trait_type": "Ears",
-          "value": "Earring"
+          "value": "Pit Vipers"
         },
         {
           "trait_type": "Hair",
-          "value": "Mohawk Dark"
+          "value": "Crazy Hair"
+        },
+        {
+          "trait_type": "Hair",
+          "value": "Cap"
+        },
+        {
+          "trait_type": "Special",
+          "value": "Character"
+        },
+        {
+          "trait_type": "Character",
+          "value": "Madlad"
+        },
+        {
+          "trait_type": "Emotion",
+          "value": "Madlad"
+        },
+        {
+          "trait_type": "Variant",
+          "value": "Madlad"
+        },
+        {
+          "trait_type": "Character",
+          "value": "Ashlad"
+        },
+        {
+          "trait_type": "Special",
+          "value": "One of One"
         }
       ]
     },
@@ -62116,7 +62215,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Waburger Hat White"
+          "value": "Waburger Cap White"
         }
       ]
     },
@@ -62198,7 +62297,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -63069,7 +63168,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         },
         {
           "trait_type": "Aura",
@@ -63077,7 +63176,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut Diamond"
+          "value": "Astronaut Helmet Diamond"
         }
       ]
     },
@@ -63307,7 +63406,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -64937,7 +65036,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Gucci Hat Red"
+          "value": "Gucci Cap Red"
         }
       ]
     },
@@ -65229,7 +65328,7 @@
       ]
     },
     {
-      "id": "0x4a3bda92928a1170bb26eaed4f5e94dd7d39a045d1247d80ce288ab011114978",
+      "id": "0x185fb25388717dfdfa0699ed9ddb4fa8da2c9adac875280943b2dc657c29a92e",
       "index": 3955,
       "sha": "",
       "name": "QuantumPhunk 3955",
@@ -65244,20 +65343,28 @@
           "value": "Male"
         },
         {
-          "trait_type": "Skin Tone",
-          "value": "1987 Leonardo"
+          "trait_type": "Character",
+          "value": "Mad Pikachu"
         },
         {
-          "trait_type": "Hair",
-          "value": "Fedora"
+          "trait_type": "Special",
+          "value": "One of One"
         },
         {
-          "trait_type": "Eyes",
-          "value": "Horned Rim Glasses"
+          "trait_type": "Special",
+          "value": "Character"
         },
         {
-          "trait_type": "Weapon",
-          "value": "Twin Katana"
+          "trait_type": "Character",
+          "value": "Madlad"
+        },
+        {
+          "trait_type": "Emotion",
+          "value": "Madlad"
+        },
+        {
+          "trait_type": "Variant",
+          "value": "Madlad"
         }
       ]
     },
@@ -65874,7 +65981,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Fries in the Bag Hat Black"
+          "value": "M Cap Black"
         }
       ]
     },
@@ -68158,7 +68265,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Gucci Hat Red"
+          "value": "Gucci Cap Red"
         },
         {
           "trait_type": "Eyes",
@@ -68844,7 +68951,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -69555,7 +69662,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -71882,7 +71989,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         },
         {
           "trait_type": "Aura",
@@ -74548,7 +74655,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -75655,7 +75762,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "M Gold"
+          "value": "M Cap Gold"
         }
       ]
     },
@@ -75778,7 +75885,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "M Gold"
+          "value": "M Cap Gold"
         },
         {
           "trait_type": "Eyes",
@@ -76164,7 +76271,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -78388,7 +78495,7 @@
       ]
     },
     {
-      "id": "0x08f9111fed25a59472cca6cdedf75959d27096e8958da314b4c37c657d83e602",
+      "id": "0xb29bb9c44d86d08e22a5eec1821afc6e5eea676b11b93caa25b95bcf089df31f",
       "index": 4733,
       "sha": "",
       "name": "QuantumPhunk 4733",
@@ -78403,24 +78510,40 @@
           "value": "Male"
         },
         {
-          "trait_type": "Skin Tone",
-          "value": "Rise of the TMNT Donatello"
+          "trait_type": "Hair",
+          "value": "Purple Hair"
         },
         {
           "trait_type": "Hair",
-          "value": "Shaved Head"
+          "value": "Stringy Hair"
         },
         {
-          "trait_type": "Eyes",
-          "value": "Small Shades"
-        },
-        {
-          "trait_type": "Character",
-          "value": "Turtleman"
+          "trait_type": "Hair",
+          "value": "M Spinner Cap Red"
         },
         {
           "trait_type": "Special",
           "value": "Character"
+        },
+        {
+          "trait_type": "Character",
+          "value": "Madlad"
+        },
+        {
+          "trait_type": "Emotion",
+          "value": "Madlad"
+        },
+        {
+          "trait_type": "Variant",
+          "value": "Madlad"
+        },
+        {
+          "trait_type": "Special",
+          "value": "One of One"
+        },
+        {
+          "trait_type": "Special",
+          "value": "Phunkism"
         }
       ]
     },
@@ -80498,7 +80621,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -82117,7 +82240,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         },
         {
           "trait_type": "Aura",
@@ -82754,7 +82877,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Fries in the Bag Hat Black"
+          "value": "M Cap Black"
         }
       ]
     },
@@ -84398,7 +84521,7 @@
       ]
     },
     {
-      "id": "0x7cbb60db8b039a8b705edce472b566073ca4cebf1afc238947c19bfd07ee6f4a",
+      "id": "0xde400a57dd7cce625cd94438e953dea18c16ecd85882a2a3d7de52f550340f75",
       "index": 5063,
       "sha": "",
       "name": "QuantumPhunk 5063",
@@ -84410,35 +84533,39 @@
         },
         {
           "trait_type": "Type",
-          "value": "Male"
+          "value": "Cosmic"
         },
         {
-          "trait_type": "Skin Tone",
-          "value": "IDW Donatello"
-        },
-        {
-          "trait_type": "Beard",
-          "value": "Front Beard Dark"
-        },
-        {
-          "trait_type": "Eyes",
-          "value": "Nerd Glasses"
-        },
-        {
-          "trait_type": "Hair",
-          "value": "Shaved Head"
-        },
-        {
-          "trait_type": "Character",
-          "value": "Turtleman"
-        },
-        {
-          "trait_type": "Aura",
-          "value": "Power Surge Dreamcoil"
+          "trait_type": "Weapon",
+          "value": "Gauntlet"
         },
         {
           "trait_type": "Special",
           "value": "Character"
+        },
+        {
+          "trait_type": "Character",
+          "value": "Madlad"
+        },
+        {
+          "trait_type": "Emotion",
+          "value": "Madlad"
+        },
+        {
+          "trait_type": "Variant",
+          "value": "Madlad"
+        },
+        {
+          "trait_type": "Character",
+          "value": "Thanos"
+        },
+        {
+          "trait_type": "Special",
+          "value": "One of One"
+        },
+        {
+          "trait_type": "Species",
+          "value": "Titanian Eternal"
         }
       ]
     },
@@ -87703,10 +87830,6 @@
           "value": "Character"
         },
         {
-          "trait_type": "Special",
-          "value": "One of One"
-        },
-        {
           "trait_type": "Emotion",
           "value": "Madlad"
         },
@@ -87717,6 +87840,10 @@
         {
           "trait_type": "Hair",
           "value": "Crazy Hair"
+        },
+        {
+          "trait_type": "Variant",
+          "value": "Madlad"
         }
       ]
     },
@@ -91703,7 +91830,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -93087,7 +93214,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "M Spinner Gold"
+          "value": "M Spinner Cap Gold"
         }
       ]
     },
@@ -95969,7 +96096,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "M Spinner Gold"
+          "value": "M Spinner Cap Gold"
         }
       ]
     },
@@ -96253,7 +96380,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -96738,7 +96865,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -97333,7 +97460,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -98249,7 +98376,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -98282,7 +98409,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Dunk Hat"
+          "value": "Dunk Cap"
         },
         {
           "trait_type": "Eyes",
@@ -101191,7 +101318,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -101413,7 +101540,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -102057,7 +102184,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Fries in the Bag Hat Orange"
+          "value": "M Cap Orange"
         }
       ]
     },
@@ -106472,7 +106599,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Br Hat"
+          "value": "BR Cap"
         },
         {
           "trait_type": "Eyes",
@@ -107224,6 +107351,10 @@
         {
           "trait_type": "Hair",
           "value": "Bandana"
+        },
+        {
+          "trait_type": "Variant",
+          "value": "Madlad"
         }
       ]
     },
@@ -109671,7 +109802,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Fries in the Bag Hat Black"
+          "value": "M Cap Black"
         },
         {
           "trait_type": "Emotion",
@@ -110164,7 +110295,7 @@
       ]
     },
     {
-      "id": "0xc80eee719b0b1edb7b520a01fb7b536478e6c4574bc2f2ab09bcaf92d19a40e0",
+      "id": "0xc49dab3338b66b8e5bf6dc440699e755ab87cb2cb39c01bd86efa472638f6801",
       "index": 6673,
       "sha": "",
       "name": "QuantumPhunk 6673",
@@ -110179,32 +110310,40 @@
           "value": "Male"
         },
         {
-          "trait_type": "Skin Tone",
-          "value": "IDW Raphael"
-        },
-        {
-          "trait_type": "Emotion",
-          "value": "Smile"
+          "trait_type": "Hair",
+          "value": "M Cowboy Hat Gold"
         },
         {
           "trait_type": "Hair",
-          "value": "Shaved Head"
+          "value": "Messy Hair"
         },
         {
-          "trait_type": "Eyes",
-          "value": "Small Shades"
+          "trait_type": "Hair",
+          "value": "Purple Hair"
         },
         {
-          "trait_type": "Character",
-          "value": "Turtleman"
+          "trait_type": "Skin Tone",
+          "value": "Blue"
         },
         {
           "trait_type": "Aura",
-          "value": "Power Surge Fire"
+          "value": "Power Surge Volt"
         },
         {
           "trait_type": "Special",
           "value": "Character"
+        },
+        {
+          "trait_type": "Character",
+          "value": "Madlad"
+        },
+        {
+          "trait_type": "Emotion",
+          "value": "Madlad"
+        },
+        {
+          "trait_type": "Variant",
+          "value": "Madlad"
         }
       ]
     },
@@ -110241,7 +110380,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -113448,7 +113587,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -113945,7 +114084,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -114728,7 +114867,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -116136,7 +116275,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -118100,7 +118239,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Kentucky Hat"
+          "value": "Kentucky Cap"
         },
         {
           "trait_type": "Weapon",
@@ -118707,7 +118846,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Brk Hat"
+          "value": "Brk Cap"
         }
       ]
     },
@@ -119750,12 +119889,12 @@
           "value": "Ape"
         },
         {
-          "trait_type": "Skin Tone",
+          "trait_type": "Variant",
           "value": "C3FF00"
         },
         {
           "trait_type": "Hair",
-          "value": "Samaurai V2"
+          "value": "Samaurai V2 Purple"
         }
       ]
     },
@@ -120520,7 +120659,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -121568,7 +121707,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -121913,7 +122052,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -122604,7 +122743,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -123155,7 +123294,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Castle Hat"
+          "value": "Castle Cap"
         }
       ]
     },
@@ -123304,7 +123443,7 @@
       ]
     },
     {
-      "id": "0xbae955efa31d3a9476b355e1a16cd0f62c1af6134d93935d38fa49d8c39d0f8f",
+      "id": "0xb0bc4499c13588a1ca196697dc937fb4db5f84ee4a3174f8c8b34c8f10904433",
       "index": 7554,
       "sha": "",
       "name": "QuantumPhunk 7554",
@@ -123319,32 +123458,28 @@
           "value": "Male"
         },
         {
-          "trait_type": "Skin Tone",
-          "value": "1987 Leonardo"
-        },
-        {
-          "trait_type": "Eye Mask",
-          "value": "1987"
-        },
-        {
-          "trait_type": "Eyes",
-          "value": "Eye Mask"
-        },
-        {
-          "trait_type": "Beard",
-          "value": "Shadow Beard"
-        },
-        {
-          "trait_type": "Hair",
-          "value": "Shaved Head"
-        },
-        {
           "trait_type": "Character",
-          "value": "Turtleman"
+          "value": "Burglar"
         },
         {
           "trait_type": "Special",
           "value": "Character"
+        },
+        {
+          "trait_type": "Character",
+          "value": "Madlad"
+        },
+        {
+          "trait_type": "Emotion",
+          "value": "Madlad"
+        },
+        {
+          "trait_type": "Variant",
+          "value": "Madlad"
+        },
+        {
+          "trait_type": "Special",
+          "value": "One of One"
         }
       ]
     },
@@ -124384,7 +124519,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Fries in the Bag Hat Black"
+          "value": "M Cap Black"
         }
       ]
     },
@@ -124865,7 +125000,7 @@
       ]
     },
     {
-      "id": "0x25ef6b7410f95d8946f61678a88c651c9adc86e91547e54a29e1c6cf19527dfd",
+      "id": "0xace7eeab8d72d5e2ed77952c09dc4d604b78f9702024f62d9d7110319b0c7820",
       "index": 7677,
       "sha": "",
       "name": "QuantumPhunk 7677",
@@ -124880,20 +125015,36 @@
           "value": "Male"
         },
         {
-          "trait_type": "Skin Tone",
-          "value": "2012 Ethscript"
+          "trait_type": "Hair",
+          "value": "Wizard V2"
         },
         {
           "trait_type": "Hair",
           "value": "Hoodie"
         },
         {
-          "trait_type": "Mouth",
-          "value": "Medical Mask"
+          "trait_type": "Hair",
+          "value": "Mullet Blonde"
         },
         {
           "trait_type": "Weapon",
-          "value": "Purple Saber"
+          "value": "Wand"
+        },
+        {
+          "trait_type": "Special",
+          "value": "Character"
+        },
+        {
+          "trait_type": "Character",
+          "value": "Madlad"
+        },
+        {
+          "trait_type": "Emotion",
+          "value": "Madlad"
+        },
+        {
+          "trait_type": "Variant",
+          "value": "Madlad"
         }
       ]
     },
@@ -124963,7 +125114,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Fries in the Bag Hat Orange"
+          "value": "M Cap Orange"
         }
       ]
     },
@@ -128402,7 +128553,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "M Spinner Red"
+          "value": "M Spinner Cap Red"
         }
       ]
     },
@@ -130559,7 +130710,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -132820,7 +132971,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -133642,7 +133793,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -134115,7 +134266,7 @@
       ]
     },
     {
-      "id": "0x87287a7b981a693d6c1077634b0a437c71c6c7f00f7017c83566bd272d33dcec",
+      "id": "0xd28f1fa1b250747c8c7bbfe07516acb758e82d878a4976999646167657d1df77",
       "index": 8236,
       "sha": "",
       "name": "QuantumPhunk 8236",
@@ -134130,28 +134281,32 @@
           "value": "Male"
         },
         {
-          "trait_type": "Skin Tone",
-          "value": "2021 Leonardo"
+          "trait_type": "Variant",
+          "value": "Android"
         },
         {
-          "trait_type": "Mouth",
-          "value": "Cigarette"
+          "trait_type": "Character",
+          "value": "Vision"
         },
         {
-          "trait_type": "Ears",
-          "value": "Earring"
+          "trait_type": "Special",
+          "value": "Character"
         },
         {
-          "trait_type": "Hair",
-          "value": "Knitted Cap"
+          "trait_type": "Character",
+          "value": "Madlad"
         },
         {
-          "trait_type": "Eyes",
-          "value": "Small Shades"
+          "trait_type": "Emotion",
+          "value": "Madlad"
         },
         {
-          "trait_type": "Weapon",
-          "value": "Gauntlet"
+          "trait_type": "Variant",
+          "value": "Madlad"
+        },
+        {
+          "trait_type": "Special",
+          "value": "One of One"
         }
       ]
     },
@@ -136283,7 +136438,7 @@
         },
         {
           "trait_type": "Character",
-          "value": "Marvel Cyclops"
+          "value": "Cyclops"
         },
         {
           "trait_type": "Special",
@@ -137660,7 +137815,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -137775,7 +137930,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Fries in the Bag Hat Red"
+          "value": "M Cap Red"
         }
       ]
     },
@@ -139355,7 +139510,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -140382,7 +140537,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -141437,7 +141592,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Fries in the Bag Hat Black"
+          "value": "M Cap Black"
         },
         {
           "trait_type": "Mouth",
@@ -141989,7 +142144,7 @@
       ]
     },
     {
-      "id": "0x4177156442a6ad284d0a1182ec3c2a234110bc74af204c97a26cd0b241af2fd8",
+      "id": "0x8c19cd259105f6f848972cb1f385a44959f8c75d9bd4ae3760f32e8652d81ba2",
       "index": 8729,
       "sha": "",
       "name": "QuantumPhunk 8729",
@@ -142004,24 +142159,28 @@
           "value": "Male"
         },
         {
-          "trait_type": "Skin Tone",
-          "value": "2012 Filippo"
-        },
-        {
-          "trait_type": "Mouth",
-          "value": "Cigarette"
+          "trait_type": "Variant",
+          "value": "Diamondx"
         },
         {
           "trait_type": "Hair",
           "value": "Hoodie"
         },
         {
-          "trait_type": "Eyes",
-          "value": "Nerd Glasses"
+          "trait_type": "Special",
+          "value": "Character"
         },
         {
-          "trait_type": "Weapon",
-          "value": "Blue Saber"
+          "trait_type": "Character",
+          "value": "Madlad"
+        },
+        {
+          "trait_type": "Emotion",
+          "value": "Madlad"
+        },
+        {
+          "trait_type": "Variant",
+          "value": "Madlad"
         }
       ]
     },
@@ -142223,7 +142382,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "M Spinner Red"
+          "value": "M Spinner Cap Red"
         },
         {
           "trait_type": "Eyes",
@@ -147763,7 +147922,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Fries in the Bag Hat Orange"
+          "value": "M Cap Orange"
         }
       ]
     },
@@ -148876,7 +149035,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -151179,7 +151338,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Fries in the Bag Hat Black"
+          "value": "M Cap Black"
         }
       ]
     },
@@ -151783,7 +151942,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Dominos Gold"
+          "value": "Dominos Cap Gold"
         }
       ]
     },
@@ -151997,7 +152156,7 @@
         },
         {
           "trait_type": "Character",
-          "value": "Super Turtle"
+          "value": "Cyclops"
         },
         {
           "trait_type": "Neck",
@@ -152145,7 +152304,7 @@
       ]
     },
     {
-      "id": "0x2169fd6d9d3c7e49f149786c8e986cb2072f70e6e5402629b2bc27ad4c9365a5",
+      "id": "0xa2660c06a6d26cfd91222be5c428309961669ca7a1420e9104e88f8a3ef319a0",
       "index": 9437,
       "sha": "",
       "name": "QuantumPhunk 9437",
@@ -152160,24 +152319,28 @@
           "value": "Male"
         },
         {
-          "trait_type": "Skin Tone",
-          "value": "1987 Donatello"
+          "trait_type": "Variant",
+          "value": "C3FF00"
         },
         {
-          "trait_type": "Beard",
-          "value": "Handlebars"
+          "trait_type": "Eyes",
+          "value": "Zero Wave"
         },
         {
-          "trait_type": "Cheeks",
-          "value": "Rosy Cheeks"
+          "trait_type": "Special",
+          "value": "Character"
         },
         {
-          "trait_type": "Hair",
-          "value": "Mohawk"
+          "trait_type": "Character",
+          "value": "Madlad"
         },
         {
-          "trait_type": "Mouth",
-          "value": "Pizza"
+          "trait_type": "Emotion",
+          "value": "Madlad"
+        },
+        {
+          "trait_type": "Variant",
+          "value": "Madlad"
         }
       ]
     },
@@ -153464,7 +153627,7 @@
       ]
     },
     {
-      "id": "0x75d10de1744b5e5decbc2e772f4402c94b13cd75d3b560f530caff56ac0ffc6d",
+      "id": "0x23d3a8a57c7991dd6ade749d9a261ba1a81506fd92d7d5ec3a7c880e4336a347",
       "index": 9504,
       "sha": "",
       "name": "QuantumPhunk 9504",
@@ -153479,16 +153642,28 @@
           "value": "Male"
         },
         {
-          "trait_type": "Skin Tone",
-          "value": "2021 Ethscript"
+          "trait_type": "Special",
+          "value": "Character"
         },
         {
-          "trait_type": "Hair",
-          "value": "Vampire Hair"
+          "trait_type": "Character",
+          "value": "Madlad"
         },
         {
-          "trait_type": "Mouth",
-          "value": "Vape"
+          "trait_type": "Emotion",
+          "value": "Madlad"
+        },
+        {
+          "trait_type": "Variant",
+          "value": "Madlad"
+        },
+        {
+          "trait_type": "Character",
+          "value": "Mummy"
+        },
+        {
+          "trait_type": "Special",
+          "value": "One of One"
         }
       ]
     },
@@ -153665,7 +153840,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -154790,7 +154965,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -160759,7 +160934,7 @@
         },
         {
           "trait_type": "Hair",
-          "value": "Astronaut"
+          "value": "Astronaut Helmet"
         }
       ]
     },
@@ -161507,6 +161682,10 @@
         {
           "trait_type": "Special",
           "value": "Animated"
+        },
+        {
+          "trait_type": "Variant",
+          "value": "Madlad"
         }
       ]
     },
@@ -161970,7 +162149,7 @@
         },
         {
           "trait_type": "Eyes",
-          "value": "3d Glasses"
+          "value": "3D Glasses"
         },
         {
           "trait_type": "Hair",
@@ -162101,7 +162280,7 @@
         },
         {
           "trait_type": "Eyes",
-          "value": "3d Glasses"
+          "value": "3D Glasses"
         },
         {
           "trait_type": "Hair",
@@ -162265,7 +162444,7 @@
         },
         {
           "trait_type": "Eyes",
-          "value": "3d Glasses"
+          "value": "3D Glasses"
         },
         {
           "trait_type": "Hair",
@@ -163812,7 +163991,7 @@
         },
         {
           "trait_type": "Eyes",
-          "value": "3d Glasses"
+          "value": "3D Glasses"
         },
         {
           "trait_type": "Mouth",
