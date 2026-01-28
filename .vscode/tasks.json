@@ -14,6 +14,20 @@
 			"isBackground": true,
 			"problemMatcher": [],
 			"group": "build"
+		},
+		{
+			"label": "Run local server on port 8000",
+			"type": "shell",
+			"command": "python -m http.server 8000",
+			"isBackground": true,
+			"group": "build"
+		},
+		{
+			"label": "Run local server on port 8000",
+			"type": "shell",
+			"command": "python -m http.server 8000",
+			"isBackground": true,
+			"group": "build"
 		}
 	]
 }

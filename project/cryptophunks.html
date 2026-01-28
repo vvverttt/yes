@@ -9,23 +9,50 @@
             background-color: #1a1a1a !important;
             color: #ffffff !important;
         }
-
         body.dark-mode .main_footer {
             background-color: #1a1a1a !important;
             color: #ffffff !important;
         }
-
         body.dark-mode .main_header {
             background-color: #1a1a1a !important;
             color: #ffffff !important;
         }
-
         body.dark-mode a {
             color: #B3BF44 !important;
         }
-
         body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 {
             color: #ffffff !important;
+        }
+
+        /* --- Mobile image/text layout fix --- */
+        @media (max-width: 900px) {
+            .main_content.project > div[style*="background-color"] {
+                margin-top: 0 !important;
+                margin-bottom: 20px !important;
+                padding: 0 !important;
+                width: 100vw !important;
+                left: 50%;
+                right: 50%;
+                transform: translateX(-50%);
+                position: relative;
+                z-index: 1;
+            }
+            .main_content.project > div[style*="background-color"] img {
+                width: 100vw !important;
+                max-width: 100vw !important;
+                height: auto !important;
+                display: block;
+                margin: 0 auto !important;
+                position: relative;
+                z-index: 2;
+                background: none !important;
+            }
+            .main_content.project .header_block,
+            .main_content.project .spacer_block {
+                position: static !important;
+                z-index: 3;
+                background: none !important;
+            }
         }
     </style>
     <meta charset="UTF-8">
