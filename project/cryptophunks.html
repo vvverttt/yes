@@ -355,18 +355,17 @@
             left: 0 !important;
             width: 100vw !important;
             height: 100vh !important;
-            overflow: auto !important;
-            -webkit-overflow-scrolling: touch !important;
+            overflow: hidden !important;
             z-index: 999999 !important;
-            touch-action: auto !important;
         }
         
         #iframe-container.fullscreen #grid-iframe {
             width: 100% !important;
             height: 100% !important;
+            overflow: auto !important;
+            -webkit-overflow-scrolling: touch !important;
             touch-action: auto !important;
-            -webkit-user-select: none !important;
-            user-select: none !important;
+            pointer-events: auto !important;
         }
     }
 
