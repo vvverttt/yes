@@ -368,21 +368,32 @@
 
     /* Mobile fullscreen iframe fixes - allow panning and pinch zoom */
     @media (max-width: 1024px) {
-        #iframe-container.fullscreen {
-            overflow-y: auto !important;
-            overflow-x: auto !important;
-            -webkit-overflow-scrolling: touch !important;
-            pointer-events: auto !important;
-        }
-        #iframe-container.fullscreen #grid-iframe {
-            touch-action: pan-x pan-y pinch-zoom !important;
-            -webkit-user-select: none !important;
-            user-select: none !important;
-            pointer-events: none !important;
-        }
         body.fullscreen-active {
-            overflow: visible !important;
+            overflow: hidden !important;
+            position: fixed !important;
+            width: 100% !important;
+            height: 100% !important;
+        }
+        
+        #iframe-container.fullscreen {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            overflow-y: scroll !important;
+            overflow-x: scroll !important;
             -webkit-overflow-scrolling: touch !important;
+            z-index: 999999 !important;
+        }
+        
+        #iframe-container.fullscreen #grid-iframe {
+            width: 100% !important;
+            height: 100% !important;
+            min-width: 100% !important;
+            min-height: 100% !important;
+            touch-action: manipulation !important;
+            pointer-events: auto !important;
         }
     }
 
