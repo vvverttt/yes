@@ -311,6 +311,10 @@
 </script>
 
 <style>
+    #iframe-container {
+        transition: all 0.3s ease-in-out !important;
+    }
+
     #iframe-container.fullscreen {
         position: fixed !important;
         top: 0 !important;
@@ -334,6 +338,23 @@
 
     body.fullscreen-active {
         overflow: hidden !important;
+    }
+
+    /* Mobile fullscreen iframe fixes - allow panning and pinch zoom */
+    @media (max-width: 1024px) {
+        #iframe-container.fullscreen {
+            overflow: auto !important;
+            -webkit-overflow-scrolling: touch !important;
+        }
+        #iframe-container.fullscreen #grid-iframe {
+            touch-action: manipulation !important;
+            -webkit-user-select: none !important;
+            user-select: none !important;
+        }
+        body.fullscreen-active {
+            overflow: auto !important;
+            -webkit-overflow-scrolling: touch !important;
+        }
     }
 
     /* Dark Mode Styles - Only background changes */
