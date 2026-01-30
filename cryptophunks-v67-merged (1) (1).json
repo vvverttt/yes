@@ -1,6 +1,6 @@
 {
   "name": "QuantumPhunks",
-  "logo_image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAFBlWElmTU0AKgAAAAgAAgESAAMAAAABAAEAAIdpAAQAAAABAAAAJgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAGKADAAQAAAABAAAAGAAAAADw6FuzAAABKElEQVRIDe2VvQ0CMQyFmYGfhgGYAHoY4qagpmQCqJBYgZqSDRASoocNmCLcQ3F4sZzchZ+OSFainPM+2/HddTr/UVKBw7LrSvyLfRsAgGsrY2QAbn2cRrbYTQTWHnJe9a0SRcIMKoYYgKS4gIogPwfctgNdou9moAHz8cU12ay3aX/Z9/0wygDiqDGMQbwnAMx+ne4qC+Dqgf5ngN7TkCTIArBwai0ABOLNzkID4CztmJtRMncdPcWrqkpDCPB0yonyM7kTBJQF+C4KTixirTlDQN4G4KBlDG0F8G9y6ww+BnAJWIzXErmUJ3sH9C0KWTRBBABhMV/OelJD/Q8iSO0a3YNk4U6v9sxGD5YCYCtERYdDC0NcZ4AzOGgOAwC/EDlDII4smgAPSzNOcQI/U8wAAAAASUVORK5CYII=",
+  "logo_image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAFBlWElmTU0AKgAAAAgAAgESAAMAAAABAAEAAIdpAAQAAAABAAAAJgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAGKADAAQAAAABAAAAGAAAAADw6FuzAAABPklEQVRIDe2VvQ3CMBCFMwM/DQMwAfRQkA2yQFpqSiaACgmxATUlGyAkRIkEGzCF4Vm+6Hz4YluCjkgnO4nzvnt3TlIU/yOnAsdlx+Ssz14bAQAuI4/RAjC72+wjHDAdcln1QiWywuvTxMhY7MfkKA0SAKjiBMuC/Bzw2PZlib7rQALmo6uJxbS7Se/D8zDwHEAcNUZwEL9GAIxurjc8BDDvA9uRA+Q1CVFBIQAX1uYE0FN3dyQAmeMFoy2pjSiZuQ+98gZhApAkTlBAkJCLoH7BdpFdGMseYhJQlqUOcQBT17UHYJnRw3YkcYzkoBXg3uQPABfS5tmAqqo8FzFhuMQzKQ7QIOuCQ/jnmsMoc6ylUCHif+BBZB8IYs52ezbirS4EoHGCpiMoQ8AAgHjIgQoJACyEsicIziEOSAzwAmGYXi6h8FcgAAAAAElFTkSuQmCC",
   "banner_image": null,
   "total_supply": 4337,
   "slug": "cryptophunksv67",
@@ -11,7 +11,7 @@
   "background_color": "#C3FF00",
   "collection_items": [
     {
-      "id": "0x28aa7110c07afb7bccd8ea4c61b4d4f48abbb767112a17c20eb2c06213009bf5",
+      "id": "0x96bf5702ebada826a3f2c10ab91781d06c16cc01cd9f007522f16c91c5e822e6",
       "index": 1,
       "sha": "",
       "name": "QuantumPhunk 1",
@@ -1302,10 +1302,6 @@
         {
           "trait_type": "Hair",
           "value": "Hoodie"
-        },
-        {
-          "trait_type": "Special",
-          "value": "One of One"
         }
       ]
     },
@@ -2143,7 +2139,7 @@
       ]
     },
     {
-      "id": "0x3b879f1442d876eb3a914e5505cb2b2b29455b7ded3118735d36c5cd094cf087",
+      "id": "0x28eef4a5a280d1c2108b4a1954127c31ce529daece247dc6be5c155a73ad341b",
       "index": 167,
       "sha": "",
       "name": "QuantumPhunk 167",
@@ -2154,20 +2150,16 @@
           "value": "Turtle"
         },
         {
-          "trait_type": "Skin Tone",
-          "value": "Og Promo Lymera"
+          "trait_type": "Special",
+          "value": "One of One"
         },
         {
           "trait_type": "Character",
-          "value": "Mrs.Claus"
+          "value": "Toothiana"
         },
         {
           "trait_type": "Special",
           "value": "Character"
-        },
-        {
-          "trait_type": "Special",
-          "value": "One of One"
         },
         {
           "trait_type": "Type",
@@ -7159,7 +7151,7 @@
       ]
     },
     {
-      "id": "0x875fdb06fc42e0806fdddda05b4de55574209ebda51e9b66c1ea8b313e4f2b8d",
+      "id": "0x16b5491362aa2129e38afb06e2a428fb4d6eafe5d2f0bad0207408208065a7b8",
       "index": 483,
       "sha": "",
       "name": "QuantumPhunk 483",
@@ -7992,7 +7984,7 @@
       ]
     },
     {
-      "id": "0x33e4b29a0770eebf23a5ca5f7f4ab0d471b900c988e28d23c3af2d17b7f1859c",
+      "id": "0x0cf512a803e4bfacc5f2112f5878ba668864783c459efa87a8088dd7814e135a",
       "index": 526,
       "sha": "",
       "name": "QuantumPhunk 526",
@@ -12787,7 +12779,7 @@
       ]
     },
     {
-      "id": "0xd87fa3db7a13fbf7a5521eac3b8e8c70f8fc4ccfbb9e2810d53ac7108ea89aa5",
+      "id": "0xe8c0f5cb09474f4567759cf0ee52f91ac1285f372f106e578d967b4c141ca1bb",
       "index": 791,
       "sha": "",
       "name": "QuantumPhunk 791",
@@ -14898,11 +14890,15 @@
         {
           "trait_type": "Type",
           "value": "Cyborg"
+        },
+        {
+          "trait_type": "Special",
+          "value": "One of One"
         }
       ]
     },
     {
-      "id": "0xc9cf2a5b634c5bec154a5e1a22b44c0dbcecab5ea1231b7cb198ad010ee6db36",
+      "id": "0x136585ca2195f1bcfe91bbc603f83652bf58ad4f3d7c2ebef56f8a1e8d9bb021",
       "index": 909,
       "sha": "",
       "name": "QuantumPhunk 909",
@@ -14919,10 +14915,6 @@
         {
           "trait_type": "Skin Tone",
           "value": "2003 Michaelangelo"
-        },
-        {
-          "trait_type": "Hair",
-          "value": "Stringy Hair"
         },
         {
           "trait_type": "Eyes",
@@ -21954,10 +21946,6 @@
         {
           "trait_type": "Eyes",
           "value": "Eyes Forward"
-        },
-        {
-          "trait_type": "Eye Mask",
-          "value": "2021"
         }
       ]
     },
@@ -23992,6 +23980,10 @@
         {
           "trait_type": "Eyes",
           "value": "Dual Blue"
+        },
+        {
+          "trait_type": "Special",
+          "value": "One of One"
         }
       ]
     },
@@ -24235,7 +24227,7 @@
       ]
     },
     {
-      "id": "0x90e5058b59ed21a78852da4dd41506906fb07c0a0fdaaa01371d14f3cfb132c0",
+      "id": "0x2ad117025c514cc442c704f17b462afc47a03a3caad1282493758e41ac684952",
       "index": 1439,
       "sha": "",
       "name": "QuantumPhunk 1439",
@@ -24252,10 +24244,6 @@
         {
           "trait_type": "Skin Tone",
           "value": "OG Promo Michaelangelo"
-        },
-        {
-          "trait_type": "Hair",
-          "value": "Stringy Hair"
         },
         {
           "trait_type": "Beard",
@@ -25831,7 +25819,7 @@
       ]
     },
     {
-      "id": "0xcaf4067dfe36bd41a7c589d44eb4e9a2a544b347b132695328f335d755eb5339",
+      "id": "0xe74502e0ed2e1c2058ec990208c825211da4734df8ea551200f3ee9ce3bd9e72",
       "index": 1526,
       "sha": "",
       "name": "QuantumPhunk 1526",
@@ -43489,10 +43477,6 @@
         {
           "trait_type": "Eyes",
           "value": "Eyes Forward"
-        },
-        {
-          "trait_type": "Eye Mask",
-          "value": "2021"
         }
       ]
     },
@@ -45901,10 +45885,6 @@
         {
           "trait_type": "Weapon",
           "value": "Tenebris Gold"
-        },
-        {
-          "trait_type": "Eye Mask",
-          "value": "2021"
         }
       ]
     },
@@ -49225,7 +49205,7 @@
       ]
     },
     {
-      "id": "0x0561cd06a7e7dea98a8dc1ba9cfe01247ffa68a371172f6d346b318fd1449505",
+      "id": "0x14bebf4f746c219c0ad64fe363b62d78eb36fe72036e260e5aa8ade6237c9691",
       "index": 2970,
       "sha": "",
       "name": "QuantumPhunk 2970",
@@ -52622,7 +52602,7 @@
       ]
     },
     {
-      "id": "0xfe1b132727e2bacaeec10bc18c5591fcffa4547b3b41431bb76ac27fd68fce5a",
+      "id": "0x558c0ca7f1a50937a89bae862a14e54fe41778ff059bc063e15bfe38e2a72585",
       "index": 3172,
       "sha": "",
       "name": "QuantumPhunk 3172",
@@ -52646,15 +52626,11 @@
         },
         {
           "trait_type": "Emotion",
-          "value": "Frown"
+          "value": "Left Smile"
         },
         {
           "trait_type": "Hair",
           "value": "Blue Turtle Hoodie"
-        },
-        {
-          "trait_type": "Emotion",
-          "value": "Full Frown"
         }
       ]
     },
@@ -54878,6 +54854,10 @@
         {
           "trait_type": "Eyes",
           "value": "Blue"
+        },
+        {
+          "trait_type": "Special",
+          "value": "One of One"
         }
       ]
     },
@@ -57811,10 +57791,6 @@
         {
           "trait_type": "Variant",
           "value": "C3FF00"
-        },
-        {
-          "trait_type": "Eye Mask",
-          "value": "2021"
         }
       ]
     },
@@ -60862,10 +60838,6 @@
         {
           "trait_type": "Animal",
           "value": "Turtle"
-        },
-        {
-          "trait_type": "Special",
-          "value": "One of One"
         },
         {
           "trait_type": "Special",
@@ -65645,10 +65617,6 @@
         {
           "trait_type": "Weapon",
           "value": "Noctyr Gold"
-        },
-        {
-          "trait_type": "Eye Mask",
-          "value": "2021"
         }
       ]
     },
@@ -73081,7 +73049,7 @@
       ]
     },
     {
-      "id": "0xfb060ebacf4e5edaad2e682661f2a57dd309d69ffc04a5a5b234f8f08e6387fd",
+      "id": "0x5eff499905dc7219fe6fdc00e2e205f215d169f9e998a6d07bb8c48c32a215ba",
       "index": 4394,
       "sha": "",
       "name": "QuantumPhunk 4394",
@@ -74985,7 +74953,7 @@
       ]
     },
     {
-      "id": "0x85ca61ae7596258b09a2fdcec5dc528048debf15153f4c270bf7bcb6c9f478ff",
+      "id": "0x4cc154e4a4815e068e8385d10593dac508ec9db4730b455d17393199784adad9",
       "index": 4520,
       "sha": "",
       "name": "QuantumPhunk 4520",
@@ -75004,10 +74972,6 @@
           "value": "Rise of the TMNT Raphael"
         },
         {
-          "trait_type": "Hair",
-          "value": "Stringy Hair"
-        },
-        {
           "trait_type": "Face",
           "value": "Spots"
         },
@@ -75022,6 +74986,10 @@
         {
           "trait_type": "Hair",
           "value": "Cyron"
+        },
+        {
+          "trait_type": "Eyes",
+          "value": "Eyes Forward"
         }
       ]
     },
@@ -92718,10 +92686,6 @@
         {
           "trait_type": "Eyes",
           "value": "Eye Mask"
-        },
-        {
-          "trait_type": "Eye Mask",
-          "value": "2021"
         }
       ]
     },
@@ -96039,7 +96003,7 @@
       ]
     },
     {
-      "id": "0x28eef4a5a280d1c2108b4a1954127c31ce529daece247dc6be5c155a73ad341b",
+      "id": "0x3b879f1442d876eb3a914e5505cb2b2b29455b7ded3118735d36c5cd094cf087",
       "index": 5796,
       "sha": "",
       "name": "QuantumPhunk 5796",
@@ -96050,20 +96014,36 @@
           "value": "Turtle"
         },
         {
-          "trait_type": "Special",
-          "value": "One of One"
+          "trait_type": "Skin Tone",
+          "value": "Og Promo Lymera"
         },
         {
           "trait_type": "Character",
-          "value": "Toothiana"
+          "value": "Mrs.Claus"
         },
         {
           "trait_type": "Special",
           "value": "Character"
         },
         {
+          "trait_type": "Special",
+          "value": "One of One"
+        },
+        {
           "trait_type": "Type",
           "value": "Guardian"
+        },
+        {
+          "trait_type": "Lips",
+          "value": "Hot Lipstick"
+        },
+        {
+          "trait_type": "Emotion",
+          "value": "Smile"
+        },
+        {
+          "trait_type": "Ears",
+          "value": "Earring"
         }
       ]
     },
@@ -124080,7 +124060,7 @@
       ]
     },
     {
-      "id": "0x0a9cff85860d90ed488921ea5b25e6fcd49e826fc7f95059cedfbb38719fb406",
+      "id": "0x455d36cb5e1406c30c3e1b93c54708a0487eb3f88dc217ccd003b28cb9bef94e",
       "index": 7596,
       "sha": "",
       "name": "QuantumPhunk 7596",
@@ -125222,7 +125202,7 @@
       ]
     },
     {
-      "id": "0xece7f4c9f00a16f3566005b01334d0d11fea13772b296b674db240291db47764",
+      "id": "0x003a2cadc1aa1faa0d31163979fadfbfa9f41a66bc1a83ffed61790b15cc46ca",
       "index": 7690,
       "sha": "",
       "name": "QuantumPhunk 7690",
@@ -125241,10 +125221,6 @@
           "value": "2003 Raphael"
         },
         {
-          "trait_type": "Hair",
-          "value": "Stringy Hair"
-        },
-        {
           "trait_type": "Beard",
           "value": "Luxurious Beard"
         },
@@ -125259,6 +125235,10 @@
         {
           "trait_type": "Hair",
           "value": "Vanta"
+        },
+        {
+          "trait_type": "Eyes",
+          "value": "Eyes Forward"
         }
       ]
     },
@@ -139979,7 +139959,7 @@
       ]
     },
     {
-      "id": "0xabf2cfd00a3bd8947346fcd2b36b79c4f5f740c0f736dbdacbcb47d1969dc7d3",
+      "id": "0xe690f95b0d9eff9f1396e38ab075a4ab1d0bba25a9d63fdef0c17e9e332a65ad",
       "index": 8615,
       "sha": "",
       "name": "QuantumPhunk 8615",
@@ -140016,6 +139996,10 @@
         {
           "trait_type": "Hair",
           "value": "Vanta"
+        },
+        {
+          "trait_type": "Eyes",
+          "value": "Eyes Forward"
         }
       ]
     },
@@ -144561,7 +144545,7 @@
       ]
     },
     {
-      "id": "0xe125d34a9bcf2c82d61bf91d6174bf6dfd3d71850933ae2eedb4d82ddb0fc48e",
+      "id": "0xee03b57857380dcf8a6b052516aa236fb5ded39b7a9d38fb67e7ab0e20adca2c",
       "index": 8899,
       "sha": "",
       "name": "QuantumPhunk 8899",
@@ -145622,10 +145606,6 @@
         {
           "trait_type": "Emotion",
           "value": "Left Smile"
-        },
-        {
-          "trait_type": "Eye Mask",
-          "value": "2021"
         },
         {
           "trait_type": "Hair",

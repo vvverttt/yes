@@ -14,7 +14,7 @@ def analyze_image_collection(folder_path, collection_name):
     image_files = [f for f in os.listdir(folder_path) if f.endswith('.png')]
     
     # Exclude specific file if requested
-    exclude_files = ['10197_Missing_Phunk_10197.png']
+    exclude_files = ['10197_Missing_Phunk_10197.png', 'Missing-Phunk#10197_transparent.png']
     image_files = [f for f in image_files if f not in exclude_files]
     
     for filename in image_files:
@@ -58,23 +58,21 @@ def analyze_image_collection(folder_path, collection_name):
     
     return total_pixels_used, len(all_colors)
 
-# Analyze Missing Phunks
-missing_folder = "images/missing_phunks_transparent"
-missing_pixels, missing_colors = analyze_image_collection(missing_folder, "Missing Phunks")
 
-# Analyze DystoPhunkz  
-dysto_folder = "images/DystoPhunkz"
-dysto_pixels, dysto_colors = analyze_image_collection(dysto_folder, "DystoPhunkz")
+# Analyze CryptoPhunks Images
+cryptophunks_folder = "images/images_24x24"
+cryptophunks_pixels, cryptophunks_colors = analyze_image_collection(cryptophunks_folder, "CryptoPhunks Images")
+
+# Analyze Missing Phunks Images
+missing_phunks_folder = "images/missing_phunks_transparent"
+missing_phunks_pixels, missing_phunks_colors = analyze_image_collection(missing_phunks_folder, "Missing Phunks Images")
 
 print(f"\n{'='*50}")
 print("SUMMARY:")
 print(f"{'='*50}")
-print(f"Missing Phunks:")
-print(f"  Pixels Used: {missing_pixels:,}")
-print(f"  Colors Used: {missing_colors:,}")
-print(f"\nDystoPhunkz:")
-print(f"  Pixels Used: {dysto_pixels:,}")
-print(f"  Colors Used: {dysto_colors:,}")
-print(f"\nCombined:")
-print(f"  Total Pixels Used: {missing_pixels + dysto_pixels:,}")
-print(f"  Note: Color count would need to be recalculated for combined unique colors")
+print(f"CryptoPhunks Images:")
+print(f"  Pixels Used: {cryptophunks_pixels:,}")
+print(f"  Colors Used: {cryptophunks_colors:,}")
+print(f"Missing Phunks Images:")
+print(f"  Pixels Used: {missing_phunks_pixels:,}")
+print(f"  Colors Used: {missing_phunks_colors:,}")
