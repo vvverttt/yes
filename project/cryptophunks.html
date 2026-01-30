@@ -53,7 +53,18 @@
                 z-index: 3;
                 background: none !important;
             }
-        }
+            /* Add spacing above iframe on mobile */
+            #iframe-container {
+                margin-top: 40px !important;
+            }
+            /* Fix stats section text overlapping on mobile */
+            .stats-section > div[style*="position: relative"] {
+                top: 0 !important;
+            }
+            .stats-section p {
+                white-space: normal !important;
+                word-wrap: break-word !important;
+            }
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
