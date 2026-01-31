@@ -225,11 +225,19 @@ function setupEventListeners() {
         // Wire up control buttons
         const btnZoomIn = document.getElementById('btn-zoom-in');
         const btnZoomOut = document.getElementById('btn-zoom-out');
+        const btnNavWest = document.getElementById('btn-nav-west');
+        const btnNavNorth = document.getElementById('btn-nav-north');
+        const btnNavEast = document.getElementById('btn-nav-east');
+        const btnNavSouth = document.getElementById('btn-nav-south');
         const btnFullscreen = document.getElementById('btn-fullscreen');
         const btnReset = document.getElementById('btn-reset');
 
         if (btnZoomIn) btnZoomIn.addEventListener('click', zoomIn);
         if (btnZoomOut) btnZoomOut.addEventListener('click', zoomOut);
+        if (btnNavWest) btnNavWest.addEventListener('click', scrollWest);
+        if (btnNavNorth) btnNavNorth.addEventListener('click', scrollNorth);
+        if (btnNavEast) btnNavEast.addEventListener('click', scrollEast);
+        if (btnNavSouth) btnNavSouth.addEventListener('click', scrollSouth);
         if (btnFullscreen) btnFullscreen.addEventListener('click', toggleFullScreen);
         if (btnReset) btnReset.addEventListener('click', resetView);
 
@@ -322,6 +330,30 @@ function zoomOut() {
         canvas.height / gridHeight
     );
     zoom = Math.max(minZoom, zoom);
+    clampPan();
+    drawGrid();
+}
+
+function scrollWest() {
+    panX += 100;
+    clampPan();
+    drawGrid();
+}
+
+function scrollEast() {
+    panX -= 100;
+    clampPan();
+    drawGrid();
+}
+
+function scrollNorth() {
+    panY += 100;
+    clampPan();
+    drawGrid();
+}
+
+function scrollSouth() {
+    panY -= 100;
     clampPan();
     drawGrid();
 }
