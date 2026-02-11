@@ -4,25 +4,19 @@
 <!-- Mirrored from larvalabs.com/project/meebits by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Sep 2025 04:08:21 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
+    <!-- Dark mode init - must be first in head to prevent flash -->
+    <script>(function(){try{if(localStorage.getItem('darkMode')==='true'){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})()</script>
     <style>
-        body.dark-mode {
-            background-color: #1a1a1a !important;
-            color: #ffffff !important;
-        }
-        body.dark-mode .main_footer {
-            background-color: #1a1a1a !important;
-            color: #ffffff !important;
-        }
-        body.dark-mode .main_header {
-            background-color: #1a1a1a !important;
-            color: #ffffff !important;
-        }
-        body.dark-mode a {
-            color: #B3BF44 !important;
-        }
-        body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 {
-            color: #ffffff !important;
-        }
+        /* Critical dark mode + layout stability - applied before external CSS */
+        html[data-theme="dark"] { background-color: #1a1a1a !important; color-scheme: dark; }
+        html[data-theme="dark"], html[data-theme="dark"] body { color: #ffffff !important; }
+        html[data-theme="dark"] .main_header, html[data-theme="dark"] .main_footer { background-color: #1a1a1a !important; color: #ffffff !important; }
+        html[data-theme="dark"] a, html[data-theme="dark"] .main_nav_list a, html[data-theme="dark"] .footer_nav_list a { color: #B3BF44 !important; }
+        html[data-theme="dark"] h1, html[data-theme="dark"] h2, html[data-theme="dark"] h3, html[data-theme="dark"] h4, html[data-theme="dark"] h5, html[data-theme="dark"] h6 { color: #ffffff !important; }
+        html[data-theme="dark"] p, html[data-theme="dark"] .small, html[data-theme="dark"] .text_block { color: #ffffff !important; }
+        html[data-theme="dark"] .logo svg path { fill: #ffffff; }
+        /* Prevent header layout shift */
+        .main_header { min-height: 70px; transition: none; }
 
         /* --- Mobile image/text layout fix --- */
         @media (max-width: 900px) {
@@ -132,13 +126,7 @@
     </script>
     </head>
 <body>
-<script>
-    // Apply dark mode class to body immediately after it exists (before DOMContentLoaded)
-    if (localStorage.getItem('darkMode') === 'true') {
-        document.body.classList.add('dark-mode');
-        document.documentElement.classList.remove('dark-mode-pending');
-    }
-</script>
+    <script>if(localStorage.getItem('darkMode')==='true'){document.body.classList.add('dark-mode');}</script>
 
 <header class="container main_header">
     <div class="row">
@@ -369,59 +357,8 @@
         }
     }
 
-    /* Dark Mode Styles - Only background changes */
-    body.dark-mode {
-        background-color: #1a1a1a !important;
-    }
-
-    body.dark-mode .main_content {
-        background-color: #1a1a1a !important;
-    }
-
-    body.dark-mode .container {
-        background-color: #1a1a1a !important;
-        color: #ffffff !important;
-    }
-
-    body.dark-mode .main_footer {
-        background-color: #1a1a1a !important;
-        color: #ffffff !important;
-    }
-
-    body.dark-mode .main_header {
-        background-color: #1a1a1a !important;
-        color: #ffffff !important;
-    }
-
-    body.dark-mode a {
-        color: #B3BF44 !important;
-    }
-
-    body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 {
-        color: #ffffff !important;
-    }
-
-    dody.dark-modk-p, body.damk-modo .dmall, b-dy.dark-modod.tex._block {
-        coaor: #ffffff !important;
-   -}do .dmall, b-dy.dark-modod.tex._block {
-        coaor: #ffffff !important;
-   -}do .dmall, b-dy.dark-modod.tex._block {
-        coaor: #ffffff !important;
-   -}do .dmall, b-dy.dark-modod.tex._block {
-        coaor: #ffffff !important;
-   -}do .dmall, b-dy.dark-modod.tex._block {
-        coaor: #ffffff !important;
-   -}do .dmall, b-dy.dark-modod.tex._block {
-        coaor: #ffffff !important;
-   -}do .dmall, b-dy.dark-modod.tex._block {
-        coaor: #ffffff !important;
-   -}do .dmall, b-dy.dark-modod.tex._block {
-        coaor: #ffffff !important;
-   -}do .dmall, b dy.dark-modod.tex._block {
-        coaor: #ffffff !important;
-   -}de .small, body.dark-mode .text_block {
-        color: #ffffff !important;
-    }
+    /* Dark mode additional styles */
+    html[data-theme="dark"] .main_content, html[data-theme="dark"] .container { background-color: #1a1a1a !important; }
     @media (max-width: 768px) {
         .header_block h1 {
             font-size: 24px !important;
@@ -484,31 +421,26 @@
 </style>
 
 <script>
-    // Dark Mode Toggle
     function toggleDarkMode() {
-        const body = document.body;
-        const isDarkMode = body.classList.contains('dark-mode');
-        const toggle = document.getElementById('dark-mode-toggle');
-        
-        if (isDarkMode) {
-            body.classList.remove('dark-mode');
-            toggle.innerHTML = '<i class="fa fa-moon-o"></i>';
-            localStorage.setItem('darkMode', 'false');
-        } else {
-            body.classList.add('dark-mode');
-            toggle.innerHTML = '<i class="fa fa-sun-o"></i>';
+        var body = document.body;
+        var html = document.documentElement;
+        var toggle = document.getElementById('dark-mode-toggle');
+        body.classList.toggle('dark-mode');
+        if (body.classList.contains('dark-mode')) {
             localStorage.setItem('darkMode', 'true');
+            html.setAttribute('data-theme', 'dark');
+            if (toggle) toggle.innerHTML = '<i class="fa fa-sun-o"></i>';
+        } else {
+            localStorage.setItem('darkMode', 'false');
+            html.removeAttribute('data-theme');
+            if (toggle) toggle.innerHTML = '<i class="fa fa-moon-o"></i>';
         }
     }
-
-    // Load dark mode preference on page load
     document.addEventListener('DOMContentLoaded', function() {
-        const darkModeEnabled = localStorage.getItem('darkMode') === 'true';
-        const toggle = document.getElementById('dark-mode-toggle');
-        
-        if (darkModeEnabled) {
+        if (localStorage.getItem('darkMode') === 'true') {
             document.body.classList.add('dark-mode');
-            toggle.innerHTML = '<i class="fa fa-sun-o"></i>';
+            var toggle = document.getElementById('dark-mode-toggle');
+            if (toggle) toggle.innerHTML = '<i class="fa fa-sun-o"></i>';
         }
     });
 </script>

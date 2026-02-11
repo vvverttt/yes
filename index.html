@@ -2,38 +2,19 @@
 <html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:bind="http://www.w3.org/1999/xhtml">
 
 <head>
-    <!-- Prevent white flash in dark mode and layout shift -->
-    <script>
-      (function() {
-        try {
-          if (localStorage.getItem('darkMode') === 'true') {
-            document.documentElement.style.background = '#1a1a1a';
-            document.body && (document.body.style.background = '#1a1a1a');
-          }
-        } catch(e) {}
-      })();
-    </script>
+    <!-- Dark mode init - must be first in head to prevent flash -->
+    <script>(function(){try{if(localStorage.getItem('darkMode')==='true'){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})()</script>
     <style>
-        body.dark-mode {
-            background-color: #1a1a1a !important;
-            color: #ffffff !important;
-        }
-        body.dark-mode .main_footer {
-            background-color: #1a1a1a !important;
-            color: #ffffff !important;
-        }
-        body.dark-mode .main_header {
-            background-color: #1a1a1a !important;
-            color: #ffffff !important;
-        }
-        body.dark-mode a {
-            color: #B3BF44 !important;
-        }
-        body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 {
-            color: #ffffff !important;
-        }
-        /* Reserve header space to prevent twitch */
-        .main_header { min-height: 70px; transition: background 0.2s; }
+        /* Critical dark mode + layout stability - applied before external CSS */
+        html[data-theme="dark"] { background-color: #1a1a1a !important; color-scheme: dark; }
+        html[data-theme="dark"], html[data-theme="dark"] body { color: #ffffff !important; }
+        html[data-theme="dark"] .main_header, html[data-theme="dark"] .main_footer { background-color: #1a1a1a !important; color: #ffffff !important; }
+        html[data-theme="dark"] a, html[data-theme="dark"] .main_nav_list a, html[data-theme="dark"] .footer_nav_list a { color: #B3BF44 !important; }
+        html[data-theme="dark"] h1, html[data-theme="dark"] h2, html[data-theme="dark"] h3, html[data-theme="dark"] h4, html[data-theme="dark"] h5, html[data-theme="dark"] h6 { color: #ffffff !important; }
+        html[data-theme="dark"] p, html[data-theme="dark"] .small, html[data-theme="dark"] .text_block { color: #ffffff !important; }
+        html[data-theme="dark"] .logo svg path { fill: #ffffff; }
+        /* Prevent header layout shift */
+        .main_header { min-height: 70px; transition: none; }
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -107,14 +88,7 @@
     </script>
     </head>
 <body>
-    <script>
-        // Apply dark mode class immediately if set in localStorage
-        if (localStorage.getItem('darkMode') === 'true') {
-            document.body.classList.add('dark-mode');
-            document.documentElement.classList.remove('dark-mode-pending');
-            document.documentElement.classList.add('dark-mode-applied');
-        }
-    </script>
+    <script>if(localStorage.getItem('darkMode')==='true'){document.body.classList.add('dark-mode');}</script>
 
 <header class="container main_header">
     <div class="row">
@@ -322,59 +296,27 @@
     lazySizesConfig. expFactor = 1.5; //default: 1.7
 </script>
 
-<style>
-    /* Dark Mode Styles - Only background changes */
-    body.dark-mode {
-        background-color: #1a1a1a !important;
-        color: #ffffff !important;
-    }
-
-    body.dark-mode .main_footer {
-        background-color: #1a1a1a !important;
-        color: #ffffff !important;
-    }
-
-    body.dark-mode .main_header {
-        background-color: #1a1a1a !important;
-        color: #ffffff !important;
-    }
-
-    body.dark-mode a {
-        color: #B3BF44 !important;
-    }
-
-    body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 {
-        color: #ffffff !important;
-    }
-
-    body.dark-mode p, body.dark-mode .small, body.dark-mode .text_block {
-        color: #ffffff !important;
-    }
-</style>
-
 <script>
-    // Dark Mode Toggle
     function toggleDarkMode() {
-        const body = document.body;
-        const isDarkMode = body.classList.contains('dark-mode');
-        const toggle = document.getElementById('dark-mode-toggle');
-        if (isDarkMode) {
-            body.classList.remove('dark-mode');
-            localStorage.setItem('darkMode', 'false');
-            toggle.innerHTML = '<i class="fa fa-moon-o"></i>';
-        } else {
-            body.classList.add('dark-mode');
+        var body = document.body;
+        var html = document.documentElement;
+        var toggle = document.getElementById('dark-mode-toggle');
+        body.classList.toggle('dark-mode');
+        if (body.classList.contains('dark-mode')) {
             localStorage.setItem('darkMode', 'true');
-            toggle.innerHTML = '<i class="fa fa-sun-o"></i>';
+            html.setAttribute('data-theme', 'dark');
+            if (toggle) toggle.innerHTML = '<i class="fa fa-sun-o"></i>';
+        } else {
+            localStorage.setItem('darkMode', 'false');
+            html.removeAttribute('data-theme');
+            if (toggle) toggle.innerHTML = '<i class="fa fa-moon-o"></i>';
         }
     }
-
     document.addEventListener('DOMContentLoaded', function() {
-        const toggle = document.getElementById('dark-mode-toggle');
-        const darkModeEnabled = localStorage.getItem('darkMode') === 'true';
-        if (darkModeEnabled) {
+        if (localStorage.getItem('darkMode') === 'true') {
             document.body.classList.add('dark-mode');
-            toggle.innerHTML = '<i class="fa fa-sun-o"></i>';
+            var toggle = document.getElementById('dark-mode-toggle');
+            if (toggle) toggle.innerHTML = '<i class="fa fa-sun-o"></i>';
         }
     });
 </script>

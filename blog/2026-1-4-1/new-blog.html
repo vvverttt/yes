@@ -4,6 +4,20 @@
 <!-- Mirrored from larvalabs.com/blog/2021-6-22-22-1/cryptopunks-4-year-anniversary by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Sep 2025 04:08:26 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
+    <!-- Dark mode init - must be first in head to prevent flash -->
+    <script>(function(){try{if(localStorage.getItem('darkMode')==='true'){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})()</script>
+    <style>
+        /* Critical dark mode + layout stability - applied before external CSS */
+        html[data-theme="dark"] { background-color: #1a1a1a !important; color-scheme: dark; }
+        html[data-theme="dark"], html[data-theme="dark"] body { color: #ffffff !important; }
+        html[data-theme="dark"] .main_header, html[data-theme="dark"] .main_footer { background-color: #1a1a1a !important; color: #ffffff !important; }
+        html[data-theme="dark"] a, html[data-theme="dark"] .main_nav_list a, html[data-theme="dark"] .footer_nav_list a { color: #B3BF44 !important; }
+        html[data-theme="dark"] h1, html[data-theme="dark"] h2, html[data-theme="dark"] h3, html[data-theme="dark"] h4, html[data-theme="dark"] h5, html[data-theme="dark"] h6 { color: #ffffff !important; }
+        html[data-theme="dark"] p, html[data-theme="dark"] .small, html[data-theme="dark"] .text_block, html[data-theme="dark"] .blog_txt, html[data-theme="dark"] .blog_post_content { color: #ffffff !important; }
+        html[data-theme="dark"] .logo svg path { fill: #ffffff; }
+        html[data-theme="dark"] .container { background-color: #1a1a1a !important; }
+        .main_header { min-height: 70px; transition: none; }
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv=X-UA-Compatible content="IE=11">
@@ -28,31 +42,6 @@
     <link rel="stylesheet" type="text/css" href="../../public/stylesheets/mainf500.css?v=13" charset="utf-8" >
     <link rel="stylesheet" type="text/css" href="../../public/stylesheets/stylesf500.css?v=13" charset="utf-8" >
 
-    <style>
-    body.dark-mode {
-        background-color: #1a1a1a !important;
-        color: #ffffff !important;
-    }
-
-    body.dark-mode .main_footer {
-        background-color: #1a1a1a !important;
-        color: #ffffff !important;
-    }
-
-    body.dark-mode .main_header {
-        background-color: #1a1a1a !important;
-        color: #ffffff !important;
-    }
-
-    body.dark-mode a {
-        color: #B3BF44 !important;
-    }
-
-    body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 {
-        color: #ffffff !important;
-    }
-    </style>
-
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -64,33 +53,32 @@
     </script>
 
     <script>
-        // Dark Mode Toggle
         function toggleDarkMode() {
-            const body = document.body;
-            const isDarkMode = body.classList.contains('dark-mode');
-            const toggle = document.getElementById('dark-mode-toggle');
-            if (isDarkMode) {
-                body.classList.remove('dark-mode');
-                localStorage.setItem('darkMode', 'false');
-                toggle.innerHTML = '<i class="fa fa-moon-o"></i>';
-            } else {
-                body.classList.add('dark-mode');
+            var body = document.body;
+            var html = document.documentElement;
+            var toggle = document.getElementById('dark-mode-toggle');
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
                 localStorage.setItem('darkMode', 'true');
-                toggle.innerHTML = '<i class="fa fa-sun-o"></i>';
+                html.setAttribute('data-theme', 'dark');
+                if (toggle) toggle.innerHTML = '<i class="fa fa-sun-o"></i>';
+            } else {
+                localStorage.setItem('darkMode', 'false');
+                html.removeAttribute('data-theme');
+                if (toggle) toggle.innerHTML = '<i class="fa fa-moon-o"></i>';
             }
         }
-
         document.addEventListener('DOMContentLoaded', function() {
-            const toggle = document.getElementById('dark-mode-toggle');
-            const darkModeEnabled = localStorage.getItem('darkMode') === 'true';
-            if (darkModeEnabled) {
+            if (localStorage.getItem('darkMode') === 'true') {
                 document.body.classList.add('dark-mode');
-                toggle.innerHTML = '<i class="fa fa-sun-o"></i>';
+                var toggle = document.getElementById('dark-mode-toggle');
+                if (toggle) toggle.innerHTML = '<i class="fa fa-sun-o"></i>';
             }
         });
     </script>
     </head>
-<body>  
+<body>
+    <script>if(localStorage.getItem('darkMode')==='true'){document.body.classList.add('dark-mode');}</script>
 
 <header class="container main_header">
     <div class="row">
