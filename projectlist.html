@@ -10,7 +10,7 @@
         /* Critical dark mode + layout stability - applied before external CSS */
         html[data-theme="dark"] { background-color: #1a1a1a !important; color-scheme: dark; }
         html[data-theme="dark"], html[data-theme="dark"] body { background-color: #1a1a1a !important; color: #ffffff !important; }
-        html[data-theme="dark"] .main_content, html[data-theme="dark"] .container, html[data-theme="dark"] .page { background-color: #1a1a1a !important; }
+        html[data-theme="dark"] .main_content { background-color: transparent !important; }
         html[data-theme="dark"] .main_header, html[data-theme="dark"] .main_footer { background-color: #1a1a1a !important; color: #ffffff !important; }
         html[data-theme="dark"] a, html[data-theme="dark"] .main_nav_list a, html[data-theme="dark"] .footer_nav_list a { color: #B3BF44 !important; }
         html[data-theme="dark"] h1, html[data-theme="dark"] h2, html[data-theme="dark"] h3, html[data-theme="dark"] h4, html[data-theme="dark"] h5, html[data-theme="dark"] h6 { color: #ffffff !important; }
@@ -230,7 +230,6 @@
 
 <style>
     /* Project list items keep dark text on colored backgrounds */
-    html[data-theme="dark"] .main_content, html[data-theme="dark"] .container { background-color: #1a1a1a !important; }
     html[data-theme="dark"] .project_txt, html[data-theme="dark"] .project_txt h3, html[data-theme="dark"] .project_txt p,
     html[data-theme="dark"] .project_item, html[data-theme="dark"] .project_item h3, html[data-theme="dark"] .project_item p { color: #000000 !important; }
 </style>
