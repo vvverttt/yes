@@ -16,7 +16,8 @@
         html[data-theme="dark"] h1, html[data-theme="dark"] h2, html[data-theme="dark"] h3, html[data-theme="dark"] h4, html[data-theme="dark"] h5, html[data-theme="dark"] h6 { color: #ffffff !important; }
         html[data-theme="dark"] p, html[data-theme="dark"] .small, html[data-theme="dark"] .text_block, html[data-theme="dark"] .blog_txt, html[data-theme="dark"] .blog_post_content { color: #ffffff !important; }
         html[data-theme="dark"] .logo svg path { fill: #ffffff; }
-        .main_header { min-height: 70px; transition: none; }
+        .main_header { min-height: 70px; margin-top: 70px; margin-bottom: 100px; position: relative; z-index: 100; transition: none; }
+        @media (max-width: 767px) { .main_header { margin-top: 50px; margin-bottom: 20px; } }
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

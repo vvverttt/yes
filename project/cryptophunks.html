@@ -17,7 +17,8 @@
         html[data-theme="dark"] p, html[data-theme="dark"] .small, html[data-theme="dark"] .text_block { color: #ffffff !important; }
         html[data-theme="dark"] .logo svg path { fill: #ffffff; }
         /* Prevent header layout shift */
-        .main_header { min-height: 70px; transition: none; }
+        .main_header { min-height: 70px; margin-top: 70px; margin-bottom: 100px; position: relative; z-index: 100; transition: none; }
+        @media (max-width: 767px) { .main_header { margin-top: 50px; margin-bottom: 20px; } }
 
         /* --- Mobile image/text layout fix --- */
         @media (max-width: 900px) {
