@@ -2,29 +2,38 @@
 <html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:bind="http://www.w3.org/1999/xhtml">
 
 <head>
+    <!-- Prevent white flash in dark mode and layout shift -->
+    <script>
+      (function() {
+        try {
+          if (localStorage.getItem('darkMode') === 'true') {
+            document.documentElement.style.background = '#1a1a1a';
+            document.body && (document.body.style.background = '#1a1a1a');
+          }
+        } catch(e) {}
+      })();
+    </script>
     <style>
         body.dark-mode {
             background-color: #1a1a1a !important;
             color: #ffffff !important;
         }
-
         body.dark-mode .main_footer {
             background-color: #1a1a1a !important;
             color: #ffffff !important;
         }
-
         body.dark-mode .main_header {
             background-color: #1a1a1a !important;
             color: #ffffff !important;
         }
-
         body.dark-mode a {
             color: #B3BF44 !important;
         }
-
         body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 {
             color: #ffffff !important;
         }
+        /* Reserve header space to prevent twitch */
+        .main_header { min-height: 70px; transition: background 0.2s; }
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,7 +43,7 @@
     <meta name="description" content="" />
     <link rel="stylesheet" href="./public/components/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./public/components/bootstrap/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
     <link rel="stylesheet" href="./public/font-awesome-4.7.0/css/font-awesome.min.css">
     <!-- production -->
     <link rel="stylesheet" type="text/css" href="./public/stylesheets/mainf500.css?v=20260120" charset="utf-8" >
