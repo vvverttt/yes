@@ -230,6 +230,28 @@
         font-size: 0;
     }
 
+    /* Mobile: let example images wrap and shrink */
+    @media (max-width: 600px) {
+        .examples-cell {
+            white-space: normal;
+        }
+        .phunk-box {
+            width: 32px;
+            height: 32px;
+        }
+        .phunk-box img {
+            width: 32px;
+            height: 32px;
+        }
+        .attr-table th, .attr-table td {
+            padding: 6px 4px;
+            font-size: 13px;
+        }
+        .main-title {
+            font-size: 28px;
+        }
+    }
+
     body.dark-mode {
         background-color: #1a1a1a !important;
         color: #ffffff !important;

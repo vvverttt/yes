@@ -258,6 +258,30 @@
     #punks-grid {
         line-height: 0;
     }
+
+    /* Mobile: responsive grid that fits screen width */
+    @media (max-width: 768px) {
+        #punks-grid {
+            grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)) !important;
+            min-width: 0 !important;
+            overflow-x: hidden !important;
+        }
+        .punk-item {
+            width: 100% !important;
+            height: auto !important;
+        }
+        .punk-item img {
+            width: 100% !important;
+            height: auto !important;
+        }
+        .punk-number {
+            font-size: 9px !important;
+            line-height: 10px !important;
+        }
+        .main-title {
+            font-size: 28px !important;
+        }
+    }
 </style>
 
 <style>
