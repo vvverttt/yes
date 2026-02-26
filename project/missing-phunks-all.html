@@ -245,8 +245,20 @@
 
     /* Mobile: responsive grid that fits screen width */
     @media (max-width: 768px) {
+        .container-fluid {
+            padding-left: 4px !important;
+            padding-right: 4px !important;
+        }
+        .container-fluid .row {
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
+        .container-fluid [class*="col-"] {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
         #punks-grid {
-            grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)) !important;
+            grid-template-columns: repeat(auto-fill, minmax(55px, 1fr)) !important;
             min-width: 0 !important;
             overflow-x: hidden !important;
         }
