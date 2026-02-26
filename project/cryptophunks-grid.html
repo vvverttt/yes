@@ -118,6 +118,19 @@
         .fullscreen-info.show {
             display: block;
         }
+
+        /* Mobile: wrap controls into compact grid so buttons don't overflow */
+        @media (max-width: 520px) {
+            .controls {
+                flex-wrap: wrap;
+                max-width: 180px;
+                gap: 6px;
+            }
+            .controls button {
+                width: 36px;
+                height: 36px;
+            }
+        }
     </style>
 </head>
 <body>

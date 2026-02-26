@@ -118,6 +118,19 @@
         .fullscreen-info.show {
             display: block;
         }
+
+        /* Mobile: wrap controls into compact grid so buttons don't overflow */
+        @media (max-width: 520px) {
+            .controls {
+                flex-wrap: wrap;
+                max-width: 180px;
+                gap: 6px;
+            }
+            .controls button {
+                width: 36px;
+                height: 36px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -197,6 +210,51 @@
             canvas.addEventListener('mousedown', handleMouseDown);
             canvas.addEventListener('mousemove', handleMouseMove);
             canvas.addEventListener('mouseup', handleMouseUp);
+
+            // Touch events for mobile panning and pinch-to-zoom
+            var lastTouchDist = 0;
+            var touchStartPanX = 0, touchStartPanY = 0;
+            var touchStartX = 0, touchStartY = 0;
+
+            canvas.addEventListener('touchstart', function(e) {
+                e.preventDefault();
+                if (e.touches.length === 1) {
+                    touchStartX = e.touches[0].clientX;
+                    touchStartY = e.touches[0].clientY;
+                    touchStartPanX = panX;
+                    touchStartPanY = panY;
+                } else if (e.touches.length === 2) {
+                    var dx = e.touches[0].clientX - e.touches[1].clientX;
+                    var dy = e.touches[0].clientY - e.touches[1].clientY;
+                    lastTouchDist = Math.sqrt(dx * dx + dy * dy);
+                }
+            }, { passive: false });
+
+            canvas.addEventListener('touchmove', function(e) {
+                e.preventDefault();
+                if (e.touches.length === 1) {
+                    panX = touchStartPanX + (e.touches[0].clientX - touchStartX);
+                    panY = touchStartPanY + (e.touches[0].clientY - touchStartY);
+                    drawGrid();
+                } else if (e.touches.length === 2) {
+                    var dx = e.touches[0].clientX - e.touches[1].clientX;
+                    var dy = e.touches[0].clientY - e.touches[1].clientY;
+                    var dist = Math.sqrt(dx * dx + dy * dy);
+                    if (lastTouchDist > 0) {
+                        zoom *= dist / lastTouchDist;
+                        var gridW = cols * (characterSize + gridSpacing) - gridSpacing;
+                        var gridH = rows * (characterSize + gridSpacing) - gridSpacing;
+                        var minZoom = Math.max(canvas.width / gridW, canvas.height / gridH);
+                        zoom = Math.max(minZoom, Math.min(20, zoom));
+                        drawGrid();
+                    }
+                    lastTouchDist = dist;
+                }
+            }, { passive: false });
+
+            canvas.addEventListener('touchend', function(e) {
+                if (e.touches.length === 0) lastTouchDist = 0;
+            });
         }
 
         function loadMissingPhunks() {

@@ -202,6 +202,61 @@ function setupEventListeners() {
         // Click detection
         canvas.addEventListener('click', handleCanvasClick);
 
+        // Touch events for mobile panning and pinch-to-zoom
+        var lastTouchDist = 0;
+        var touchStartPanX = 0;
+        var touchStartPanY = 0;
+        var touchStartX = 0;
+        var touchStartY = 0;
+        canvas.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+            if (e.touches.length === 1) {
+                touchStartX = e.touches[0].clientX;
+                touchStartY = e.touches[0].clientY;
+                touchStartPanX = panX;
+                touchStartPanY = panY;
+            } else if (e.touches.length === 2) {
+                var dx = e.touches[0].clientX - e.touches[1].clientX;
+                var dy = e.touches[0].clientY - e.touches[1].clientY;
+                lastTouchDist = Math.sqrt(dx * dx + dy * dy);
+            }
+        }, { passive: false });
+
+        canvas.addEventListener('touchmove', function(e) {
+            e.preventDefault();
+            if (e.touches.length === 1) {
+                var dx = e.touches[0].clientX - touchStartX;
+                var dy = e.touches[0].clientY - touchStartY;
+                panX = touchStartPanX + dx;
+                panY = touchStartPanY + dy;
+                clampPan();
+                drawGrid();
+            } else if (e.touches.length === 2) {
+                var dx = e.touches[0].clientX - e.touches[1].clientX;
+                var dy = e.touches[0].clientY - e.touches[1].clientY;
+                var dist = Math.sqrt(dx * dx + dy * dy);
+                if (lastTouchDist > 0) {
+                    var scale = dist / lastTouchDist;
+                    var midX = (e.touches[0].clientX + e.touches[1].clientX) / 2;
+                    var midY = (e.touches[0].clientY + e.touches[1].clientY) / 2;
+                    panX = midX - (midX - panX) * scale;
+                    panY = midY - (midY - panY) * scale;
+                    zoom *= scale;
+                    var minZoom = Math.max(canvas.width / gridWidth, canvas.height / gridHeight);
+                    zoom = Math.max(minZoom, Math.min(50, zoom));
+                    clampPan();
+                    drawGrid();
+                }
+                lastTouchDist = dist;
+            }
+        }, { passive: false });
+
+        canvas.addEventListener('touchend', function(e) {
+            if (e.touches.length === 0) {
+                lastTouchDist = 0;
+            }
+        });
+
         // Draw initial grid
         drawGrid();
         
@@ -397,9 +452,11 @@ function toggleFullScreen() {
         // Send message to parent to collapse iframe
         window.parent.postMessage('toggleFullscreen', '*');
 
-        // Reset canvas to original size
-        canvas.width = 1024;
-        canvas.height = 320;
+        // Reset canvas to actual viewport size
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        canvas.style.width = window.innerWidth + 'px';
+        canvas.style.height = window.innerHeight + 'px';
 
         // Reset zoom to 2x and center
         zoom = 2;
