@@ -280,11 +280,7 @@
 
     // Set phunk image first
     const phunkImg = document.getElementById('phunk-image');
-    if ([5865, 6850, 8913, 6922, 6996].includes(Number(phunkId))) {
-        phunkImg.src = `../../images/images_24x24/${phunkId}.gif`;
-    } else {
-        phunkImg.src = `../../images/images_24x24/${phunkId}.png`;
-    }
+    phunkImg.src = `../../images/images_24x24/${phunkId}.png`;
     phunkImg.alt = `Phunk ${phunkId}`;
     phunkImg.onerror = function() { 
         this.style.display = 'none';

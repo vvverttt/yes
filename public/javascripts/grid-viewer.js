@@ -44,12 +44,7 @@ function loadImages(callback) {
                     return;
                 }
                 var img = new Image();
-                var specialGifIds = [5865, 6850, 8913, 6922, 6996];
-                if (specialGifIds.includes(imageData.num)) {
-                    img.src = '/images/images_24x24/' + imageData.num + '.gif';
-                } else {
-                    img.src = '/images/images_24x24/' + imageData.num + '.png';
-                }
+                img.src = '/images/images_24x24/' + imageData.num + '.png';
 
                 img.onload = function() {
                     loadedCount++;

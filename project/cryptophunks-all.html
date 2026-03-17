@@ -473,19 +473,13 @@
             punkDiv.className = 'punk-item';
 
             const img = document.createElement('img');
-            const specialGifIds = [5865, 6850, 8913];
-
                 // Check if this is an EthsRock
                 let isEthsRock = false;
                 if (item.attributes) {
                     isEthsRock = item.attributes.some(attr => attr.trait_type === 'Type' && attr.value === 'EthsRock');
                 }
 
-                if ([5865, 6850, 8913, 6922, 6996].includes(Number(item.index))) {
-                    img.src = `../images/images_24x24/${item.index}.gif`;
-                } else {
-                    img.src = `../images/images_24x24/${item.index}.png`;
-                }
+                img.src = `../images/images_24x24/${item.index}.png`;
                 img.alt = `QuantumPhunk ${item.index}`;
                 img.style.imageRendering = 'pixelated';
 

@@ -371,13 +371,7 @@
             // Helper function to create phunk box HTML with 48x48 images (clickable links to details page)
             function createPhunkBoxes(examples) {
                 return examples.map(idx => {
-                    const specialGifIds = [5865, 6850, 6922, 6996, 8913];
-                    let imgSrc;
-                    if (specialGifIds.includes(idx)) {
-                        imgSrc = `../images/images_24x24/${idx}.gif`;
-                    } else {
-                        imgSrc = `../images/images_24x24/${idx}.png`;
-                    }
+                    const imgSrc = `../images/images_24x24/${idx}.png`;
                     return `<a href="cryptophunks-details.html?id=${idx}" class="phunk-box"><img src="${imgSrc}" alt="Phunk ${idx}" title="Phunk #${idx}"></a>`;
                 }).join('');
             }
